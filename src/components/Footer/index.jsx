@@ -193,7 +193,7 @@ const Footer = () => {
                         <Link href="https://chat.whatsapp.com/JDCR6lerXr95qfKZKzexoV" target="_blank" className={styles.whatsapp} title='Whatsapp | PhysioTrends'>
                             <FaWhatsapp />
                         </Link>
-                        <Link href="https://www.instagram.com/thephysiobrothers8/" target="_blank" className={styles.instagram} title='Instagram | PhysioTrends'>
+                        <Link href="https://www.instagram.com/physiotrendsofficial/" target="_blank" className={styles.instagram} title='Instagram | PhysioTrends'>
                             <FaInstagram />
                         </Link>
                     </div>

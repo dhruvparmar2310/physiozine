@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../../styles/Hero.module.scss'
-import { Bebas_Neue, Teko } from 'next/font/google'
+import { Bebas_Neue, Teko, Roboto_Condensed } from 'next/font/google'
 import Image from 'next/image'
-// import Character from '../../../public/assets/img/char-1.png'
-import Character from '../../../public/assets/img/article-book.png'
 import { Button, Modal } from 'react-bootstrap'
+import BannerImg from '../../../public/assets/img/bannerImg.png'
 import { useRouter } from 'next/router'
-import textLogo from '../../../public/assets/img/main-logo-2.png'
+import textLogo from '../../../public/assets/img/main-logo.png'
 import { motion } from 'framer-motion'
 
-// const Bebas_Neue_Font = Bebas_Neue({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
+const Roboto_Condensed_Font = Roboto_Condensed({ subsets: ['latin'], weight: ['400', '500', '600', '700'], style: ['normal'] })
 // const Teko_Font = Teko({ subsets: ['latin'], weight: ['300', '400', '500', '600'], style: ['normal'] })
 
 function Hero ({ width }) {
@@ -28,7 +27,7 @@ function Hero ({ width }) {
             <section className={`${styles?.hero}`} id='hero'>
                 <div className={`${styles?.heroContent}`}>
                     <div className={`${styles?.adsContent}`}>
-                        <h1 data-heading='ISSN (Online)'></h1>
+                        <h1 data-heading='ISSN (Online)' className={`${Roboto_Condensed_Font?.className}`}></h1>
                         <motion.div
                             className={`styles?.mainLogo`}
                             initial={{ opacity: 0 }}
@@ -49,7 +48,7 @@ function Hero ({ width }) {
                         </motion.div>
 
                         <motion.p
-                            className={`${styles?.desc} mt-3`}
+                            className={`${styles?.desc} ${Roboto_Condensed_Font?.className} mt-3`}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{
@@ -60,23 +59,6 @@ function Hero ({ width }) {
                         >
                             Read the latest research and empower your physiotherapy journey.
                         </motion.p>
-
-                        <motion.div
-                            className={`${styles?.btnContent} mt-3`}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{
-                                delay: width ? 0 : 0.5, // delay the animation by 0.2 seconds
-                                duration: width ? 0.3 : 0.8, // animation duration of 0.8 seconds
-                                ease: 'easeInOut', // easing function for a smoother animation
-                            }}
-                        >
-                            <span>
-                                <Button className={`${styles?.readMoreBtn}`} onClick={() => router.push('/submit-your-article')}>
-                                    Submit Your Article Now!
-                                </Button>
-                            </span>
-                        </motion.div>
                     </div>
 
                     <motion.div
@@ -85,7 +67,7 @@ function Hero ({ width }) {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: width ? 0.3 : 1, animate: 'easeInOut' }}
                     >
-                        <Image src={Character} quality={100} width={100} priority height={100} className={`${styles?.phoneMockUp}`} />
+                        <Image src={BannerImg} quality={100} width={100} priority height={100} className={`${styles?.phoneMockUp}`} />
                     </motion.div>
                 </div >
 
