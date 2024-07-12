@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Inter, Ubuntu } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
 import Hero from "@/components/Hero";
 import HomePageArticles from "@/components/HomePageArticles";
@@ -27,6 +27,7 @@ import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home () {
@@ -88,11 +89,16 @@ export default function Home () {
     }
   }, [controls, inView]);
 
+  const handleClick = () => {
+    router.push('https://physiotherapyonline.net/')
+  }
   return (
     <>
       <Head>
         <title>PhysioTrends</title>
         <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name='keywords' content='PhysioTrends, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
         <meta name="description" content="PHYSIOTRENDS is India’s fastest growing ISSN Certified E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
@@ -106,32 +112,100 @@ export default function Home () {
       </Head>
       <main className={`${styles.mainLayout} container`}>
         <Hero width={width} />
-        <section className={`${styles?.counter}`}>
+
+        <div className={`${styles?.actionBar} mt-2`}>
+          <marquee className={`${styles?.extraInfo}`}>Use code "Physiotrends" to avail 65% discount in all the online courses. Limited period offer!</marquee>
+          <div className={`${styles?.actions} ${ubuntu?.className}`}>
+            <span>
+              <motion.div
+                className={`${styles?.btnContent}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  delay: width ? 0 : 0.5, // delay the animation by 0.2 seconds
+                  duration: width ? 0.3 : 0.8, // animation duration of 0.8 seconds
+                  ease: 'easeInOut', // easing function for a smoother animation
+                }}
+              >
+                <span>
+                  <Button className={`${styles?.readMoreBtn}`} onClick={() => router.push('/submit-your-article')}>
+                    Submit Your Article
+                  </Button>
+                </span>
+              </motion.div>
+            </span>
+            <span>
+              <motion.div
+                className={`${styles?.btnContent}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  delay: width ? 0 : 0.5, // delay the animation by 0.2 seconds
+                  duration: width ? 0.3 : 0.8, // animation duration of 0.8 seconds
+                  ease: 'easeInOut', // easing function for a smoother animation
+                }}
+              >
+                <span>
+                  <Button className={`${styles?.readMoreBtn}`} onClick={() => handleClick()}>
+                    Online Courses
+                  </Button>
+                </span>
+              </motion.div>
+            </span>
+            <span>
+              <motion.div
+                className={`${styles?.btnContent}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  delay: width ? 0 : 0.5, // delay the animation by 0.2 seconds
+                  duration: width ? 0.3 : 0.8, // animation duration of 0.8 seconds
+                  ease: 'easeInOut', // easing function for a smoother animation
+                }}
+              >
+                <span>
+                  <Button className={`${styles?.readMoreBtn}`} onClick={() => router.push('/joinAsInstructor')}>
+                    Join As Instructor
+                  </Button>
+                </span>
+              </motion.div>
+            </span>
+          </div>
+        </div>
+
+        <section className={`${styles?.counter} my-5`}>
           <div className={`${styles?.innerContent}`}>
             <Row>
-              <Col lg={4} md={6}>
-                <div className={`${styles?.counterCard}`}>
-                  <div className={`${styles?.dataValue}`}>{network}+</div>
-                  <div className={`${styles?.dataLabel}`}>Network</div>
-                </div>
+              <Col lg={4}>
+                <h4 className={`${ubuntu?.className}`}>Empower Yourself with Knowledge, Anytime, Anywhere.</h4>
               </Col>
-              <Col lg={4} md={6} className="mt-md-0 mt-3">
-                <div className={`${styles?.counterCard}`}>
-                  <div className={`${styles?.dataValue}`}>{cityCount}+</div>
-                  <div className={`${styles?.dataLabel}`}>City</div>
-                </div>
-              </Col>
-              <Col lg={4} md={6} className="mt-lg-0 mt-3">
-                <div className={`${styles?.counterCard}`}>
-                  <div className={`${styles?.dataValue}`}>{teamCount}</div>
-                  <div className={`${styles?.dataLabel}`}>Editorial Team</div>
+              <Col lg={8}>
+                <div className={`${styles?.counterInfo}`}>
+                  <div>
+                    <div className={`${styles?.counterCard}`}>
+                      <div className={`${styles?.dataValue}`}>{network}+</div>
+                      <div className={`${styles?.dataLabel} ${ubuntu?.className}`}>Network</div>
+                    </div>
+                  </div>
+                  <div className="mt-md-0">
+                    <div className={`${styles?.counterCard}`}>
+                      <div className={`${styles?.dataValue}`}>{cityCount}+</div>
+                      <div className={`${styles?.dataLabel} ${ubuntu?.className}`}>City</div>
+                    </div>
+                  </div>
+                  <div className="mt-lg-0">
+                    <div className={`${styles?.counterCard}`}>
+                      <div className={`${styles?.dataValue}`}>{teamCount}</div>
+                      <div className={`${styles?.dataLabel} ${ubuntu?.className}`}>Editorial Team</div>
+                    </div>
+                  </div>
                 </div>
               </Col>
             </Row>
           </div>
         </section>
 
-        <section id="about" className={`${styles?.about}`} ref={aboutSectionRef}>
+        <section id="about" className={`${styles?.about} pt-4`} ref={aboutSectionRef}>
           <h1 className={`sectionTitle`} data-heading='About' title='About Us | PhysioTrends'>PhysioTrends</h1>
 
           <div className={`${styles?.innerContent}`}>

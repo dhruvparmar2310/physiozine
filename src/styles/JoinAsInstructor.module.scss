@@ -1,0 +1,200 @@
+.joinAsInstructor {
+    padding-top: 20px;
+
+    .innerContent {
+        text-align: justify;
+        font-family: 'Alice', serif;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        word-spacing: 2.5px;
+        font-size: 1.1rem;
+
+        .sectionTitle {
+            text-align: left;
+            font-size: 1.5rem;
+        }
+
+        .line {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--secondary-200);
+        }
+
+        form {
+            border: 2px solid var(--secondary-200);
+            padding: 20px;
+            border-radius: 20px;
+
+            label {
+                font-size: 15px;
+                color: var(--primary-color);
+                margin: 0;
+            }
+
+            input,
+            textarea {
+                border: 1px solid var(--secondary-200);
+            }
+
+            button {
+                background: var(--primary-color);
+                border: none;
+                color: var(--white-color);
+                border-radius: 50px;
+                padding: 5px 20px;
+                font-family: 'Alice', sans-serif;
+                word-spacing: 2px;
+                font-weight: 500;
+                transition: 0.5s;
+
+                &:hover {
+                    background: var(--primary-dark);
+                    color: var(--white-color);
+                    transform: translateY(-5px);
+                }
+            }
+
+            .fileinput {
+                label {
+                    font-size: 15px;
+                    margin: 0;
+                    letter-spacing: 0.5px;
+                    color: var(--primary-color) !important;
+                    text-align: start;
+                    width: 100%;
+                    padding: 0;
+
+                    .information {
+                        display: flex;
+                        justify-content: end;
+                        align-items: center;
+                        cursor: pointer;
+                    }
+                }
+
+                .inputtypefile {
+                    margin: 3px 0;
+                    padding: 5px;
+                    position: relative;
+                    border: 1px solid var(--secondary-200);
+                    background-color: transparent;
+                    border-radius: 4px;
+
+                    .inputMSG {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .bundle-name {
+                            word-break: break-all;
+                            background-color: var(--primary-color);
+                            letter-spacing: 0.8px;
+                            font-weight: 600;
+                        }
+
+                        .document-preview-group {
+                            margin: 0;
+                            position: relative;
+                            width: 100%;
+                            z-index: 12;
+
+                            .img-over {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.512);
+                                display: none;
+                                letter-spacing: 0.5px;
+                                justify-content: center;
+                                align-items: center;
+                                color: #ffffff;
+                                font-size: 18px;
+                                font-weight: 800;
+                                cursor: pointer;
+                            }
+
+                            &:hover {
+                                .img-over {
+                                    display: flex;
+                                }
+                            }
+
+                            .document-preview {
+                                width: 100%;
+                                overflow: hidden;
+                                display: flex;
+                                flex-wrap: nowrap;
+                                justify-content: center;
+                                align-items: center;
+
+                                img {
+                                    width: 100%;
+                                    height: 180px;
+                                }
+                            }
+                        }
+
+                        span {
+                            all: unset;
+                            font-size: 11px;
+                            color: var(--white-color);
+                            background-color: var(--primary-dark) !important;
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                            font-weight: 400;
+                        }
+                    }
+
+                    input {
+                        opacity: 0;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        margin-bottom: 0;
+                        position: absolute;
+
+                        &:disabled {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .joinAsInstructor {
+        padding: 20px !important;
+
+        .sectionTitle {
+            font-size: 1.6rem !important;
+        }
+
+        h3 {
+            font-size: 1.2rem !important;
+            font-weight: 600;
+        }
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1950px) {
+    .sectionTitle {
+        font-size: 3.5rem !important;
+    }
+
+    .line {
+        margin-top: 20px;
+    }
+
+    .joinAsInstructor {
+        margin-top: 1rem !important;
+    }
+
+    .innerContent {
+        font-size: 1.5rem !important;
+    }
+}

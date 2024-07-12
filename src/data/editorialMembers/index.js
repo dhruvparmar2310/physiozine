@@ -129,7 +129,7 @@ export const members = [
         name: 'Dr. Mansi Shingala',
         profile: 'assets/img/Members/DrMansiShingala.jpg',
         education: 'Ph.D., MPT in Sports',
-        designation: 'Tutor cum Physiotherapist at Govt. Physiotheraphy College, Jamnagar',
+        designation: 'Tutor cum Physiotherapist at Govt. Physiotherapy College, Jamnagar',
         role: '-',
         emailAddress: 'mansishingala@gptcjam.edu.in',
         address: 'Govt. Physiotherapy College, Rameshwar-nagar, Jamnagar, Gujarat - 361008.'
