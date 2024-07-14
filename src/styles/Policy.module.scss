@@ -18,7 +18,6 @@
         ul>li,
         ol>li {
             text-align: justify;
-            font-family: 'Alice', serif;
             letter-spacing: 0.8px;
         }
 
@@ -36,7 +35,7 @@
         .note {
             font-style: italic;
             color: var(--primary-dark);
-            font-weight: 600;
+            font-weight: 500;
         }
     }
 }

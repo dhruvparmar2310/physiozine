@@ -12,7 +12,7 @@ import YogaSanskriti from '../../public/assets/img/Clients/header-logo.png'
 import PhysioGyan from '../../public/assets/img/Clients/physioGyan.jpeg'
 import PricePlan from '../../public/assets/PricePlan'
 import AdsImg from '../../public/assets/img/adsSpec.png'
-import { Abril_Fatface, Comfortaa } from 'next/font/google'
+import { Abril_Fatface, Comfortaa, Ubuntu } from 'next/font/google'
 import DynamicChart from '@/components/DynamicChart'
 import physiothonline from '../../public/assets/img/associated/physioth-online.jpeg'
 import smartPT from '../../public/assets/img/associated/smart-pt.jpeg'
@@ -20,6 +20,7 @@ import { motion, useAnimation } from 'framer-motion'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { useInView } from 'react-intersection-observer'
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const abrilFatface = Abril_Fatface({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 const comfortaa = Comfortaa({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 const Advertise = () => {
@@ -144,10 +145,10 @@ const Advertise = () => {
             <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Advertise'} />
             <section className={`${styles?.advertise} container`}>
                 <div className={`${styles?.advertiseContent}`}>
-                    <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Advertise With Us!</h1>
+                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading="Let's Get ">Advertise With Us!</h1>
                     <div className={`${styles?.line}`}></div>
                     <motion.p
-                        className={`${styles?.advertiseDesc} mt-4`}
+                        className={`${styles?.advertiseDesc} ${ubuntu?.className} mt-4`}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: width ? 0.3 : 0.8, duration: width ? 0.5 : 1, animate: 'easeInOut' }}
@@ -171,7 +172,7 @@ const Advertise = () => {
                     </div>
 
                     <div className={`${styles?.whyUs}`} ref={aboutSectionRef}>
-                        <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Why Us?</h1>
+                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Why Us?</h1>
                         <div className={`${styles?.line}`}></div>
 
                         <div className={`${styles?.detailCardContent}`}>
@@ -238,7 +239,7 @@ const Advertise = () => {
                     </div>
 
                     <div>
-                        <h1 className={`sectionTitle ${styles?.sectionTitle} mt-4`} title='Rate of Advertisement | PhysioTrends'>Rate of Advertisement:</h1>
+                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className} mt-4`} title='Rate of Advertisement | PhysioTrends'>Rate of Advertisement:</h1>
                         <div className={`${styles?.line}`}></div>
 
                         <Row className={`${styles?.priceSection}`}>
@@ -292,7 +293,7 @@ const Advertise = () => {
                     </div>
 
                     <div className={`${styles?.clientContent} mt-4`}>
-                        <h1 className={`sectionTitle`} data-heading='A few of our many Satisfied Clients'></h1>
+                        <h1 className={`sectionTitle text-center`} data-heading='A few of our many Satisfied Clients'></h1>
 
                         <div className={`mt-4 ${styles?.clientLogo}`}>
                             <div>

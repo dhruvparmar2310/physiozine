@@ -2,7 +2,9 @@ import React from 'react'
 import BreadCrumb from '@/components/BreadCrumb'
 import Head from 'next/head'
 import styles from '../../styles/Policy.module.scss'
+import { Ubuntu } from 'next/font/google'
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const EditorialPolicy = () => {
     return (
         <>
@@ -23,10 +25,10 @@ const EditorialPolicy = () => {
             <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Policy - Editorial Policy'} />
             <section className={`${styles?.policy} container`}>
                 <div className={`${styles?.policyContent}`}>
-                    <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Editorial Policy</h1>
+                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Editorial Policy</h1>
                     <div className={`${styles?.line}`}></div>
 
-                    <p className={`${styles.policyDetails} mt-3`}>
+                    <p className={`${styles.policyDetails} ${ubuntu?.className} mt-3`}>
                         PhysioTrends is dedicated to providing high-quality, accurate, and informative content related to the field of physiotherapy. Our editorial policy encompasses the following principles:
                     </p>
                     <ol className='mt-2'>
@@ -41,11 +43,11 @@ const EditorialPolicy = () => {
                         <li><strong>Compliance with Laws and Regulations</strong>: PhysioTrends operates in compliance with applicable laws and regulations governing online publishing, data protection, and privacy.</li>
                     </ol>
 
-                    <p className={`${styles.policyDetails} mt-3`}>
+                    <p className={`${styles.policyDetails} ${ubuntu?.className} mt-3`}>
                         By adhering to these editorial principles, PhysioTrends aims to uphold the highest standards of integrity, accuracy, and professionalism in delivering valuable content to our audience.
                     </p>
 
-                    <p className={`${styles.note}`}>
+                    <p className={`${styles.note} ${ubuntu?.className}`}>
                         Note: This editorial policy outlines the guiding principles that govern content selection, publication processes, and ethical standards at PhysioTrends.
                     </p>
                 </div>

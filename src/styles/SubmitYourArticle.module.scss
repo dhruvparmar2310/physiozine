@@ -3,12 +3,12 @@
 
     .innerContent {
         text-align: justify;
-        font-family: 'Alice', serif;
         font-weight: 600;
 
         .sectionTitle {
             text-align: left;
-            font-size: 2rem;
+            margin: 0;
+            font-size: 1.5rem;
         }
 
         .line {
@@ -20,7 +20,6 @@
 
         .headLines {
             color: var(--black-color);
-            font-family: 'Alice', serif;
             font-weight: 600;
             letter-spacing: 0.8px;
         }
@@ -39,6 +38,7 @@
                             margin: 0;
 
                             strong {
+                                font-weight: 500;
                                 color: var(--primary-color);
                             }
                         }

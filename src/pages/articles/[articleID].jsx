@@ -14,7 +14,6 @@ import { GrFormPrevious, GrPrevious } from "react-icons/gr"
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 function ArticleID ({ data }) {
     const router = useRouter()
-    console.log('router :>> ', router);
     const pdfViewRef = useRef(null)
 
     const { articleID, sArticle, issueId, sIssueName } = router.query
@@ -22,10 +21,8 @@ function ArticleID ({ data }) {
 
     useEffect(() => {
         const data = articles?.find(item => item?._id === issueId)?.aMagazines?.find(magazine => magazine?._id === articleID)
-        console.log('data :>> ', data, articles);
         setArticleData(data)
     }, [articleID])
-    console.log('articleData :>> ', articleData);
 
     return (
         <>
@@ -46,7 +43,7 @@ function ArticleID ({ data }) {
             {/* <BreadCrumb title={'Articles | PhysioTrends'} link={'Home'} current={`Articles - ${sArticle}`} /> */}
             <section className={`${styles?.articles} ${styles?.readArticlePage} container`} style={{ marginTop: '6rem' }}>
                 <div className={`${styles?.articlesContent}`}>
-                    <h1 className={`sectionTitle ${styles?.magazineTitle}`}>{sArticle}:</h1>
+                    <h1 className={`sectionTitle ${styles?.magazineTitle} ${ubuntu?.className}`} data-heading='Article'>{sArticle}:</h1>
                     {/* <div className={`${styles?.line} mb-3`}></div> */}
 
                     <div className={`${styles?.actions} ${ubuntu?.className}`}>

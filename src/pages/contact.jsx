@@ -11,7 +11,9 @@ import { useForm, Controller } from 'react-hook-form'
 import ContactUs from '../../public/assets/ContactUs'
 import { FaPaperPlane } from 'react-icons/fa'
 import { useRouter } from 'next/router'
+import { Ubuntu } from 'next/font/google'
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const Contact = () => {
     const router = useRouter()
     const { control, register, handleSubmit, watch, errors } = useForm({ mode: 'all' })
@@ -35,16 +37,16 @@ const Contact = () => {
             <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Contact'} />
             <section className={`${styles?.contact} container`}>
                 <div className={`${styles?.contactContent}`}>
-                    <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Stay Connected With Us!</h1>
+                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Stay Connected With Us!</h1>
                     <div className={`${styles?.line}`}></div>
 
-                    <p className={`${styles?.notes} mt-2`}>Note: One must read all the <Link href={'/terms-and-conditions'}>Terms & Conditions</Link> before submitting the Article.</p>
+                    <p className={`${styles?.notes} ${ubuntu?.className} mt-2`}>Note: One must read all the <Link href={'/terms-and-conditions'}>Terms & Conditions</Link> before submitting the Article.</p>
                     <div className='mt-4'>
                         <Row className={styles?.contactDetails}>
                             <Col lg={6} md={6}>
                                 <div className={`${styles?.cardDetails}`}>
                                     <div className={`${styles?.cardTitle}`}>
-                                        <h1>Publisher</h1>
+                                        <h1 className={ubuntu?.className}>Publisher</h1>
                                         <p className={`${styles.subTitle}`}>PhysioTrends</p>
                                     </div>
 
@@ -64,7 +66,7 @@ const Contact = () => {
                             <Col lg={6} md={6}>
                                 <div className={`${styles?.cardDetails}`}>
                                     <div className={`${styles?.cardTitle}`}>
-                                        <h1>Chief Editor</h1>
+                                        <h1 className={ubuntu?.className}>Chief Editor</h1>
                                         <p className={`${styles.subTitle}`}>Dr. Jaspreet Kaur Kang</p>
                                     </div>
 

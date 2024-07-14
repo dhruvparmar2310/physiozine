@@ -1,39 +1,33 @@
 .breadcrumbContent {
-    padding: 60px;
+    padding: 60px 0;
     padding-bottom: 0;
 
     .breadcrumb {
         display: flex;
         flex-wrap: nowrap;
-        justify-content: end !important;
+        justify-content: start !important;
 
         .breadcrumbItem {
             a {
                 display: flex;
                 flex-wrap: nowrap;
-                font-family: 'Alice', serif;
                 text-decoration: none !important;
-                font-weight: 600;
+                font-weight: 500;
                 letter-spacing: 0.8px;
                 color: var(--primary-color);
+                font-style: italic;
 
                 &:hover {
                     color: var(--primary-dark);
-                }
-
-                &::after {
-                    content: '/';
-                    margin: 0 3px;
-                    color: var(--black-color);
                 }
             }
 
         }
 
         .currentPage {
-            font-family: 'Alice', serif;
             color: var(--secondary-400);
-            font-weight: 600;
+            font-style: italic;
+            font-weight: 500;
             letter-spacing: 0.8px;
         }
     }

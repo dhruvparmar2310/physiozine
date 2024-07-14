@@ -1,7 +1,7 @@
 export const articles = [
     {
         _id: '1',
-        title: 'Volume - 1 | Issue - 1',
+        title: 'Volume - 1, Issue - 1',
         nMonth: 'March, 2024',
         img: 'assets/img/magazines/Vol-1-Issue-1.jpeg',
         eBook: 'assets/pdfs/vol-1-issue-1/Physiotrends Vol 1, Issue 1.pdf',
@@ -55,7 +55,7 @@ export const articles = [
     },
     {
         _id: '2',
-        title: 'Volume - 1 | Issue - 2',
+        title: 'Volume - 1, Issue - 2',
         nMonth: 'June, 2024',
         img: 'assets/img/magazines/vol1_issue2.jpeg',
         eBook: 'assets/pdfs/vol-1-issue-2/PhysioTrends Vol.1, Issue 2.pdf',
@@ -106,5 +106,13 @@ export const articles = [
                 sContent: "<p>In the dynamic field of women's health, physiotherapy stands as a beacon of holistic care, transcending the traditional confines of physical treatment. This discipline, enriched by insights from 'Obstetrics by Ten Teachers', 'Gynaecology by Ten Teachers', and 'National Guidelines for Quality Obstetrics and Perinatal Care', offers a well-rounded approach to health, particularly for pregnant women and those with gestational diabetes. This article delves into the intricacies of diet and nutrition, exercise, yoga, ergonomics, healthy habits, and personal hygiene, highlighting their collective impact on women's health.</p><h3>Diet and Nutrition : The Foundation of Women's Health</h3><p>Proper nutrition is a cornerstone of health, especially during the crucial phases of pregnancy and lactation. Women's bodies require a symphony of nutrients to support their own health and that of their developing babies. Key nutrients include calcium, crucial for bone health and a vital component in preventing osteoporosis; iron, essential for combating anemia, especially significant during menstruation and pregnancy; folate, a B-vitamin critical for preventing birth defects and aiding in fetal brain development; and vitamin D, vital for overall health and immune function.</p><p>A balanced diet, rich in fruits, vegetables, lean proteins, whole grains, and healthy fats, supports not just physical health, but also mental well-being. For those with specific conditions like gestational diabetes, diet plays a therapeutic role. A low-glycemic diet rich in fiber, lean protein, and healthy fats helps regulate blood sugar levels, ensuring both maternal and fetal health.</p><h3>Exercise and Yoga: Enhancing Physical and Mental Well-being</h3><p>Physical activity is a pillar of health, offering benefits that extend beyond weight management. Cardiovascular exercises, such as walking, swimming, or cycling, improve heart health and enhance circulatory efficiency. Strength training, often overlooked, is crucial for maintaining muscle mass and bone density, particularly important in preventing osteoporosis. Yoga, with its emphasis on flexibility, balance, and mental focus, offers a unique set of benefits. During pregnancy, yoga can alleviate common discomforts like back pain, enhance circulation, and prepare the body for childbirth through focused breathing and relaxation techniques. Moreover, the mental benefits of yoga, including stress reduction and mindfulness, contribute significantly to overall well-being.</p><h3>Ergonomic and Hygiene Practices for Optimal Health:</h3><p>Ergonomics, particularly in the context of women's health, involves designing work and home environments that support physical well-being. Proper ergonomic practices reduce the risk of musculoskeletal disorders, a common ailment among women due to their diverse roles and responsibilities. During pregnancy, ergonomic adaptations are essential to accommodate the changing body and prevent strain and injury.</p><p>In addition to ergonomics, personal hygiene plays a crucial role in women's health. Regular bathing, proper genital care, and appropriate menstrual hygiene practices are essential for preventing infections and maintaining overall well-being. This is particularly important during menstruation and pregnancy, when hormonal changes can affect the body's susceptibility to infections.</p><h3>Healthy Habits for a Balanced Life:</h3><p>Healthy habits form the bedrock of a balanced lifestyle. Quality sleep is essential for physical repair and mental clarity. Relaxation techniques and effective stress management are as important as physical health practices. Mental well-being, fostered through mindfulness and meditation, has a profound impact on overall health.</p><p>Hydration is another key aspect of healthy living. Drinking adequate water daily is crucial for bodily functions and can prevent common issues like urinary tract infections, which are more prevalent in women. Avoiding harmful habits such as smoking and excessive alcohol consumption is vital for long-term health and well-being.</p><p>In conclusion, the integration of physiotherapy with diet, exercise, ergonomics, healthy habits, and personal hygiene offers a comprehensive framework for enhancing women's health. This is especially important during transformative phases such as pregnancy and postpartum. The application of evidence-based practices, informed by authoritative sources, enables physiotherapists to make significant contributions to women's health, guiding them toward healthier, more balanced lives.</p><p>By understanding and addressing the unique needs of women at different life stages, physiotherapy can play a pivotal role in not just treating but also preventing a range of health issues. This proactive, holistic approach is the key to empowering women to take charge of their health and well-being.</p>"
             },
         ]
+    },
+    {
+        _id: '3',
+        title: 'Volume - 1, Issue - 3',
+        nMonth: 'Coming Soon',
+        img: 'assets/img/magazines/vol1_issue3.jpeg',
+        eBook: 'assets/pdfs/vol-1-issue-2/PhysioTrends Vol.1, Issue 2.pdf',
+        aMagazines: []
     }
 ]

@@ -1,16 +1,20 @@
 import React from 'react'
 import styles from '../../styles/BreadCrumb.module.scss'
 import Link from 'next/link'
+import { Ubuntu } from 'next/font/google'
+import { FaAngleRight } from "react-icons/fa"
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['500'], style: ['normal'] })
 const BreadCrumb = ({ title, link, current }) => {
     return (
         <>
-            <div className={`${styles?.breadcrumbContent} mt-5`}>
+            <div className={`${styles?.breadcrumbContent} container mt-5`}>
                 <div className={`${styles?.breadcrumb}`}>
                     <span className={`${styles?.breadcrumbItem}`}>
-                        <Link href={'/'} title={title}>{link}</Link>
+                        <Link href={'/'} className={ubuntu?.className} title={title}>{link}</Link>
                     </span>
-                    <span className={`${styles?.currentPage}`}>{current}</span>
+                    <span><FaAngleRight /></span>
+                    <span className={`${styles?.currentPage} ${ubuntu?.className}`}>{current}</span>
                 </div>
             </div>
         </>

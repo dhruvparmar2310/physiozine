@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../../styles/Hero.module.scss'
-import { Bebas_Neue, Teko, Roboto_Condensed } from 'next/font/google'
+import { Bebas_Neue, Teko, Roboto_Condensed, Ubuntu } from 'next/font/google'
 import Image from 'next/image'
 import { Button, Modal } from 'react-bootstrap'
-import BannerImg from '../../../public/assets/img/bannerImg.png'
+import BannerImg from '../../../public/assets/img/main-bg.png'
 import { useRouter } from 'next/router'
 import textLogo from '../../../public/assets/img/main-logo.png'
 import { motion } from 'framer-motion'
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['700'], style: ['normal'] })
 const Roboto_Condensed_Font = Roboto_Condensed({ subsets: ['latin'], weight: ['400', '500', '600', '700'], style: ['normal'] })
 // const Teko_Font = Teko({ subsets: ['latin'], weight: ['300', '400', '500', '600'], style: ['normal'] })
 
@@ -25,11 +26,10 @@ function Hero ({ width }) {
     return (
         <>
             <section className={`${styles?.hero}`} id='hero'>
-                <div className={`${styles?.heroContent}`}>
+                <div className={`${styles?.heroContent} container-sm`}>
                     <div className={`${styles?.adsContent}`}>
-                        <h1 data-heading='ISSN (Online)' className={`${Roboto_Condensed_Font?.className}`}></h1>
-                        <motion.div
-                            className={`styles?.mainLogo`}
+                        <motion.h1
+                            className={`${ubuntu?.className} mt-3`}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{
@@ -38,26 +38,31 @@ function Hero ({ width }) {
                                 ease: 'easeInOut', // easing function for a smoother animation
                             }}
                         >
-                            <Image
-                                src={textLogo}
-                                alt='PhysioTreends Logo'
-                                quality={100}
-                                className='img-fluid'
-                                priority
-                            />
-                        </motion.div>
-
+                            India's <span style={{ color: 'var(--primary-color)' }}>pioneering</span> digital magazine
+                        </motion.h1>
                         <motion.p
                             className={`${styles?.desc} ${Roboto_Condensed_Font?.className} mt-3`}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{
-                                delay: width ? 0 : 0.5, // delay the animation by 0.2 seconds
-                                duration: width ? 0.3 : 0.8, // animation duration of 0.8 seconds
+                                delay: width ? 0 : 0.8, // delay the animation by 0.2 seconds
+                                duration: width ? 0.3 : 1, // animation duration of 0.8 seconds
                                 ease: 'easeInOut', // easing function for a smoother animation
                             }}
                         >
-                            Read the latest research and empower your physiotherapy journey.
+                            for Physiotherapy, featuring <span style={{ color: 'var(--primary-dark)' }}>peer-reviewed</span> articles with <span style={{ color: 'var(--primary-dark)' }}>DOI</span>.
+                        </motion.p>
+                        <motion.p
+                            className={`${styles?.desc} ${Roboto_Condensed_Font?.className} mt-3`}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                delay: width ? 0 : 0.8, // delay the animation by 0.2 seconds
+                                duration: width ? 0.3 : 1, // animation duration of 0.8 seconds
+                                ease: 'easeInOut', // easing function for a smoother animation
+                            }}
+                        >
+                            <span style={{ color: 'var(--primary-dark)' }}>Read the latest research and empower your physiotherapy journey.</span>
                         </motion.p>
                     </div>
 

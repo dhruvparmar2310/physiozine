@@ -3,7 +3,6 @@
 
     .innerContent {
         text-align: justify;
-        font-family: 'Alice', serif;
         font-weight: 600;
         letter-spacing: 0.8px;
         word-spacing: 2.5px;
@@ -31,7 +30,8 @@
                 list-style: none;
 
                 strong {
-                    color: var(--primary-color);
+                    font-weight: 500;
+                    color: var(--primary-dark);
                 }
             }
         }
@@ -40,7 +40,6 @@
     .subTitle {
         text-align: center;
         font-size: 20px;
-        font-family: 'Titillium Web', sans-serif;
         font-weight: 600;
     }
 

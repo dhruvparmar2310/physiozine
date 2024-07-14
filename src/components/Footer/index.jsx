@@ -6,7 +6,9 @@ import { Form } from 'react-bootstrap'
 import { Controller, useForm } from 'react-hook-form'
 import logo from '../../../public/assets/img/footer-logo.png'
 import Image from 'next/image'
+import { Ubuntu } from 'next/font/google'
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 const Footer = () => {
     const { control, watch, handleSubmit, reset } = useForm({ mode: 'all' })
     const [userEmail, setUserEmail] = useState('');
@@ -135,32 +137,32 @@ const Footer = () => {
                         <div className={`${styles?.linkContent}`}>
                             <div className={`${styles?.footerLinksContent} mt-lg-4`}>
                                 <div className={`${styles.footer_links}`}>
-                                    <h4>Useful Links</h4>
+                                    <h4 className={ubuntu?.className}>Useful Links</h4>
                                     <ul>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/" title='Home | PhysioTrends'>Home</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/#about" title='About Us | PhysioTrends'>About us</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/articles" title='Our Latest Articles | PhysioTrends'>Latest Magazine</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/contact" title='Contact Us | PhysioTrends'>Contact</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/" title='Home | PhysioTrends' className={ubuntu?.className}>Home</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/#about" title='About Us | PhysioTrends' className={ubuntu?.className}>About us</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/articles" title='Our Latest Articles | PhysioTrends' className={ubuntu?.className}>Latest Magazine</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/contact" title='Contact Us | PhysioTrends' className={ubuntu?.className}>Contact</Link></li>
                                     </ul>
                                 </div>
 
                                 <div className={`${styles.footer_links}`}>
-                                    <h4>Quick Links</h4>
+                                    <h4 className={ubuntu?.className}>Quick Links</h4>
                                     <ul>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/articles" title='All Articles | PhysioTrends'>All Articles</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/advertise" title='Advertise with Us | PhysioTrends'>Advertisement</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/joinAsEditor" title='Join as Editor | PhysioTrends'>Join as Editor</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/eventPartner" title='Event Partner | PhysioTrends'>Event Partner</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/articles" title='All Articles | PhysioTrends' className={ubuntu?.className}>All Articles</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/advertise" title='Advertise with Us | PhysioTrends' className={ubuntu?.className}>Advertisement</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/joinAsEditor" title='Join as Editor | PhysioTrends' className={ubuntu?.className}>Join as Editor</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/eventPartner" title='Event Partner | PhysioTrends' className={ubuntu?.className}>Event Partner</Link></li>
                                     </ul>
                                 </div>
 
                                 <div className={`${styles.footer_links}`}>
-                                    <h4>Additional Links</h4>
+                                    <h4 className={ubuntu?.className}>Additional Links</h4>
                                     <ul>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/submit-your-article" title='Submit Article | PhysioTrends'>Submit Article</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/terms-and-conditions" title='Our Terms & Conditions | PhysioTrends'>Terms & Conditions</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/policy/privacyPolicy" title='Privacy Policy | PhysioTrends'>Privacy Policy</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/policy/editorialPolicy" title='Editorial Policy | PhysioTrends'>Editorial Policy</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/submit-your-article" title='Submit Article | PhysioTrends' className={ubuntu?.className}>Submit Article</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/terms-and-conditions" title='Our Terms & Conditions | PhysioTrends' className={ubuntu?.className}>Terms & Conditions</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/policy/privacyPolicy" title='Privacy Policy | PhysioTrends' className={ubuntu?.className}>Privacy Policy</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/policy/editorialPolicy" title='Editorial Policy | PhysioTrends' className={ubuntu?.className}>Editorial Policy</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -178,15 +180,15 @@ const Footer = () => {
 
                 <div className={`row ${styles?.footerCopyRight}`} style={{ display: 'flex !important', alignItems: 'center', justifyContent: 'center', alignContent: 'center', padding: '20px', margin: '0 auto' }}>
 
-                    <div className="col-lg-6 p-0">
-                        <div className={`${styles.copyright}`}>
-                            Copyright &copy; <span style={{ fontSize: '18px' }}>2024</span>, <strong style={{ color: 'var(--primary-color)' }}>PHYSIO<span style={{ color: '#ddd' }}>TRENDS</span></strong>. All Rights Reserved
+                    <div className="col-lg-8 p-0">
+                        <div className={`${styles.copyright} ${ubuntu?.className}`}>
+                            Copyright &copy; <span style={{ fontSize: '13px' }}>2024</span>, <strong style={{ color: 'var(--primary-color)' }}>PHYSIO<span style={{ color: '#ddd' }}>TRENDS</span></strong>. All Rights Reserved, Subject to Judiciary of Ahmedabad.
                         </div>
-                        <div className={styles.credits}>
+                        <div className={`${styles.credits} ${ubuntu?.className}`}>
                             Developed by <Link href="https://dhanparmar.netlify.app" target="_blank" title='Dhruv Parmar'>Dhruv Parmar</Link>
                         </div>
                     </div>
-                    <div className={`col-lg-6 p-0 ${styles.social_links}`} style={{ textAlign: 'end' }}>
+                    <div className={`col-lg-4 p-0 ${styles.social_links}`} style={{ textAlign: 'end' }}>
                         <Link href="https://www.linkedin.com/posts/physiotrends_physiotrends-linkedin-activity-7171034285615898625-nQlZ" target="_blank" className={styles.linkedin} title='LinkedIn | PhysioTrends'>
                             <FaLinkedinIn />
                         </Link>
