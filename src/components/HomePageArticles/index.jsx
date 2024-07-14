@@ -20,7 +20,18 @@ const HomePageArticles = () => {
         infinite: true,
         centerPadding: "60px",
         slidesToShow: 3,
-        speed: 500
+        speed: 500,
+        responsive: [
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,
+                    dots: false,
+                    centerPadding: "0",
+                }
+            }
+        ]
     };
     return (
         <>

@@ -118,7 +118,7 @@ export default function Home () {
         <Hero width={width} />
 
         <section id="associated" className={`${styles?.associated} py-0`}>
-          <h1 className={`sectionTitle text-center`} data-heading='Our International Association' title='Our International Association | PhysioTrends'></h1>
+          <h1 className={`sectionTitle text-center`} data-heading='Our International Educational Partner' title='Our International Association | PhysioTrends'></h1>
 
           <div className={`${styles?.innerContent}`}>
             <div className={`${styles?.leftSide} container`}>
@@ -182,7 +182,7 @@ export default function Home () {
                   </div>
                 </motion.div>
               </Col>
-              <Col lg={4} md={6} sm={12}>
+              <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
                 <motion.div
                   className={`${styles?.actionCard} ${ubuntu?.className}`}
                   ref={actionBarRef}
@@ -204,7 +204,7 @@ export default function Home () {
                   </div>
                 </motion.div>
               </Col>
-              <Col lg={4} md={6} sm={12}>
+              <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
                 <motion.div
                   className={`${styles?.actionCard} ${ubuntu?.className}`}
                   ref={actionBarRef}
@@ -305,6 +305,10 @@ export default function Home () {
                       <td className={`${styles?.dataValue}`}></td>
                     </tr>
                     <tr>
+                      <td>Founder</td>
+                      <td className={`${styles?.dataValue}`}>Dr. Darshan Parmar</td>
+                    </tr>
+                    <tr>
                       <td>Chief Editor</td>
                       <td className={`${styles?.dataValue}`} title="Dr. Jaspreet Kaur Kang | Chief Editor of PhysioTrends">Dr. Jaspreet Kaur Kang</td>
                     </tr>
@@ -364,14 +368,14 @@ export default function Home () {
                   <div className={`${styles?.dataLabel} ${ubuntu?.className}`}>Network</div>
                 </div>
               </Col>
-              <Col lg={4}>
+              <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
                 <div className={`${styles?.counterCard}`}>
                   <div><FaCity style={{ color: '#54ff72' }} /></div>
                   <div className={`${styles?.dataValue}`}>{cityCount}+</div>
                   <div className={`${styles?.dataLabel} ${ubuntu?.className}`}>City</div>
                 </div>
               </Col>
-              <Col lg={4}>
+              <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-3 mt-3">
                 <div className={`${styles?.counterCard}`}>
                   <div><FaUsers style={{ color: '#ff8fa3' }} /></div>
                   <div className={`${styles?.dataValue}`}>{teamCount}</div>
@@ -384,7 +388,7 @@ export default function Home () {
 
         <section id="magazines" className={`${styles?.articles}`}>
           <div className="container">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
               <h1 className={`sectionTitle ${ubuntu?.className}`} data-heading='Our Latest' title="Our Latest Research Articles | PhysioTrends">Articles</h1>
               <div className={`text-center mt-4 ${styles?.viewMoreBtn} ${ubuntu?.className}`}>
                 <span onClick={() => router.push('/articles')}>View More</span>

@@ -43,7 +43,7 @@ main {
 
   .associated {
     width: 100%;
-    background: #b9d5ff;
+    background: #9fc6ff;
     // margin-bottom: 25px;
     padding: 20px !important;
 
@@ -74,7 +74,6 @@ main {
           aspect-ratio: 3/2;
           object-fit: contain;
           mix-blend-mode: darken;
-          opacity: 0.6;
           transition: all 0.3s ease-in-out;
         }
       }
@@ -409,21 +408,36 @@ main {
 
 @media (max-width: 576px) {
   .about {
-    padding-top: 0 !important;
+    padding-top: 30px !important;
 
     .innerContent {
       .desc {
+        word-spacing: 1px !important;
         margin-top: 30px !important;
         font-size: 1.1rem !important;
+      }
+
+      .visionContent {
+        padding: 0px !important;
+
+        .card {
+          padding: 15px !important;
+        }
       }
     }
   }
 
-  .counter {
-    margin-bottom: 20px !important;
+  .articles {
+    padding: 30px !important;
 
+    .viewMoreBtn {
+      margin-top: 0 !important;
+    }
+  }
+
+  .counter {
     .innerContent {
-      padding: 25px 20px !important;
+      padding: 30px !important;
 
       h4:first-child {
         text-align: center;
@@ -471,13 +485,30 @@ main {
   .associated {
     .innerContent {
       .leftSide {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
         padding: 15px !important;
-        gap: 20px !important;
+        gap: 10px !important;
 
-        img {
-          width: 150px !important;
+        div {
+          padding: 0 !important;
+
+          img {
+            width: 150px !important;
+          }
         }
       }
+    }
+  }
+
+  .actionBar {
+    padding: 30px 30px;
+
+    h1 {
+      word-wrap: break-word;
+      letter-spacing: 0.5px !important;
+      line-height: 1.8rem;
+      font-size: 1.8rem !important;
     }
   }
 }

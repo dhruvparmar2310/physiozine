@@ -2,7 +2,9 @@ import React from 'react'
 import BreadCrumb from '@/components/BreadCrumb'
 import Head from 'next/head'
 import styles from '../styles/JoinAsInstructor.module.scss'
+import { Ubuntu } from 'next/font/google'
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const JoinAsInstructor = () => {
     return (
         <>
@@ -22,8 +24,8 @@ const JoinAsInstructor = () => {
 
             <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Join as Editor'} />
             <section className={`${styles?.joinAsInstructor}`}>
-                <div className={`${styles?.innerContent}`}>
-                    <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Join as Instructor</h1>
+                <div className={`${styles?.innerContent} container`}>
+                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Join as Instructor</h1>
                     <div className={`${styles?.line}`}></div>
 
                     <div className='mt-3'>
@@ -32,7 +34,7 @@ const JoinAsInstructor = () => {
                         </p>
                         <p>PhysioTrends is seeking dedicated physiotherapy professionals to join our team of online instructors. As a leader in digital physiotherapy education, we're looking for experts who are passionate about sharing their knowledge and advancing the field.</p>
 
-                        <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Why Teach with PhysioTrends?</h1>
+                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Why Teach with PhysioTrends?</h1>
                         <div className={`${styles?.line}`}></div>
 
                         <ul className='mt-3'>
@@ -47,7 +49,7 @@ const JoinAsInstructor = () => {
                             </li>
                         </ul>
 
-                        <h1 className={`sectionTitle ${styles?.sectionTitle}`}>What We're Looking For:</h1>
+                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>What We're Looking For:</h1>
                         <div className={`${styles?.line}`}></div>
 
                         <ul className='mt-3'>
@@ -65,7 +67,7 @@ const JoinAsInstructor = () => {
                             </li>
                         </ul>
 
-                        <h1 className={`sectionTitle ${styles?.sectionTitle}`}>As a PhysioTrends instructor, you'll play a crucial role in:</h1>
+                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>As a PhysioTrends instructor, you'll play a crucial role in:</h1>
                         <div className={`${styles?.line}`}></div>
 
                         <ul className='mt-3'>
