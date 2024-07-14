@@ -304,27 +304,28 @@
         padding-bottom: 0;
 
         .heroContent {
-            margin-top: 2rem;
+            margin-top: 1rem;
             flex-direction: column;
             row-gap: 30px;
 
             .adsContent {
-                padding: 10px 25px;
+                width: 100%;
+                padding: 10px 20px;
+                padding-top: 0 !important;
 
                 .subtitle {
                     font-size: 15px;
                 }
 
                 h1 {
-                    font-size: 37px;
-                    line-height: 2.5rem;
+                    font-size: 30px;
+                    line-height: 2rem;
                 }
 
                 .desc {
                     line-height: 1.2rem;
                     font-size: 18px;
                     letter-spacing: 0.5px;
-                    text-align: center;
                 }
 
                 .btnContent {

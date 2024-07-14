@@ -49,7 +49,7 @@ function Header () {
         transition={{ duration: 0.5 }}
       >
         <div className={`d-flex align-items-center ${styles.home}`}>
-          <div className={isNavExpanded ? `${styles.top_header}` : ``}>
+          <div className={isNavExpanded ? `${styles.top_header}` : `${styles.top_headerWeb}`}>
             <h1 className={`${styles.logo} mr-auto`} title={`PhysioTrends`}>
               <Link href='/' style={{ fontWeight: '500' }} passHref>
                 <Image src={TextLogo} alt='' quality={100} width={250} height={100} priority />
