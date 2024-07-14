@@ -5,7 +5,9 @@ import styles from '../styles/SupportUs.module.scss'
 import { Col, Form, Row } from 'react-bootstrap'
 import Image from 'next/image'
 import physioBrothersLogo from '../../public/assets/img/Clients/physiobrothers.png'
+import { Ubuntu } from 'next/font/google'
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const SupportUs = () => {
     return (
         <>
@@ -25,8 +27,8 @@ const SupportUs = () => {
 
             <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Support Us'} />
             <section className={`${styles?.supportUs}`}>
-                <div className={`${styles?.innerContent}`}>
-                    <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Support PhysioTrends</h1>
+                <div className={`${styles?.innerContent} container`}>
+                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Support PhysioTrends</h1>
                     <div className={`${styles?.line}`}></div>
 
                     <div className='mt-3'>
@@ -35,7 +37,7 @@ const SupportUs = () => {
                         </p>
                     </div>
 
-                    <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Financial Support</h1>
+                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Financial Support</h1>
                     <div className={`${styles?.line}`}></div>
 
                     <div className='mt-3'>
@@ -58,7 +60,7 @@ const SupportUs = () => {
                         </ul>
                     </div>
 
-                    <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Contribute to Our Magazine</h1>
+                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Contribute to Our Magazine</h1>
                     <div className={`${styles?.line}`}></div>
 
                     <div className='mt-3'>
@@ -89,7 +91,7 @@ const SupportUs = () => {
                         </p>
                     </div>
 
-                    <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Benefits You Get:</h1>
+                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Benefits You Get:</h1>
                     <div className={`${styles?.line}`}></div>
 
                     <div className='mt-3'>
@@ -142,8 +144,8 @@ const SupportUs = () => {
                     </div>
                 </div>
 
-                <div className={`${styles?.allSponsor}`}>
-                    <h1 className={`${styles?.subTitle}`}>Sponsor</h1>
+                <div className={`${styles?.allSponsor} container`}>
+                    <h1 className={`${styles?.subTitle} ${ubuntu?.className}`}>Sponsor</h1>
                     <div className={`${styles?.sponsorContent} mt-3`}>
                         <div className={`${styles?.sponsorImg}`}>
                             <Image

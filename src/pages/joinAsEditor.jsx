@@ -2,7 +2,9 @@ import React from 'react'
 import BreadCrumb from '@/components/BreadCrumb'
 import Head from 'next/head'
 import styles from '../styles/JoinAsEditor.module.scss'
+import { Ubuntu } from 'next/font/google'
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const JoinAsEditor = () => {
     return (
         <>
@@ -22,8 +24,8 @@ const JoinAsEditor = () => {
 
             <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Join as Editor'} />
             <section className={`${styles?.joinAsEditor}`}>
-                <div className={`${styles?.innerContent}`}>
-                    <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Join as Editor</h1>
+                <div className={`${styles?.innerContent} container`}>
+                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Join as Editor</h1>
                     <div className={`${styles?.line}`}></div>
 
                     <div className='mt-3'>

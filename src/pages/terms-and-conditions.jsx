@@ -2,7 +2,9 @@ import React from 'react'
 import BreadCrumb from '@/components/BreadCrumb'
 import Head from 'next/head'
 import styles from '../styles/TermsAndConditions.module.scss'
+import { Ubuntu } from 'next/font/google'
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const TermsAndConditions = () => {
     return (
         <>
@@ -16,9 +18,9 @@ const TermsAndConditions = () => {
             </Head>
 
             <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Terms & Conditions'} />
-            <section className={`${styles?.termsAndConditions} container`}>
-                <div className={`${styles?.innerContent}`}>
-                    <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Terms & Conditions</h1>
+            <section className={`${styles?.termsAndConditions}`}>
+                <div className={`${styles?.innerContent} container`}>
+                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='Kindly Read Our'>Terms & Conditions</h1>
                     <div className={`${styles?.line}`}></div>
 
                     <marquee behavior="" direction="" className={`${styles?.headLines}`}>PhysioTrends E-Magazine Article Submission Terms and Conditions</marquee>

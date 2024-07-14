@@ -2,7 +2,9 @@ import React from 'react'
 import BreadCrumb from '@/components/BreadCrumb'
 import Head from 'next/head'
 import styles from '../styles/JoinAsEditor.module.scss'
+import { Ubuntu } from 'next/font/google'
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const EventPartner = () => {
     return (<>
         <Head>
@@ -21,11 +23,11 @@ const EventPartner = () => {
 
         <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Event Partner'} />
         <section className={`${styles?.joinAsEditor}`}>
-            <div className={`${styles?.innerContent}`}>
-                <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Partner With Us</h1>
+            <div className={`${styles?.innerContent} container`}>
+                <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Partner With Us</h1>
                 <div className={`${styles?.line}`}></div>
 
-                <p>
+                <p className='mt-3'>
                     Are you a physiotherapy organization, clinic, or educational institution looking to expand your reach and impact? Partner with PhysioTrends to co-host engaging events that elevate the physiotherapy profession and provide valuable learning opportunities for our community.
                 </p>
                 <p>As an event partner, you'll have the chance to:</p>

@@ -3,7 +3,6 @@
 
     .contactContent {
         text-align: justify;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-weight: 600;
 
         .sectionTitle {
@@ -22,6 +21,7 @@
         .notes {
             display: block;
             color: #d93e3e;
+            font-weight: 500;
 
             a {
                 text-decoration: none;
@@ -68,6 +68,11 @@
 
             p {
                 line-height: 18px;
+
+                strong {
+                    font-weight: 500;
+                    color: var(--primary-dark);
+                }
             }
         }
 
@@ -89,7 +94,6 @@
 
             .formContent {
                 margin: auto 0;
-                font-family: 'Alice', serif;
                 font-weight: 500;
                 letter-spacing: 0.5px;
 
@@ -105,7 +109,6 @@
 
                         &::placeholder {
                             color: var(--secondary-400);
-                            font-family: 'Alice', serif;
                             letter-spacing: 0.5px;
                             font-weight: 600;
                         }
@@ -117,7 +120,6 @@
                         color: var(--white-color);
                         border-radius: 50px;
                         padding: 10px 20px;
-                        font-family: 'Alice', sans-serif;
                         word-spacing: 2px;
                         font-weight: 500;
                         transition: 0.5s;

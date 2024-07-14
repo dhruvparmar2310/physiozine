@@ -1,100 +1,62 @@
-.magazine {
-    margin: 0 auto;
-    max-width: 300px;
+.articleCard {
+    background: var(--white-color);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 305px;
+    min-width: fit-content;
+    margin: 0 5px;
 
-    .magazineCard {
-        display: block;
-        width: 300px;
-        height: 400px;
-        background: #002e33;
-        background: linear-gradient(45deg, #002e33 0%, var(--primary-dark) 50%, var(--primary-color) 100%);
-        margin-top: 50px;
+    &:hover {
+        .cardImg img {
+            transform: scale(1.05);
+        }
+    }
+
+    .cardImg {
+        width: 100%;
+        height: 320px;
         overflow: hidden;
-        transition: 0.5s;
-        cursor: pointer;
 
-        .magazineImg {
-            overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            // object-fit: cover;
+            transition: 0.5s ease-in-out;
+        }
+    }
 
-            img {
-                width: 100%;
-                height: 360px;
-                transition: 0.5s;
-            }
+    .cardBody {
+        padding: 15px;
+        text-align: left;
+
+        h1 {
+            color: var(--primary-color) !important;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
         }
 
-        .cardTitle {
+        p {
+            color: rgb(132, 132, 132) !important;
+            font-size: 15px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .downloadBtn {
+            border: none;
+            border-radius: 99px;
+            font-size: 14px;
             padding: 5px 10px;
-            text-align: center;
+            font-weight: 500;
+            letter-spacing: 0.5px;
             color: var(--white-color);
-            // z-index: 20 !important;
-            font-weight: 600;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-    }
+            background: rgb(0, 110, 131);
+            background: linear-gradient(200deg, rgb(12, 111, 131) 35%, rgb(36, 205, 239) 100%);
 
-    .prevBtn {
-        svg {
-            background: var(--primary-dark) !important;
-            border-radius: 50%;
-            padding: 10px;
-            font-size: 2.5rem;
-            position: absolute;
-            left: -50px;
-        }
-    }
-
-    .nextBtn {
-        svg {
-            background: var(--primary-dark) !important;
-            border-radius: 50%;
-            padding: 10px;
-            font-size: 2.5rem;
-            position: absolute;
-            right: -50px;
-        }
-    }
-}
-
-@media (max-width: 576px) {
-    .magazine {
-        max-width: 300px;
-
-        .prevBtn {
             svg {
-                left: -15px !important;
-            }
-        }
-
-        .nextBtn {
-            svg {
-                right: -15px !important;
-            }
-        }
-    }
-}
-
-// very large display
-@media (min-width: 1400px) and (max-width: 1950px) {
-    .magazine {
-        max-width: 500px;
-
-        .carousel {
-            width: 500px !important;
-        }
-
-        .magazineCard {
-            width: 500px !important;
-            height: 650px;
-
-            .magazineImg {
-                img {
-                    height: 580px !important;
-                }
-            }
-
-            .cardTitle {
-                font-size: 2.2rem;
+                font-size: 12px !important;
             }
         }
     }

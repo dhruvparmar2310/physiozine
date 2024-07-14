@@ -7,7 +7,6 @@ const GoogleReviews = ({ placeId }) => {
         const fetchReviews = async () => {
             try {
                 const response = await fetch(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=AIzaSyAzA0Xl-hB73qa5RpvC8OeV87XIVrMzE3o`);
-                console.log('response :>> ', response);
                 if (!response.ok) {
                     throw new Error('Failed to fetch reviews');
                 }

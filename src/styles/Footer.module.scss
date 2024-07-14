@@ -15,11 +15,10 @@
         h4 {
             font-size: 1rem;
             font-weight: 500;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
             color: #fff;
             position: relative;
             padding-bottom: 12px;
-            font-family: 'Alice', serif;
         }
 
         .footerContent {
@@ -32,18 +31,16 @@
                 h3 {
                     a {
                         font-size: 2rem;
-                        font-family: 'Alice', serif;
                         margin: 0 0 10px 0;
                         padding: 2px 0 2px 0;
                         line-height: 1;
                         font-weight: 500;
-                        letter-spacing: 1px;
+                        letter-spacing: 1.5px;
                         color: var(--primary-color);
                         text-decoration: none;
 
                         span {
                             font-weight: 500;
-                            font-family: 'Alice', serif;
                             color: whitesmoke;
                         }
                     }
@@ -113,17 +110,14 @@
                         line-height: 22px !important;
                         margin-bottom: 0;
                         color: rgba(255, 255, 255, 0.7);
-                        font-family: 'Alice', serif;
                         font-weight: 400;
                         letter-spacing: 0.3px;
                     }
 
                     span {
-                        font-family: 'Alice', serif;
 
                         a {
                             color: gray;
-                            font-family: 'Alice', serif;
                             font-weight: 500;
                             text-decoration: none;
 
@@ -166,8 +160,7 @@
                                 line-height: 1;
                                 text-decoration: none;
                                 font-weight: 500;
-                                letter-spacing: 0.5px;
-                                font-family: 'Alice', serif;
+                                letter-spacing: 1.5px;
 
                                 &:hover {
                                     text-decoration: none;
@@ -209,12 +202,10 @@
 
 .footer {
     .copyright {
-        font-family: 'Alice', serif;
         font-weight: 500;
         letter-spacing: 0.8px;
 
         strong {
-            font-family: 'Alice', serif;
             font-weight: 500;
         }
     }
@@ -225,7 +216,6 @@
 }
 
 .footer .credits {
-    font-family: 'Alice', serif;
     letter-spacing: 0.8px;
 
     a {

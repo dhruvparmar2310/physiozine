@@ -3,8 +3,11 @@
 
     .innerContent {
         text-align: justify;
-        font-family: 'Alice', serif;
         font-weight: 600;
+
+        .subHeading {
+            font-family: 'Ubuntu';
+        }
 
         .sectionTitle {
             text-align: left;
@@ -25,7 +28,6 @@
 
         .headLines {
             color: var(--black-color);
-            font-family: 'Alice', serif;
             font-weight: 600;
             letter-spacing: 0.8px;
         }

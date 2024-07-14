@@ -76,7 +76,7 @@ function Articles ({ data, router }) {
         <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Articles'} />
         <section className={`${styles?.articles} container`}>
           <div className={`${styles?.articlesContent}`}>
-            <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Our Articles</h1>
+            <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='Read'>Our Articles</h1>
             <div className={`${styles?.line}`}></div>
 
             <div className={`${styles?.contentBody}`}>
@@ -160,7 +160,7 @@ function Articles ({ data, router }) {
                                       </div>
                                     </Fragment>
                                   )
-                                }) : <span className={`text-center ${ubuntu?.className}`}>Coming Soon (June 2024)</span>}
+                                }) : <span className={`text-center ${ubuntu?.className}`}>Coming Soon</span>}
                               </Row>
                             </div>
                           </div>

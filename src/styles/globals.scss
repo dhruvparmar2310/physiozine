@@ -1,15 +1,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alice&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 body {
-  font-family: 'Titillium Web', sans-serif;
-  // font-family: 'Alice', serif;
   color: #4d4643;
   position: relative;
 
@@ -28,14 +22,24 @@ body {
   }
 }
 
+.slider-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slick-slide {
+  padding: 20px;
+  text-align: center;
+}
+
 
 html {
   scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
-  width: 0.60rem;
-  background-color: var(--primary-dark);
+  width: 0.30rem;
+  background-color: var(--primary-light);
   border-radius: 0.5rem;
 }
 
@@ -71,7 +75,7 @@ h6 {
 }
 
 :root {
-  --primary-color: #4ab3bc;
+  --primary-color: #009dfe;
   --primary-light: #b4eef3;
   --primary-dark: #227e89;
   --white-color: #fff;
@@ -94,12 +98,13 @@ section {
   box-sizing: border-box;
 
   .sectionTitle {
-    text-align: center;
-    font-size: 3rem;
-    font-family: 'Alice', serif;
-    font-weight: 500;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
     line-height: 2.2rem;
-    color: var(--primary-dark);
+    color: var(--primary-color);
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
 
     &::before {
       content: attr(data-heading);
@@ -108,9 +113,11 @@ section {
       top: 5px;
       font-size: 1.2rem;
       font-weight: 700 !important;
-      color: var(--black-color);
-      font-family: 'Titillium Web', sans-serif;
+      color: var(--primary-dark);
+      font-family: 'Ubuntu';
+      text-transform: capitalize;
       text-shadow: none;
+      letter-spacing: 0.5px;
     }
   }
 }

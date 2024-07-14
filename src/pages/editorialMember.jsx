@@ -4,7 +4,9 @@ import BreadCrumb from '@/components/BreadCrumb'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Accordion, Card, Col, Row } from 'react-bootstrap'
+import { Ubuntu } from 'next/font/google'
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const EditorialMember = ({ data }) => {
     const founders = data?.members?.filter(item => item?.type === 'Founder')
     const chiefEditor = data?.members?.find(item => item?.type === 'ChiefEditor')
@@ -32,7 +34,7 @@ const EditorialMember = ({ data }) => {
             <section className={`${styles?.editorialMember} container`}>
                 <div className={`accordion accordion-flush mt-3`} id='main-accordion'>
                     <div className={`accordion-item`}>
-                        <h2 className={`accordion-header`} id={`flush-heading-1`} title='Founders of PhysioTrends | PhysioTrends'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-1`} title='Founders of PhysioTrends | PhysioTrends'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-1`} aria-expanded="true" aria-controls={`flush-collapse-1`}>
                                 Founders / Patron
                             </button>
@@ -49,16 +51,16 @@ const EditorialMember = ({ data }) => {
                                                             <Image src={founder?.profile} alt={founder?.name + 'profile'} quality={100} width={100} height={100} priority />
                                                         </div>
                                                         <div className={`${styles?.memberCardBody}`}>
-                                                            <h3 className={`${styles?.doctorName}`}>{founder?.name}</h3>
-                                                            <span className={`${styles?.occupation}`}>{founder?.occupation || ''}</span>
+                                                            <h3 className={`${styles?.doctorName} ${ubuntu?.className}`}>{founder?.name}</h3>
+                                                            <span className={`${styles?.occupation} ${ubuntu?.className}`}>{founder?.occupation || ''}</span>
                                                             <ul>
-                                                                <li className={`${styles?.details}`}>{founder?.education}</li>
-                                                                <li className={`${styles?.details}`}>{founder?.designation}</li>
+                                                                <li className={`${styles?.details} ${ubuntu?.className}`}>{founder?.education}</li>
+                                                                <li className={`${styles?.details} ${ubuntu?.className}`}>{founder?.designation}</li>
                                                                 <li className={`${styles?.details}`}>
                                                                     {typeof founder?.role === 'string' ? '' : founder?.role?.map((item, i) => {
                                                                         return (
                                                                             <React.Fragment key={i}>
-                                                                                <p className='mb-1'>{item}</p>
+                                                                                <p className={`mb-1 ${ubuntu?.className}`}>{item}</p>
                                                                             </React.Fragment >
                                                                         )
                                                                     })}
@@ -78,7 +80,7 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header`} id={`flush-heading-2`} title='Chief Editor of PhysioTrends | PhysioTrends'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-2`} title='Chief Editor of PhysioTrends | PhysioTrends'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-2`} aria-expanded="false" aria-controls={`flush-collapse-2`}>
                                 Chief Editor
                             </button>
@@ -92,16 +94,16 @@ const EditorialMember = ({ data }) => {
                                                 <Image src={chiefEditor?.profile} alt={chiefEditor?.name + 'profile'} quality={100} width={100} height={100} priority />
                                             </div>
                                             <div className={`${styles?.memberCardBody}`}>
-                                                <h3 className={`${styles?.doctorName}`}>{chiefEditor?.name}</h3>
-                                                <span className={`${styles?.occupation}`}>{chiefEditor?.occupation || ''}</span>
+                                                <h3 className={`${styles?.doctorName} ${ubuntu?.className}`}>{chiefEditor?.name}</h3>
+                                                <span className={`${styles?.occupation} ${ubuntu?.className}`}>{chiefEditor?.occupation || ''}</span>
                                                 <ul>
-                                                    <li className={`${styles?.details}`}>{chiefEditor?.education}</li>
-                                                    <li className={`${styles?.details}`}>{chiefEditor?.designation}</li>
+                                                    <li className={`${styles?.details} ${ubuntu?.className}`}>{chiefEditor?.education}</li>
+                                                    <li className={`${styles?.details} ${ubuntu?.className}`}>{chiefEditor?.designation}</li>
                                                     <li className={`${styles?.details}`}>
                                                         {typeof chiefEditor?.role === 'string' ? '' : chiefEditor?.role?.map((item, i) => {
                                                             return (
                                                                 <React.Fragment key={i}>
-                                                                    <p className='mb-1'>{item}</p>
+                                                                    <p className={`mb-1 ${ubuntu?.className}`}>{item}</p>
                                                                 </React.Fragment >
                                                             )
                                                         })}
@@ -118,7 +120,7 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header`} id={`flush-heading-3`} title='Associate Editors of PhysioTrends | PhysioTrends'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-3`} title='Associate Editors of PhysioTrends | PhysioTrends'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-3`} aria-expanded="false" aria-controls={`flush-collapse-3`}>
                                 Associate Editors
                             </button>
@@ -135,16 +137,16 @@ const EditorialMember = ({ data }) => {
                                                             <Image src={editors?.profile} alt={editors?.name + 'profile'} quality={100} width={100} height={100} priority />
                                                         </div>
                                                         <div className={`${styles?.memberCardBody}`}>
-                                                            <h3 className={`${styles?.doctorName}`}>{editors?.name}</h3>
-                                                            <span className={`${styles?.occupation}`}>{editors?.occupation || ''}</span>
+                                                            <h3 className={`${styles?.doctorName} ${ubuntu?.className}`}>{editors?.name}</h3>
+                                                            <span className={`${styles?.occupation} ${ubuntu?.className}`}>{editors?.occupation || ''}</span>
                                                             <ul>
-                                                                <li className={`${styles?.details}`}>{editors?.education}</li>
-                                                                <li className={`${styles?.details}`}>{editors?.designation}</li>
+                                                                <li className={`${styles?.details} ${ubuntu?.className}`}>{editors?.education}</li>
+                                                                <li className={`${styles?.details} ${ubuntu?.className}`}>{editors?.designation}</li>
                                                                 <li className={`${styles?.details}`}>
                                                                     {typeof editors?.role === 'string' ? '' : editors?.role?.map((item, i) => {
                                                                         return (
                                                                             <React.Fragment key={i}>
-                                                                                <p className='mb-1'>{item}</p>
+                                                                                <p className={`mb-1 ${ubuntu?.className}`}>{item}</p>
                                                                             </React.Fragment >
                                                                         )
                                                                     })}
@@ -164,7 +166,7 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header`} id={`flush-heading-4`} title='Advisory Members of PhysioTrends | PhysioTrends'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-4`} title='Advisory Members of PhysioTrends | PhysioTrends'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-4`} aria-expanded="false" aria-controls={`flush-collapse-4`}>
                                 Advisory Members
                             </button>
@@ -181,16 +183,16 @@ const EditorialMember = ({ data }) => {
                                                             <Image src={members?.profile} alt={members?.name + 'profile'} quality={100} width={100} height={100} priority />
                                                         </div>
                                                         <div className={`${styles?.memberCardBody}`}>
-                                                            <h3 className={`${styles?.doctorName}`}>{members?.name}</h3>
-                                                            <span className={`${styles?.occupation}`}>{members?.occupation || ''}</span>
+                                                            <h3 className={`${styles?.doctorName} ${ubuntu?.className}`}>{members?.name}</h3>
+                                                            <span className={`${styles?.occupation} ${ubuntu?.className}`}>{members?.occupation || ''}</span>
                                                             <ul>
-                                                                <li className={`${styles?.details}`}>{members?.education}</li>
-                                                                <li className={`${styles?.details}`}>{members?.designation}</li>
+                                                                <li className={`${styles?.details} ${ubuntu?.className}`}>{members?.education}</li>
+                                                                <li className={`${styles?.details} ${ubuntu?.className}`}>{members?.designation}</li>
                                                                 <li className={`${styles?.details}`}>
                                                                     {typeof members?.role === 'string' ? '' : members?.role?.map((item, i) => {
                                                                         return (
                                                                             <React.Fragment key={i}>
-                                                                                <p className='mb-1'>{item}</p>
+                                                                                <p className={`mb-1 ${ubuntu?.className}`}>{item}</p>
                                                                             </React.Fragment >
                                                                         )
                                                                     })}
@@ -210,7 +212,7 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header`} id={`flush-heading-5`} title='Editors of PhysioTrends | PhysioTrends'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-5`} title='Editors of PhysioTrends | PhysioTrends'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-5`} aria-expanded="false" aria-controls={`flush-collapse-5`}>
                                 Editors
                             </button>
@@ -227,16 +229,16 @@ const EditorialMember = ({ data }) => {
                                                             <Image src={editors?.profile} alt={editors?.name + 'profile'} quality={100} width={100} height={100} priority />
                                                         </div>
                                                         <div className={`${styles?.memberCardBody}`}>
-                                                            <h3 className={`${styles?.doctorName}`}>{editors?.name}</h3>
-                                                            <span className={`${styles?.occupation}`}>{editors?.occupation || ''}</span>
+                                                            <h3 className={`${styles?.doctorName} ${ubuntu?.className}`}>{editors?.name}</h3>
+                                                            <span className={`${styles?.occupation} ${ubuntu?.className}`}>{editors?.occupation || ''}</span>
                                                             <ul>
-                                                                <li className={`${styles?.details}`}>{editors?.education}</li>
-                                                                <li className={`${styles?.details}`}>{editors?.designation}</li>
+                                                                <li className={`${styles?.details} ${ubuntu?.className}`}>{editors?.education}</li>
+                                                                <li className={`${styles?.details} ${ubuntu?.className}`}>{editors?.designation}</li>
                                                                 <li className={`${styles?.details}`}>
                                                                     {typeof editors?.role === 'string' ? '' : editors?.role?.map((item, i) => {
                                                                         return (
                                                                             <React.Fragment key={i}>
-                                                                                <p className='mb-1'>{item}</p>
+                                                                                <p className={`mb-1 ${ubuntu?.className}`}>{item}</p>
                                                                             </React.Fragment >
                                                                         )
                                                                     })}
@@ -256,7 +258,7 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header`} id={`flush-heading-6`} title='Reviewers of PhysioTrends | PhysioTrends'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-6`} title='Reviewers of PhysioTrends | PhysioTrends'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-6`} aria-expanded="false" aria-controls={`flush-collapse-6`}>
                                 Reviewers
                             </button>
@@ -273,16 +275,16 @@ const EditorialMember = ({ data }) => {
                                                             <Image src={reviewers?.profile} alt={reviewers?.name + 'profile'} quality={100} width={100} height={100} priority />
                                                         </div>
                                                         <div className={`${styles?.memberCardBody}`}>
-                                                            <h3 className={`${styles?.doctorName}`}>{reviewers?.name}</h3>
-                                                            <span className={`${styles?.occupation}`}>{reviewers?.occupation || ''}</span>
+                                                            <h3 className={`${styles?.doctorName} ${ubuntu?.className}`}>{reviewers?.name}</h3>
+                                                            <span className={`${styles?.occupation} ${ubuntu?.className}`}>{reviewers?.occupation || ''}</span>
                                                             <ul>
-                                                                <li className={`${styles?.details}`}>{reviewers?.education}</li>
-                                                                <li className={`${styles?.details}`}>{reviewers?.designation}</li>
+                                                                <li className={`${styles?.details} ${ubuntu?.className}`}>{reviewers?.education}</li>
+                                                                <li className={`${styles?.details} ${ubuntu?.className}`}>{reviewers?.designation}</li>
                                                                 <li className={`${styles?.details}`}>
                                                                     {typeof reviewers?.role === 'string' ? '' : reviewers?.role?.map((item, i) => {
                                                                         return (
                                                                             <React.Fragment key={i}>
-                                                                                <p className='mb-1'>{item}</p>
+                                                                                <p className={`mb-1 ${ubuntu?.className}`}>{item}</p>
                                                                             </React.Fragment >
                                                                         )
                                                                     })}

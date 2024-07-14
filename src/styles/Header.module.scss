@@ -1,8 +1,12 @@
 .header {
-    background: var(--white-color) !important;
+    background: transparent !important;
     transition: all 0.5s;
     z-index: 997;
     padding: 0px 0;
+    backdrop-filter: blur(20px);
+}
+
+.headerScrolled {
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.187);
 }
 
@@ -29,7 +33,7 @@
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 25px;
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -50,7 +54,8 @@
 }
 
 .logo img {
-    max-height: 45px;
+    max-height: 40px;
+    object-fit: contain;
 }
 
 /*--------------------------------------------------------------
@@ -61,7 +66,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 8px 20px;
 }
 
 .nav_menu {
@@ -88,16 +93,30 @@
     display: block;
     position: relative;
     color: #111;
-    transition: 0.3s;
-    font-size: 1.15rem;
-    text-transform: capitalize;
+    font-size: 14px;
+    text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.8px;
     text-decoration: none;
-    font-family: 'Alice', serif;
+
+    &.homeSvg {
+        svg {
+            font-size: 25px !important;
+        }
+    }
 
     &.active {
         color: var(--primary-color);
+
+        &::after {
+            content: '';
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-color);
+            top: -8px;
+        }
     }
 }
 
@@ -105,6 +124,16 @@
 .nav_menu .active>a,
 .nav_menu li:hover>a {
     color: var(--primary-color);
+
+    &::after {
+        content: '';
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: var(--primary-color);
+        top: -8px;
+    }
 }
 
 .drop_down ul {
@@ -142,6 +171,16 @@
     text-transform: none;
     color: #111;
     letter-spacing: 0.3mm;
+    border: none !important;
+
+    &.active {
+        color: var(--primary-color);
+
+        &::after {
+            width: 0%;
+            height: 0%;
+        }
+    }
 }
 
 .dropDownButton {
@@ -154,6 +193,11 @@
 .nav_menu .drop_down ul .active>a,
 .nav_menu .drop_down ul li:hover>a {
     color: var(--primary-color);
+
+    &::after {
+        width: 0%;
+        height: 0%;
+    }
 }
 
 .nav_menu .drop_down .drop_down ul {

@@ -11,7 +11,9 @@ import openAccessLogo from '../../public/assets/img/webAvailability/Open_Access_
 import openAireLogo from '../../public/assets/img/webAvailability/OpenAire_Logo.jpg'
 import readwhereLogo from '../../public/assets/img/webAvailability/readwhere.jpg'
 import Image from 'next/image'
+import { Ubuntu } from 'next/font/google'
 
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const SubmitYourArticle = () => {
    return (
       <>
@@ -25,9 +27,9 @@ const SubmitYourArticle = () => {
          </Head>
 
          <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Submit Your Article'} />
-         <section className={`${styles?.submitYourArticle} container`}>
-            <div className={`${styles?.innerContent}`}>
-               <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Submission Guidelines for PhysioTrends Magazine</h1>
+         <section className={`${styles?.submitYourArticle}`}>
+            <div className={`${styles?.innerContent} container`}>
+               <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Submission Guidelines for PhysioTrends Magazine</h1>
                <div className={`${styles?.line}`}></div>
 
                <p className='mt-3'>
@@ -143,7 +145,7 @@ const SubmitYourArticle = () => {
                   </p>
                </div>
 
-               <h1 className={`sectionTitle ${styles?.sectionTitle}`}>Why PhysioTrends?</h1>
+               <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Why PhysioTrends?</h1>
                <div className={`${styles?.line}`}></div>
 
                <div className={`${styles?.whyUs}`}>
@@ -176,7 +178,7 @@ const SubmitYourArticle = () => {
                </div>
 
                <div className={`${styles.webAvailable}`}>
-                  <h1 className={`sectionTitle`} data-heading='Major Index' title="Major Index | PhysioTrends"></h1>
+                  <h1 className={`sectionTitle text-center`} data-heading='Major Index' title="Major Index | PhysioTrends"></h1>
                   <div className={`${styles?.innerContent} mt-4`}>
                      <div className={`${styles?.logoContent}`}>
                         <Image src={googleLogo} alt="" quality={100} priority />
