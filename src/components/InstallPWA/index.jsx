@@ -1,5 +1,6 @@
 import { Ubuntu } from 'next/font/google';
 import { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 import { FaDownload } from "react-icons/fa6"
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
@@ -32,8 +33,8 @@ const InstallPWA = () => {
   }
 
   return (
-    <button
-      className={`install-button ${ubuntu?.className}`}
+    <Button
+      className={`btn install-button ${ubuntu?.className}`}
       id="setup_button"
       aria-label="Install app"
       title="Install app"
@@ -42,7 +43,7 @@ const InstallPWA = () => {
       <span>
         <FaDownload />
       </span> Install App
-    </button>
+    </Button>
   );
 };
 

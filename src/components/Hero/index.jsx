@@ -9,7 +9,7 @@ import textLogo from '../../../public/assets/img/main-logo.png'
 import { motion } from 'framer-motion'
 import InstallPWA from '../InstallPWA'
 
-const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['700'], style: ['normal'] })
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const Roboto_Condensed_Font = Roboto_Condensed({ subsets: ['latin'], weight: ['400', '500', '600', '700'], style: ['normal'] })
 // const Teko_Font = Teko({ subsets: ['latin'], weight: ['300', '400', '500', '600'], style: ['normal'] })
 
@@ -17,6 +17,10 @@ function Hero ({ width }) {
     const router = useRouter()
     const [mobile, setMobile] = useState(null)
     const [modal, setModal] = useState(false)
+
+    const handleSubscriptionBtn = () => {
+        router.push('https://eepurl.com/iTQNZg')
+    }
 
     useEffect(() => {
         if (window?.innerWidth < 576) {
@@ -66,18 +70,32 @@ function Hero ({ width }) {
                             <span style={{ color: 'var(--primary-dark)' }}>Read the latest research and empower your physiotherapy journey.</span>
                         </motion.p>
 
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{
-                                delay: width ? 0 : 0.8, // delay the animation by 0.2 seconds
-                                duration: width ? 0.3 : 1, // animation duration of 0.8 seconds
-                                ease: 'easeInOut', // easing function for a smoother animation
-                            }}
-                            className='mt-3'
-                        >
-                            <InstallPWA />
-                        </motion.div>
+                        <div className='d-flex'>
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{
+                                    delay: width ? 0 : 0.8, // delay the animation by 0.2 seconds
+                                    duration: width ? 0.3 : 1, // animation duration of 0.8 seconds
+                                    ease: 'easeInOut', // easing function for a smoother animation
+                                }}
+                                className='mt-3 me-3'
+                            >
+                                <Button className={`btn ${styles?.subscribeBtn} ${ubuntu?.className}`} onClick={() => handleSubscriptionBtn()}>Subscribe Now</Button>
+                            </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{
+                                    delay: width ? 0 : 0.8, // delay the animation by 0.2 seconds
+                                    duration: width ? 0.3 : 1, // animation duration of 0.8 seconds
+                                    ease: 'easeInOut', // easing function for a smoother animation
+                                }}
+                                className='mt-3'
+                            >
+                                <InstallPWA />
+                            </motion.div>
+                        </div>
                     </div>
 
                     <motion.div

@@ -56,6 +56,12 @@
                 color: var(--dark-color);
                 text-wrap: wrap;
             }
+
+            .subscribeBtn {
+                border-radius: 99px;
+                font-weight: 500 !important;
+                font-size: 15px;
+            }
         }
 
         .imgContent {
@@ -265,6 +271,7 @@
 
                 .btnContent {
                     padding: 0;
+
 
                     .readMoreBtn {
                         padding: 8px 20px;
