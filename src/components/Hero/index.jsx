@@ -7,6 +7,7 @@ import BannerImg from '../../../public/assets/img/main-bg.png'
 import { useRouter } from 'next/router'
 import textLogo from '../../../public/assets/img/main-logo.png'
 import { motion } from 'framer-motion'
+import InstallPWA from '../InstallPWA'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['700'], style: ['normal'] })
 const Roboto_Condensed_Font = Roboto_Condensed({ subsets: ['latin'], weight: ['400', '500', '600', '700'], style: ['normal'] })
@@ -64,6 +65,19 @@ function Hero ({ width }) {
                         >
                             <span style={{ color: 'var(--primary-dark)' }}>Read the latest research and empower your physiotherapy journey.</span>
                         </motion.p>
+
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                delay: width ? 0 : 0.8, // delay the animation by 0.2 seconds
+                                duration: width ? 0.3 : 1, // animation duration of 0.8 seconds
+                                ease: 'easeInOut', // easing function for a smoother animation
+                            }}
+                            className='mt-3'
+                        >
+                            <InstallPWA />
+                        </motion.div>
                     </div>
 
                     <motion.div
@@ -75,7 +89,6 @@ function Hero ({ width }) {
                         <Image src={BannerImg} quality={100} width={100} priority height={100} className={`${styles?.phoneMockUp}`} />
                     </motion.div>
                 </div >
-
             </section >
 
             <Modal show={modal} onHide={() => setModal(false)} id='add-article' size='lg'>
