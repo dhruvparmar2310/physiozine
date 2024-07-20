@@ -99,39 +99,10 @@ const Footer = () => {
                             </h3>
 
                             <div className={`${styles.line}`}></div>
-                            <div className={`${styles.subscribeSection}`}>
-                                <Form onSubmit={handleSubmit(onSubscribe)}>
 
-                                    {/* <span>
-                                    Enter your email address, to subscribe to our newsletter, & recieve the latest updates.
-                                </span> */}
-                                    <Form.Group>
-                                        <Controller
-                                            name='emailAddress'
-                                            control={control}
-                                            rules={{ required: { value: true, message: 'Subject to discuss is required.' } }}
-                                            render={({ field: { onChange, value, ref } }) => (
-                                                <Form.Control
-                                                    type="text"
-                                                    ref={ref}
-                                                    value={value}
-                                                    onChange={(e) => {
-                                                        setUserEmail(e.target.value)
-                                                        onChange(e)
-                                                    }}
-                                                    name='emailAddress'
-                                                    placeholder="Enter your email address"
-                                                    className="form-control"
-                                                />
-                                            )}
-                                        />
-                                    </Form.Group>
-
-                                    <div className={`${styles.subsBtn}`}>
-                                        <button className={`btn btn-info`} disabled={watch('emailAddress') === undefined} type='submit'>Subscribe</button>
-                                    </div>
-                                </Form>
-                            </div>
+                            <p className={ubuntu?.className}>
+                                Advancing Physiotherapy through Knowledge & Innovation
+                            </p>
                         </div>
 
                         <div className={`${styles?.linkContent}`}>
@@ -176,7 +147,7 @@ const Footer = () => {
                         </div>
 
                     </div>
-                </div>
+                </div >
 
                 <div className={`row ${styles?.footerCopyRight}`} style={{ display: 'flex !important', alignItems: 'center', justifyContent: 'center', alignContent: 'center', padding: '20px', margin: '0 auto' }}>
 
@@ -200,7 +171,7 @@ const Footer = () => {
                         </Link>
                     </div>
                 </div>
-            </footer>
+            </footer >
         </>
     )
 }

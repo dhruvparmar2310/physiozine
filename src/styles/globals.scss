@@ -94,10 +94,10 @@ h6 {
 # Progressive Web App
 --------------------------------------------------------------*/
 .install-button {
-  background: var(--primary-color);
+  background: var(--primary-dark) !important;
   padding: 8px 20px;
   border: none;
-  border-radius: 99px;
+  border-radius: 99px !important;
   font-size: 15px;
   color: var(--white-color);
   font-weight: 500;
