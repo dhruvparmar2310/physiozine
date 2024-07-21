@@ -29,6 +29,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import { BsGlobeCentralSouthAsia } from "react-icons/bs";
 import { FaCity, FaUsers } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6"
+import PaymentForm from "@/components/PaymentForm";
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500', '700'], style: ['normal'] })
 const inter = Inter({ subsets: ["latin"] });
@@ -116,6 +117,8 @@ export default function Home () {
       </Head>
       <main className={`${styles.mainLayout}`}>
         <Hero width={width} />
+
+        <PaymentForm />
 
         <section id="associated" className={`${styles?.associated} py-0`}>
           <h1 className={`sectionTitle text-center`} data-heading='Our International Educational Partner' title='Our International Association | PhysioTrends'></h1>
