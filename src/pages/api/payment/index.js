@@ -11,7 +11,7 @@ export default function handler (req, res) {
             },
             order_meta: {
               payment_methods: "cc,dc,upi",
-              notify_url: "https://webhook.site/bb201c66-0f59-468f-aaf0-c19c7b4cb0ed"
+              notify_url: "https://webhook.site/99f719b8-0357-42a2-ad27-eea33f55f258",
             },
             order_id: 'ORID' + Date.now(),
             order_amount: 1,
@@ -19,8 +19,9 @@ export default function handler (req, res) {
           };
           
           const config = {
-            method: 'post',
-            url: 'https://api.cashfree.com/pg/orders',
+            method: 'POST',
+            // url: 'https://sandbox.cashfree.com/pg/orders', // test
+            url: 'https://api.cashfree.com/pg/orders', // prod
             headers: { 
               'accept': 'application/json', 
               'content-type': 'application/json', 
@@ -33,14 +34,12 @@ export default function handler (req, res) {
           
           axios.request(config)
             .then(function (response) {
-              console.log(response.data);
-              
               return res.status(200).send(response.data.payment_session_id)
             })
             .catch(function (error) {
               console.log('%cAxios Error ::', 'color: red',error);
             });
       } catch (err) {
-        res.status(500).json({ error: 'failed to load members data' })
+        res.status(500).send({ message: 'failed to load session id' })
       }
 }

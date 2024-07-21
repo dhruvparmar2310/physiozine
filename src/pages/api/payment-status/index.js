@@ -1,5 +1,5 @@
 export default function handler (req, res) {
-    console.log('req :>> ', req);
+    console.log('payment status :: ', req);
     const order_id = req.params.order_id
     try {
         // res.status(200).json({ members })

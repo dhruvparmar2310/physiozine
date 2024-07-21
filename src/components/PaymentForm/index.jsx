@@ -12,19 +12,28 @@ const PaymentForm = () => {
         e.preventDefault()
         axios.post('api/payment', { version })
             .then((res) => {
-                setSessionId(res.data)
-                res.data && handlePayment()
+                console.log('res :>> ', res.data);
+                if (res.status === 200) {
+                    setSessionId(res.data)
+                    // setTimeout(() => {
+                    //     handlePayment()
+                    // }, 2000)
+                }
             })
             .catch((err) => {
                 console.log('%c[Error]: Session ID :: ', 'color: red', err)
             })
     }
-    const handlePayment = () => {
+    const handlePayment = async (e) => {
+        e.preventDefault()
+        console.log('sessionId :>> ', sessionId);
         let checkoutOptions = {
-            paymentSessionId: sessionId,
-            returnUrl: process.env.DEPLY + "/api/payment-status/{order_id}",
+            paymentSessionId: await sessionId,
+            // returnUrl: 'https://t8j4snd7-3000.inc1.devtunnels.ms' + "/api/payment-status/{order_id}",
+            returnUrl: 'https://physiotrends-stag.vercel.app' + "/api/payment-status/{order_id}",
         }
         cashfree.checkout(checkoutOptions).then(function (result) {
+            console.log('result :>> ', result);
             if (result.error) {
                 alert(result.error.message)
             }
@@ -36,6 +45,8 @@ const PaymentForm = () => {
     return (
         <div>
             <Button onClick={(e) => getSessionId(e)}>Get Session ID</Button>
+            <h1>Session ID: {sessionId}</h1>
+            <Button onClick={(e) => handlePayment(e)}>Pay Now</Button>
         </div>
     )
 }
