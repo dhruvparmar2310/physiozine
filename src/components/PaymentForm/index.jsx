@@ -30,7 +30,7 @@ const PaymentForm = () => {
         let checkoutOptions = {
             paymentSessionId: await sessionId,
             // returnUrl: 'https://t8j4snd7-3000.inc1.devtunnels.ms' + "/api/payment-status/{order_id}",
-            returnUrl: 'https://physiotrends-stag.vercel.app' + "/api/payment-status/{order_id}",
+            returnUrl: 'https://physiotrends-stag-git-stag-dhan-parmars-projects.vercel.app' + "/api/payment-status/{order_id}",
         }
         cashfree.checkout(checkoutOptions).then(function (result) {
             console.log('result :>> ', result);
