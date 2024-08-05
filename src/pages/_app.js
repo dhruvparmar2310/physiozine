@@ -56,7 +56,7 @@ export default function App({ Component, pageProps }) {
   }, [router.events])
   return (
     <>
-      {/* {isLoading && <LoadingScreen className={isLoading ? "logoLoading" : ""} />} */}
+      {isLoading && <LoadingScreen className={isLoading ? "logoLoading" : ""} />}
       <ToastContainer stacked />
       <Header />
       <Component {...pageProps} />

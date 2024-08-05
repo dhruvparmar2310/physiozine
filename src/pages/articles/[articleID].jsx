@@ -58,7 +58,7 @@ function ArticleID ({ data }) {
                     </div>
 
                     <article>
-                        <div dangerouslySetInnerHTML={{ __html: articleData?.sContent }} className={`${ubuntu?.className} mt-4 ${styles.magazineHTML}`} />
+                        <div dangerouslySetInnerHTML={{ __html: articleData?.sContent }} className={`mt-4 ${styles.magazineHTML}`} />
                     </article>
 
                     <div className={`${styles.goBackBtn}`}>
