@@ -176,6 +176,32 @@ section {
   }
 }
 
+// article inner page [vol - 1, issue - 3]
+article {
+  h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .volOneIssueThreeImg {
+    img {
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      aspect-ratio: 3/2;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+  }
+
+  .history {
+    li {
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
 // small (mobile or Tablet)
 @media (min-width: 576px) and (max-width: 768px) {
   section {
