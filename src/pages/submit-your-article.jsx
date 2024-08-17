@@ -12,9 +12,15 @@ import openAireLogo from '../../public/assets/img/webAvailability/OpenAire_Logo.
 import readwhereLogo from '../../public/assets/img/webAvailability/readwhere.jpg'
 import Image from 'next/image'
 import { Ubuntu } from 'next/font/google'
+import { FaDownload } from 'react-icons/fa'
+import { saveAs } from 'file-saver'
+import sUrl from '../../public/assets/pdfs/Author_Information.pdf'
+import { Button } from 'react-bootstrap'
+import { useRouter } from 'next/router'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const SubmitYourArticle = () => {
+   const router = useRouter()
    return (
       <>
          <Head>
@@ -31,6 +37,18 @@ const SubmitYourArticle = () => {
             <div className={`${styles?.innerContent} container`}>
                <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Submission Guidelines for PhysioTrends Magazine</h1>
                <div className={`${styles?.line}`}></div>
+
+               <div className={`${styles?.actions} ${ubuntu?.className}`}>
+                  <span><strong>Note: Fill up the form and Mail us along with your Article</strong></span>
+
+                  <span variant='dark' size='sm' onClick={() => saveAs(sUrl, 'Author_Information')}>
+                     <span className={`${styles?.logo}`}><FaDownload /></span> <span>Download PDF</span>
+                  </span>
+
+                  <span>
+                     <Button className={`btn ${styles?.subscribeBtn} ${ubuntu?.className}`} onClick={() => router.push('https://eepurl.com/iTQNZg')}>Subscribe</Button>
+                  </span>
+               </div>
 
                <p className='mt-3'>
                   PhysioTrends welcomes submissions of original articles, case studies, research papers, and other content related to the field of physiotherapy. To submit your manuscript, please follow these guidelines:
