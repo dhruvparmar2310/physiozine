@@ -17,6 +17,7 @@ import { saveAs } from 'file-saver'
 import sUrl from '../../public/assets/pdfs/Author_Information.pdf'
 import { Button } from 'react-bootstrap'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const SubmitYourArticle = () => {
@@ -32,7 +33,7 @@ const SubmitYourArticle = () => {
             <link rel="icon" href="assets/img/favicon.jpg" />
          </Head>
 
-         <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Submit Your Article'} />
+         <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Guidelines'} />
          <section className={`${styles?.submitYourArticle}`}>
             <div className={`${styles?.innerContent} container`}>
                <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Submission Guidelines for PhysioTrends Magazine</h1>
@@ -125,8 +126,7 @@ const SubmitYourArticle = () => {
                         <p>Submission Process</p>
                         <ul>
                            <li>
-                              <span>Submit your manuscript through the online submission system at mail id "<strong>
-                                 physiotrendsmagazine@gmail.com</strong>"</span>
+                              <span>Submit your manuscript through the online submission system - <span><Link href={'/submissionForm'}>Click Here to Submit article</Link></span></span>
                            </li>
                            <li>
                               <span>Upload your manuscript file(s) and any supplementary materials (e.g., figures, tables, additional files).</span>

@@ -7,7 +7,7 @@ import Hero from "@/components/Hero";
 import HomePageArticles from "@/components/HomePageArticles";
 import { articles } from "@/data/articles";
 import articleImg from '../../public/assets/img/magazines/vol1_issue1.jpg'
-import { Button, Col, Row, Table } from "react-bootstrap";
+import { Button, Col, Row, Table, Container } from "react-bootstrap";
 import { useRouter } from "next/router";
 import { ToastContainer } from "react-toastify";
 import googleLogo from '../../public/assets/img/webAvailability/Google-Logo.png'
@@ -18,6 +18,8 @@ import zenodoLogo from '../../public/assets/img/webAvailability/zenodo.png'
 import openAccessLogo from '../../public/assets/img/webAvailability/Open_Access_logo.png'
 import openAireLogo from '../../public/assets/img/webAvailability/OpenAire_Logo.jpg'
 import readwhereLogo from '../../public/assets/img/webAvailability/readwhere.jpg'
+import rgLogo from '../../public/assets/img/webAvailability/researchgate.png'
+import linkedinLogo from '../../public/assets/img/webAvailability/Linkedin-Logo.png'
 import { members } from "@/data/editorialMembers";
 import physiothonline from '../../public/assets/img/associated/physioth-online.jpeg'
 import smartPT from '../../public/assets/img/associated/smart-pt.jpeg'
@@ -170,13 +172,35 @@ export default function Home () {
                   transition={{ duration: width ? 0.5 : 1, ease: 'easeInOut' }}
                 >
                   <div className={`${styles?.cardHeader}`}>
-                    <h5 className={`${ubuntu?.className}`}>Call for Publication</h5>
+                    <h5 className={`${ubuntu?.className}`}>Submit Your Article</h5>
+                  </div>
+                  <div className={`${styles?.cardBody}`}>
+                    <p className={`${ubuntu?.className}`}>Submit your articles details for further process.</p>
+                    <span>
+                      <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('/submissionForm')}>
+                        <span className="me-1">Submit</span> <span><FaArrowRight /></span>
+                      </Button>
+                    </span>
+                  </div>
+                </motion.div>
+              </Col>
+              <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
+                <motion.div
+                  className={`${styles?.actionCard} ${ubuntu?.className}`}
+                  ref={actionBarRef}
+                  variants={fadeUpAnimation}
+                  initial="hidden"
+                  animate={controls}
+                  transition={{ duration: width ? 0.5 : 1, ease: 'easeInOut' }}
+                >
+                  <div className={`${styles?.cardHeader}`}>
+                    <h5 className={`${ubuntu?.className}`}>Guidelines</h5>
                   </div>
                   <div className={`${styles?.cardBody}`}>
                     <p className={`${ubuntu?.className}`}>Submit your Research Article, Case Study for publication.</p>
                     <span>
-                      <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('/submit-your-article')}>
-                        <span className="me-1">Submit</span> <span><FaArrowRight /></span>
+                      <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('/guidelines')}>
+                        <span className="me-1">View Now</span> <span><FaArrowRight /></span>
                       </Button>
                     </span>
                   </div>
@@ -204,7 +228,7 @@ export default function Home () {
                   </div>
                 </motion.div>
               </Col>
-              <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
+              <Col lg={4} md={6} sm={12} className="mt-lg-3 mt-md-0 mt-3">
                 <motion.div
                   className={`${styles?.actionCard} ${ubuntu?.className}`}
                   ref={actionBarRef}
@@ -401,27 +425,48 @@ export default function Home () {
         <section id="webAvailable" className={`${styles?.webAvailable}`}>
           <h1 className={`sectionTitle text-center`} data-heading='Major Index' title="Major Index | PhysioTrends"></h1>
 
-          <div className={`${styles?.innerContent} mt-4`}>
+          <div className={`${styles?.innerContent} container mt-4`}>
             <div className={`${styles?.logoContent}`}>
-              <Image src={googleLogo} alt="" quality={100} priority />
-              <Image src={googleScholarLogo} alt="" quality={100} priority />
-              <Image src={magzterLogo} alt="" quality={100} priority />
-              <Image src={doiLogo} alt="" quality={100} priority />
-              <Image src={zenodoLogo} alt="" quality={100} priority />
-              <Image src={openAccessLogo} alt="" quality={100} priority />
-              <Image src={openAireLogo} alt="" quality={100} priority />
-              <Image src={readwhereLogo} alt="" quality={100} priority />
+              <Container className='text-center'>
+                <Row>
+                  <Col>
+                    <Image src={googleLogo} alt="" quality={100} priority />
+                  </Col>
+                  <Col>
+                    <Image src={googleScholarLogo} alt="" quality={100} priority />
+                  </Col>
+                  <Col>
+                    <Image src={magzterLogo} alt="" quality={100} priority />
+                  </Col>
+                  <Col>
+                    <Image src={doiLogo} alt="" quality={100} priority />
+                  </Col>
+                </Row>
+                <Row className='mt-2'>
+                  <Col>
+                    <Image src={zenodoLogo} alt="" quality={100} priority />
+                  </Col>
+                  <Col>
+                    <Image src={openAccessLogo} alt="" quality={100} priority />
+                  </Col>
+                  <Col>
+                    <Image src={openAireLogo} alt="" quality={100} priority />
+                  </Col>
+                  <Col>
+                    <Image src={readwhereLogo} alt="" quality={100} priority />
+                  </Col>
+                </Row>
+                <Row className='mt-2'>
+                  <Col>
+                    <Image src={rgLogo} alt="" quality={100} priority />
+                  </Col>
+                  <Col>
+                    <Image src={linkedinLogo} alt="" quality={100} priority />
+                  </Col>
+                </Row>
+              </Container>
             </div>
-            <div className={`${styles?.logoContent}`}>
-              <Image src={googleLogo} alt="" quality={100} priority />
-              <Image src={googleScholarLogo} alt="" quality={100} priority />
-              <Image src={magzterLogo} alt="" quality={100} priority />
-              <Image src={doiLogo} alt="" quality={100} priority />
-              <Image src={zenodoLogo} alt="" quality={100} priority />
-              <Image src={openAccessLogo} alt="" quality={100} priority />
-              <Image src={openAireLogo} alt="" quality={100} priority />
-              <Image src={readwhereLogo} alt="" quality={100} priority />
-            </div>
+
           </div>
         </section>
       </main>

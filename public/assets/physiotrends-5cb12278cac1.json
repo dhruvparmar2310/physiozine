@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "physiotrends",
+  "private_key_id": "5cb12278cac1172581fb3b2d0b9c7398ebc9f653",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQDY3vlf/g7s5pCe\nh6bo0iqsjqS33G5rkCiBdU6oDOgkH3IWlOpCsqOH5EfAy84KMqPbisG7xtZCg2cY\np4g15G0YCio4OudtnPHQdySUWEdjDfylkQQqVfuQRGdXsOUjrc6CFtI19XG8f7RP\nWVoQtTnSyZYaRJ5f1Zr8nfgpab2r/hHkvJo/P6Blq7jixDWSNK+QdR2fBsaM2uVu\nBrm0lTJaR2mP7ogGYmnBRWLpTDrBi8omntBrBngqypuYsCT2sRUueB+tsJAfp5+B\neJeMhM+Jd5z50ptBzzlXmEr3weIG/EXGhF5A/ZzK8pmTDHqQZ5GAYBp9aFZ/P3y4\nomix+ahDAgMBAAECggEABJHVlryGLJovHju4lO9O6B3AuFBMvmi1D1QJdEEMcfF8\nmtq+lOkzoYlmeacMy3QPjpgWgeDddpgYEZHYmTZqqcDb2Qmfx/vN/w8hKeGBFbop\naedh4sdoG70t3JUCjco21x+BhJLHaOUWvbLTDhXXLmE9VMGYdyx8wWSwRLj4IT3A\nj4wvIsGivdsyWm4Rhhih/tJIOmNFFhLgpJZRQ0Eds9XVdTeFaDvtaxT6P4K/TPPD\n5oCnEjdsOw/7vtXpOWoK2rrQWJR/YUq031aGRajDNN6fmMRpFmPWIGhzD4dTWfro\nm0BCIf0//kEwEdjBkiFUmRp7WhzndRnvLVSyzNMfAQKBgQD2zo3omDCGsi+aEoBU\nXd887+voNALNv6kQqsGF3lfF9XRY9Xa5bON0zSL8+D5fxC4djUiS9hRIsxO2M+bC\nJk6DmDIAOCZHwgJfz6BIECe187j62K8oytJc3QyvlZDc/aWbBAH7Ki1liamQVuRk\nxi0tnH/GWdPFd84FcsYUs1TnxQKBgQDg8vbPSDpYT+5kRetq7YueplwYJVjyRyew\nA3aK0Xa+TKsCsLQgU+L8UxAR1Gf471X8mzsU/wlKKI8TBGwrfsf+rWiTa/jV5SFe\nO15X82qD5FmkLoqwk59GePvntV8H/RywsOT7itXH1OqonYsow004qH79RPV5KAp0\njpxq/C1IZwJ/BNID84cFa5wPUfMKjptGwOnusZpSc7JKmwi6vuKY1ET3AMXKi9SU\nnLNk+4vdrAEo5WrdAAHOY50bxXM+Doyw++D9GQP/u2cOpNBpUP7/x437DussgJ91\nfFrU5JkHO0m48k4hu8YXHOSTaz5HN7CnMTzdQgJ/IFw2qeST+dOG1QKBgDZskio0\nX2lebV71S6/jKRSJS17MKmjzrjZ3oAaWBxSjl/xepDXuFczWi9zEdyNTRIqJRBIg\nYi7/AR6ow0MCuYB0lAiW5u1ZMmmKE5lT20FtzgJbAFMYZEC4pLm6t/NG2dol8kCp\npm9ipCOHelOybMx4d8DvHjTh6yWoG1AHEy2hAoGBAO9m0co9YlJg0HLUzGuJKaEd\n4mjmYpsXMdf7Xyk34AlKn1jzf/b7lKU+54HxgTrvGSreEQfww5E4N2Pk6RO/KRVi\nsVNJcPPRF79OGyolU6TAc9K3O7oXjURDwGej6uwDTueqMNYoxJsbbJ7f1kIxc467\nUcMN6W9rxdAFMl6YM/zG\n-----END PRIVATE KEY-----\n",
+  "client_email": "physiotrends@physiotrends.iam.gserviceaccount.com",
+  "client_id": "114892155518259602168",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/physiotrends%40physiotrends.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
