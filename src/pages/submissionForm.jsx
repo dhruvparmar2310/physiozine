@@ -3,7 +3,7 @@ import BreadCrumb from '@/components/BreadCrumb'
 import Head from 'next/head'
 import styles from '../styles/ArticleForm.module.scss'
 import { Ubuntu } from 'next/font/google'
-import { Button, Col, Form, Row, Spinner } from 'react-bootstrap'
+import { Button, Col, Container, Form, Row, Spinner } from 'react-bootstrap'
 import { Controller, useFieldArray, useForm } from 'react-hook-form'
 import AuthorCard from '@/components/AuthorCard'
 import Select from 'react-select'
@@ -11,6 +11,19 @@ import { saveAs } from 'file-saver'
 import sUrl from '../../public/assets/pdfs/Author_Information.pdf'
 import { FaDownload } from 'react-icons/fa'
 import { useState } from 'react'
+import Image from 'next/image'
+import googleLogo from '../../public/assets/img/webAvailability/Google-Logo.png'
+import googleScholarLogo from '../../public/assets/img/webAvailability/google-scholar.jpg'
+import magzterLogo from '../../public/assets/img/webAvailability/magzter_logo.png'
+import doiLogo from '../../public/assets/img/webAvailability/DOI_logo.png'
+import zenodoLogo from '../../public/assets/img/webAvailability/zenodo.png'
+import openAccessLogo from '../../public/assets/img/webAvailability/Open_Access_logo.png'
+import openAireLogo from '../../public/assets/img/webAvailability/OpenAire_Logo.jpg'
+import readwhereLogo from '../../public/assets/img/webAvailability/readwhere.jpg'
+import rgLogo from '../../public/assets/img/webAvailability/researchgate.png'
+import linkedinLogo from '../../public/assets/img/webAvailability/Linkedin-Logo.png'
+import physiothonline from '../../public/assets/img/associated/physioth-online.jpeg'
+import smartPT from '../../public/assets/img/associated/smart-pt.jpeg'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500', '700'], style: ['normal'] })
 const SubmissionForm = () => {
@@ -418,7 +431,7 @@ const SubmissionForm = () => {
                                     </Col>
 
                                     <Col lg={12} className='mt-3'>
-                                        <div className='d-flex align-item-center'>
+                                        <div className={styles?.signatureForm}>
                                             <Form.Label className='me-5'>Upload Author Information Form <span className='text-danger'>*</span></Form.Label>
                                             <Button variant='dark' size='sm' onClick={() => saveAs(sUrl, 'Author_Information')}>
                                                 <span className={`${styles?.logo}`}><FaDownload /></span> <span>Download Form</span>
@@ -500,6 +513,50 @@ const SubmissionForm = () => {
                                 If you encounter any issues while submitting your article, please contact our customer care at <span style={{ color: 'var(--primary-color)' }}>+91 7984377792</span> or email us at <span style={{ color: 'var(--primary-color)' }}>physiotrendsmagazine@gmail.com</span> for assistance.
                             </em>
                         </p>
+                    </div>
+
+                    <div className={`${styles?.innerContent} container mt-4`}>
+                        <div className={`${styles?.logoContent}`}>
+                            <Container className='text-center'>
+                                <Row>
+                                    <Col>
+                                        <Image src={googleLogo} alt="" quality={100} priority />
+                                    </Col>
+                                    <Col>
+                                        <Image src={googleScholarLogo} alt="" quality={100} priority />
+                                    </Col>
+                                    <Col>
+                                        <Image src={magzterLogo} alt="" quality={100} priority />
+                                    </Col>
+                                    <Col>
+                                        <Image src={doiLogo} alt="" quality={100} priority />
+                                    </Col>
+                                </Row>
+                                <Row className='mt-2'>
+                                    <Col>
+                                        <Image src={zenodoLogo} alt="" quality={100} priority />
+                                    </Col>
+                                    <Col>
+                                        <Image src={openAccessLogo} alt="" quality={100} priority />
+                                    </Col>
+                                    <Col>
+                                        <Image src={openAireLogo} alt="" quality={100} priority />
+                                    </Col>
+                                    <Col>
+                                        <Image src={readwhereLogo} alt="" quality={100} priority />
+                                    </Col>
+                                </Row>
+                                <Row className='mt-2'>
+                                    <Col>
+                                        <Image src={rgLogo} alt="" quality={100} priority />
+                                    </Col>
+                                    <Col>
+                                        <Image src={linkedinLogo} alt="" quality={100} priority />
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+
                     </div>
                 </div>
             </section>

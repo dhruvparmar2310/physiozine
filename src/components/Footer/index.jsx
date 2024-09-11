@@ -130,7 +130,7 @@ const Footer = () => {
                                 <div className={`${styles.footer_links}`}>
                                     <h4 className={ubuntu?.className}>Additional Links</h4>
                                     <ul>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/guidelines" title='Submit Article | PhysioTrends' className={ubuntu?.className}>Submit Article</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/submissionForm" title='Submit Article | PhysioTrends' className={ubuntu?.className}>Submit Article</Link></li>
                                         <li><i className="ri-arrow-right-s-line"></i> <Link href="/terms-and-conditions" title='Our Terms & Conditions | PhysioTrends' className={ubuntu?.className}>Terms & Conditions</Link></li>
                                         <li><i className="ri-arrow-right-s-line"></i> <Link href="/policy/privacyPolicy" title='Privacy Policy | PhysioTrends' className={ubuntu?.className}>Privacy Policy</Link></li>
                                         <li><i className="ri-arrow-right-s-line"></i> <Link href="/policy/editorialPolicy" title='Editorial Policy | PhysioTrends' className={ubuntu?.className}>Editorial Policy</Link></li>

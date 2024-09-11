@@ -197,7 +197,7 @@ export default function Home () {
                     <h5 className={`${ubuntu?.className}`}>Guidelines</h5>
                   </div>
                   <div className={`${styles?.cardBody}`}>
-                    <p className={`${ubuntu?.className}`}>Submit your Research Article, Case Study for publication.</p>
+                    <p className={`${ubuntu?.className}`}>Guidelines for Paper Publication.</p>
                     <span>
                       <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('/guidelines')}>
                         <span className="me-1">View Now</span> <span><FaArrowRight /></span>
@@ -370,7 +370,7 @@ export default function Home () {
                     </tr>
                     <tr>
                       <td>Address</td>
-                      <td className={`${styles?.dataValue}`} title='Contact Us | Address of PhysioTrends'>PhysioTrends, Kuldevi Krupa, Sahkar Society, Street No.3, Sahkar Main Road, Bhaktinagar, Rajkot - 360002</td>
+                      <td className={`${styles?.dataValue}`} title='Contact Us | Address of PhysioTrends'>PhysioTrends, Aatishya 100, Nr. Lubi Corporate Road, Oppo. Tulsi Status, Ahmedabad, Gujarat - 382470</td>
                     </tr>
                   </tbody>
                 </Table>
