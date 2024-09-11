@@ -195,7 +195,7 @@ const SubmitYourArticle = () => {
                   </ul>
                </div>
 
-               <div className={`${styles.webAvailable}`}>
+               {/* <div className={`${styles.webAvailable}`}>
                   <h1 className={`sectionTitle text-center`} data-heading='Major Index' title="Major Index | PhysioTrends"></h1>
                   <div className={`${styles?.innerContent} mt-4`}>
                      <div className={`${styles?.logoContent}`}>
@@ -219,7 +219,7 @@ const SubmitYourArticle = () => {
                         <Image src={readwhereLogo} alt="" quality={100} priority />
                      </div>
                   </div>
-               </div>
+               </div> */}
             </div>
          </section>
       </>
