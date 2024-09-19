@@ -27,7 +27,8 @@ const EditorialMember = ({ data }) => {
                 <meta property="og:url" content="https://physiotrends.vercel.app/editorialMember" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
-                <link rel="icon" href="assets/img/favicon.jpg" />
+                <link rel="icon" href="assets/img/favicon.png" />
+                <link rel="manifest" href="/manifest.json" />
             </Head>
 
             <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Editorial Members'} />

@@ -15,13 +15,21 @@ import { Ubuntu } from 'next/font/google'
 import { FaDownload } from 'react-icons/fa'
 import { saveAs } from 'file-saver'
 import sUrl from '../../public/assets/pdfs/Author_Information.pdf'
-import { Button } from 'react-bootstrap'
+import { Button, Table } from 'react-bootstrap'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const SubmitYourArticle = () => {
    const router = useRouter()
+
+   const columns = ["Article Type", "Abstract - Word Count", "Article - Word Count", "Publication Charge"]
+   const data = [
+      { _id: 0, sTitle: 'Research Article', sAbsCount: '150 - 250', sArticleCount: 'Max. 1500', sCharge: 'FREE' },
+      { _id: 1, sTitle: 'Case Report', sAbsCount: '150 - 250', sArticleCount: 'Max. 1500', sCharge: 'FREE' },
+      { _id: 2, sTitle: 'Case Series', sAbsCount: '150 - 250', sArticleCount: 'Max. 1500', sCharge: 'FREE' },
+      { _id: 3, sTitle: 'Blogs', sAbsCount: '-', sArticleCount: 'Max. 1500', sCharge: 'FREE' }
+   ]
    return (
       <>
          <Head>
@@ -36,130 +44,138 @@ const SubmitYourArticle = () => {
          <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Guidelines'} />
          <section className={`${styles?.submitYourArticle}`}>
             <div className={`${styles?.innerContent} container`}>
-               <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Submission Guidelines for PhysioTrends Magazine</h1>
+               <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Author Guidelines</h1>
                <div className={`${styles?.line}`}></div>
 
-               <div className={`${styles?.actions} ${ubuntu?.className}`}>
-                  <span><strong>Note: Fill up the form and Mail us along with your Article</strong></span>
+               <div className={`mt-2 ${styles?.contentInfo}`}>
+                  <h1 className={ubuntu?.className}>1. Aim and Scope</h1>
+                  <p>
+                     Physiotrends Magazine is a peer-reviewed, open-access publication dedicated to disseminating innovative research, case studies, and reviews in the field of physiotherapy. We aim to bridge the gap between research and clinical practice by providing insights into the latest trends, techniques, and evidence-based practices in physiotherapy. We welcome contributions from practitioners, researchers, and scholars across various related disciplines.
+                  </p>
 
-                  <span variant='dark' size='sm' onClick={() => saveAs(sUrl, 'Author_Information')}>
-                     <span className={`${styles?.logo}`}><FaDownload /></span> <span>Download PDF</span>
-                  </span>
+                  <h1 className={ubuntu?.className}>2. Editorial Process</h1>
+                  <p>
+                     A manuscript submitted to Physiotrends Magazine will be considered for publication on the condition that it is exclusively under review by our publication and has not been previously published, submitted elsewhere, or accepted for publication.
+                  </p>
+                  <p>
+                     Upon submission, our editorial team evaluates all manuscripts. Those that lack originality, exhibit significant scientific or technical flaws, or fail to convey a meaningful contribution may be rejected prior to formal peer review. Manuscripts deemed suitable for publication will be sent to two or more expert reviewers.
+                  </p>
+                  <p>
+                     Each manuscript is assigned to an editorial team member who will make the final decision based on reviewer feedback. The comments and recommendations (acceptance, rejection, or required revisions) from the reviewers will be communicated to the corresponding author. If necessary, authors may be asked to provide a detailed response to the reviewers' comments and submit a revised manuscript.
+                  </p>
+                  <p>
+                     Accepted manuscripts will undergo copy editing for grammar, punctuation, style, and formatting. The entire process, from manuscript submission to final decision and proof approval, is conducted online and typically takes about <strong>15 days to 1 month</strong>.
+                  </p>
+                  <p>
+                     Please note that communication regarding manuscripts is restricted to the Editor-in-Chief and Editor only; other editorial team members are not permitted to engage with authors directly.
+                  </p>
 
-                  <span>
-                     <Button className={`btn ${styles?.subscribeBtn} ${ubuntu?.className}`} onClick={() => router.push('https://eepurl.com/iTQNZg')}>Subscribe</Button>
-                  </span>
-               </div>
+                  <h1 className={ubuntu?.className}>3. General Guidelines</h1>
+                  <div>
+                     <ul>
+                        <li><span>Font: Times New Roman</span></li>
+                        <li><span>Formatting: A4</span></li>
+                        <li><span>Page Numbering: Consecutively starting from the title page</span></li>
+                        <li>
+                           <span>Structure:</span>
+                           <ul>
+                              <li><span>Title page</span></li>
+                              <li><span>Photo of Author(s)</span></li>
+                              <li><span>Designation and email id of Author(s)</span></li>
+                              <li><span>Abstract (if applicable)</span></li>
+                              <li><span>Keywords</span></li>
+                              <li><span>Main text (Introduction, Materials and Methods, Results, Discussion)</span></li>
+                              <li><span>Acknowledgments (if applicable)</span></li>
+                              <li><span>Declaration of Interest (if applicable)</span></li>
+                              <li><span>References</span></li>
+                              <li><span>Appendices (if applicable)</span></li>
+                              <li><span>Tables and Figures (each on a separate page)</span></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
 
-               <p className='mt-3'>
-                  PhysioTrends welcomes submissions of original articles, case studies, research papers, and other content related to the field of physiotherapy. To submit your manuscript, please follow these guidelines:
-               </p>
+                  <h1 className={ubuntu?.className}>4. Manuscript Preparation</h1>
+                  <p>
+                     Abstract: A structured abstract (up to 250 words) with subheadings: Objectives, Methods, Findings, Novelty. (if applicable)<br />
+                     Keywords: 3-6 keywords.
+                  </p>
+                  <p>
+                     <strong>Sections:</strong><br />
+                     Introduction: Context and objectives.<br />
+                     Materials and Methods: Detailed methodology with citations.<br />
+                     Results: Clear presentation of findings, avoiding duplication in figures and tables.<br />
+                     Discussion: Analysis of results and significance.<br />
+                     Conclusion: Brief summary and future research suggestions.<br />
+                     Acknowledgments: Recognize contributions and funding sources.<br />
+                     References: Formatted numerically and listed alphabetically by first author.
+                  </p>
 
-               <div className={`${styles.pointsContent}`}>
-                  <ol>
-                     <li>
-                        <p>Content and Topics</p>
+                  <Table responsive bordered striped>
+                     <thead>
+                        <tr>
+                           {columns?.map((item, index) => {
+                              return (
+                                 <React.Fragment key={index}>
+                                    <td>{item}</td>
+                                 </React.Fragment>
+                              )
+                           })}
+                        </tr>
+                     </thead>
+                     <tbody>
+                        {data?.map(item => {
+                           return (
+                              <tr key={item?._id}>
+                                 <td>{item?.sTitle}</td>
+                                 <td className='text-center'>{item?.sAbsCount}</td>
+                                 <td className='text-center'>{item?.sArticleCount}</td>
+                                 <td className='text-center'>{item?.sCharge}</td>
+                              </tr>
+                           )
+                        })}
+                     </tbody>
+                  </Table>
 
-                        <ul>
-                           <li>
-                              <span>
-                                 Manuscripts should focus on topics relevant to physiotherapy practice, research, education, or healthcare policy.
-                              </span>
-                           </li>
-                           <li>
-                              <span>
-                                 Submissions may cover areas such as musculoskeletal conditions, neurological disorders, cardiopulmonary rehabilitation, geriatric care, pediatric physical therapy, and more.
-                              </span>
-                           </li>
-                        </ul>
-                     </li>
-                     <li>
-                        <p>Formatting Requirements</p>
-                        <ul>
-                           <li>
-                              <span>Manuscripts should be submitted in a Word document format (.doc or .docx).</span>
-                           </li>
-                           <li>
-                              <span>Include a cover page with the title, author(s) name(s), affiliations, and contact information.</span>
-                           </li>
-                        </ul>
-                     </li>
-                     <li>
-                        <p>Length and Structure</p>
-                        <ul>
-                           <li>
-                              <span>Research articles, case-studies and review papers should typically be between <strong>1,000 - 1,500 words</strong>. Structure manuscripts with appropriate sections (e.g., Abstract, Introduction, Methods, Results, Discussion, Conclusion, References).</span>
-                           </li>
-                        </ul>
-                     </li>
-                     <li>
-                        <p>References</p>
-                        <ul>
-                           <li>
-                              <span>Follow the American Psychological Association (APA) style for in-text citations and reference list formatting.</span>
-                           </li>
-                           <li>
-                              <span>Ensure that all references cited in the text are included in the reference list and vice versa.</span>
-                           </li>
-                        </ul>
-                     </li>
-                     <li>
-                        <p>Tables and Figures</p>
-                        <ul>
-                           <li>
-                              <span>Provide clear and descriptive titles/captions for each table and figure.</span>
-                           </li>
-                           <li>
-                              <span>Ensure that tables and figures are legible and of high quality.</span>
-                           </li>
-                        </ul>
-                     </li>
-                     <li>
-                        <p>Ethical Considerations</p>
-                        <ul>
-                           <li>
-                              <span>Ensure that patient privacy and confidentiality are maintained in case reports or clinical examples.</span>
-                           </li>
-                        </ul>
-                     </li>
-                     <li>
-                        <p>Submission Process</p>
-                        <ul>
-                           <li>
-                              <span>Submit your manuscript through the online submission system - <span><Link href={'/submissionForm'}>Click Here to Submit article</Link></span></span>
-                           </li>
-                           <li>
-                              <span>Upload your manuscript file(s) and any supplementary materials (e.g., figures, tables, additional files).</span>
-                           </li>
-                        </ul>
-                     </li>
-                     <li>
-                        <p>Review Process</p>
-                        <ul>
-                           <li>
-                              <span>All submitted manuscripts undergo a peer-review process by qualified experts in the field.</span>
-                           </li>
-                           <li>
-                              <span>The editorial team will communicate the decision (accept, revise, or reject) and provide feedback if revisions are requested within 15 days of Submission.</span>
-                           </li>
-                        </ul>
-                     </li>
-                     <li>
-                        <p>Copyright and Permissions</p>
-                        <ul>
-                           <li>
-                              <span>Authors retain copyright of their work but grant PhysioTrends an exclusive license to publish the article.</span>
-                           </li>
-                           <li>
-                              <span>Obtain necessary permissions for reproducing any copyrighted material (e.g., figures, tables) from other sources.</span>
-                           </li>
-                        </ul>
-                     </li>
-                  </ol>
-               </div>
+                  <h1 className={ubuntu?.className}>5. Submission Guidelines</h1>
+                  <p>
+                     Manuscripts must be submitted online through our website. Ensure the following documents are included:
+                  </p>
+                  <div>
+                     <ul>
+                        <li><span>Cover letter</span></li>
+                        <li><span>Title page (with title, authors, affiliations, corresponding author details)</span></li>
+                        <li><span>Main article file</span></li>
+                        <li><span>Tables and figures should be mailed separately along with the article's title.</span></li>
+                        <li><span>Each author's photo should be mailed separately along with the article's title.</span></li>
+                        <li><span>Submit your manuscript through the online submission system - <span className={styles?.anchorLink} onClick={() => router.push('/submissionForm')}>Click Here</span></span></li>
+                     </ul>
+                  </div>
 
-               <div className={`${styles.information}`}>
-                  <p>For any additional questions or clarifications, contact the editorial office at <a href="tel:+91-7984377793">+91-7984377793</a>. We look forward to receiving your valuable contributions to the field of physiotherapy.
+                  <h1 className={ubuntu?.className}>6. Duplicate Publication </h1>
+                  <p>
+                     Material submitted to Physiotrends must be original and not published or submitted for consideration in other Journal. <br /><br />
+                     Duplicate publication occurs when an author re-uses substantial parts of his or her own published work without providing the appropriate references. This can range from getting an identical paper published in multiple journals, to slicing of the paper, where authors add small amounts of new data to a previous paper.
+                  </p>
+
+                  <h1 className={ubuntu?.className}>7. Manuscript Withdrawal Policy </h1>
+                  <p>Authors must abide by these policies after submission of their manuscript.</p>
+                  <div>
+                     <ul>
+                        <li><span>Authors must provide their consent to publish their manuscript prior to peerreview process.</span></li>
+                        <li><span>Withdrawing an already confirmed manuscript after it has been accepted requires consent from all the authors with valid reason for withdrawing of their manuscript.</span></li>
+                        <li><span>After a manuscript has been accepted and confirmed, withdrawing it could result in a 500/- review process penalty.</span></li>
+                     </ul>
+                  </div>
+
+                  <h1 className={ubuntu?.className}>8. Disclaimer</h1>
+                  <p>
+                     The author(s) of each article published in Physiotrends Magazine are solely responsible for the content of their work. Neither Physiotrends Magazine, its editors, publishers, nor anyone involved in the creation, production, or distribution of the magazine assumes any liability or responsibility for the accuracy, completeness, or usefulness of the information presented. Additionally, they are not liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from the use of Physiotrends Magazine.
+                  </p>
+
+                  <h1 className={ubuntu?.className}>9. Policy for Rejection of AI-Generated Articles </h1>
+                  <p>
+                     Physiotrends Magazine does not accept articles generated wholly or primarily by artificial intelligence (AI). Submissions must represent original research, insights, or perspectives from human authors. Manuscripts that rely on AI-generated content will be automatically rejected. We prioritize authentic, thoughtful contributions that reflect the expertise and experiences of our authors, ensuring the integrity and quality of our publication.
                   </p>
                </div>
 
@@ -220,8 +236,8 @@ const SubmitYourArticle = () => {
                      </div>
                   </div>
                </div> */}
-            </div>
-         </section>
+            </div >
+         </section >
       </>
    )
 }
