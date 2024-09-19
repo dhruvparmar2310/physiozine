@@ -102,7 +102,7 @@ const SubmissionForm = () => {
             // Prepare form data for submission
             const formDataForSheet = {
                 "Paper Title": data.sPaperTitle,
-                Keywords: data.sKeywords,
+                EmailID: data.sEmailID,
                 "Mobile No.": data.sMobileNo,
                 City: data.sCity,
                 Country: data.sCountry,
@@ -148,118 +148,6 @@ const SubmissionForm = () => {
         }
     };
 
-
-    // const onSubmit = async data => {
-    //     console.log('data', data)
-
-    //     // Function to serialize author data
-    //     const serializeAuthors = (authors) => {
-    //         return authors.map((author, index) => {
-    //             return `Author ${index + 1}: Name: ${author.name}, Designation: ${author.designation}, Mobile: ${author.mobileNumber}`;
-    //         }).join(' | ');
-    //     };
-
-    //     try {
-    //         // convert file to base64 format
-    //         if (data.fAuthorFormFile && data.fAuthorFormFile.type === 'application/pdf') {
-    //             try {
-    //                 const base64String = await pdfToBase64(data.fAuthorFormFile);
-    //                 setAuthorFormFile(base64String)
-    //             } catch (error) {
-    //                 console.error('Error converting PDF to Base64:: Author Form File', error);
-    //             }
-    //         } else {
-    //             alert('Please select a valid PDF file');
-    //         }
-
-    //         if (data.fArticleFile && data.fArticleFile.type === 'application/pdf') {
-    //             try {
-    //                 const base64String = await pdfToBase64(data.fArticleFile);
-    //                 setFile(base64String)
-    //             } catch (error) {
-    //                 console.error('Error converting PDF to Base64:: Article File', error);
-    //             }
-    //         } else {
-    //             alert('Please select a valid PDF file');
-    //         }
-
-    //         // Prepare the formData object for submission to Google Sheets
-    //         // const formDataForSheet = {
-    //         //     "Paper Title": data.sPaperTitle,
-    //         //     "Keywords": data.sKeywords,
-    //         //     "Mobile No.": data.sMobileNo,
-    //         //     "City": data.sCity,
-    //         //     "Country": data.sCountry,
-    //         //     "Author Counts": data.sAuthorCount?.value,
-    //         //     "Authors": serializeAuthors(data.authors || []),
-    //         //     "Author Form File URL": authorFormFile,
-    //         //     "File URL": file,
-    //         // };
-    //         const formDataForSheet = {
-    //             "Paper Title": data.sPaperTitle,
-    //             Keywords: data.sKeywords,
-    //             "Mobile No.": data.sMobileNo,
-    //             City: data.sCity,
-    //             Country: data.sCountry,
-    //             "Author Counts": data.sAuthorCount?.value,
-    //             Authors: serializeAuthors(data.authors || []),
-    //             "Author Form File URL": authorFormFile,
-    //             "File URL": file,
-    //         };
-
-    //         console.log('formDataForSheet', formDataForSheet)
-
-    //         if (authorFormFile !== null && file !== null) {
-    //             // Submit data to Google Sheets
-    //             // const response = await axios.post(
-    //             //     'https://sheet.best/api/sheets/438f6abe-0168-4d04-9ed7-d57cef24708b',
-    //             //     formDataForSheet
-    //             // );
-
-    //             // const response = await fetch('/api/upload-to-drive', {
-    //             //     method: 'POST',
-    //             //     headers: {
-    //             //         'Content-Type': 'application/json',
-    //             //     },
-    //             //     body: JSON.stringify({ formDataForSheet }),
-    //             // });
-    //             // console.log('Submission successful:', response);
-
-    //             // if (!response.ok) {
-    //             //     throw new Error('Failed to submit data');
-    //             // }
-
-    //             // const result = await response.json();
-    //             const response = await fetch('/api/upload-to-drive', {
-    //                 method: 'POST',
-    //                 headers: {
-    //                     'Content-Type': 'application/json',
-    //                 },
-    //                 body: JSON.stringify({ formDataForSheet }),
-    //             });
-
-    //             const result = await response.json();
-
-    //             // Now submit the data to Google Sheets
-    //             const sheetResponse = await fetch('/api/submit-to-sheet', {
-    //                 method: 'POST',
-    //                 headers: {
-    //                     'Content-Type': 'application/json',
-    //                 },
-    //                 body: JSON.stringify(result.formDataForSheet),
-    //             });
-
-    //             if (!sheetResponse.ok) {
-    //                 throw new Error('Failed to submit to Google Sheets');
-    //             }
-
-    //             console.log('Sheet submission successful');
-    //         }
-    //     } catch (error) {
-    //         console.error('Submission error:', error);
-    //         // Add error handling here (e.g., showing an error message to the user)
-    //     }
-    // }
     return (
         <>
             <Head>
@@ -268,7 +156,8 @@ const SubmissionForm = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name='keywords' content='PhysioTrends, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
                 <meta name="description" content="PHYSIOTRENDS is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
-                <link rel="icon" href="assets/img/favicon.jpg" />
+                <link rel="icon" href="assets/img/favicon.png" />
+                <link rel="manifest" href="/manifest.json" />
             </Head>
 
             <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Submission Form'} />
@@ -308,20 +197,20 @@ const SubmissionForm = () => {
                                     </Col>
                                     <Col lg={6}>
                                         <Form.Group className="mb-3">
-                                            <Form.Label>Keywords <span className='text-danger'>*</span></Form.Label>
+                                            <Form.Label>Email Address <span className='text-danger'>*</span></Form.Label>
                                             <Controller
-                                                name="sKeywords"
+                                                name="sEmailID"
                                                 control={control}
                                                 defaultValue=""
-                                                rules={{ required: 'Keywords field is required' }}
+                                                rules={{ required: 'Email field is required' }}
                                                 render={({ field }) => (
                                                     <>
-                                                        <Form.Control {...field} placeholder="Enter the keywords" />
+                                                        <Form.Control {...field} placeholder="Enter your email address" />
                                                     </>
                                                 )}
                                             />
-                                            {errors?.sKeywords &&
-                                                <span className='d-block text-danger text-end'>{errors?.sKeywords?.message}</span>
+                                            {errors?.sEmailID &&
+                                                <span className='d-block text-danger text-end'>{errors?.sEmailID?.message}</span>
                                             }
                                         </Form.Group>
                                     </Col>

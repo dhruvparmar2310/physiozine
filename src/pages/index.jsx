@@ -194,7 +194,7 @@ export default function Home () {
                   transition={{ duration: width ? 0.5 : 1, ease: 'easeInOut' }}
                 >
                   <div className={`${styles?.cardHeader}`}>
-                    <h5 className={`${ubuntu?.className}`}>Guidelines</h5>
+                    <h5 className={`${ubuntu?.className}`}>Author Guidelines</h5>
                   </div>
                   <div className={`${styles?.cardBody}`}>
                     <p className={`${ubuntu?.className}`}>Guidelines for Paper Publication.</p>
