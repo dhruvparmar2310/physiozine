@@ -19,6 +19,8 @@ import openAccessLogo from '../../public/assets/img/webAvailability/Open_Access_
 import openAireLogo from '../../public/assets/img/webAvailability/OpenAire_Logo.jpg'
 import readwhereLogo from '../../public/assets/img/webAvailability/readwhere.jpg'
 import rgLogo from '../../public/assets/img/webAvailability/researchgate.png'
+import amLogo from '../../public/assets/img/webAvailability/am.jpeg'
+import orcidLogo from '../../public/assets/img/webAvailability/orcid.logo.png'
 import linkedinLogo from '../../public/assets/img/webAvailability/Linkedin-Logo.png'
 import { members } from "@/data/editorialMembers";
 import physiothonline from '../../public/assets/img/associated/physioth-online.jpeg'
@@ -44,7 +46,7 @@ export default function Home () {
   const [ref, inView] = useInView({ triggerOnce: true, rootMargin: '300px', });
   const [actionBarRef, actionBarInView] = useInView({ triggerOnce: true, rootMargin: '300px', });
 
-  const [network, setNetwork] = useState(19317)
+  const [network, setNetwork] = useState(22376)
   const [cityCount, setCityCount] = useState(0);
   const [teamCount, setTeamCount] = useState(0);
 
@@ -459,6 +461,12 @@ export default function Home () {
                 <Row className='mt-2'>
                   <Col>
                     <Image src={rgLogo} alt="" quality={100} priority />
+                  </Col>
+                  <Col>
+                    <Image src={amLogo} alt="" quality={100} priority />
+                  </Col>
+                  <Col>
+                    <Image src={orcidLogo} alt="" quality={100} priority />
                   </Col>
                   <Col>
                     <Image src={linkedinLogo} alt="" quality={100} priority />

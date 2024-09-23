@@ -1,11 +1,23 @@
 import { google } from 'googleapis';
 import { Readable } from 'stream';
+import getRawBody from 'raw-body';
+
+export const config = {
+    api: {
+      bodyParser: false, // Disable the default body parser
+    },
+  };
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         try {
-            const { formDataForSheet } = req.body;
-
+             // Get the raw body with an extended limit (e.g., 10MB)
+      const rawBody = await getRawBody(req, {
+        length: req.headers['content-length'],
+        limit: '10mb', // Set the limit to 10MB or adjust as needed
+        encoding: true, // Set encoding to true if you want to automatically handle text-based encodings
+      });
+            const {formDataForSheet} = JSON.parse(rawBody);
             const auth = new google.auth.GoogleAuth({
                 credentials: JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS),
                 scopes: ['https://www.googleapis.com/auth/drive'],
@@ -39,7 +51,6 @@ export default async function handler(req, res) {
                         type: 'anyone',
                     },
                 });
-
                 return fileResponse.data.webViewLink;
             };
 
@@ -49,7 +60,7 @@ export default async function handler(req, res) {
             formDataForSheet['Author Form File URL'] = authorFormFileUrl;
             formDataForSheet['File URL'] = articleFileUrl;
 
-            res.status(200).json({ success: true, formDataForSheet });
+            res.status(200).json({ success: true, formDataForSheet, data: { message: 'File Uploaded Successfully.' } });
         } catch (error) {
             console.error('Error uploading files to Google Drive:', error);
             res.status(500).json({ error: 'Failed to upload files to Google Drive' });

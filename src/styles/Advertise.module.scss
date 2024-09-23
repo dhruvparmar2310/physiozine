@@ -135,8 +135,8 @@
         }
 
         .clientContent {
-            background-color: rgb(231, 229, 229);
-            border-radius: 30px;
+            // background-color: rgb(231, 229, 229);
+            // border-radius: 30px;
             padding: 20px;
 
             .contentTitle {
@@ -157,9 +157,9 @@
                 border-radius: 30px;
 
                 div {
-                    background: rgb(255, 255, 255);
-                    padding: 15px;
-                    border-radius: 20px;
+                    // background: rgb(255, 255, 255);
+                    // padding: 15px;
+                    // border-radius: 20px;
                     transition: all 0.3s ease-in-out;
                 }
 
@@ -170,8 +170,8 @@
                     aspect-ratio: 10/4;
                     object-fit: contain;
                     mix-blend-mode: darken;
-                    opacity: 0.6;
-                    filter: grayscale(100%);
+                    opacity: 1;
+                    filter: grayscale(0%);
                     transition: all 0.3s ease-in-out;
 
                     &:hover {
