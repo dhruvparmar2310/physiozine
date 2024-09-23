@@ -15,6 +15,7 @@ import AdsImg from '../../public/assets/img/adsSpec.png'
 import { Abril_Fatface, Comfortaa, Ubuntu } from 'next/font/google'
 import DynamicChart from '@/components/DynamicChart'
 import physiothonline from '../../public/assets/img/associated/physioth-online.jpeg'
+import apcLogo from '../../public/assets/img/Clients/apc.jpeg'
 import smartPT from '../../public/assets/img/associated/smart-pt.jpeg'
 import { motion, useAnimation } from 'framer-motion'
 import useMediaQuery from '@/hooks/useMediaQuery'
@@ -31,7 +32,7 @@ const Advertise = () => {
     const [ref, inView] = useInView({ triggerOnce: true, rootMargin: '-100px' });
 
     const [chartOptions, setChartOptions] = useState({
-        series: [10000, 4640, 3176, 1500],
+        series: [12119, 4814, 3176, 2267],
         options: {
             chart: {
                 height: 390,
@@ -120,6 +121,8 @@ const Advertise = () => {
         visible: { opacity: 1, x: 0 },
     };
 
+    const nTotalAudience = chartOptions?.series?.reduce((a, c) => a + c)
+
     useEffect(() => {
         if (inView) {
             controls.start('visible');
@@ -165,7 +168,7 @@ const Advertise = () => {
                             </Col>
                             <Col sm={6}>
                                 <div className={`${styles?.totalAudience}`}>
-                                    <h1 className={`${styles?.totalCount} ${abrilFatface?.className}`}>19,316+</h1>
+                                    <h1 className={`${styles?.totalCount} ${abrilFatface?.className}`}>{nTotalAudience || '0'}+</h1>
                                     <h1 className={`${styles?.audienceTitle} ${comfortaa?.className}`}>Total Audience</h1>
                                 </div>
                             </Col>
@@ -311,6 +314,9 @@ const Advertise = () => {
                             </div>
                             <div>
                                 <Image src={smartPT} className={'img-fluid'} alt='' quality={100} priority />
+                            </div>
+                            <div>
+                                <Image src={apcLogo} className={'img-fluid'} alt='' quality={100} priority />
                             </div>
                         </div>
                     </div>

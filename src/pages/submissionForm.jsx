@@ -22,6 +22,8 @@ import openAireLogo from '../../public/assets/img/webAvailability/OpenAire_Logo.
 import readwhereLogo from '../../public/assets/img/webAvailability/readwhere.jpg'
 import rgLogo from '../../public/assets/img/webAvailability/researchgate.png'
 import linkedinLogo from '../../public/assets/img/webAvailability/Linkedin-Logo.png'
+import amLogo from '../../public/assets/img/webAvailability/am.jpeg'
+import orcidLogo from '../../public/assets/img/webAvailability/orcid.logo.png'
 import physiothonline from '../../public/assets/img/associated/physioth-online.jpeg'
 import smartPT from '../../public/assets/img/associated/smart-pt.jpeg'
 
@@ -31,7 +33,16 @@ const SubmissionForm = () => {
     const [msg, setMsg] = useState({ type: '', data: '' });
 
     const { control, handleSubmit, formState: { errors }, watch, setValue, reset } = useForm({
-        mode: 'all'
+        mode: 'all',
+        // defaultValues: {
+        //     sPaperTitle: 'sdfsd',
+        //     sEmailID: 'dhru@gmail.com',
+        //     sMobileNo: '9876543210',
+        //     sCity: 'Delhi',
+        //     sCountry: 'India',
+        //     sAuthorCount: 1,
+        //     authors: [{ name: 'dfsvdf', designation: 'xcxv', mobileNumber: '9876543210' }],
+        // }
     })
     const watchAuthorCount = watch('sAuthorCount');
 
@@ -438,6 +449,12 @@ const SubmissionForm = () => {
                                 <Row className='mt-2'>
                                     <Col>
                                         <Image src={rgLogo} alt="" quality={100} priority />
+                                    </Col>
+                                    <Col>
+                                        <Image src={amLogo} alt="" quality={100} priority />
+                                    </Col>
+                                    <Col>
+                                        <Image src={orcidLogo} alt="" quality={100} priority />
                                     </Col>
                                     <Col>
                                         <Image src={linkedinLogo} alt="" quality={100} priority />
