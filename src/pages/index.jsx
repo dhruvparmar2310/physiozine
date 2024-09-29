@@ -154,11 +154,11 @@ export default function Home () {
               <Col lg={6}>
                 <span>Be a part of PhysioTrends</span>
               </Col>
-              <Col lg={6}>
+              {/* <Col lg={6}>
                 <span>
                   <marquee className={`${styles?.extraInfo}`}>Use code "Physiotrends" to avail 65% discount in all the online courses. Limited period offer!</marquee>
                 </span>
-              </Col>
+              </Col> */}
             </Row>
           </h1>
 
@@ -199,7 +199,7 @@ export default function Home () {
                     <h5 className={`${ubuntu?.className}`}>Author Guidelines</h5>
                   </div>
                   <div className={`${styles?.cardBody}`}>
-                    <p className={`${ubuntu?.className}`}>Guidelines for Paper Publication.</p>
+                    <p className={`${ubuntu?.className}`}>Author Guidelines for Paper Publication and case study.</p>
                     <span>
                       <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('/guidelines')}>
                         <span className="me-1">View Now</span> <span><FaArrowRight /></span>
@@ -219,6 +219,28 @@ export default function Home () {
                 >
                   <div className={`${styles?.cardHeader}`}>
                     <h5 className={`${ubuntu?.className}`}>Online Courses</h5>
+                  </div>
+                  <div className={`${styles?.cardBody}`}>
+                    <p className={`${ubuntu?.className}`}>Explore certified courses by PhysioTrends Academy</p>
+                    <span>
+                      <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://physiotrendsacademy.graphy.com/courses')}>
+                        <span className="me-1">Explore Now</span> <span><FaArrowRight /></span>
+                      </Button>
+                    </span>
+                  </div>
+                </motion.div>
+              </Col>
+              <Col lg={4} md={6} sm={12} className="mt-lg-3 mt-md-0 mt-3">
+                <motion.div
+                  className={`${styles?.actionCard} ${ubuntu?.className}`}
+                  ref={actionBarRef}
+                  variants={fadeUpAnimation}
+                  initial="hidden"
+                  animate={controls}
+                  transition={{ duration: width ? 0.5 : 1, ease: 'easeInOut' }}
+                >
+                  <div className={`${styles?.cardHeader}`}>
+                    <h5 className={`${ubuntu?.className}`}>International Online Courses</h5>
                   </div>
                   <div className={`${styles?.cardBody}`}>
                     <p className={`${ubuntu?.className}`}>Get access to Certified International Courses.</p>
