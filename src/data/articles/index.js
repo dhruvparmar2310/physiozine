@@ -166,7 +166,7 @@ export const articles = [
         title: 'Volume - 1, Issue - 4',
         nMonth: 'October, 2024',
         img: 'assets/img/magazines/vol1_issue4.jpg',
-        eBook: '',
+        eBook: 'assets/pdfs/vol-1-issue-4/PhysioTrends Vol.1, Issue 4.pdf',
         aMagazines: [
             {
                 _id: '401',
