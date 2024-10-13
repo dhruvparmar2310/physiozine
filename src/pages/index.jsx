@@ -135,7 +135,6 @@ export default function Home () {
                     alt="MSME Logo"
                     quality={100}
                     priority
-                    onClick={() => router.push('https://smartptacademy.com/')}
                   />
                 </div>
                 <div>
