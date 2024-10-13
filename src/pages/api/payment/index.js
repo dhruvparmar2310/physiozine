@@ -23,7 +23,7 @@ export default function handler (req, res) {
               notify_url: "https://webhook.site/99f719b8-0357-42a2-ad27-eea33f55f258",
             },
             order_id: 'ORID' + Date.now(),
-            order_amount: 1,
+            order_amount: 500,
             order_currency: "INR",
           };
           
