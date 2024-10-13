@@ -15,7 +15,7 @@ const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500', '700'], style
 const HomePageArticles = () => {
     const settings = {
         className: "center",
-        centerMode: true,
+        centerMode: false,
         dots: true,
         infinite: true,
         centerPadding: "60px",
@@ -33,6 +33,8 @@ const HomePageArticles = () => {
             }
         ]
     };
+
+    const sortArticle = articles?.reverse()
     return (
         <>
             {/* <div className={`${styles?.magazine}`}>
@@ -59,9 +61,9 @@ const HomePageArticles = () => {
                     </button>
                 </div>
             </div > */}
-            <div className="slider">
+            {/* <div className="slider">
                 <Slider {...settings}>
-                    {articles?.map(article => {
+                    {sortArticle?.map(article => {
                         return (
                             <tr key={article?._id}>
                                 <div className={`${styles?.articleCard}`}>
@@ -79,6 +81,26 @@ const HomePageArticles = () => {
                         )
                     })}
                 </Slider>
+            </div> */}
+
+            <div className={styles?.homePageArticleSlider}>
+                {sortArticle?.map(article => {
+                    return (
+                        <tr key={article?._id}>
+                            <div className={`${styles?.articleCard}`}>
+                                <div className={`${styles?.cardImg}`}>
+                                    <Image src={article?.img} className='img-fluid' priority quality={100} width={100} height={100} alt={article?.title} />
+                                </div>
+                                <div className={`${styles?.cardBody}`}>
+                                    {/* <h1 className={ubuntu?.className}>{article?.title}</h1> */}
+                                    <p className={ubuntu?.className}>{article?.nMonth}</p>
+
+                                    <Button className={`${styles?.downloadBtn} ${ubuntu?.className}`} variant='info' onClick={() => saveAs(article?.eBook, article?.title)}>Download <span><FaArrowUpRightFromSquare /></span></Button>
+                                </div>
+                            </div>
+                        </tr>
+                    )
+                })}
             </div>
         </>
     )

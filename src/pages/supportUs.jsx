@@ -43,7 +43,7 @@ const SupportUs = () => {
 
                     <div className='mt-3'>
                         <p>
-                            Your financial contribution plays a vital role in helping us maintain and improve our free digital magazine, as well as develop new content, programs, and resources for our growing community. Your support can help us:
+                            Your financial contribution plays a vital role in helping us maintain and improve our digital magazine, as well as develop new content, programs, and resources for our growing community. Your support can help us:
                         </p>
                         <ul>
                             <li>
@@ -66,7 +66,7 @@ const SupportUs = () => {
 
                     <div className='mt-3'>
                         <p>
-                            In addition to financial support, we also welcome physiotherapy professionals, researchers, and subject matter experts to contribute articles and content to our free digital magazine. By sharing your expertise and insights, you can:
+                            In addition to financial support, we also welcome physiotherapy professionals, researchers, and subject matter experts to contribute articles and content to our digital magazine. By sharing your expertise and insights, you can:
                         </p>
                         <ul>
                             <li>
