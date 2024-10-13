@@ -1,11 +1,9 @@
 .articleCard {
-    background: var(--white-color);
-    border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
-    width: 305px;
     min-width: fit-content;
-    margin: 0 5px;
+    margin: 0 !important;
+    width: 180px;
 
     &:hover {
         .cardImg img {
@@ -14,8 +12,7 @@
     }
 
     .cardImg {
-        width: 100%;
-        height: 320px;
+        width: 180px;
         overflow: hidden;
 
         img {
@@ -27,44 +24,77 @@
     }
 
     .cardBody {
-        padding: 15px;
+        padding: 10px 0;
         text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        background: transparent !important;
 
         h1 {
             color: var(--primary-color) !important;
-            font-size: 18px;
+            font-size: 12px;
             font-weight: 700;
             margin: 0;
         }
 
         p {
             color: rgb(132, 132, 132) !important;
-            font-size: 15px;
+            font-size: 12px;
             font-weight: 700;
             margin: 0;
+            text-align: left;
         }
 
         .downloadBtn {
             border: none;
             border-radius: 99px;
-            font-size: 14px;
-            padding: 5px 10px;
+            font-size: 10px;
+            padding: 2px 5px;
             font-weight: 500;
             letter-spacing: 0.5px;
-            color: var(--white-color);
-            background: rgb(0, 110, 131);
-            background: linear-gradient(200deg, rgb(12, 111, 131) 35%, rgb(36, 205, 239) 100%);
+            color: var(--black-color);
+            border: 1px solid rgb(0, 110, 131);
+            // background: linear-gradient(200deg, rgb(12, 111, 131) 35%, rgb(36, 205, 239) 100%);
+            background: transparent;
+            margin: 0;
 
             svg {
-                font-size: 12px !important;
+                font-size: 10px !important;
             }
         }
     }
 }
 
+.homePageArticleSlider {
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    margin: 20px 0;
+
+    &::-webkit-scrollbar {
+        width: 0.30rem;
+        background-color: var(--primary-light);
+        border-radius: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color) !important;
+        border-radius: 0.5rem;
+    }
+
+    &::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    tr {
+        margin: 0 5px;
+    }
+}
+
 @media (max-width: 576px) {
     .articleCard {
-        width: 280px;
+        width: 180px;
         margin-top: 30px;
     }
 }

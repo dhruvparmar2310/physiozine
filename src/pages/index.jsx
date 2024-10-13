@@ -21,6 +21,8 @@ import readwhereLogo from '../../public/assets/img/webAvailability/readwhere.jpg
 import rgLogo from '../../public/assets/img/webAvailability/researchgate.png'
 import amLogo from '../../public/assets/img/webAvailability/am.jpeg'
 import orcidLogo from '../../public/assets/img/webAvailability/orcid.logo.png'
+import ccLogo from '../../public/assets/img/License/cc.jpeg'
+import msmeLogo from '../../public/assets/img/License/MSME-Logo.png'
 import linkedinLogo from '../../public/assets/img/webAvailability/Linkedin-Logo.png'
 import { members } from "@/data/editorialMembers";
 import physiothonline from '../../public/assets/img/associated/physioth-online.jpeg'
@@ -122,26 +124,28 @@ export default function Home () {
         <Hero width={width} />
 
         <section id="associated" className={`${styles?.associated} py-0`}>
-          <h1 className={`sectionTitle text-center`} data-heading='Our International Educational Partner' title='Our International Association | PhysioTrends'></h1>
+          <div className={styles?.license}>
+            <h1 className={`sectionTitle text-center`} data-heading='License & Registration' title='License & Registration | PhysioTrends'></h1>
 
-          <div className={`${styles?.innerContent}`}>
-            <div className={`${styles?.leftSide} container`}>
-              <div>
-                <Image
-                  src={physiothonline}
-                  alt="Physioth Online Logo"
-                  quality={100}
-                  priority
-                />
-              </div>
-              <div>
-                <Image
-                  src={smartPT}
-                  alt="Smart PT Acedamy Logo"
-                  quality={100}
-                  priority
-                  onClick={() => router.push('https://smartptacademy.com/')}
-                />
+            <div className={`${styles?.innerContent}`}>
+              <div className={`${styles?.leftSide} container`}>
+                <div>
+                  <Image
+                    src={msmeLogo}
+                    alt="MSME Logo"
+                    quality={100}
+                    priority
+                    onClick={() => router.push('https://smartptacademy.com/')}
+                  />
+                </div>
+                <div>
+                  <Image
+                    src={ccLogo}
+                    alt="CC Logo"
+                    quality={100}
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -278,6 +282,34 @@ export default function Home () {
           </div>
         </section>
 
+        <section id="associated" className={`${styles?.associated} py-0`}>
+          <div className={styles?.partner}>
+            <h1 className={`sectionTitle text-center`} data-heading='Our International Educational Partner' title='Our International Association | PhysioTrends'></h1>
+
+            <div className={`${styles?.innerContent}`}>
+              <div className={`${styles?.leftSide} container`}>
+                <div>
+                  <Image
+                    src={physiothonline}
+                    alt="Physiotherapy Online Logo"
+                    quality={100}
+                    priority
+                  />
+                </div>
+                <div>
+                  <Image
+                    src={smartPT}
+                    alt="Smart PT Acedamy Logo"
+                    quality={100}
+                    priority
+                    onClick={() => router.push('https://smartptacademy.com/')}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="about" className={`${styles?.about}`} ref={aboutSectionRef}>
           <div className="container">
             <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='About' title='About Us | PhysioTrends'>PhysioTrends</h1>
@@ -350,7 +382,11 @@ export default function Home () {
                     </tr>
                     <tr>
                       <td>ISSN No.</td>
-                      <td className={`${styles?.dataValue}`}></td>
+                      <td className={`${styles?.dataValue}`}>Under Process</td>
+                    </tr>
+                    <tr>
+                      <td>MSME Reg. No.</td>
+                      <td className={`${styles?.dataValue}`}>GJ-01-0443513</td>
                     </tr>
                     <tr>
                       <td>Founder</td>
@@ -436,8 +472,8 @@ export default function Home () {
 
         <section id="magazines" className={`${styles?.articles}`}>
           <div className="container">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
-              <h1 className={`sectionTitle ${ubuntu?.className}`} data-heading='Our Latest' title="Our Latest Research Articles | PhysioTrends">Articles</h1>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
+              <h1 className={`sectionTitle ${ubuntu?.className}`} data-heading='Our Latest' title="Our Latest Research Magazines | PhysioTrends">Magazines</h1>
               <div className={`text-center mt-4 ${styles?.viewMoreBtn} ${ubuntu?.className}`}>
                 <span onClick={() => router.push('/articles')}>View More</span>
               </div>

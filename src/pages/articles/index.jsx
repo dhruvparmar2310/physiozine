@@ -174,7 +174,7 @@ function Articles ({ data, router }) {
 
             </div>
 
-            <span className={`${styles?.notes} {ubuntu?.className} mt-2`}>Note: Publish your Article for Free in the upcoming Issue.</span>
+            {/* <span className={`${styles?.notes} {ubuntu?.className} mt-2`}>Note: Publish your Article in upcoming Issue.</span> */}
           </div>
         </section >
       </Suspense >

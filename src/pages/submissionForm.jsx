@@ -26,9 +26,13 @@ import amLogo from '../../public/assets/img/webAvailability/am.jpeg'
 import orcidLogo from '../../public/assets/img/webAvailability/orcid.logo.png'
 import physiothonline from '../../public/assets/img/associated/physioth-online.jpeg'
 import smartPT from '../../public/assets/img/associated/smart-pt.jpeg'
+import { setCookie } from '@/utils'
+import { useRouter } from 'next/router'
+import { BsArrowRight } from 'react-icons/bs'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500', '700'], style: ['normal'] })
 const SubmissionForm = () => {
+    const router = useRouter()
     const [isLoading, setIsLoading] = useState(false)
     const [msg, setMsg] = useState({ type: '', data: '' });
 
@@ -94,9 +98,8 @@ const SubmissionForm = () => {
 
     const onSubmit = async (data) => {
         setIsLoading(true)
-        setMsg({ type: 'pending', data: 'Your article is being uploaded. Please do not refresh the page or close the tab.' })
+
         try {
-            // Access files from data object using proper file input reference
             const authorFormFileObj = data.fAuthorFormFile;
             const articleFileObj = data.fArticleFile;
 
@@ -104,58 +107,19 @@ const SubmissionForm = () => {
             const authorFormFileBase64 = await pdfToBase64(authorFormFileObj);
             const articleFileBase64 = await pdfToBase64(articleFileObj);
 
-            const serializeAuthors = (authors) => {
-                return authors.map((author, index) => {
-                    return `Author ${index + 1}: Name: ${author.name}, Designation: ${author.designation}, Mobile: ${author.mobileNumber}`;
-                }).join(' | ');
-            };
+            // Append base64 strings to the data object
+            data.fAuthorFormFileBase64 = authorFormFileBase64;
+            data.fArticleFileBase64 = articleFileBase64;
 
-            // Prepare form data for submission
-            const formDataForSheet = {
-                "Paper Title": data.sPaperTitle,
-                EmailID: data.sEmailID,
-                "Mobile No.": data.sMobileNo,
-                City: data.sCity,
-                Country: data.sCountry,
-                "Author Counts": data.sAuthorCount?.value,
-                Authors: serializeAuthors(data.authors || []),
-                "Author Form File URL": authorFormFileBase64,
-                "File URL": articleFileBase64,
-            };
-
-            // Post to backend
-            const driveResponse = await fetch('/api/upload-to-drive', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ formDataForSheet }),
-            });
-
-            const driveData = await driveResponse.json();
-
-            // Submit the updated form data (with Drive URLs) to Google Sheets
-            const sheetResponse = await fetch('/api/submit-to-sheet', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(driveData.formDataForSheet),
-            })
-
-            if (!sheetResponse.ok) {
-                throw new Error('Failed to submit to Google Sheets');
-            } else {
-                setIsLoading(false);
-                setMsg({ type: 'submitted', data: 'Article Submitted Successfully.' })
-                reset({})
-                // window.scrollTo({
-                //     top: 0,
-                //     behavior: 'smooth',
-                // });
-            }
-        } catch (error) {
-            console.error('Error submitting form:', error);
+            // Remove the original file objects if not needed (optional)
+            delete data.fAuthorFormFile;
+            delete data.fArticleFile;
+            setCookie('articleData', JSON.stringify(data), 1)
+            localStorage.setItem('articleData', JSON.stringify(data))
+            router.push('/checkout')
+        } catch (err) {
+            setMsg({ type: 'error', data: 'Oops! Something went wrong. Please try again.' });
+            console.error(err);
         }
     };
 
@@ -398,10 +362,25 @@ const SubmissionForm = () => {
                                         </Form.Group>
                                     </Col>
                                 </Row>
-                                <Button type='submit' disabled={isLoading}>Submit {isLoading && <Spinner animation='border' size='sm' />}</Button>
+
+                                <Button
+                                    type='submit'
+                                    className='me-2'
+                                    disabled={isLoading}
+                                >
+                                    Next <BsArrowRight /> {isLoading && <Spinner animation='border' size='sm' />}
+                                </Button>
+
+                                {/* <Button
+                                    type='button'
+                                    disabled={msg?.type !== 'submitted'}
+                                    onClick={() => handlePaymentBtn()}
+                                >
+                                    Proceed to Pay {isLoading && <Spinner animation='border' size='sm' />}
+                                </Button> */}
 
                                 {msg?.data !== '' && <div className="mt-2">
-                                    <span className={msg.type === 'submitted' ? 'text-success' : 'text-danger'}>{msg?.data}</span>
+                                    <span className={msg.type === 'submitted' ? 'text-warning' : 'text-danger'}>{msg?.data}</span>
                                 </div>}
                             </div>
                         </Form>

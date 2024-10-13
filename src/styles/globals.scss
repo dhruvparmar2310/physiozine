@@ -22,6 +22,18 @@ body {
   }
 }
 
+.slider {
+  .slick-list {
+    .slick-slide {
+      padding: 0 10px !important;
+      margin: 0 10px;
+      width: 160px !important;
+      min-height: 199px !important;
+      max-height: 200px !important;
+    }
+  }
+}
+
 .slider-container {
   width: 80%;
   margin: 0 auto;
