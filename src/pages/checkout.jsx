@@ -152,15 +152,15 @@ const Checkout = () => {
 
                     <div>
                         <Row className={styles?.customerDetails}>
-                            <Col>
+                            <Col lg={4} md={6} sm={12}>
                                 <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>Article Name</div>
                                 <div className={`${styles?.dataValue} ${ubuntu?.className}`}>{articleData?.sPaperTitle || '-'}</div>
                             </Col>
-                            <Col>
+                            <Col lg={4} md={6} sm={12} className='mt-3 mt-lg-0 mt-md-0'>
                                 <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>Email ID</div>
                                 <div className={`${styles?.dataValue} ${ubuntu?.className}`}>{articleData?.sEmailID || '-'}</div>
                             </Col>
-                            <Col>
+                            <Col lg={4} md={6} sm={12} className='mt-3 mt-lg-0 '>
                                 <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>Mobile No</div>
                                 <div className={`${styles?.dataValue} ${ubuntu?.className}`}>{articleData?.sMobileNo || '-'}</div>
                             </Col>
