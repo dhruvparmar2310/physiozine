@@ -30,6 +30,10 @@ import smartPT from '../../public/assets/img/associated/smart-pt.jpeg'
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import ConphycsLogo from '../../public/assets/img/15-conphycs-logo-02.png'
+import gptaLogo from '../../public/assets/img/GPTA-LOGO.jpeg'
+import muLogo from '../../public/assets/img/MU_LOGO_BROWN.png'
+import mainLogo from '../../public/assets/img/main-logo.png'
 
 //* ALL SVG ELEMENTS
 import { BsGlobeCentralSouthAsia } from "react-icons/bs";
@@ -151,6 +155,60 @@ export default function Home () {
         </section>
 
         <section className={`${styles?.actionBar} container`}>
+          <h6 className={`${ubuntu?.className}`}>Upcoming</h6>
+          <h1 className={`${ubuntu?.className} sectionTitle`}>
+            <span>Conference, 2024</span>
+          </h1>
+
+          <Row className='my-4'>
+            <Col sm={12}>
+              <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
+                <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
+                  <h1 className={`${ubuntu?.className} text-uppercase`}>15<sup>th</sup> Gujstate Conphycs, 2024</h1>
+                  <p className='mt-4'>Theme: Global Perspectives on Physiotherapy - Collaboration & Innovation</p>
+                  <p>Venue: Marwadi University, Rajkot</p>
+                  <p>Date: 20 - 21 December, 2024</p>
+                  <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://conphycs2024.com/')}>Register Now</Button>
+                </div>
+                <div className={styles?.middleImg}>
+                  <Image
+                    src={ConphycsLogo}
+                    alt='15th Conphycs Logo'
+                    priority
+                    quality={100}
+                    className="img-fluid"
+                  />
+                  <Image
+                    src={gptaLogo}
+                    alt='GPTA Logo'
+                    priority
+                    quality={100}
+                    className="img-fluid"
+                  />
+                </div>
+                <div className={styles?.lastDetails}>
+                  <p>Organized By</p>
+                  <Image
+                    src={muLogo}
+                    alt='Marwadi University Logo'
+                    priority
+                    quality={100}
+                    className="img-fluid"
+                  />
+
+                  <p className='mt-3'>Media Partner</p>
+                  <Image
+                    src={mainLogo}
+                    alt='PhysioTrends Logo'
+                    priority
+                    quality={100}
+                    className="img-fluid"
+                  />
+                </div>
+              </div>
+            </Col>
+          </Row>
+
           <h6 className={`${ubuntu?.className}`}>Our Services</h6>
           <h1 className={`${ubuntu?.className} sectionTitle`}>
             <Row>

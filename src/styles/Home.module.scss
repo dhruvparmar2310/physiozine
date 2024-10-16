@@ -197,6 +197,64 @@ main {
         }
       }
     }
+
+    .upcomingDetailCard {
+      background: #fff;
+      border-radius: 30px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+      padding: 30px 30px;
+      box-shadow: 0 0 50px rgba(216, 215, 215, 0.634);
+
+      .readMoreBtn {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 99px;
+        border: none;
+        background: rgb(0, 110, 131);
+        background: linear-gradient(200deg, rgb(12, 111, 131) 35%, rgb(36, 205, 239) 100%);
+
+        &:hover {
+          svg {
+            transform: translateX(2px);
+          }
+        }
+
+        svg {
+          transition: all 0.1s linear;
+          font-size: 13px;
+        }
+      }
+
+      .middleImg {
+        img {
+          display: block;
+          width: 100%;
+          max-width: 100px;
+          object-fit: contain;
+        }
+      }
+
+      .lastDetails {
+        text-align: center;
+
+        p {
+          margin: 0;
+        }
+
+        img {
+          width: 100%;
+          max-width: 200px;
+          object-fit: contain;
+        }
+      }
+    }
   }
 
   .about {
@@ -416,6 +474,47 @@ main {
     padding: 0;
     margin-bottom: 25px;
   }
+
+  .actionBar {
+    .upcomingDetailCard {
+      grid-template-columns: 1fr !important;
+      padding: 20px;
+
+      h1 {
+        font-size: 25px !important;
+      }
+
+      .middleImg {
+        width: 100%;
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-evenly !important;
+
+        img {
+          width: 100%;
+          max-width: 100px;
+          object-fit: contain;
+        }
+      }
+
+      .lastDetails {
+        text-align: center;
+
+        p {
+          font-weight: 500;
+          color: var(--primary-dark);
+          font-family: 'Ubuntu';
+          margin: 0;
+        }
+
+        img {
+          width: 100%;
+          max-width: 200px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 576px) {
@@ -529,6 +628,45 @@ main {
       letter-spacing: 0.5px !important;
       line-height: 1.8rem;
       font-size: 1.8rem !important;
+    }
+
+    .upcomingDetailCard {
+      grid-template-columns: 1fr !important;
+      padding: 20px;
+
+      h1 {
+        font-size: 25px !important;
+      }
+
+      .middleImg {
+        width: 100%;
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-evenly !important;
+
+        img {
+          width: 100%;
+          max-width: 100px;
+          object-fit: contain;
+        }
+      }
+
+      .lastDetails {
+        text-align: center;
+
+        p {
+          font-weight: 500;
+          color: var(--primary-dark);
+          font-family: 'Ubuntu';
+          margin: 0;
+        }
+
+        img {
+          width: 100%;
+          max-width: 200px;
+          object-fit: contain;
+        }
+      }
     }
   }
 }

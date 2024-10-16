@@ -25,9 +25,9 @@ const SubmitYourArticle = () => {
 
    const columns = ["Article Type", "Abstract - Word Count", "Article - Word Count", "Publication Charge"]
    const data = [
-      { _id: 0, sTitle: 'Research Article', sAbsCount: '150 - 250', sArticleCount: 'Max. 1500', sCharge: '₹ 500' },
-      { _id: 1, sTitle: 'Case Report', sAbsCount: '150 - 250', sArticleCount: 'Max. 1500', sCharge: '₹ 500' },
-      { _id: 2, sTitle: 'Case Series', sAbsCount: '150 - 250', sArticleCount: 'Max. 1500', sCharge: '₹ 500' },
+      { _id: 0, sTitle: 'Research Article', sAbsCount: '150 - 250', sArticleCount: 'Max. 2000', sCharge: '₹ 500' },
+      { _id: 1, sTitle: 'Case Report', sAbsCount: '150 - 250', sArticleCount: 'Max. 2000', sCharge: '₹ 500' },
+      { _id: 2, sTitle: 'Case Series', sAbsCount: '150 - 250', sArticleCount: 'Max. 2000', sCharge: '₹ 500' },
       { _id: 3, sTitle: 'Blogs', sAbsCount: '-', sArticleCount: 'Max. 1500', sCharge: '₹ 500' }
    ]
    return (
