@@ -3,7 +3,7 @@ import axios from "axios";
 export default function handler (req, res) {
     const {
         version,
-        sPaperTitle: PaperTitle,
+        // sPaperTitle: PaperTitle,
         customer_email: EmailID,
         customer_phone: MobileNo,
         City,
@@ -16,11 +16,12 @@ export default function handler (req, res) {
               customer_id: 'CID' + Date.now(),
               customer_email: EmailID,
               customer_phone: MobileNo,
-              customer_name:  PaperTitle
+              // customer_name:  PaperTitle
             },
             order_meta: {
               payment_methods: "cc,dc,upi",
-              notify_url: "https://webhook.site/99f719b8-0357-42a2-ad27-eea33f55f258",
+              // notify_url: "https://webhook.site/99f719b8-0357-42a2-ad27-eea33f55f258",
+              notify_url: "https://webhook.site/b9d5c83a-8405-4ca4-a7ae-b9932346850d",
             },
             order_id: 'ORID' + Date.now(),
             order_amount: 500,

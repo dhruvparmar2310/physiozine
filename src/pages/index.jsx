@@ -34,6 +34,10 @@ import ConphycsLogo from '../../public/assets/img/15-conphycs-logo-02.png'
 import gptaLogo from '../../public/assets/img/GPTA-LOGO.jpeg'
 import muLogo from '../../public/assets/img/MU_LOGO_BROWN.png'
 import mainLogo from '../../public/assets/img/main-logo.png'
+import zoteroLogo from '../../public/assets/img/webAvailability/Zotero_logo.png'
+import dataCiteLogo from '../../public/assets/img/webAvailability/DataCite-Commons.png'
+import mendeleyLogo from '../../public/assets/img/webAvailability/Mendeley_Logo_Vertical.png'
+import openScholarLogo from '../../public/assets/img/webAvailability/openscholar.png'
 
 //* ALL SVG ELEMENTS
 import { BsGlobeCentralSouthAsia } from "react-icons/bs";
@@ -544,7 +548,7 @@ export default function Home () {
 
           <div className={`${styles?.innerContent} container mt-4`}>
             <div className={`${styles?.logoContent}`}>
-              <Container className='text-center'>
+              <Container className='text-center p-0'>
                 <Row>
                   <Col>
                     <Image src={googleLogo} alt="" quality={100} priority />
@@ -585,6 +589,20 @@ export default function Home () {
                   </Col>
                   <Col>
                     <Image src={linkedinLogo} alt="" quality={100} priority />
+                  </Col>
+                </Row>
+                <Row className='mt-2'>
+                  <Col>
+                    <Image src={dataCiteLogo} alt="" quality={100} priority />
+                  </Col>
+                  <Col>
+                    <Image src={zoteroLogo} alt="" quality={100} priority />
+                  </Col>
+                  <Col>
+                    <Image src={openScholarLogo} alt="" quality={100} priority />
+                  </Col>
+                  <Col>
+                    <Image src={mendeleyLogo} alt="" quality={100} priority />
                   </Col>
                 </Row>
               </Container>
