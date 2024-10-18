@@ -29,7 +29,7 @@ const Checkout = () => {
         if (articleData !== null) {
             // Prepare form data for submission
             const formDataForSheet = {
-                sPaperTitle: articleData?.sPaperTitle,
+                // sPaperTitle: articleData?.sPaperTitle,
                 customer_email: articleData?.sEmailID,
                 customer_phone: articleData?.sMobileNo,
             };
@@ -103,7 +103,6 @@ const Checkout = () => {
             });
 
             const driveData = await driveResponse.json();
-            console.log('driveData :>> ', driveData)
 
             // Submit the updated form data (with Drive URLs) to Google Sheets
             const sheetResponse = await fetch('/api/submit-to-sheet', {
@@ -115,8 +114,8 @@ const Checkout = () => {
             })
 
             if (!sheetResponse.ok) {
-                throw new Error('Failed to submit to Google Sheets');
                 setIsLoading(false);
+                throw new Error('Failed to submit to Google Sheets');
             } else {
                 setIsLoading(false);
                 localStorage.removeItem('articleData')

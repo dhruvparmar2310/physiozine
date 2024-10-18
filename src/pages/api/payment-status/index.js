@@ -18,8 +18,6 @@ export default function handler (req, res) {
 
         axios.request(options)
             .then(function (response) {
-                console.log('get order data :: ', response.data);
-
                 if(response.data.order_status === "PAID"){
                     res.redirect(302, `https://physiotrends.vercel.app/checkout?data=${encodeURIComponent(JSON.stringify(orderData))}&status=success&message=Payment Successful`);
                 } else if (response.data.order_status = "ACTIVE"){

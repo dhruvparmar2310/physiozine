@@ -17,6 +17,8 @@ import DynamicChart from '@/components/DynamicChart'
 import physiothonline from '../../public/assets/img/associated/physioth-online.jpeg'
 import apcLogo from '../../public/assets/img/Clients/apc.jpeg'
 import smartPT from '../../public/assets/img/associated/smart-pt.jpeg'
+import marwadiLogo from '../../public/assets/img/MU_LOGO_BROWN.png'
+import conphycsLogo from '../../public/assets/img/15-conphycs-logo-02.png'
 import { motion, useAnimation } from 'framer-motion'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { useInView } from 'react-intersection-observer'
@@ -317,6 +319,12 @@ const Advertise = () => {
                             </div>
                             <div>
                                 <Image src={apcLogo} className={'img-fluid'} alt='' quality={100} priority />
+                            </div>
+                            <div>
+                                <Image src={marwadiLogo} className={'img-fluid'} alt='' quality={100} priority />
+                            </div>
+                            <div>
+                                <Image src={conphycsLogo} className={'img-fluid'} alt='' quality={100} priority />
                             </div>
                         </div>
                     </div>

@@ -44,7 +44,7 @@ const AuthorCard = ({ control, index, errors }) => {
                     defaultValue=""
                     rules={{ pattern: { value: /^\d{10}$/, message: 'Invalid mobile number' } }}
                     render={({ field }) => (
-                        <Form.Control {...field} placeholder="Enter mobile number" />
+                        <Form.Control {...field} placeholder="Enter mobile number" maxLength={10} />
                     )}
                 />
                 {errors?.authors?.[index]?.mobileNumber && (

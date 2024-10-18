@@ -26,6 +26,10 @@ import amLogo from '../../public/assets/img/webAvailability/am.jpeg'
 import orcidLogo from '../../public/assets/img/webAvailability/orcid.logo.png'
 import physiothonline from '../../public/assets/img/associated/physioth-online.jpeg'
 import smartPT from '../../public/assets/img/associated/smart-pt.jpeg'
+import zoteroLogo from '../../public/assets/img/webAvailability/Zotero_logo.png'
+import dataCiteLogo from '../../public/assets/img/webAvailability/DataCite-Commons.png'
+import mendeleyLogo from '../../public/assets/img/webAvailability/Mendeley_Logo_Vertical.png'
+import openScholarLogo from '../../public/assets/img/webAvailability/openscholar.png'
 import { setCookie } from '@/utils'
 import { useRouter } from 'next/router'
 import { BsArrowRight } from 'react-icons/bs'
@@ -177,10 +181,15 @@ const SubmissionForm = () => {
                                                 name="sEmailID"
                                                 control={control}
                                                 defaultValue=""
-                                                rules={{ required: 'Email field is required' }}
+                                                rules={{
+                                                    required: 'Email field is required', pattern: {
+                                                        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                                                        message: 'Please enter a valid email address',
+                                                    },
+                                                }}
                                                 render={({ field }) => (
                                                     <>
-                                                        <Form.Control {...field} placeholder="Enter your email address" />
+                                                        <Form.Control {...field} placeholder="eg: example@gmail.com" autoCapitalize="none" />
                                                     </>
                                                 )}
                                             />
@@ -196,13 +205,13 @@ const SubmissionForm = () => {
                                                 name="sMobileNo"
                                                 control={control}
                                                 defaultValue=""
-                                                rules={{ required: 'Mobile number is required' }}
+                                                rules={{ required: 'Mobile number is required', pattern: { value: /^\d{10}$/, message: 'Invalid mobile number' } }}
                                                 render={({ field }) => (
                                                     <>
                                                         <Form.Control
                                                             {...field}
-                                                            placeholder="Enter your mobile number"
-                                                            maxLength={12}
+                                                            placeholder="Enter mobile number"
+                                                            maxLength={10}
                                                         />
                                                     </>
                                                 )}
@@ -345,7 +354,20 @@ const SubmissionForm = () => {
                                             <Controller
                                                 name="fArticleFile"
                                                 control={control}
-                                                rules={{ required: 'Additional file is required' }}
+                                                rules={{
+                                                    required: 'Additional file is required',
+                                                    validate: {
+                                                        fileType: (value) => {
+                                                            if (value && typeof (watch('fArticleFile')) !== 'string') {
+                                                                const maxSize = 10 * 1024 * 1024; // 10MB in bytes
+                                                                if (value.size >= maxSize) {
+                                                                    return "File size must be less than 10MB";
+                                                                }
+                                                            }
+                                                            return true;
+                                                        },
+                                                    }
+                                                }}
                                                 render={({ field: { onChange, value, ...field } }) => (
                                                     <>
                                                         <Form.Control
@@ -353,8 +375,8 @@ const SubmissionForm = () => {
                                                             onChange={(e) => onChange(e.target.files[0])}
                                                             {...field}
                                                         />
-                                                        {errors?.file &&
-                                                            <span className='d-block text-danger text-end'>{errors.file.message}</span>
+                                                        {errors?.fArticleFile &&
+                                                            <span className='d-block text-danger text-end'>{errors.fArticleFile.message}</span>
                                                         }
                                                     </>
                                                 )}
@@ -389,7 +411,7 @@ const SubmissionForm = () => {
                     <div className='mt-2'>
                         <p>
                             <em>
-                                If you encounter any issues while submitting your article, please contact our customer care at <span style={{ color: 'var(--primary-color)' }}>+91 7984377792</span> or email us at <span style={{ color: 'var(--primary-color)' }}>physiotrendsmagazine@gmail.com</span> for assistance.
+                                If you encounter any issues while submitting your article, please contact our customer care at <span style={{ color: 'var(--primary-color)' }}>+91 7984377793</span> or email us at <span style={{ color: 'var(--primary-color)' }}>physiotrendsmagazine@gmail.com</span> for assistance.
                             </em>
                         </p>
                     </div>
@@ -437,6 +459,20 @@ const SubmissionForm = () => {
                                     </Col>
                                     <Col>
                                         <Image src={linkedinLogo} alt="" quality={100} priority />
+                                    </Col>
+                                </Row>
+                                <Row className='mt-2'>
+                                    <Col>
+                                        <Image src={dataCiteLogo} alt="" quality={100} priority />
+                                    </Col>
+                                    <Col>
+                                        <Image src={zoteroLogo} alt="" quality={100} priority />
+                                    </Col>
+                                    <Col>
+                                        <Image src={openScholarLogo} alt="" quality={100} priority />
+                                    </Col>
+                                    <Col>
+                                        <Image src={mendeleyLogo} alt="" quality={100} priority />
                                     </Col>
                                 </Row>
                             </Container>
