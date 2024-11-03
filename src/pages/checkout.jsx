@@ -12,18 +12,34 @@ const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500', '700'], style
 const Checkout = () => {
     const router = useRouter()
     const [articleData, setArticleData] = useState(null)
+    const [subscriptionData, setSubscriptionData] = useState(null)
+
     const [sessionID, setSessionID] = useState(null)
-    const { orderID, status } = router.query
+    const { orderID, status, type } = router.query
     const [isLoading, setIsLoading] = useState(false)
     const [msg, setMsg] = useState({ type: '', data: '' });
     let version = cashfree?.version()
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
+        if (type === 'subscription') {
+            const savedSubscriptionData = localStorage.getItem('subscriptionData') || getCookie('subscriptionData')
+            setSubscriptionData(savedSubscriptionData ? JSON.parse(savedSubscriptionData) : null);
+        }
+        if (type === 'article') {
             const savedArticleData = localStorage.getItem('articleData') || getCookie('articleData')
             setArticleData(savedArticleData ? JSON.parse(savedArticleData) : null);
         }
-    }, [])
+    }, [type])
+
+    useEffect(() => {
+        if (Object?.keys(router?.query)?.includes('orderID')) {
+            localStorage?.removeItem('articleData')
+            localStorage?.removeItem('subscriptionData')
+
+            removeCookie('articleData')
+            removeCookie('subscriptionData')
+        }
+    }, [router])
 
     useEffect(() => {
         if (articleData !== null) {
@@ -46,12 +62,34 @@ const Checkout = () => {
         }
     }, [articleData])
 
+    useEffect(() => {
+        if (subscriptionData !== null) {
+            // Prepare form data for submission
+            const formDataForSheet = {
+                customer_name: subscriptionData?.sCollegeName,
+                customer_email: subscriptionData?.sEmailID,
+                customer_phone: subscriptionData?.sMobileNo,
+                subscription_plan: subscriptionData?.subscription_plan
+            };
+
+            axios.post('api/subscription-plan', { version, ...formDataForSheet })
+                .then(async (res) => {
+                    if (res.status === 200) {
+                        setSessionID(res.data)
+                    }
+                })
+                .catch((err) => {
+                    console.log('%c[Error]: Session ID :: ', 'color: red', err)
+                })
+        }
+    }, [subscriptionData])
+
     const handlePaymentBtn = async () => {
         if (sessionID !== null) {
             let checkoutOptions = {
                 paymentSessionId: sessionID,
                 // returnUrl: 'https://t8j4snd7-3000.inc1.devtunnels.ms' + "/api/payment-status/{order_id}",
-                returnUrl: 'https://physiotrends.vercel.app' + "/checkout?orderID={order_id}",
+                returnUrl: 'https://physiotrends-stag.vercel.app' + `/checkout?orderID={order_id}&type=${type}`,
             }
             cashfree.checkout(checkoutOptions).then(function (result) {
                 if (result.error) {
@@ -66,7 +104,12 @@ const Checkout = () => {
 
     useEffect(() => {
         if (orderID !== undefined) {
-            setMsg({ type: 'pending', data: 'Your payment was successful. To complete your submission, please submit your article.' })
+            if (type === 'subscription') {
+                setMsg({ type: 'submitted', data: 'Your Subscription Form has been submitted successfully. You will receive a conformation mail and invoice within 48 hours.' })
+            }
+            if (type === 'article') {
+                setMsg({ type: 'pending', data: 'Your payment was successful. To complete your submission, please submit your article.' })
+            }
         }
     }, [orderID])
 
@@ -127,6 +170,43 @@ const Checkout = () => {
             setIsLoading(false);
         }
     }
+
+    const handleSubmitSubscription = async () => {
+        setIsLoading(true)
+        setMsg({ type: 'pending', data: 'Your Subscription Form is being submitted. Please do not refresh the page or close the tab.' })
+        try {
+            // Prepare form data for submission
+            const formDataForSheet = {
+                sCollegeName: subscriptionData?.sCollegeName,
+                sEmailID: subscriptionData?.sEmailID,
+                sMobileNo: subscriptionData?.sMobileNo,
+                eSubscriptionType: subscriptionData?.subscription_plan,
+                sAddress: subscriptionData?.sAddress
+            };
+
+            // Submit the updated form data (with Drive URLs) to Google Sheets
+            const sheetResponse = await fetch('/api/subscription-plan-sheet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formDataForSheet),
+            })
+
+            if (!sheetResponse.ok) {
+                setIsLoading(false);
+                throw new Error('Failed to submit to Subscription Google Sheets');
+            } else {
+                setIsLoading(false);
+                localStorage.removeItem('subscriptionData')
+                removeCookie('subscriptionData')
+                setMsg({ type: 'submitted', data: 'Your Subscription Form has been submitted successfully. You will receive a conformation mail and invoice within 48 hours.' })
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setIsLoading(false);
+        }
+    }
     return (
         <>
             <Head>
@@ -139,34 +219,56 @@ const Checkout = () => {
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={'Submission Form | PhysioTrends'} link={'/submissionForm'} current={'Checkout'} />
+            <BreadCrumb title={type === 'subscription' ? 'Academic Partner | PhysioTrends' : 'Submission Form | PhysioTrends'} link={type === 'subscription' ? '/academicPartner' : '/submissionForm'} current={'Checkout'} />
             <section className={`${styles?.checkout}`}>
                 <div className={`${styles?.innerContent} container`}>
                     <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Proceed to Payment</h1>
                     <div className={`${styles?.line}`}></div>
 
                     <p className={`${styles?.notes} ${ubuntu?.className}`}>
-                        Please review your article details below and confirm the payment details before proceeding to checkout. If you have any questions, feel free to reach out to our customer support team at <span style={{ color: 'var(--primary-color)' }}>physiotrendsmagazine@gmail.com</span>.
+                        Please review your {type === 'subscription' ? '' : 'article'} details below and confirm the payment details before proceeding to checkout. If you have any questions, feel free to reach out to our customer support team at <span style={{ color: 'var(--primary-color)' }}>physiotrendsmagazine@gmail.com</span>.
                     </p>
 
                     <div>
-                        <Row className={styles?.customerDetails}>
-                            <Col lg={4} md={6} sm={12}>
-                                <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>Article Name</div>
-                                <div className={`${styles?.dataValue} ${ubuntu?.className}`}>{articleData?.sPaperTitle || '-'}</div>
-                            </Col>
-                            <Col lg={4} md={6} sm={12} className='mt-3 mt-lg-0 mt-md-0'>
-                                <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>Email ID</div>
-                                <div className={`${styles?.dataValue} ${ubuntu?.className}`}>{articleData?.sEmailID || '-'}</div>
-                            </Col>
-                            <Col lg={4} md={6} sm={12} className='mt-3 mt-lg-0 '>
-                                <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>Mobile No</div>
-                                <div className={`${styles?.dataValue} ${ubuntu?.className}`}>{articleData?.sMobileNo || '-'}</div>
-                            </Col>
-                        </Row>
+                        {subscriptionData != null && <>
+                            <Row className={styles?.customerDetails}>
+                                <Col lg={4} md={6} sm={12}>
+                                    <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>College Name</div>
+                                    <div className={`${styles?.dataValue} ${ubuntu?.className}`}>{subscriptionData?.sCollegeName || '-'}</div>
+                                </Col>
+                                <Col lg={4} md={6} sm={12} className='mt-3 mt-lg-0 mt-md-0'>
+                                    <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>Email ID</div>
+                                    <div className={`${styles?.dataValue} ${ubuntu?.className}`}>{subscriptionData?.sEmailID || '-'}</div>
+                                </Col>
+                                <Col lg={4} md={6} sm={12} className='mt-3 mt-lg-0 '>
+                                    <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>Mobile No</div>
+                                    <div className={`${styles?.dataValue} ${ubuntu?.className}`}>{subscriptionData?.sMobileNo || '-'}</div>
+                                </Col>
+                                <Col lg={4} md={6} sm={12} className='mt-3 '>
+                                    <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>Subscription Plan</div>
+                                    <div className={`${styles?.dataValue} ${ubuntu?.className} text-capitalize`}>{subscriptionData?.subscription_plan || '-'}</div>
+                                </Col>
+                            </Row>
+                        </>}
+                        {articleData != null && <>
+                            <Row className={styles?.customerDetails}>
+                                <Col lg={4} md={6} sm={12}>
+                                    <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>Article Name</div>
+                                    <div className={`${styles?.dataValue} ${ubuntu?.className}`}>{articleData?.sPaperTitle || '-'}</div>
+                                </Col>
+                                <Col lg={4} md={6} sm={12} className='mt-3 mt-lg-0 mt-md-0'>
+                                    <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>Email ID</div>
+                                    <div className={`${styles?.dataValue} ${ubuntu?.className}`}>{articleData?.sEmailID || '-'}</div>
+                                </Col>
+                                <Col lg={4} md={6} sm={12} className='mt-3 mt-lg-0 '>
+                                    <div className={`${styles?.dataTitle} ${ubuntu?.className}`}>Mobile No</div>
+                                    <div className={`${styles?.dataValue} ${ubuntu?.className}`}>{articleData?.sMobileNo || '-'}</div>
+                                </Col>
+                            </Row>
+                        </>}
                     </div>
 
-                    {orderID ?
+                    {orderID && type === 'article' ?
                         <Button
                             type='button'
                             disabled={isLoading}
@@ -175,18 +277,19 @@ const Checkout = () => {
                         >
                             Submit Article {isLoading && <Spinner animation='border' size='sm' />}
                         </Button>
-                        : <Button
-                            type='button'
-                            disabled={sessionID === null}
-                            onClick={() => handlePaymentBtn()}
-                            className='my-2'
-                        >
-                            Proceed to Pay
-                        </Button>
+                        : orderID && type === 'subscription' ? '' :
+                            <Button
+                                type='button'
+                                disabled={sessionID === null}
+                                onClick={() => handlePaymentBtn()}
+                                className='my-2'
+                            >
+                                Proceed to Pay
+                            </Button>
                     }
 
                     {msg?.data !== '' && <div className="mt-2">
-                        <span className={msg.type === 'submitted' ? 'text-warning' : 'text-danger'}>{msg?.data}</span>
+                        <span className={msg.type === 'submitted' ? 'text-success' : msg.type === 'pending' ? 'text-warning' : 'text - danger'}>{msg?.data}</span>
                     </div>}
                 </div>
             </section >

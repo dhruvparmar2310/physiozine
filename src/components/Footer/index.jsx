@@ -120,10 +120,18 @@ const Footer = () => {
                                 <div className={`${styles.footer_links}`}>
                                     <h4 className={ubuntu?.className}>Quick Links</h4>
                                     <ul>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/articles" title='All Articles | PhysioTrends' className={ubuntu?.className}>All Articles</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/advertise" title='Advertise with Us | PhysioTrends' className={ubuntu?.className}>Advertisement</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/joinAsEditor" title='Join as Editor | PhysioTrends' className={ubuntu?.className}>Join as Editor</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/eventPartner" title='Event Partner | PhysioTrends' className={ubuntu?.className}>Event Partner</Link></li>
+                                        <li>
+                                            <i className="ri-arrow-right-s-line"></i> <Link href="/articles" title='All Articles | PhysioTrends' className={ubuntu?.className}>All Articles</Link>
+                                        </li>
+                                        <li>
+                                            <i className="ri-arrow-right-s-line"></i> <Link href="/supportUs" title='Support Us | PhysioTrends' className={ubuntu?.className}>Support Us</Link>
+                                        </li>
+                                        <li>
+                                            <i className="ri-arrow-right-s-line"></i> <Link href="/joinAsEditor" title='Join as Editor | PhysioTrends' className={ubuntu?.className}>Join as Editor</Link>
+                                        </li>
+                                        <li>
+                                            <i className="ri-arrow-right-s-line"></i> <Link href="/eventPartner" title='Event Partner | PhysioTrends' className={ubuntu?.className}>Event Partner</Link>
+                                        </li>
                                     </ul>
                                 </div>
 

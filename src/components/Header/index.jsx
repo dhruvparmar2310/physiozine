@@ -78,6 +78,11 @@ function Header () {
               <li>
                 <Link href={'/editorialMember'} title='Editorial Members | PhysioTrends' className={`${router?.route?.includes('/editorialMember') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/editorialMember')}>Editorial Members</Link>
               </li>
+
+              <li>
+                <Link href={'/academicPartner'} title='Academic Partner | PhysioTrends' className={`${router?.route?.includes('/academicPartner') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/academicPartner')}>Academic Partner</Link>
+              </li>
+
               <li className={`${styles.drop_down}`}>
                 <span className={`${styles?.dropDownButton} ${ubuntu.className}`} title='Policies | PhysioTrends' onClick={() => setDropDownOpen(!dropdownOpen)}>Policies <FaChevronDown /></span>
                 <ul style={dropdownOpen ? { display: 'block' } : { display: 'none' }}>
@@ -99,9 +104,7 @@ function Header () {
                   <li><Link href={'/policy/editorialPolicy'} title='Editorial Policy | PhysioTrends' className={`${router?.route?.includes('/policy/editorialPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/editorialPolicy')}>Editorial Policy</Link></li>
                 </ul>
               </li>
-              <li>
-                <Link href={'/supportUs'} title='Support Us | PhysioTrends' className={`${router?.route?.includes('/supportUs') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/supportUs')}>Support Us</Link>
-              </li>
+
               <li>
                 <Link href={'/contact'} className={`${router?.route?.includes('/contact') && styles?.active} ${ubuntu.className}`} title='Contact | PhysioTrends' onClick={(e) => handleClick(e, '/contact')}>
                   Contact
