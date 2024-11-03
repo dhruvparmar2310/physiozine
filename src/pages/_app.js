@@ -14,7 +14,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import 'react-loading-skeleton/dist/skeleton.css'
 import Script from 'next/script';
 
-const GA_TRACKING_ID = '435586821';
+const GA_MEASUREMENT_ID = 'G-P080GEG6FN';
 
 export default function App({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(false)
@@ -61,7 +61,7 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      window.gtag('config', GA_TRACKING_ID, {
+      window.gtag('config', GA_MEASUREMENT_ID, {
         page_path: url,
       });
     };
@@ -75,7 +75,7 @@ export default function App({ Component, pageProps }) {
       {isLoading && <LoadingScreen className={isLoading ? "logoLoading" : ""} />}
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
       />
       <Script
         id="google-analytics"
@@ -85,7 +85,7 @@ export default function App({ Component, pageProps }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
+            gtag('config', '${GA_MEASUREMENT_ID}', {
               page_path: window.location.pathname,
             });
           `,
