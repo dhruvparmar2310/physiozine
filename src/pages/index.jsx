@@ -230,13 +230,8 @@ export default function Home () {
           <div className={`${styles?.actions} ${ubuntu?.className} mt-4`}>
             <Row>
               <Col lg={4} md={6} sm={12}>
-                <motion.div
+                <div
                   className={`${styles?.actionCard} ${ubuntu?.className}`}
-                  ref={actionBarRef}
-                  variants={fadeUpAnimation}
-                  initial="hidden"
-                  animate={controls}
-                  transition={{ duration: width ? 0.5 : 1, ease: 'easeInOut' }}
                 >
                   <div className={`${styles?.cardHeader}`}>
                     <h5 className={`${ubuntu?.className}`}>Submit Your Article</h5>
@@ -249,16 +244,11 @@ export default function Home () {
                       </Button>
                     </span>
                   </div>
-                </motion.div>
+                </div>
               </Col>
               <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
-                <motion.div
+                <div
                   className={`${styles?.actionCard} ${ubuntu?.className}`}
-                  ref={actionBarRef}
-                  variants={fadeUpAnimation}
-                  initial="hidden"
-                  animate={controls}
-                  transition={{ duration: width ? 0.5 : 1, ease: 'easeInOut' }}
                 >
                   <div className={`${styles?.cardHeader}`}>
                     <h5 className={`${ubuntu?.className}`}>Author Guidelines</h5>
@@ -271,16 +261,11 @@ export default function Home () {
                       </Button>
                     </span>
                   </div>
-                </motion.div>
+                </div>
               </Col>
               <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
-                <motion.div
+                <div
                   className={`${styles?.actionCard} ${ubuntu?.className}`}
-                  ref={actionBarRef}
-                  variants={fadeUpAnimation}
-                  initial="hidden"
-                  animate={controls}
-                  transition={{ duration: width ? 0.5 : 1, ease: 'easeInOut' }}
                 >
                   <div className={`${styles?.cardHeader}`}>
                     <h5 className={`${ubuntu?.className}`}>Online Courses</h5>
@@ -293,16 +278,11 @@ export default function Home () {
                       </Button>
                     </span>
                   </div>
-                </motion.div>
+                </div>
               </Col>
               <Col lg={4} md={6} sm={12} className="mt-lg-3 mt-md-0 mt-3">
-                <motion.div
+                <div
                   className={`${styles?.actionCard} ${ubuntu?.className}`}
-                  ref={actionBarRef}
-                  variants={fadeUpAnimation}
-                  initial="hidden"
-                  animate={controls}
-                  transition={{ duration: width ? 0.5 : 1, ease: 'easeInOut' }}
                 >
                   <div className={`${styles?.cardHeader}`}>
                     <h5 className={`${ubuntu?.className}`}>International Online Courses</h5>
@@ -315,16 +295,11 @@ export default function Home () {
                       </Button>
                     </span>
                   </div>
-                </motion.div>
+                </div>
               </Col>
               <Col lg={4} md={6} sm={12} className="mt-lg-3 mt-md-0 mt-3">
-                <motion.div
+                <div
                   className={`${styles?.actionCard} ${ubuntu?.className}`}
-                  ref={actionBarRef}
-                  variants={fadeUpAnimation}
-                  initial="hidden"
-                  animate={controls}
-                  transition={{ duration: width ? 0.5 : 1, ease: 'easeInOut' }}
                 >
                   <div className={`${styles?.cardHeader}`}>
                     <h5 className={`${ubuntu?.className}`}>Join As Instructor</h5>
@@ -337,7 +312,7 @@ export default function Home () {
                       </Button>
                     </span>
                   </div>
-                </motion.div>
+                </div>
               </Col>
             </Row>
           </div>

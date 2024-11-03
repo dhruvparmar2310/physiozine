@@ -120,7 +120,7 @@ const SubmissionForm = () => {
             delete data.fArticleFile;
             setCookie('articleData', JSON.stringify(data), 1)
             localStorage.setItem('articleData', JSON.stringify(data))
-            router.push('/checkout')
+            router.push('/checkout?type=article')
         } catch (err) {
             setMsg({ type: 'error', data: 'Oops! Something went wrong. Please try again.' });
             console.error(err);

@@ -11,6 +11,7 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 export default function App({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(false)
