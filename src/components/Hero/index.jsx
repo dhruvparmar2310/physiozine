@@ -34,7 +34,7 @@ function Hero ({ width }) {
                 <div className={`${styles?.heroContent} container-sm`}>
                     <div className={`${styles?.adsContent}`}>
                         <motion.h1
-                            className={`${ubuntu?.className} mt-3`}
+                            className={`mt-3`}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{
