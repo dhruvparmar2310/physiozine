@@ -249,12 +249,12 @@ const Advertise = () => {
                         <div className={`${styles?.line}`}></div>
 
                         <Row className={`${styles?.priceSection}`}>
-                            <Col lg={6} md={12}>
+                            {/* <Col lg={6} md={12}>
                                 <div className={`${styles?.adsImg}`}>
                                     <PricePlan />
                                 </div>
-                            </Col>
-                            <Col lg={6} md={12} className={`${styles?.tableContent}`}>
+                            </Col> */}
+                            <Col md={12} className={`${styles?.tableContent}`}>
                                 <Table responsive>
                                     <thead>
                                         <tr>
@@ -279,12 +279,46 @@ const Advertise = () => {
                                             <td>1/4 Page</td>
                                             <td className={`${styles?.price}`}>1,000/-</td>
                                         </tr>
+                                        <tr>
+                                            <td>Social Media Network Advertisement</td>
+                                            <td className={`${styles?.price}`}>2,000/-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Single Page in Magazine + <br />Social Media Network Advertisement</td>
+                                            <td className={`${styles?.price}`}>4,000/-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Double Page in Magazine + <br /> Social Media Network Advertisement
+                                            </td>
+                                            <td className={`${styles?.price}`}>4,500/-</td>
+                                        </tr>
                                     </tbody>
                                 </Table>
+
+                                <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className} mt-4`} title='Rate of Advertisement | PhysioTrends'>Get PhysioTrends as Media Partner:</h1>
+                                <div className={`${styles?.line}`}></div>
+                                <div>
+                                    <span>Benefits:</span>
+                                    <ul>
+                                        <li>
+                                            <span>Magazine Advertisement for 1 Year</span>
+                                        </li>
+                                        <li>
+                                            <span>Social Media Advertisement for 1 Year</span>
+                                        </li>
+                                        <li>
+                                            <span>Permanent page/link of Your Company in our Website</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <span className={styles.otherPlan}>
+                                    Send an email on <span>physiotrendsmagazine@gmail.com</span> to choose this plan.
+                                </span>
                                 <span className={`${styles?.notes}`}>Note: 100% payment is mandatory for the Advertisement</span>
                             </Col>
 
-                            <Col sm={12}>
+                            <Col sm={12} className='mt-3'>
                                 <div className={`${styles.adsImg}`}>
                                     <Image
                                         src={AdsImg}
@@ -303,6 +337,12 @@ const Advertise = () => {
 
                         <div className={`mt-4 ${styles?.clientLogo}`}>
                             <div>
+                                <Image src={marwadiLogo} className={'img-fluid'} alt='' quality={100} priority />
+                            </div>
+                            <div>
+                                <Image src={conphycsLogo} className={'img-fluid'} alt='' quality={100} priority />
+                            </div>
+                            <div>
                                 <Image src={ThePhysioBrothers} className={'img-fluid'} alt='' quality={100} priority />
                             </div>
                             <div>
@@ -320,12 +360,7 @@ const Advertise = () => {
                             <div>
                                 <Image src={apcLogo} className={'img-fluid'} alt='' quality={100} priority />
                             </div>
-                            <div>
-                                <Image src={marwadiLogo} className={'img-fluid'} alt='' quality={100} priority />
-                            </div>
-                            <div>
-                                <Image src={conphycsLogo} className={'img-fluid'} alt='' quality={100} priority />
-                            </div>
+
                         </div>
                     </div>
                 </div>

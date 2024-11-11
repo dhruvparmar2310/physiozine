@@ -62,13 +62,32 @@
                         text-transform: uppercase;
                         color: var(--black-color);
                         text-align: left;
+                        text-wrap: wrap;
 
-                        &:last-child {
+
+                        &:nth-child(2) {
                             text-align: end;
                         }
                     }
 
                     .price {
+                        color: var(--primary-color);
+                    }
+                }
+
+                span {
+                    text-align: start !important;
+                    width: 100%;
+                    text-wrap: wrap;
+                    font-size: 15px;
+                    // max-width: calc(100% - 300px) !important;
+
+                    &.otherPlan {
+                        text-align: left !important;
+                        text-transform: none;
+                    }
+
+                    span {
                         color: var(--primary-color);
                     }
                 }
