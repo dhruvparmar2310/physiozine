@@ -72,7 +72,7 @@ const AcademicPartner = () => {
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name='keywords' content='PhysioTrends, Physiotherapy, Academic Partners of PhysioTrends, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing ISSN Certified E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
+                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiotrendsmagazine@gmail.com or +91 7984377793." />
                 <meta property="og:title" content="PhysioTrends: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
                 <meta property="og:description" content="Empowering Colleges and Students through Publication and Recognition - Physiotrends" />
                 <meta property="og:url" content="https://physiotrends.vercel.app/academicPartner" />
@@ -90,7 +90,10 @@ const AcademicPartner = () => {
                     </div>
                 </div>
 
-                <div className={`${styles?.academicContent} container`}>
+                <div className={`${styles?.academicContent} container my-5`}>
+                    <h1 className={`${ubuntu.className} text-center`}>Coming Soon</h1>
+                </div>
+                {/* <div className={`${styles?.academicContent} container`}>
                     <p className={`${styles?.introduction} ${ubuntu?.className}`}>
                         Welcome to Physiotrends Digital Magazine’s Academic Partner Program! As a trusted resource in the field of physiotherapy, our digital magazine is dedicated to supporting educational institutions and their students. This program offers exclusive subscription plans that encourage knowledge sharing, promote student achievements, and build a strong community of future healthcare professionals. Join us in fostering academic excellence through accessible publication opportunities and gain recognition on a national platform!
                     </p>
@@ -219,10 +222,10 @@ const AcademicPartner = () => {
                             </em>
                         </p>
                     </div>
-                </div>
+                </div> */}
             </section>
 
-            <Modal show={modal?.open} onHide={handleClose} size='lg'>
+            {/* <Modal show={modal?.open} onHide={handleClose} size='lg'>
                 <Modal.Header closeButton>
                     <Modal.Title>Subscription Plan</Modal.Title>
                 </Modal.Header>
@@ -243,29 +246,6 @@ const AcademicPartner = () => {
                                 <span className='d-block text-danger text-end'>{errors.sCollegeName.message}</span>
                             )}
                         </Form.Group>
-
-                        {/* <Form.Group className="mb-3">
-                            <Form.Label>Address <span className='text-danger'>*</span></Form.Label>
-                            <Controller
-                                name="sAddress"
-                                control={control}
-                                defaultValue=""
-                                rules={{ required: 'College Address is required' }}
-                                render={({ field }) => (
-                                    <Form.Control
-                                        {...field}
-                                        as="textarea"
-                                        rows={4}
-                                        placeholder="Enter the College Address"
-                                    />
-                                )}
-                            />
-                            {errors?.sAddress && (
-                                <span className='d-block text-danger text-end'>
-                                    {errors?.sAddress?.message}
-                                </span>
-                            )}
-                        </Form.Group> */}
 
                         <Form.Group className="mb-3">
                             <Form.Label>Email Address <span className='text-danger'>*</span></Form.Label>
@@ -321,7 +301,7 @@ const AcademicPartner = () => {
                         </Button>
                     </Form>
                 </Modal.Body>
-            </Modal>
+            </Modal> */}
         </>
     )
 }
