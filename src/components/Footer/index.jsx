@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../../styles/Footer.module.scss'
 import Link from 'next/link'
-import { FaLinkedinIn, FaWhatsapp, FaInstagram } from "react-icons/fa"
+import { FaLinkedinIn, FaWhatsapp, FaInstagram, FaBookReader } from "react-icons/fa"
 import { Form } from 'react-bootstrap'
 import { Controller, useForm } from 'react-hook-form'
 import logo from '../../../public/assets/img/footer-logo.png'
@@ -168,6 +168,9 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className={`col-lg-4 p-0 ${styles.social_links}`} style={{ textAlign: 'end' }}>
+                        <Link href="https://www.magzter.com/magazines/listAllIssues/30405" target="_blank" className={styles.linkedin} title='Magzter | PhysioTrends'>
+                            <FaBookReader />
+                        </Link>
                         <Link href="https://www.linkedin.com/posts/physiotrends_physiotrends-linkedin-activity-7171034285615898625-nQlZ" target="_blank" className={styles.linkedin} title='LinkedIn | PhysioTrends'>
                             <FaLinkedinIn />
                         </Link>

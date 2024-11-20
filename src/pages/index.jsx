@@ -113,15 +113,15 @@ export default function Home () {
   return (
     <>
       <Head>
-        <title>PhysioTrends</title>
+        <title>PhysioTrends | Magazine</title>
         <meta charset="utf-8"></meta>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name='keywords' content='PhysioTrends, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-        <meta name="description" content="PHYSIOTRENDS is India’s fastest growing ISSN Certified E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
+        <meta name="description" content="PHYSIOTRENDS is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiotrendsmagazine@gmail.com or +91 7984377793." />
         <meta property="og:title" content="PhysioTrends: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
-        <meta property="og:description" content="PHYSIOTRENDS is India’s fastest growing ISSN Certified E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation." />
+        <meta property="og:description" content="PHYSIOTRENDS is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiotrendsmagazine@gmail.com or +91 7984377793." />
         <meta property="og:url" content="https://physiotrends.vercel.app/" />
         <meta property="og:image" content="assets/img/favicon.png" />
         <meta property="og:type" content="website" />
@@ -151,6 +151,7 @@ export default function Home () {
                     alt="CC Logo"
                     quality={100}
                     priority
+                    onClick={() => router.push('https://en.wikipedia.org/wiki/Creative_Commons_license', { target: '_blank' })}
                   />
                 </div>
               </div>
@@ -188,6 +189,7 @@ export default function Home () {
                     priority
                     quality={100}
                     className="img-fluid"
+                    onClick={() => router.push('https://gptaindia.org/')}
                   />
                 </div>
                 <div className={styles?.lastDetails}>
@@ -198,6 +200,7 @@ export default function Home () {
                     priority
                     quality={100}
                     className="img-fluid"
+                    onClick={() => router.push('https://www.marwadiuniversity.ac.in/faculty-of-physiotherapy/')}
                   />
 
                   <p className='mt-3'>Media Partner</p>
@@ -330,6 +333,7 @@ export default function Home () {
                     alt="Physiotherapy Online Logo"
                     quality={100}
                     priority
+                    onClick={() => router.push('https://physiotherapyonline.net/')}
                   />
                 </div>
                 <div>
@@ -535,13 +539,13 @@ export default function Home () {
               <Container className='text-center p-0'>
                 <Row>
                   <Col>
-                    <Image src={googleLogo} alt="" quality={100} priority />
+                    <Image src={googleLogo} onClick={() => router.push('https://google.com/')} alt="" quality={100} priority />
                   </Col>
                   <Col>
-                    <Image src={googleScholarLogo} alt="" quality={100} priority />
+                    <Image src={googleScholarLogo} onClick={() => router.push('https://scholar.google.com/')} alt="" quality={100} priority />
                   </Col>
                   <Col>
-                    <Image src={magzterLogo} alt="" quality={100} priority />
+                    <Image src={magzterLogo} alt="" quality={100} priority onClick={() => router.push('https://www.magzter.com/magazines/listAllIssues/30405')} />
                   </Col>
                   <Col>
                     <Image src={doiLogo} alt="" quality={100} priority />
@@ -549,21 +553,21 @@ export default function Home () {
                 </Row>
                 <Row className='mt-2'>
                   <Col>
-                    <Image src={zenodoLogo} alt="" quality={100} priority />
+                    <Image src={zenodoLogo} alt="" quality={100} priority onClick={() => router.push('https://zenodo.org/search?q=physiotrends&l=list&p=1&s=10&sort=bestmatch')} />
                   </Col>
                   <Col>
                     <Image src={openAccessLogo} alt="" quality={100} priority />
                   </Col>
                   <Col>
-                    <Image src={openAireLogo} alt="" quality={100} priority />
+                    <Image src={openAireLogo} alt="" quality={100} priority onClick={() => router.push('https://explore.openaire.eu/search/find/research-outcomes?fv0=physiotrends&f0=q&page=1')} />
                   </Col>
                   <Col>
-                    <Image src={readwhereLogo} alt="" quality={100} priority />
+                    <Image src={readwhereLogo} alt="" quality={100} priority onClick={() => router.push('https://www.readwhere.com/search?q=physiotrends')} />
                   </Col>
                 </Row>
                 <Row className='mt-2'>
                   <Col>
-                    <Image src={rgLogo} alt="" quality={100} priority />
+                    <Image src={rgLogo} alt="" quality={100} priority onClick={() => router.push('https://www.researchgate.net/profile/Darshan-Parmar-2')} />
                   </Col>
                   <Col>
                     <Image src={amLogo} alt="" quality={100} priority />
@@ -572,7 +576,7 @@ export default function Home () {
                     <Image src={orcidLogo} alt="" quality={100} priority />
                   </Col>
                   <Col>
-                    <Image src={linkedinLogo} alt="" quality={100} priority />
+                    <Image src={linkedinLogo} alt="" quality={100} priority onClick={() => router.push('https://www.linkedin.com/company/physiotrends')} />
                   </Col>
                 </Row>
                 <Row className='mt-2'>
