@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import BreadCrumb from '@/components/BreadCrumb'
 import Head from 'next/head'
 import styles from '../styles/Advertise.module.scss'
-import { Col, Row, Table } from 'react-bootstrap'
+import { Col, Form, Row, Table } from 'react-bootstrap'
 import { MdNoiseAware } from "react-icons/md"
 import { AiOutlineStock } from "react-icons/ai"
-import { FaUsers } from "react-icons/fa"
+import { FaPaperPlane, FaUsers } from "react-icons/fa"
 import Image from 'next/image'
 import ThePhysioBrothers from '../../public/assets/img/Clients/physiobrothers.png'
 import YogaSanskriti from '../../public/assets/img/Clients/header-logo.png'
@@ -23,12 +23,14 @@ import { motion, useAnimation } from 'framer-motion'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { useInView } from 'react-intersection-observer'
 import { useRouter } from 'next/router'
+import { Controller, useForm } from 'react-hook-form'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const abrilFatface = Abril_Fatface({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 const comfortaa = Comfortaa({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 const Advertise = () => {
     const width = useMediaQuery('(max-width: 576px)')
+    const { control, register, handleSubmit, watch, errors } = useForm({ mode: 'all' })
 
     const aboutSectionRef = useRef(null);
     const controls = useAnimation();
@@ -133,6 +135,21 @@ const Advertise = () => {
         }
     }, [controls, inView]);
 
+
+    const onHandleSubmit = (data) => {
+        const subject = encodeURIComponent('Advertise with Physiotrends Magazine');
+        const body = encodeURIComponent(`
+      Company Name: ${data?.sCompanyName}
+      Email Address: ${data?.sEmailID}
+      Mobile Number: ${data?.sMobileNo}
+      
+      We want to Advertise with Physiotrends Magazine.
+    `);
+
+        const mailtoURL = `mailto:physiotrendsmagazine@gmail.com?subject=${subject}&body=${body}`;
+        router.push(mailtoURL);
+    }
+
     return (
         <>
             <Head>
@@ -174,6 +191,10 @@ const Advertise = () => {
                                 <div className={`${styles?.totalAudience}`}>
                                     <h1 className={`${styles?.totalCount} ${abrilFatface?.className}`}>{nTotalAudience || '0'}+</h1>
                                     <h1 className={`${styles?.audienceTitle} ${comfortaa?.className}`}>Total Audience</h1>
+                                    <div className={`mt-5`}>
+                                        <h2 className={`${comfortaa?.className}`} style={{ textAlign: 'left' }}>Our International Presence:</h2>
+                                        <p className={`${ubuntu?.className}`} style={{ color: 'var(--primary-color)' }}>India, USA, UK, Australia, UAE</p>
+                                    </div>
                                 </div>
                             </Col>
                         </Row>
@@ -329,6 +350,121 @@ const Advertise = () => {
                                         priority
                                     />
                                 </div>
+                            </Col>
+                            <Col sm={12}>
+                                <div className={`${styles.whoCanAd}`}>
+                                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className} mt-4`} title='Rate of Advertisement | PhysioTrends'>Who can Advertise with us?</h1>
+                                    <div className={`${styles?.line}`}></div>
+
+                                    <ul>
+                                        <li>
+                                            <span>
+                                                <strong>Manufacturers, Suppliers, and Distributors</strong> of equipment for Electrotherapy, Exercise Therapy, and Rehabilitation Solutions.
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <strong>Providers of Beauty, Fitness, and Wellness Products,</strong> including slimming tools and devices.
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                Businesses offering <strong>Muscle Relaxants, Pain Relief Solutions, and Topical Ointments.</strong>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <strong>Organizations and Institutions</strong> hosting Workshops, Seminars, and Professional Conferences.
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <strong>Distributors of Medical and Physiotherapy Books,</strong> including specialized publications for the healthcare community.
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <strong>Universities and Educational Institutions</strong> providing physiotherapy courses, both domestic and international.
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </Col>
+
+                            <Col sm={12} className={`${styles?.formContent} mt-3`}>
+                                <Form onSubmit={handleSubmit(onHandleSubmit)} autoComplete='off'>
+                                    <h3 className={ubuntu?.className}>Inquire</h3>
+                                    <Form.Group className="mb-3">
+                                        <Form.Label>Company Name<span className='text-danger'>*</span></Form.Label>
+                                        <Controller
+                                            name='sCompanyName'
+                                            control={control}
+                                            rules={{ required: { value: true, message: 'Company Name is required.' } }}
+                                            render={({ field: { onChange, value, ref } }) => (
+                                                <Form.Control
+                                                    ref={ref}
+                                                    type="text"
+                                                    className={`form-control ${errors && errors?.sName}`}
+                                                    placeholder="Enter your company name"
+                                                    value={value}
+                                                    onChange={onChange}
+                                                />
+                                            )}
+                                        />
+                                        {errors?.sCompanyName && <Form.Control.Feedback type='invalid'>{errors?.sCompanyName?.message}</Form.Control.Feedback>}
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3">
+                                        <Form.Label>Email Address<span className='text-danger'>*</span></Form.Label>
+                                        <Controller
+                                            name="sEmailID"
+                                            control={control}
+                                            defaultValue=""
+                                            rules={{
+                                                required: 'Email field is required', pattern: {
+                                                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                                                    message: 'Please enter a valid email address',
+                                                },
+                                            }}
+                                            render={({ field }) => (
+                                                <>
+                                                    <Form.Control {...field} placeholder="eg: example@gmail.com" autoCapitalize="none" />
+                                                </>
+                                            )}
+                                        />
+                                        {errors?.sEmailID &&
+                                            <span className='d-block text-danger text-end'>{errors?.sEmailID?.message}</span>
+                                        }
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3">
+                                        <Form.Label>Mobile Number<span className='text-danger'>*</span></Form.Label>
+                                        <Controller
+                                            name="sMobileNo"
+                                            control={control}
+                                            defaultValue=""
+                                            rules={{ required: 'Mobile number is required', pattern: { value: /^\d{10}$/, message: 'Invalid mobile number' } }}
+                                            render={({ field }) => (
+                                                <>
+                                                    <Form.Control
+                                                        {...field}
+                                                        placeholder="Enter mobile number"
+                                                        maxLength={10}
+                                                    />
+                                                </>
+                                            )}
+                                        />
+                                        {errors?.sMobileNo &&
+                                            <span className='d-block text-danger text-end'>{errors?.sMobileNo?.message}</span>
+                                        }
+                                    </Form.Group>
+
+                                    <div className='mt-3'>
+                                        <button type='submit' className='button'>
+                                            <FaPaperPlane className='button-icon' /> Send
+                                        </button>
+                                    </div>
+                                </Form>
                             </Col>
                         </Row>
 
