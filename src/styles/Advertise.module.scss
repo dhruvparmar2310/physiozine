@@ -8,10 +8,16 @@
         word-spacing: 2.5px;
         font-size: 1.1rem;
 
+        .advertiseDesc {
+            font-weight: 400;
+            font-family: 'Ubuntu';
+        }
+
         .sectionTitle {
             text-align: left;
             font-size: 1.5rem;
             margin: 0;
+            font-family: 'Ubuntu', sans-serif;
         }
 
         .line {
@@ -29,6 +35,10 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;
+
+                p {
+                    margin-top: 0 !important;
+                }
 
                 .totalCount {
                     letter-spacing: 5px;
@@ -75,7 +85,7 @@
                     }
                 }
 
-                span {
+                p {
                     text-align: start !important;
                     width: 100%;
                     text-wrap: wrap;
@@ -101,7 +111,7 @@
             }
 
             .formContent {
-                width: calc(100% - 400px);
+                width: 50%;
                 margin: 0 auto;
                 background: rgb(203, 203, 203);
                 padding: 30px;
@@ -136,8 +146,12 @@
                     margin-top: 15px;
 
                     li {
+                        text-align: left;
+
                         span {
+                            text-wrap: wrap;
                             font-size: 15px;
+                            font-weight: 500;
                         }
                     }
                 }
@@ -291,6 +305,13 @@
         ul {
             li {
                 font-size: 15px;
+            }
+        }
+
+        .priceSection {
+            .formContent {
+                padding: 20px !important;
+                width: calc(100% - 30px) !important;
             }
         }
     }
