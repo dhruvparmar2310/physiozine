@@ -104,7 +104,7 @@ function Hero ({ width }) {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: width ? 0.3 : 1, animate: 'easeInOut' }}
                     >
-                        <Image src={BannerImg} quality={100} width={100} priority height={100} className={`${styles?.phoneMockUp}`} />
+                        <Image src={BannerImg} quality={100} width={100} priority height={100} className={`${styles?.phoneMockUp}`} alt='doctor image' />
                     </motion.div>
                 </div >
             </section >

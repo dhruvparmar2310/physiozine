@@ -1,8 +1,8 @@
+import { useEffect, useState } from "react";
 import "@/styles/globals.scss";
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,9 +10,8 @@ import LoadingScreen from "@/components/LoadingScreen";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from "@/components/ScrollToTop";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import 'react-loading-skeleton/dist/skeleton.css'
 import Script from 'next/script';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 const GA_MEASUREMENT_ID = 'G-P080GEG6FN';
 

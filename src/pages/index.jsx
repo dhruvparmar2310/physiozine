@@ -43,6 +43,9 @@ import openScholarLogo from '../../public/assets/img/webAvailability/openscholar
 import { BsGlobeCentralSouthAsia } from "react-icons/bs";
 import { FaCity, FaUsers } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChartSimple, faCity, faEarthAsia } from "@fortawesome/free-solid-svg-icons";
+import { Suspense } from "react";
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500', '700'], style: ['normal'] })
 const inter = Inter({ subsets: ["latin"] });
@@ -58,11 +61,13 @@ export default function Home () {
 
   const [network, setNetwork] = useState(22376)
   const [cityCount, setCityCount] = useState(0);
+  const [countryCount, setCountryCount] = useState(0);
   const [teamCount, setTeamCount] = useState(0);
 
   useEffect(() => {
     let networkInterval = null;
     let cityInterval = null;
+    let countryCountInterval = null;
     let teamInterval = null;
 
     // networkInterval = setInterval(() => {
@@ -81,6 +86,14 @@ export default function Home () {
       }
     }, 10);
 
+    countryCountInterval = setInterval(() => {
+      if (countryCount <= 10) {
+        setCountryCount((prevCount) => prevCount + 1);
+      } else {
+        clearInterval(countryCountInterval);
+      }
+    }, 10);
+
     teamInterval = setInterval(() => {
       if (teamCount < members?.length) {
         setTeamCount((prevCount) => prevCount + 1);
@@ -92,9 +105,10 @@ export default function Home () {
     return () => {
       clearInterval(networkInterval);
       clearInterval(cityInterval);
+      clearInterval(countryCountInterval);
       clearInterval(teamInterval);
     };
-  }, [network, cityCount, teamCount]);
+  }, [network, cityCount, teamCount, countryCount]);
 
   const fadeUpAnimation = {
     hidden: { opacity: 0, y: 50 },
@@ -160,10 +174,7 @@ export default function Home () {
         </section>
 
         <section className={`${styles?.actionBar} container`}>
-          <h6 className={`${ubuntu?.className}`}>Upcoming</h6>
-          <h1 className={`${ubuntu?.className} sectionTitle`}>
-            <span>Conference, 2024</span>
-          </h1>
+          <h1 className={`sectionTitle ${styles?.sectionTitle}`} data-heading='Upcoming' title='Upcoming Events | PhysioTrends'>Conference, 2024</h1>
 
           <Row className='my-4'>
             <Col sm={12}>
@@ -179,14 +190,14 @@ export default function Home () {
                   <Image
                     src={ConphycsLogo}
                     alt='15th Conphycs Logo'
-                    priority
+                    loading='lazy'
                     quality={100}
                     className="img-fluid"
                   />
                   <Image
                     src={gptaLogo}
                     alt='GPTA Logo'
-                    priority
+                    loading='lazy'
                     quality={100}
                     className="img-fluid"
                     onClick={() => router.push('https://gptaindia.org/')}
@@ -197,7 +208,7 @@ export default function Home () {
                   <Image
                     src={muLogo}
                     alt='Marwadi University Logo'
-                    priority
+                    loading='lazy'
                     quality={100}
                     className="img-fluid"
                     onClick={() => router.push('https://www.marwadiuniversity.ac.in/faculty-of-physiotherapy/')}
@@ -207,7 +218,7 @@ export default function Home () {
                   <Image
                     src={mainLogo}
                     alt='PhysioTrends Logo'
-                    priority
+                    loading='lazy'
                     quality={100}
                     className="img-fluid"
                   />
@@ -216,19 +227,7 @@ export default function Home () {
             </Col>
           </Row>
 
-          <h6 className={`${ubuntu?.className}`}>Our Services</h6>
-          <h1 className={`${ubuntu?.className} sectionTitle`}>
-            <Row>
-              <Col lg={6}>
-                <span>Be a part of PhysioTrends</span>
-              </Col>
-              {/* <Col lg={6}>
-                <span>
-                  <marquee className={`${styles?.extraInfo}`}>Use code "Physiotrends" to avail 65% discount in all the online courses. Limited period offer!</marquee>
-                </span>
-              </Col> */}
-            </Row>
-          </h1>
+          <h1 className={`sectionTitle ${styles?.sectionTitle}`} data-heading='Our Services' title='Our Services | PhysioTrends'>Be a part of PhysioTrends</h1>
 
           <div className={`${styles?.actions} ${ubuntu?.className} mt-4`}>
             <Row>
@@ -356,7 +355,7 @@ export default function Home () {
 
             <div className={`${styles?.innerContent}`}>
               <motion.p
-                className={`${styles?.desc} ${ubuntu?.className} mt-5`}
+                className={`${styles?.desc} mt-5`}
                 ref={ref}
                 variants={fadeUpAnimation}
                 initial="hidden"
@@ -379,7 +378,7 @@ export default function Home () {
                     >
                       <h1 className={`${styles?.cardTitle} ${ubuntu?.className}`}>Vision</h1>
                       <div className={`${styles?.line}`}></div>
-                      <p className={`${styles?.cardBody} ${ubuntu?.className}`}>
+                      <p className={`${styles?.cardBody}`}>
                         "Empowering physiotherapists through timely evidence, fostering a collaborative community for elevated standards."
                       </p>
                     </motion.div>
@@ -395,7 +394,7 @@ export default function Home () {
                     >
                       <h1 className={`${styles?.cardTitle} ${ubuntu?.className}`}>Mission</h1>
                       <div className={`${styles?.line}`}></div>
-                      <p className={`${styles?.cardBody} ${ubuntu?.className}`}>
+                      <p className={`${styles?.cardBody}`}>
                         "Connect physiotherapists globally with cutting-edge knowledge, building a stronger profession."
                       </p>
                     </motion.div>
@@ -494,21 +493,28 @@ export default function Home () {
               {/* <Col lg={4}>
                 <h4 className={`${ubuntu?.className}`}>Empower Yourself with Knowledge, Anytime, Anywhere.</h4>
               </Col> */}
-              <Col lg={4}>
+              <Col lg={3}>
                 <div className={`${styles?.counterCard}`}>
-                  <div><BsGlobeCentralSouthAsia style={{ color: '#c1c1c1' }} /></div>
+                  <div><FontAwesomeIcon icon={faChartSimple} color='#c1c1c1' /></div>
                   <div className={`${styles?.dataValue}`}>{network}+</div>
                   <div className={`${styles?.dataLabel} ${ubuntu?.className}`}>Network</div>
                 </div>
               </Col>
-              <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
+              <Col lg={3} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
                 <div className={`${styles?.counterCard}`}>
-                  <div><FaCity style={{ color: '#54ff72' }} /></div>
-                  <div className={`${styles?.dataValue}`}>{cityCount}+</div>
-                  <div className={`${styles?.dataLabel} ${ubuntu?.className}`}>City</div>
+                  <div><FontAwesomeIcon icon={faEarthAsia} color='#5391e1' /></div>
+                  <div className={`${styles?.dataValue}`}>{countryCount}+</div>
+                  <div className={`${styles?.dataLabel} ${ubuntu?.className}`}>Country</div>
                 </div>
               </Col>
-              <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-3 mt-3">
+              <Col lg={3} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
+                <div className={`${styles?.counterCard}`}>
+                  <div><FontAwesomeIcon icon={faCity} color='#68f568' /></div>
+                  <div className={`${styles?.dataValue}`}>{cityCount}+</div>
+                  <div className={`${styles?.dataLabel} ${ubuntu?.className}`}>Indian Cities</div>
+                </div>
+              </Col>
+              <Col lg={3} md={6} sm={12} className="mt-lg-0 mt-md-3 mt-3">
                 <div className={`${styles?.counterCard}`}>
                   <div><FaUsers style={{ color: '#ff8fa3' }} /></div>
                   <div className={`${styles?.dataValue}`}>{teamCount}</div>
@@ -522,7 +528,7 @@ export default function Home () {
         <section id="magazines" className={`${styles?.articles}`}>
           <div className="container">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
-              <h1 className={`sectionTitle ${ubuntu?.className}`} data-heading='Our Latest' title="Our Latest Research Magazines | PhysioTrends">Magazines</h1>
+              <h1 className={`sectionTitle`} data-heading='Our Latest' title="Our Latest Research Magazines | PhysioTrends">Magazines</h1>
               <div className={`text-center mt-4 ${styles?.viewMoreBtn} ${ubuntu?.className}`}>
                 <span onClick={() => router.push('/articles')}>View More</span>
               </div>
@@ -539,58 +545,58 @@ export default function Home () {
               <Container className='text-center p-0'>
                 <Row>
                   <Col>
-                    <Image src={googleLogo} onClick={() => router.push('https://google.com/')} alt="" quality={100} priority />
+                    <Image src={googleLogo} onClick={() => router.push('https://google.com/')} alt="" quality={100} loading='lazy' />
                   </Col>
                   <Col>
-                    <Image src={googleScholarLogo} onClick={() => router.push('https://scholar.google.com/')} alt="" quality={100} priority />
+                    <Image src={googleScholarLogo} onClick={() => router.push('https://scholar.google.com/')} alt="" quality={100} loading='lazy' />
                   </Col>
                   <Col>
-                    <Image src={magzterLogo} alt="" quality={100} priority onClick={() => router.push('https://www.magzter.com/magazines/listAllIssues/30405')} />
+                    <Image src={magzterLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://www.magzter.com/magazines/listAllIssues/30405')} />
                   </Col>
                   <Col>
-                    <Image src={doiLogo} alt="" quality={100} priority />
-                  </Col>
-                </Row>
-                <Row className='mt-2'>
-                  <Col>
-                    <Image src={zenodoLogo} alt="" quality={100} priority onClick={() => router.push('https://zenodo.org/search?q=physiotrends&l=list&p=1&s=10&sort=bestmatch')} />
-                  </Col>
-                  <Col>
-                    <Image src={openAccessLogo} alt="" quality={100} priority />
-                  </Col>
-                  <Col>
-                    <Image src={openAireLogo} alt="" quality={100} priority onClick={() => router.push('https://explore.openaire.eu/search/find/research-outcomes?fv0=physiotrends&f0=q&page=1')} />
-                  </Col>
-                  <Col>
-                    <Image src={readwhereLogo} alt="" quality={100} priority onClick={() => router.push('https://www.readwhere.com/search?q=physiotrends')} />
+                    <Image src={doiLogo} alt="" quality={100} loading='lazy' />
                   </Col>
                 </Row>
                 <Row className='mt-2'>
                   <Col>
-                    <Image src={rgLogo} alt="" quality={100} priority onClick={() => router.push('https://www.researchgate.net/profile/Darshan-Parmar-2')} />
+                    <Image src={zenodoLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://zenodo.org/search?q=physiotrends&l=list&p=1&s=10&sort=bestmatch')} />
                   </Col>
                   <Col>
-                    <Image src={amLogo} alt="" quality={100} priority />
+                    <Image src={openAccessLogo} alt="" quality={100} loading='lazy' />
                   </Col>
                   <Col>
-                    <Image src={orcidLogo} alt="" quality={100} priority />
+                    <Image src={openAireLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://explore.openaire.eu/search/find/research-outcomes?fv0=physiotrends&f0=q&page=1')} />
                   </Col>
                   <Col>
-                    <Image src={linkedinLogo} alt="" quality={100} priority onClick={() => router.push('https://www.linkedin.com/company/physiotrends')} />
+                    <Image src={readwhereLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://www.readwhere.com/search?q=physiotrends')} />
                   </Col>
                 </Row>
                 <Row className='mt-2'>
                   <Col>
-                    <Image src={dataCiteLogo} alt="" quality={100} priority />
+                    <Image src={rgLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://www.researchgate.net/profile/Darshan-Parmar-2')} />
                   </Col>
                   <Col>
-                    <Image src={zoteroLogo} alt="" quality={100} priority />
+                    <Image src={amLogo} alt="" quality={100} loading='lazy' />
                   </Col>
                   <Col>
-                    <Image src={openScholarLogo} alt="" quality={100} priority />
+                    <Image src={orcidLogo} alt="" quality={100} loading='lazy' />
                   </Col>
                   <Col>
-                    <Image src={mendeleyLogo} alt="" quality={100} priority />
+                    <Image src={linkedinLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://www.linkedin.com/company/physiotrends')} />
+                  </Col>
+                </Row>
+                <Row className='mt-2'>
+                  <Col>
+                    <Image src={dataCiteLogo} alt="" quality={100} loading='lazy' />
+                  </Col>
+                  <Col>
+                    <Image src={zoteroLogo} alt="" quality={100} loading='lazy' />
+                  </Col>
+                  <Col>
+                    <Image src={openScholarLogo} alt="" quality={100} loading='lazy' />
+                  </Col>
+                  <Col>
+                    <Image src={mendeleyLogo} alt="" quality={100} loading='lazy' />
                   </Col>
                 </Row>
               </Container>
