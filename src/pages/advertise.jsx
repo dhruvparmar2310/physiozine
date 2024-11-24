@@ -193,7 +193,7 @@ const Advertise = () => {
                                     <h1 className={`${styles?.audienceTitle} ${comfortaa?.className}`}>Total Audience</h1>
                                     <div className={`mt-5`}>
                                         <h2 className={`${comfortaa?.className} mb-0`} style={{ textAlign: 'left' }}>Our International Presence:</h2>
-                                        <p className={`${ubuntu?.className}`} style={{ color: 'var(--primary-color)' }}>India, USA, UK, Australia, UAE</p>
+                                        <p className={`${ubuntu?.className}`} style={{ color: 'var(--primary-color)' }}>India, USA, UK, Australia, UAE, Canada, Indonesia, Ireland, Pakistan</p>
                                     </div>
                                 </div>
                             </Col>
