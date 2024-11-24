@@ -192,7 +192,7 @@ const Advertise = () => {
                                     <h1 className={`${styles?.totalCount} ${abrilFatface?.className}`}>{nTotalAudience || '0'}+</h1>
                                     <h1 className={`${styles?.audienceTitle} ${comfortaa?.className}`}>Total Audience</h1>
                                     <div className={`mt-5`}>
-                                        <h2 className={`${comfortaa?.className}`} style={{ textAlign: 'left' }}>Our International Presence:</h2>
+                                        <h2 className={`${comfortaa?.className} mb-0`} style={{ textAlign: 'left' }}>Our International Presence:</h2>
                                         <p className={`${ubuntu?.className}`} style={{ color: 'var(--primary-color)' }}>India, USA, UK, Australia, UAE</p>
                                     </div>
                                 </div>
@@ -303,16 +303,16 @@ const Advertise = () => {
                                             <td className={`${styles?.price}`}>1,000/-</td>
                                         </tr>
                                         <tr>
-                                            <td>Social Media Network Advertisement</td>
+                                            <td>Social Media Advertisement</td>
                                             <td className={`${styles?.price}`}>2,000/-</td>
                                         </tr>
                                         <tr>
-                                            <td>Single Page in Magazine + <br />Social Media Network Advertisement</td>
+                                            <td>Single Page in Magazine + <br />Social Media Advertisement</td>
                                             <td className={`${styles?.price}`}>4,000/-</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                Double Page in Magazine + <br /> Social Media Network Advertisement
+                                                Double Page in Magazine + <br /> Social Media Advertisement
                                             </td>
                                             <td className={`${styles?.price}`}>4,500/-</td>
                                         </tr>
@@ -335,10 +335,10 @@ const Advertise = () => {
                                         </li>
                                     </ul>
                                 </div>
-                                <span className={styles.otherPlan}>
+                                <p className={styles.otherPlan}>
                                     Send an email on <span>physiotrendsmagazine@gmail.com</span> to choose this plan.
-                                </span>
-                                <span className={`${styles?.notes}`}>Note: 100% payment is mandatory for the Advertisement</span>
+                                </p>
+                                <p className={`${styles?.notes}`}>Note: 100% payment is mandatory for the Advertisement</p>
                             </Col>
 
                             <Col sm={12} className='mt-3'>
