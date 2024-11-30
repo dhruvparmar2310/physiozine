@@ -45,7 +45,6 @@ import { FaCity, FaUsers } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartSimple, faCity, faEarthAsia } from "@fortawesome/free-solid-svg-icons";
-import { Suspense } from "react";
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500', '700'], style: ['normal'] })
 const inter = Inter({ subsets: ["latin"] });
