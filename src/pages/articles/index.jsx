@@ -13,12 +13,19 @@ import { saveAs } from 'file-saver'
 import { articles } from '@/data/articles'
 import { FaEye, FaUserCircle } from 'react-icons/fa'
 import { Ubuntu } from 'next/font/google'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye, faFilePdf } from '@fortawesome/free-solid-svg-icons'
+import HomePageArticles from '@/components/HomePageArticles'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['500'], style: ['normal'] })
 
 function Articles ({ data, router }) {
   const [isCopied, setIsCopied] = useState(false)
   const [openAccordionIndex, setOpenAccordionIndex] = useState(0);
+  const [btnToggle, setBtnToggle] = useState({
+    volOne: true,
+    volTwo: false
+  })
 
   const handleCopyLink = async (link) => {
     try {
@@ -81,7 +88,111 @@ function Articles ({ data, router }) {
             <div className={`${styles?.line}`}></div>
 
             <div className={`${styles?.contentBody}`}>
-              {data?.articles?.map((article, index) => {
+              <div className={`${styles?.btnGroup}`}>
+                <Button className={`${styles?.tab} ${btnToggle?.volOne ? `${styles?.active}` : ''}`} onClick={() => setBtnToggle({ volOne: true })}>
+                  Volume - 1
+                </Button>
+                <Button className={`${styles?.tab} ${btnToggle?.volTwo ? `${styles?.active}` : ''}`} onClick={() => setBtnToggle({ volTwo: true })}>
+                  Volume - 2
+                </Button>
+              </div>
+
+              <div className={`${styles?.tabContent}`}>
+                {btnToggle?.volOne && (<>
+                  <div>
+                    <Table responsive>
+                      {/* <thead>
+                        <tr>
+                          <th>Sr No.</th>
+                          <th>Name</th>
+                          <th>Lunch Date</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead> */}
+                      <tbody>
+                        <tr>
+                          {/* <td>1</td> */}
+                          <td>Issue 1</td>
+                          <td>March, 2024</td>
+                          <td>
+                            <Button className='me-2' onClick={() => router.push({
+                              pathname: `/articles/Volume-1/Issue-1`,
+                              query: { publishedDate: 'March, 2024' }
+                            })}>
+                              <FontAwesomeIcon icon={faEye} /> View
+                            </Button>
+                            <Button>
+                              <FontAwesomeIcon icon={faFilePdf} /> PDF
+                            </Button>
+                          </td>
+                        </tr>
+                        <tr>
+                          {/* <td>2</td> */}
+                          <td>Issue 2</td>
+                          <td>June, 2024</td>
+                          <td>
+                            <Button className='me-2' onClick={() => router.push({
+                              pathname: `/articles/Volume-1/Issue-2`,
+                              query: { publishedDate: 'June, 2024' }
+                            })}>
+                              <FontAwesomeIcon icon={faEye} /> View
+                            </Button>
+                            <Button>
+                              <FontAwesomeIcon icon={faFilePdf} /> PDF
+                            </Button>
+                          </td>
+                        </tr>
+                        <tr>
+                          {/* <td>3</td> */}
+                          <td>Issue 3</td>
+                          <td>August, 2024</td>
+                          <td>
+                            <Button className='me-2' onClick={() => router.push({
+                              pathname: `/articles/Volume-1/Issue-3`,
+                              query: { publishedDate: 'August, 2024' }
+                            })}>
+                              <FontAwesomeIcon icon={faEye} /> View
+                            </Button>
+                            <Button>
+                              <FontAwesomeIcon icon={faFilePdf} /> PDF
+                            </Button>
+                          </td>
+                        </tr>
+                        <tr>
+                          {/* <td>4</td> */}
+                          <td>Issue 4</td>
+                          <td>October, 2024</td>
+                          <td>
+                            <Button className='me-2' onClick={() => router.push({
+                              pathname: `/articles/Volume-1/Issue-4`,
+                              query: { publishedDate: 'October, 2024' }
+                            })}>
+                              <FontAwesomeIcon icon={faEye} /> View
+                            </Button>
+                            <Button>
+                              <FontAwesomeIcon icon={faFilePdf} /> PDF
+                            </Button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </Table>
+                  </div>
+                </>)}
+
+                {btnToggle?.volTwo && (<>
+                  <div className={`${styles?.upcomingArticle}`}>
+                    <h6>Call for publications - Physiotrends Digital Magazine</h6>
+                    <p>Here's your chance to showcase your expertise! Physiotrends Digital Magazine is inviting article submission for our upcoming Issue.<br />Submit your article on <a href='/submissionForm'>link</a></p>
+                  </div>
+                </>)}
+              </div>
+              <div className={`${styles?.latestMagazineSection}`}>
+                <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className} mt-3`}>Latest Magazines</h1>
+                <div className={`${styles?.line}`}></div>
+                <HomePageArticles />
+              </div>
+
+              {/* {data?.articles?.map((article, index) => {
                 return (
                   <React.Fragment key={article?._id}>
                     <div className={`${styles?.accordion} accordion accordion-flush mt-2`} id='main-accordion'>
@@ -170,7 +281,7 @@ function Articles ({ data, router }) {
                     </div>
                   </React.Fragment>
                 );
-              })}
+              })} */}
 
             </div>
 
