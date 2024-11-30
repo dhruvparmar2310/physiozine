@@ -121,7 +121,9 @@ function Articles ({ data, router }) {
                             })}>
                               <FontAwesomeIcon icon={faEye} /> View
                             </Button>
-                            <Button>
+                            <Button onClick={() =>
+                              saveAs(`${articles?.find(item => item?._id === '1')?.eBook}`, `PhysioTrends_Vol-1_Issue-1`)}
+                            >
                               <FontAwesomeIcon icon={faFilePdf} /> PDF
                             </Button>
                           </td>
@@ -137,7 +139,8 @@ function Articles ({ data, router }) {
                             })}>
                               <FontAwesomeIcon icon={faEye} /> View
                             </Button>
-                            <Button>
+                            <Button onClick={() =>
+                              saveAs(`${articles?.find(item => item?._id === '2')?.eBook}`, `PhysioTrends_Vol-1_Issue-2`)}>
                               <FontAwesomeIcon icon={faFilePdf} /> PDF
                             </Button>
                           </td>
@@ -153,7 +156,8 @@ function Articles ({ data, router }) {
                             })}>
                               <FontAwesomeIcon icon={faEye} /> View
                             </Button>
-                            <Button>
+                            <Button onClick={() =>
+                              saveAs(`${articles?.find(item => item?._id === '3')?.eBook}`, `PhysioTrends_Vol-1_Issue-3`)}>
                               <FontAwesomeIcon icon={faFilePdf} /> PDF
                             </Button>
                           </td>
@@ -169,7 +173,8 @@ function Articles ({ data, router }) {
                             })}>
                               <FontAwesomeIcon icon={faEye} /> View
                             </Button>
-                            <Button>
+                            <Button onClick={() =>
+                              saveAs(`${articles?.find(item => item?._id === '4')?.eBook}`, `PhysioTrends_Vol-1_Issue-4`)}>
                               <FontAwesomeIcon icon={faFilePdf} /> PDF
                             </Button>
                           </td>
