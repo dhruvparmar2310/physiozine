@@ -179,6 +179,23 @@ function Articles ({ data, router }) {
                             </Button>
                           </td>
                         </tr>
+                        <tr>
+                          {/* <td>4</td> */}
+                          <td>Issue 5</td>
+                          <td>December, 2024</td>
+                          <td>
+                            <Button className='me-2' onClick={() => router.push({
+                              pathname: `/articles/Volume-1/Issue-5`,
+                              query: { publishedDate: 'December, 2024' }
+                            })}>
+                              <FontAwesomeIcon icon={faEye} /> View
+                            </Button>
+                            <Button onClick={() =>
+                              saveAs(`${articles?.find(item => item?._id === '5')?.eBook}`, `PhysioTrends_Vol-1_Issue-5`)}>
+                              <FontAwesomeIcon icon={faFilePdf} /> PDF
+                            </Button>
+                          </td>
+                        </tr>
                       </tbody>
                     </Table>
                   </div>
