@@ -28,6 +28,12 @@ function ArticleID ({ data }) {
     const { articleID, sArticle, issueId, sIssueName, publishedDate, id } = router.query
     const [articleData, setArticleData] = useState([])
 
+    function goToZenodo (data) {
+        let articleCode = data?.split('zenodo.')?.[1]
+
+        window.location.href = `https://zenodo.org/records/${articleCode}`
+    }
+
     useEffect(() => {
         const data = articleID?.length === 2 ? articles?.find(item => item?.title?.includes(articleID?.join(', '))) : articleID?.length === 3 && (articles?.find(item => item?.title?.includes(articleID?.slice(0, 2)?.join(', ')))?.aMagazines?.find(magazine => magazine?._id === id))
 
@@ -69,12 +75,12 @@ function ArticleID ({ data }) {
                                                 </div>
                                                 <h1 className={ubuntu?.className}>{item?.sName}</h1>
                                                 <p className={`${styles?.authorName} ${comfortaa?.className}`}> {item?.sAuthor} </p>
-                                                <p className={`${styles?.doiNumber}`}>DOI: {item?.sDOINo}</p>
+                                                {item?.sDOINo === '-' ? '' : <p className={`${styles?.doiNumber}`}>DOI: <span style={{ cursor: 'pointer' }} onClick={() => goToZenodo(item?.sDOINo)}>{item?.sDOINo}</span></p>}
                                                 <div className={styles?.actionBar}>
-                                                    <span>Page No.: {item?.sPageNo}</span> <span className={styles?.pipeSymbol}>|</span> <span className={`${styles?.downLoadBtn}`} onClick={() => router.push({
+                                                    {item?.sPageNo === '-' ? '' : <><span>Page No.: {item?.sPageNo}</span><span className={styles?.pipeSymbol}>|</span></>} <span className={`${styles?.downLoadBtn}`} onClick={() => router.push({
                                                         pathname: `/articles/${articleID?.[0]}/${articleID?.[1]}/${item?.sName}`,
                                                         query: { id: item?._id }
-                                                    })}><GrTextAlignFull /> Full Text</span> <span className={styles?.pipeSymbol}>|</span> <span className={`${styles?.downLoadBtn}`} onClick={() => saveAs(`${item?.sDownLoadUrl}`, `${item?.sName}`)}><FontAwesomeIcon icon={faFilePdf} /> PDF</span>
+                                                    })}><GrTextAlignFull /> Full Text</span> {item?.sDownLoadUrl === '-' ? '' : <><span className={styles?.pipeSymbol}>|</span> <span className={`${styles?.downLoadBtn}`} onClick={() => saveAs(`${item?.sDownLoadUrl}`, `${item?.sName}`)}><FontAwesomeIcon icon={faFilePdf} /> PDF</span></>}
                                                 </div>
                                             </div>
                                         )
@@ -118,12 +124,14 @@ function ArticleID ({ data }) {
 
                             <div className={`${styles?.actions} ${ubuntu?.className}`}>
                                 <span><strong>{articleData?.sAuthor}</strong></span>
-                                <span>DOI: <span style={{ color: 'var(--primary-color)', marginLeft: '5px', cursor: 'auto' }}>{articleData?.sDOINo}</span></span>
-                                <span variant='dark' size='sm' onClick={() => saveAs(`${articleData?.sDownLoadUrl}`, `${articleData?.sName}`)}>
+                                {articleData?.sDOINo === '-' ? "" : <span>DOI: <span style={{ color: 'var(--primary-color)', marginLeft: '5px', cursor: 'auto' }}>{articleData?.sDOINo}</span></span>}
+
+                                {articleData?.sDownLoadUrl === '-' ? '' : <span variant='dark' size='sm' onClick={() => saveAs(`${articleData?.sDownLoadUrl}`, `${articleData?.sName}`)}>
                                     <span className={`${styles?.logo}`}><FaDownload /></span> <span>Download PDF</span>
-                                </span>
+                                </span>}
+
                                 <span>{articleID?.slice(0, 2)?.join(', ')}</span>
-                                <span>Page No.: {articleData?.sPageNo}</span>
+                                {articleData?.sPageNo === '-' ? '' : <span>Page No.: {articleData?.sPageNo}</span>}
                             </div>
 
                             <article>
@@ -131,7 +139,10 @@ function ArticleID ({ data }) {
                             </article>
 
                             <div className={`${styles.goBackBtn}`}>
-                                <Button variant='link' className={`${ubuntu?.className}`} onClick={() => router.push(`/articles/${articleID?.[0]}/${articleID?.[1]}`)}>
+                                <Button variant='link' className={`${ubuntu?.className}`} onClick={() => router.push({
+                                    pathname: `/articles/${articleID?.[0]}/${articleID?.[1]}`,
+                                    query: { publishedDate }
+                                })}>
                                     <span>&lt;&lt;</span> <span>Previous Page</span>
                                 </Button>
                             </div>
