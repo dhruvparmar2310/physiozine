@@ -8,6 +8,7 @@ import { useRouter } from 'next/router'
 import textLogo from '../../../public/assets/img/main-logo.png'
 import { motion } from 'framer-motion'
 import InstallPWA from '../InstallPWA'
+import { LuCoins } from "react-icons/lu"
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const Roboto_Condensed_Font = Roboto_Condensed({ subsets: ['latin'], weight: ['400', '500', '600', '700'], style: ['normal'] })
@@ -96,6 +97,18 @@ function Hero ({ width }) {
                                 <InstallPWA />
                             </motion.div>
                         </div>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                delay: width ? 0 : 0.8, // delay the animation by 0.2 seconds
+                                duration: width ? 0.3 : 1, // animation duration of 0.8 seconds
+                                ease: 'easeInOut', // easing function for a smoother animation
+                            }}
+                            className='mt-2'
+                        >
+                            <Button className={`btn ${styles?.referBtn} ${ubuntu?.className}`} onClick={() => router.push('/policy/referPolicy')}>Refer & Earn <LuCoins /></Button>
+                        </motion.div>
                     </div>
 
                     <motion.div

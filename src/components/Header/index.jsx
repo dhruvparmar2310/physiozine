@@ -96,6 +96,9 @@ function Header () {
                     <Link href={'/policy/privacyPolicy'} title='Privacy Policy | PhysioTrends' className={`${router?.route?.includes('/policy/privacyPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/privacyPolicy')}>Privacy Policy</Link>
                   </li>
                   <li>
+                    <Link href={'/policy/referPolicy'} title='Refer & Earn Policy | PhysioTrends' className={`${router?.route?.includes('/policy/referPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/referPolicy')}>Refer & Earn Policy</Link>
+                  </li>
+                  <li>
                     <Link href={'/policy/refundPolicy'} title='Refund Policy | PhysioTrends' className={`${router?.route?.includes('/policy/refundPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/refundPolicy')}>Refund Policy</Link>
                   </li>
                   <li>
