@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from "@/components/ScrollToTop";
 import Script from 'next/script';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const GA_MEASUREMENT_ID = 'G-P080GEG6FN';
 

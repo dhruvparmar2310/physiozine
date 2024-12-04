@@ -15,6 +15,7 @@ import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import msmeLogo from '../../../public/assets/img/License/MSME-Logo.png'
 import Image from 'next/image'
+import Skeleton from 'react-loading-skeleton'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 const abrilFatface = Abril_Fatface({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
@@ -26,7 +27,7 @@ function ArticleID ({ data }) {
     const pdfViewRef = useRef(null)
 
     const { articleID, sArticle, issueId, sIssueName, publishedDate, id } = router.query
-    const [articleData, setArticleData] = useState([])
+    const [articleData, setArticleData] = useState({})
 
     function goToZenodo (data) {
         let articleCode = data?.split('zenodo.')?.[1]
@@ -59,96 +60,154 @@ function ArticleID ({ data }) {
 
             {/* <BreadCrumb title={'Articles | PhysioTrends'} link={'Home'} current={`Articles - ${sArticle}`} /> */}
             <section className={`${styles?.articles} ${styles?.readArticlePage} container`} style={{ marginTop: '6rem' }}>
-                <div className={`${styles?.articlesContent}`}>
-                    {articleID?.length === 2 &&
-                        (<>
-                            <h1 className={`sectionTitle ${styles?.magazineTitle} ${ubuntu?.className}`}>{articleID?.map(item => item).join(', ')}</h1>
-                            <div className={`${styles?.line} mb-3`}></div>
+                {Object?.keys(articleData)?.length === 0 ? <>
+                    <div>
+                        <Skeleton count={1} width={280} height={30} />
+                        <Skeleton count={1} height={5} />
 
-                            <div className='d-flex justify-content-between flex-wrap'>
-                                <div className={styles?.issueList}>
-                                    {articleData?.aMagazines?.map(item => {
-                                        return (
-                                            <div key={item?._id} className={`${styles?.issueDetails}`}>
-                                                <div>
-                                                    <span className={`${styles?.articleTag}`}>{item?.eTag}</span> <span>|</span> <span className={`${styles?.date}`}>Published on {publishedDate}</span>
-                                                </div>
-                                                <h1 className={ubuntu?.className}>{item?.sName}</h1>
-                                                <p className={`${styles?.authorName} ${comfortaa?.className}`}> {item?.sAuthor} </p>
-                                                {item?.sDOINo === '-' ? '' : <p className={`${styles?.doiNumber}`}>DOI: <span style={{ cursor: 'pointer' }} onClick={() => goToZenodo(item?.sDOINo)}>{item?.sDOINo}</span></p>}
-                                                <div className={styles?.actionBar}>
-                                                    {item?.sPageNo === '-' ? '' : <><span>Page No.: {item?.sPageNo}</span><span className={styles?.pipeSymbol}>|</span></>} <span className={`${styles?.downLoadBtn}`} onClick={() => router.push({
-                                                        pathname: `/articles/${articleID?.[0]}/${articleID?.[1]}/${item?.sName}`,
-                                                        query: { id: item?._id }
-                                                    })}><GrTextAlignFull /> Full Text</span> {item?.sDownLoadUrl === '-' ? '' : <><span className={styles?.pipeSymbol}>|</span> <span className={`${styles?.downLoadBtn}`} onClick={() => saveAs(`${item?.sDownLoadUrl}`, `${item?.sName}`)}><FontAwesomeIcon icon={faFilePdf} /> PDF</span></>}
-                                                </div>
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                                <div className={`${styles?.otherIndexing}`}>
-                                    <h1 className={ubuntu?.className}>Quick Links</h1>
-                                    <div className={`${styles?.line} mb-3`}></div>
+                        <Skeleton count={1} className='mt-4' width={260} height={20} />
+                        <Skeleton count={1} className='mt-3' width={580} height={35} />
+                        <Skeleton count={1} className='mt-1' width={200} height={35} />
+                        <Skeleton count={1} className='mt-3' width={230} height={20} />
+                        <Skeleton count={1} width={200} height={20} />
 
-                                    <div>
-                                        <ul>
-                                            <li>
-                                                <Link href='/articles'>All Articles</Link>
-                                            </li>
-                                            <li>
-                                                <Link href='/submissionForm'>Submit Article</Link>
-                                            </li>
-                                            <li>
-                                                <Link href='/guidelines'>Author Guidelines</Link>
-                                            </li>
-                                            <li>
-                                                <Link href='/policy/plagiarismPolicy'>Plagiarism Policy</Link>
-                                            </li>
-                                            <li>
-                                                <Link href='/policy/editorialPolicy'>Editorial Policy</Link>
-                                            </li>
-                                            <li>
-                                                <Link href='/contact'>Contact Us</Link>
-                                            </li>
-                                        </ul>
+                        <div className='d-flex gap-3 mt-2 mb-4'>
+                            <Skeleton count={1} width={80} height={20} />
+                            <Skeleton count={1} width={80} height={20} />
+                            <Skeleton count={1} width={80} height={20} />
+                        </div>
+
+                        <Skeleton count={1} className='mt-4' width={260} height={20} />
+                        <Skeleton count={1} className='mt-3' width={580} height={35} />
+                        <Skeleton count={1} className='mt-1' width={200} height={35} />
+                        <Skeleton count={1} className='mt-3' width={230} height={20} />
+                        <Skeleton count={1} width={200} height={20} />
+
+                        <div className='d-flex gap-3 mt-2 mb-4'>
+                            <Skeleton count={1} width={80} height={20} />
+                            <Skeleton count={1} width={80} height={20} />
+                            <Skeleton count={1} width={80} height={20} />
+                        </div>
+
+                        <Skeleton count={1} className='mt-4' width={260} height={20} />
+                        <Skeleton count={1} className='mt-3' width={580} height={35} />
+                        <Skeleton count={1} className='mt-1' width={200} height={35} />
+                        <Skeleton count={1} className='mt-3' width={230} height={20} />
+                        <Skeleton count={1} width={200} height={20} />
+
+                        <div className='d-flex gap-3 mt-2'>
+                            <Skeleton count={1} width={80} height={20} />
+                            <Skeleton count={1} width={80} height={20} />
+                            <Skeleton count={1} width={80} height={20} />
+                        </div>
+
+                        <Skeleton count={1} className='mt-4' width={260} height={20} />
+                        <Skeleton count={1} className='mt-3' width={580} height={35} />
+                        <Skeleton count={1} className='mt-1' width={200} height={35} />
+                        <Skeleton count={1} className='mt-3' width={230} height={20} />
+                        <Skeleton count={1} width={200} height={20} />
+
+                        <div className='d-flex gap-3 mt-2 mb-4'>
+                            <Skeleton count={1} width={80} height={20} />
+                            <Skeleton count={1} width={80} height={20} />
+                            <Skeleton count={1} width={80} height={20} />
+                        </div>
+                    </div>
+                </> :
+                    <div className={`${styles?.articlesContent}`}>
+                        {articleID?.length === 2 &&
+                            (<>
+                                <h1 className={`sectionTitle ${styles?.magazineTitle} ${ubuntu?.className}`}>{articleID?.map(item => item).join(', ')}</h1>
+                                <div className={`${styles?.line} mb-3`}></div>
+
+                                <div className='d-flex justify-content-between flex-wrap'>
+                                    <div className={styles?.issueList}>
+                                        {articleData?.aMagazines?.map(item => {
+                                            return (
+                                                <div key={item?._id} className={`${styles?.issueDetails}`}>
+                                                    <div>
+                                                        <span className={`${styles?.articleTag}`}>{item?.eTag}</span> <span>|</span> <span className={`${styles?.date}`}>Published on {publishedDate}</span>
+                                                    </div>
+                                                    <h1 className={ubuntu?.className}>{item?.sName}</h1>
+                                                    <p className={`${styles?.authorName} ${comfortaa?.className}`}> {item?.sAuthor} </p>
+                                                    {item?.sDOINo === '-' ? '' : <p className={`${styles?.doiNumber}`}>DOI: <span style={{ cursor: 'pointer' }} onClick={() => goToZenodo(item?.sDOINo)}>{item?.sDOINo}</span></p>}
+                                                    <div className={styles?.actionBar}>
+                                                        {item?.sPageNo === '-' ? '' : <><span>Page No.: {item?.sPageNo}</span><span className={styles?.pipeSymbol}>|</span></>} <span className={`${styles?.downLoadBtn}`} onClick={() => router.push({
+                                                            pathname: `/articles/${articleID?.[0]}/${articleID?.[1]}/${item?.sName}`,
+                                                            query: { id: item?._id }
+                                                        })}><GrTextAlignFull /> Full Text</span> {item?.sDownLoadUrl === '-' ? '' : <><span className={styles?.pipeSymbol}>|</span> <span className={`${styles?.downLoadBtn}`} onClick={() => saveAs(`${item?.sDownLoadUrl}`, `${item?.sName}`)}><FontAwesomeIcon icon={faFilePdf} /> PDF</span></>}
+                                                    </div>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                    <div className={`${styles?.otherIndexing}`}>
+                                        <h1 className={ubuntu?.className}>Quick Links</h1>
+                                        <div className={`${styles?.line} mb-3`}></div>
+
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <Link href='/articles'>All Articles</Link>
+                                                </li>
+                                                <li>
+                                                    <Link href='/submissionForm'>Submit Article</Link>
+                                                </li>
+                                                <li>
+                                                    <Link href='/guidelines'>Author Guidelines</Link>
+                                                </li>
+                                                <li>
+                                                    <Link href='/policy/plagiarismPolicy'>Plagiarism Policy</Link>
+                                                </li>
+                                                <li>
+                                                    <Link href='/policy/editorialPolicy'>Editorial Policy</Link>
+                                                </li>
+                                                <li>
+                                                    <Link href='/policy/referPolicy'>Refer & Earn Policy</Link>
+                                                </li>
+                                                <li>
+                                                    <Link href='/contact'>Contact Us</Link>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </>)
-                    }
+                            </>)
+                        }
 
-                    {articleID?.length === 3 &&
-                        (<>
-                            <h1 className={`sectionTitle ${styles?.magazineTitle} ${ubuntu?.className}`} data-heading='Article'>{articleID?.[2]}</h1>
-                            {/* <div className={`${styles?.line} mb-3`}></div> */}
+                        {articleID?.length === 3 &&
+                            (<>
+                                <h1 className={`sectionTitle ${styles?.magazineTitle} ${ubuntu?.className}`} data-heading='Article'>{articleID?.[2]}</h1>
+                                {/* <div className={`${styles?.line} mb-3`}></div> */}
 
-                            <div className={`${styles?.actions} ${ubuntu?.className}`}>
-                                <span><strong>{articleData?.sAuthor}</strong></span>
-                                {articleData?.sDOINo === '-' ? "" : <span>DOI: <span style={{ color: 'var(--primary-color)', marginLeft: '5px', cursor: 'auto' }}>{articleData?.sDOINo}</span></span>}
+                                <div className={`${styles?.actions} ${ubuntu?.className}`}>
+                                    <span><strong>{articleData?.sAuthor}</strong></span>
+                                    {articleData?.sDOINo === '-' ? "" : <span>DOI: <span style={{ color: 'var(--primary-color)', marginLeft: '5px', cursor: 'auto' }}>{articleData?.sDOINo}</span></span>}
 
-                                {articleData?.sDownLoadUrl === '-' ? '' : <span variant='dark' size='sm' onClick={() => saveAs(`${articleData?.sDownLoadUrl}`, `${articleData?.sName}`)}>
-                                    <span className={`${styles?.logo}`}><FaDownload /></span> <span>Download PDF</span>
-                                </span>}
+                                    {articleData?.sDownLoadUrl === '-' ? '' : <span variant='dark' size='sm' onClick={() => saveAs(`${articleData?.sDownLoadUrl}`, `${articleData?.sName}`)}>
+                                        <span className={`${styles?.logo}`}><FaDownload /></span> <span>Download PDF</span>
+                                    </span>}
 
-                                <span>{articleID?.slice(0, 2)?.join(', ')}</span>
-                                {articleData?.sPageNo === '-' ? '' : <span>Page No.: {articleData?.sPageNo}</span>}
-                            </div>
+                                    <span>{articleID?.slice(0, 2)?.join(', ')}</span>
+                                    {articleData?.sPageNo === '-' ? '' : <span>Page No.: {articleData?.sPageNo}</span>}
+                                </div>
 
-                            <article>
-                                <div dangerouslySetInnerHTML={{ __html: articleData?.sContent }} className={`mt-4 ${styles.magazineHTML}`} />
-                            </article>
+                                <article>
+                                    <div dangerouslySetInnerHTML={{ __html: articleData?.sContent }} className={`mt-4 ${styles.magazineHTML}`} />
+                                </article>
 
-                            <div className={`${styles.goBackBtn}`}>
-                                <Button variant='link' className={`${ubuntu?.className}`} onClick={() => router.push({
-                                    pathname: `/articles/${articleID?.[0]}/${articleID?.[1]}`,
-                                    query: { publishedDate }
-                                })}>
-                                    <span>&lt;&lt;</span> <span>Previous Page</span>
-                                </Button>
-                            </div>
-                        </>)
-                    }
-                </div>
+                                <div className={`${styles.goBackBtn}`}>
+                                    <Button variant='link' className={`${ubuntu?.className}`} onClick={() => router.push({
+                                        pathname: `/articles/${articleID?.[0]}/${articleID?.[1]}`,
+                                        query: { publishedDate }
+                                    })}>
+                                        <span>&lt;&lt;</span> <span>Previous Page</span>
+                                    </Button>
+                                </div>
+                            </>)
+                        }
+                    </div>}
+
             </section >
         </>
     )
