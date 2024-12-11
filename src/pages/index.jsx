@@ -264,7 +264,7 @@ export default function Home () {
                   </div>
                 </div>
               </Col>
-              <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
+              {/* <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
                 <div
                   className={`${styles?.actionCard} ${ubuntu?.className}`}
                 >
@@ -280,7 +280,7 @@ export default function Home () {
                     </span>
                   </div>
                 </div>
-              </Col>
+              </Col> */}
               <Col lg={4} md={6} sm={12} className="mt-lg-3 mt-md-0 mt-3">
                 <div
                   className={`${styles?.actionCard} ${ubuntu?.className}`}
