@@ -38,6 +38,8 @@ import zoteroLogo from '../../public/assets/img/webAvailability/Zotero_logo.png'
 import dataCiteLogo from '../../public/assets/img/webAvailability/DataCite-Commons.png'
 import mendeleyLogo from '../../public/assets/img/webAvailability/Mendeley_Logo_Vertical.png'
 import openScholarLogo from '../../public/assets/img/webAvailability/openscholar.png'
+import bookLogo from '../../public/assets/img/fundamentals-of-electrotherapy-book.png'
+import jaypeeDigitalLogo from '../../public/assets/img/header-jaypee.png'
 
 //* ALL SVG ELEMENTS
 import { BsGlobeCentralSouthAsia } from "react-icons/bs";
@@ -173,7 +175,50 @@ export default function Home () {
         </section>
 
         <section className={`${styles?.actionBar} container`}>
-          <h1 className={`sectionTitle ${styles?.sectionTitle}`} data-heading='Upcoming' title='Upcoming Events | PhysioTrends'>Conference, 2024</h1>
+          <h1 className={`sectionTitle ${styles?.sectionTitle}`} data-heading='' title='Upcoming Events | PhysioTrends'>Book, Conference - Media Partnered by PhysioTrends</h1>
+
+          <Row className='my-4'>
+            <Col sm={12}>
+              <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
+                <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
+                  <h1 className={`${ubuntu?.className} text-uppercase`}>Fundamentals of Electrotherapy and Biomedical Physics</h1>
+                  <p className='mt-4'>Author: Dr. Ashish Kakkad</p>
+                  <p>ISBN No.: 9789350909850</p>
+                  <p>DOI: 10.5005/jp/books/18476</p>
+                  <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://www.jaypeedigital.com/book/9789350909850')}>More Detail</Button>
+                </div>
+                <div className={styles?.middleImg}>
+                  <Image
+                    src={bookLogo}
+                    alt='Book Logo'
+                    loading='lazy'
+                    quality={100}
+                    className={`img-fluid ${styles?.bookImage}`}
+                  />
+                </div>
+                <div className={styles?.lastDetails}>
+                  <p>Publisher</p>
+                  <Image
+                    src={jaypeeDigitalLogo}
+                    alt='Jaypee Digital Logo'
+                    loading='lazy'
+                    quality={100}
+                    className="img-fluid"
+                    onClick={() => router.push('https://www.marwadiuniversity.ac.in/faculty-of-physiotherapy/')}
+                  />
+
+                  <p className='mt-3'>Media Partner</p>
+                  <Image
+                    src={mainLogo}
+                    alt='PhysioTrends Logo'
+                    loading='lazy'
+                    quality={100}
+                    className="img-fluid"
+                  />
+                </div>
+              </div>
+            </Col>
+          </Row>
 
           <Row className='my-4'>
             <Col sm={12}>
@@ -183,7 +228,7 @@ export default function Home () {
                   <p className='mt-4'>Theme: Global Perspectives on Physiotherapy - Collaboration & Innovation</p>
                   <p>Venue: Marwadi University, Rajkot</p>
                   <p>Date: 20 - 21 December, 2024</p>
-                  <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://conphycs2024.com/')}>Register Now</Button>
+                  {/* <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://conphycs2024.com/')}>Register Now</Button> */}
                 </div>
                 <div className={styles?.middleImg}>
                   <Image

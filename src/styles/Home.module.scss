@@ -239,6 +239,13 @@ main {
           max-width: 100px;
           object-fit: contain;
         }
+
+        .bookImage {
+          display: block;
+          object-fit: contain;
+          width: 100%;
+          max-width: 180px !important;
+        }
       }
 
       .lastDetails {
