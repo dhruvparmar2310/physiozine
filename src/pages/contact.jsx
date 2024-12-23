@@ -52,12 +52,12 @@ const Contact = () => {
                                     </div>
 
                                     <div className={`d-flex flex-wrap justify-content-center align-item-center gap-5`}>
-                                        <div className={`${styles.cardBody}`}>
+                                        {/* <div className={`${styles.cardBody}`}>
                                             <p><strong>Dr. Darshan Parmar</strong>, Aatishya 100,</p>
                                             <p>Nr. Lubi Corporate Road,</p>
                                             <p>Oppo. Tulsi Status,</p>
                                             <p>Ahmedabad, Gujarat - 382470</p>
-                                        </div>
+                                        </div> */}
                                         <div className={`${styles.cardBody}`}>
                                             <p>Kuldevi Krupa,</p>
                                             <p>Sahkar Society, Street No.- 3,</p>

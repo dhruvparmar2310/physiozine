@@ -469,14 +469,15 @@ export default function Home () {
                     <tr>
                       <td>Address</td>
                       <td className={`${styles?.dataValue}`} title='Contact Us | Address of PhysioTrends'>
-                        <ol>
+                        {/* <ol>
                           <li>
                             PhysioTrends, Aatishya 100, Nr. Lubi Corporate Road, Oppo. Tulsi Status, Ahmedabad, Gujarat - 382470
                           </li>
                           <li>
                             PhysioTrends, Kuldevi Krupa, Sahkar Society Street No. - 3, Sahkar Main Road, Rajkot, Gujarat - 360002
                           </li>
-                        </ol>
+                        </ol> */}
+                        PhysioTrends, Kuldevi Krupa, Sahkar Society Street No. - 3, Sahkar Main Road, Rajkot, Gujarat - 360002
                       </td>
                     </tr>
                   </tbody>
