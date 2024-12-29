@@ -64,6 +64,13 @@ export default function Home () {
   const [cityCount, setCityCount] = useState(0);
   const [countryCount, setCountryCount] = useState(0);
   const [teamCount, setTeamCount] = useState(0);
+  const [partnerButtons, setPartnerButtons] = useState({
+    conference: true,
+    book: false,
+    workshop: false,
+    course: false,
+    sportEvent: false
+  })
 
   useEffect(() => {
     let networkInterval = null;
@@ -174,103 +181,143 @@ export default function Home () {
           </div>
         </section>
 
+        <section className={`${styles?.mediaPartner}`}>
+          <div className="container">
+            <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='Media Partner with Physiotrends:' title='Media Partner | PhysioTrends'> Amplify Your Event’s Reach</h1>
+
+            <div className={`${styles?.innerContent}`}>
+              <div>
+                <p>
+                  Are you organizing a conference, workshop, webinar, physiotherapy course, book launch, or sports event? Partner with Physiotrends and amplify your reach through our established platform dedicated to the world of physiotherapy and wellness.
+                </p>
+                <Button type='button' onClick={() => router.push('/mediaPartner')}><span className="me-1">Learn More</span> <span><FaArrowRight /></span></Button>
+
+                <h1 className={`sectionTitle my-3 ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='Our'> Partnered Events:</h1>
+                <div className={`${styles?.tabs}`}>
+                  <Button className={partnerButtons?.conference && styles?.active} onClick={() => setPartnerButtons({ conference: true })}>Conference</Button>
+                  <Button className={partnerButtons?.book && styles?.active} onClick={() => setPartnerButtons({ book: true })}>Book</Button>
+                  <Button className={partnerButtons?.course && styles?.active} onClick={() => setPartnerButtons({ course: true })}>CPD Courses</Button>
+                  <Button className={partnerButtons?.workshop && styles?.active} onClick={() => setPartnerButtons({ workshop: true })}>Workshop/ Webinar</Button>
+                  <Button className={partnerButtons?.sportEvent && styles?.active} onClick={() => setPartnerButtons({ sportEvent: true })}>Sport Events</Button>
+                </div>
+
+                <div className={`${styles?.tabContent}`}>
+                  {partnerButtons?.conference && <>
+                    <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
+                      <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
+                        <h1 className={`${ubuntu?.className} text-uppercase`}>15<sup>th</sup> Gujstate Conphycs, 2024</h1>
+                        <p className='mt-4'>Theme: Global Perspectives on Physiotherapy - Collaboration & Innovation</p>
+                        <p>Venue: Marwadi University, Rajkot</p>
+                        <p>Date: 20 - 21 December, 2024</p>
+                        {/* <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://conphycs2024.com/')}>Register Now</Button> */}
+                      </div>
+                      <div className={styles?.middleImg}>
+                        <Image
+                          src={ConphycsLogo}
+                          alt='15th Conphycs Logo'
+                          loading='lazy'
+                          quality={100}
+                          className="img-fluid"
+                        />
+                        <Image
+                          src={gptaLogo}
+                          alt='GPTA Logo'
+                          loading='lazy'
+                          quality={100}
+                          className="img-fluid"
+                          onClick={() => router.push('https://gptaindia.org/')}
+                        />
+                      </div>
+                      <div className={styles?.lastDetails}>
+                        <p>Organized By</p>
+                        <Image
+                          src={muLogo}
+                          alt='Marwadi University Logo'
+                          loading='lazy'
+                          quality={100}
+                          className="img-fluid"
+                          onClick={() => router.push('https://www.marwadiuniversity.ac.in/faculty-of-physiotherapy/')}
+                        />
+
+                        <p className='mt-3'>Media Partner</p>
+                        <Image
+                          src={mainLogo}
+                          alt='PhysioTrends Logo'
+                          loading='lazy'
+                          quality={100}
+                          className="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </>}
+                  {partnerButtons?.book && <>
+                    <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
+                      <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
+                        <h1 className={`${ubuntu?.className} text-uppercase`}>Fundamentals of Electrotherapy and Biomedical Physics</h1>
+                        <p className='mt-4'>Author: Dr. Ashish Kakkad</p>
+                        <p>ISBN No.: 9789350909850</p>
+                        <p>DOI: 10.5005/jp/books/18476</p>
+                        <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://www.jaypeedigital.com/book/9789350909850')}>More Detail</Button>
+                      </div>
+                      <div className={styles?.middleImg}>
+                        <Image
+                          src={bookLogo}
+                          alt='Book Logo'
+                          loading='lazy'
+                          quality={100}
+                          className={`img-fluid ${styles?.bookImage}`}
+                        />
+                      </div>
+                      <div className={styles?.lastDetails}>
+                        <p>Publisher</p>
+                        <Image
+                          src={jaypeeDigitalLogo}
+                          alt='Jaypee Digital Logo'
+                          loading='lazy'
+                          quality={100}
+                          className="img-fluid"
+                          onClick={() => router.push('https://www.marwadiuniversity.ac.in/faculty-of-physiotherapy/')}
+                        />
+
+                        <p className='mt-3'>Media Partner</p>
+                        <Image
+                          src={mainLogo}
+                          alt='PhysioTrends Logo'
+                          loading='lazy'
+                          quality={100}
+                          className="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </>}
+                  {partnerButtons?.course && <>
+                    <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
+                      <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
+                        <h1 className={`${ubuntu?.className} text-uppercase`}>Physiotherapy Online</h1>
+                        <p className='mt-4'>
+                          Our Online Physiotherapy Courses Leading the Physiotherapy CPD Courses Industry worldwide.
+                        </p>
+                        <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://physiotherapyonline.net/')}><span className="me-1">Enroll Now</span> <span><FaArrowRight /></span></Button>
+                      </div>
+                    </div>
+                  </>}
+                  {partnerButtons?.workshop && <>
+                    <div className={`${styles?.comingSoonContent}`}>
+                      <h1>Coming Soon...</h1>
+                    </div>
+                  </>}
+                  {partnerButtons?.sportEvent && <>
+                    <div className={`${styles?.comingSoonContent}`}>
+                      <h1>Coming Soon...</h1>
+                    </div>
+                  </>}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section >
+
         <section className={`${styles?.actionBar} container`}>
-          <h1 className={`sectionTitle ${styles?.sectionTitle}`} data-heading='' title='Upcoming Events | PhysioTrends'>Book, Conference - Media Partnered by PhysioTrends</h1>
-
-          <Row className='my-4'>
-            <Col sm={12}>
-              <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
-                <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
-                  <h1 className={`${ubuntu?.className} text-uppercase`}>Fundamentals of Electrotherapy and Biomedical Physics</h1>
-                  <p className='mt-4'>Author: Dr. Ashish Kakkad</p>
-                  <p>ISBN No.: 9789350909850</p>
-                  <p>DOI: 10.5005/jp/books/18476</p>
-                  <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://www.jaypeedigital.com/book/9789350909850')}>More Detail</Button>
-                </div>
-                <div className={styles?.middleImg}>
-                  <Image
-                    src={bookLogo}
-                    alt='Book Logo'
-                    loading='lazy'
-                    quality={100}
-                    className={`img-fluid ${styles?.bookImage}`}
-                  />
-                </div>
-                <div className={styles?.lastDetails}>
-                  <p>Publisher</p>
-                  <Image
-                    src={jaypeeDigitalLogo}
-                    alt='Jaypee Digital Logo'
-                    loading='lazy'
-                    quality={100}
-                    className="img-fluid"
-                    onClick={() => router.push('https://www.marwadiuniversity.ac.in/faculty-of-physiotherapy/')}
-                  />
-
-                  <p className='mt-3'>Media Partner</p>
-                  <Image
-                    src={mainLogo}
-                    alt='PhysioTrends Logo'
-                    loading='lazy'
-                    quality={100}
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </Col>
-          </Row>
-
-          <Row className='my-4'>
-            <Col sm={12}>
-              <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
-                <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
-                  <h1 className={`${ubuntu?.className} text-uppercase`}>15<sup>th</sup> Gujstate Conphycs, 2024</h1>
-                  <p className='mt-4'>Theme: Global Perspectives on Physiotherapy - Collaboration & Innovation</p>
-                  <p>Venue: Marwadi University, Rajkot</p>
-                  <p>Date: 20 - 21 December, 2024</p>
-                  {/* <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://conphycs2024.com/')}>Register Now</Button> */}
-                </div>
-                <div className={styles?.middleImg}>
-                  <Image
-                    src={ConphycsLogo}
-                    alt='15th Conphycs Logo'
-                    loading='lazy'
-                    quality={100}
-                    className="img-fluid"
-                  />
-                  <Image
-                    src={gptaLogo}
-                    alt='GPTA Logo'
-                    loading='lazy'
-                    quality={100}
-                    className="img-fluid"
-                    onClick={() => router.push('https://gptaindia.org/')}
-                  />
-                </div>
-                <div className={styles?.lastDetails}>
-                  <p>Organized By</p>
-                  <Image
-                    src={muLogo}
-                    alt='Marwadi University Logo'
-                    loading='lazy'
-                    quality={100}
-                    className="img-fluid"
-                    onClick={() => router.push('https://www.marwadiuniversity.ac.in/faculty-of-physiotherapy/')}
-                  />
-
-                  <p className='mt-3'>Media Partner</p>
-                  <Image
-                    src={mainLogo}
-                    alt='PhysioTrends Logo'
-                    loading='lazy'
-                    quality={100}
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            </Col>
-          </Row>
-
           <h1 className={`sectionTitle ${styles?.sectionTitle}`} data-heading='Our Services' title='Our Services | PhysioTrends'>Be a part of PhysioTrends</h1>
 
           <div className={`${styles?.actions} ${ubuntu?.className} mt-4`}>
