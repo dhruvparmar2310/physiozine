@@ -3,8 +3,8 @@ export const articles = [
         _id: '1',
         title: 'Volume-1, Issue-1',
         nMonth: 'March, 2024',
-        img: 'assets/img/magazines/Vol-1-Issue-1.jpeg',
-        eBook: 'assets/pdfs/vol-1-issue-1/Physiotrends Vol 1, Issue 1.pdf',
+        img: 'assets/img/magazines/Vol-1-Issue-1.png',
+        eBook: 'assets/pdfs/vol-1-issue-1/PhysioZine Vol 1, Issue 1.pdf',
         aMagazines: [
             {
                 _id: '101',
@@ -62,8 +62,8 @@ export const articles = [
         _id: '2',
         title: 'Volume-1, Issue-2',
         nMonth: 'June, 2024',
-        img: 'assets/img/magazines/vol1_issue2.jpeg',
-        eBook: 'assets/pdfs/vol-1-issue-2/PhysioTrends Vol.1, Issue 2.pdf',
+        img: 'assets/img/magazines/vol1_issue2.png',
+        eBook: 'assets/pdfs/vol-1-issue-2/PhysioZine Vol.1, Issue 2.pdf',
         aMagazines: [
             {
                 _id: '201',
@@ -121,8 +121,8 @@ export const articles = [
         _id: '3',
         title: 'Volume-1, Issue-3',
         nMonth: 'August, 2024',
-        img: 'assets/img/magazines/vol1_issue3.jpeg',
-        eBook: 'assets/pdfs/vol-1-issue-3/PhysioTrends Vol.1, Issue 3.pdf',
+        img: 'assets/img/magazines/vol1_issue3.png',
+        eBook: 'assets/pdfs/vol-1-issue-3/PhysioZine Vol.1, Issue 3.pdf',
         aMagazines: [
             {
                 _id: '301',
@@ -180,8 +180,8 @@ export const articles = [
         _id: '4',
         title: 'Volume-1, Issue-4',
         nMonth: 'October, 2024',
-        img: 'assets/img/magazines/vol1_issue4.jpg',
-        eBook: 'assets/pdfs/vol-1-issue-4/PhysioTrends Vol.1, Issue 4.pdf',
+        img: 'assets/img/magazines/vol1_issue4.png',
+        eBook: 'assets/pdfs/vol-1-issue-4/PhysioZine Vol.1, Issue 4.pdf',
         aMagazines: [
             {
                 _id: '401',
@@ -239,8 +239,8 @@ export const articles = [
         _id: '5',
         title: 'Volume-1, Issue-5',
         nMonth: 'December, 2024',
-        img: 'assets/img/magazines/vol1_issue5.JPG',
-        eBook: 'assets/pdfs/vol-1-issue-5/Physiotrends Vol. 1, Issue 5 .pdf',
+        img: 'assets/img/magazines/vol1_issue5.png',
+        eBook: 'assets/pdfs/vol-1-issue-5/PhysioZine Vol. 1, Issue 5 .pdf',
         aMagazines: [
             {
                 _id: '501',

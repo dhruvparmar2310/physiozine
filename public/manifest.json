@@ -4,9 +4,9 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Install PhysioTrends App",
-  "short_name": "PhysioTrends Application",
-  "description": "Welcome to PhysioTrends",
+  "name": "Install PhysioZine App",
+  "short_name": "PhysioZine Application",
+  "description": "Welcome to PhysioZine",
   "icons": [
     {
       "src": "assets/img/favicon.png",

@@ -2,7 +2,7 @@
     background: transparent !important;
     transition: all 0.5s;
     z-index: 997;
-    padding: 0px 0;
+    padding: 0 10px;
     backdrop-filter: blur(10px);
 }
 
@@ -62,8 +62,10 @@
 }
 
 .logo img {
-    max-height: 40px;
-    object-fit: contain;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    // object-fit: contain;
 }
 
 /*--------------------------------------------------------------
@@ -116,6 +118,16 @@
     font-weight: 700;
     letter-spacing: 0.8px;
     text-decoration: none;
+
+    &::after {
+        content: '';
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: transparent;
+        top: -8px;
+    }
 
     &.homeSvg {
         svg {

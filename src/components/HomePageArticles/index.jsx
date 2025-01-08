@@ -3,7 +3,6 @@ import { articles } from '@/data/articles';
 import Image from 'next/image';
 import styles from '../../styles/HomePageArticles.module.scss'
 import { saveAs } from 'file-saver'
-import pdfFile from '../../../public/assets/pdfs/vol-1-issue-1/Physiotrends Vol 1, Issue 1.pdf'
 import { GrNext, GrPrevious } from 'react-icons/gr';
 import Slider from 'react-slick';
 import { Ubuntu } from 'next/font/google';
@@ -42,7 +41,7 @@ const HomePageArticles = () => {
                     <div className="carousel-inner">
                         {articles.map((article, index) => (
                             <div div key={article._id} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-                                <div className={`${styles.magazineCard}`} onClick={() => saveAs(`${article?.eBook}`, `PhysioTrends_${article?.title}`)}>
+                                <div className={`${styles.magazineCard}`} onClick={() => saveAs(`${article?.eBook}`, `PhysioZine_${article?.title}`)}>
                                     <div className={`${styles.magazineImg}`}>
                                         <Image src={article.img} alt={article.title} width={100} height={100} priority />
                                     </div>

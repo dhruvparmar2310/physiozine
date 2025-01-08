@@ -368,9 +368,9 @@ main {
         margin-top: 10px;
         padding: 30px;
         border-radius: 10px;
-        background: var(--white-color);
-        height: 425px;
-        max-height: 425px;
+        // background: var(--white-color);
+        // height: 425px;
+        // max-height: 425px;
         overflow-y: auto;
 
         .upcomingDetailCard {
@@ -445,8 +445,9 @@ main {
 
             img {
               width: 100%;
-              max-width: 200px;
-              object-fit: contain;
+              max-width: 250px;
+              height: auto;
+              // object-fit: contain;
             }
           }
         }
@@ -873,7 +874,7 @@ main {
 
   .tabContent {
     padding: 10px !important;
-    min-height: 680px;
+    // min-height: 680px;
   }
 }
 

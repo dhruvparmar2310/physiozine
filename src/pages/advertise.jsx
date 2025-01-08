@@ -137,37 +137,37 @@ const Advertise = () => {
 
 
     const onHandleSubmit = (data) => {
-        const subject = encodeURIComponent('Advertise with Physiotrends Magazine');
+        const subject = encodeURIComponent('Advertise with PhysioZine Magazine');
         const body = encodeURIComponent(`
       Company Name: ${data?.sCompanyName}
       Email Address: ${data?.sEmailID}
       Mobile Number: ${data?.sMobileNo}
       
-      We want to Advertise with Physiotrends Magazine.
+      We want to Advertise with PhysioZine Magazine.
     `);
 
-        const mailtoURL = `mailto:physiotrendsmagazine@gmail.com?subject=${subject}&body=${body}`;
+        const mailtoURL = `mailto:physiozinemagazine@gmail.com?subject=${subject}&body=${body}`;
         router.push(mailtoURL);
     }
 
     return (
         <>
             <Head>
-                <title>Advertise | PhysioTrends</title>
+                <title>Advertise | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioTrends, Physiotherapy, Advertise of PhysioTrends, PhysioTrends Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiotrendsmagazine@gmail.com or +91 7984377793." />
-                <meta property="og:title" content="Advertise with fastest growing Physiotherapy Network at PhysioTrends" />
-                <meta property="og:description" content="Promote your brand to targeted physio audiences - Advertise with Physiotrends." />
-                <meta property="og:url" content="https://physiotrends.vercel.app/advertise" />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
+                <meta property="og:title" content="Advertise with fastest growing Physiotherapy Network at PhysioZine" />
+                <meta property="og:description" content="Promote your brand to targeted physio audiences - Advertise with PhysioZine." />
+                <meta property="og:url" content="https://physiozine.vercel.app/advertise" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Advertise'} />
+            <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Advertise'} />
             <section className={`${styles?.advertise} container`}>
                 <div className={`${styles?.advertiseContent}`}>
                     <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading="Let's Get ">Advertise With Us!</h1>
@@ -178,7 +178,7 @@ const Advertise = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: width ? 0.3 : 0.8, duration: width ? 0.5 : 1, animate: 'easeInOut' }}
                     >
-                        PHYSIOTRENDS is one of the fastest growing ISSN Certified E-magazine for the Physiotherapist. Articles from the great Innovators, Thinkers, Researchers and Creators in the field of physiotherapy can be found in the PhysioTrends E-Magazine. Additionally, PhysioTrends has an advertisement section where users can promote their products or services in order to target consumers.
+                        PHYSIOZINE is one of the fastest growing ISSN Certified E-magazine for the Physiotherapist. Articles from the great Innovators, Thinkers, Researchers and Creators in the field of physiotherapy can be found in the PhysioZine E-Magazine. Additionally, PhysioZine has an advertisement section where users can promote their products or services in order to target consumers.
                     </motion.p>
 
                     <div className={`${styles?.analytics}`}>
@@ -268,7 +268,7 @@ const Advertise = () => {
                     </div>
 
                     <div>
-                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className} mt-4`} title='Rate of Advertisement | PhysioTrends'>Rate of Advertisement:</h1>
+                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className} mt-4`} title='Rate of Advertisement | PhysioZine'>Rate of Advertisement:</h1>
                         <div className={`${styles?.line}`}></div>
 
                         <Row className={`${styles?.priceSection}`}>
@@ -319,7 +319,7 @@ const Advertise = () => {
                                     </tbody>
                                 </Table>
 
-                                <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className} mt-4`} title='Rate of Advertisement | PhysioTrends'>Get PhysioTrends as Media Partner:</h1>
+                                <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className} mt-4`} title='Rate of Advertisement | PhysioZine'>Get PhysioZine as Media Partner:</h1>
                                 <div className={`${styles?.line}`}></div>
                                 <div>
                                     <span>Benefits:</span>
@@ -336,7 +336,7 @@ const Advertise = () => {
                                     </ul>
                                 </div>
                                 <p className={styles.otherPlan}>
-                                    Send an email on <span>physiotrendsmagazine@gmail.com</span> to choose this plan.
+                                    Send an email on <span>physiozinemagazine@gmail.com</span> to choose this plan.
                                 </p>
                                 <p className={`${styles?.notes}`}>Note: 100% payment is mandatory for the Advertisement</p>
                             </Col>
@@ -353,7 +353,7 @@ const Advertise = () => {
                             </Col>
                             <Col sm={12}>
                                 <div className={`${styles.whoCanAd}`}>
-                                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className} mt-4`} title='Rate of Advertisement | PhysioTrends'>Who can Advertise with us?</h1>
+                                    <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className} mt-4`} title='Rate of Advertisement | PhysioZine'>Who can Advertise with us?</h1>
                                     <div className={`${styles?.line}`}></div>
 
                                     <ul>

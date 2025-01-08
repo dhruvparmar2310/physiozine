@@ -9,16 +9,16 @@ const TermsAndConditions = () => {
     return (
         <>
             <Head>
-                <title>Terms & Conditions | PhysioTrends</title>
+                <title>Terms & Conditions | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioTrends, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name="description" content="PHYSIOZINE is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Terms & Conditions'} />
+            <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Terms & Conditions'} />
             <section className={`${styles?.termsAndConditions}`}>
                 <div className={`${styles?.innerContent} container`}>
                     <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading=''>Terms & Conditions</h1>
@@ -26,7 +26,7 @@ const TermsAndConditions = () => {
 
                     <div className={`accordion accordion-flush mt-3`} id='main-accordion'>
                         <div className={`accordion-item`}>
-                            <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-1`} title='Article Submission | PhysioTrends'>
+                            <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-1`} title='Article Submission | PhysioZine'>
                                 <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-1`} aria-expanded="true" aria-controls={`flush-collapse-1`}>
                                     Article Submission
                                 </button>
@@ -43,17 +43,17 @@ const TermsAndConditions = () => {
                                     <h3 className={`${styles?.subHeading} mt-2`}>2. Copyright and Ownership:</h3>
                                     <ul>
                                         <li>
-                                            <span>By submitting an article to PhysioTrends E-Magazine, authors grant us the non-exclusive right to publish, reproduce, distribute, and display their work in any format or medium.</span>
+                                            <span>By submitting an article to PhysioZine E-Magazine, authors grant us the non-exclusive right to publish, reproduce, distribute, and display their work in any format or medium.</span>
                                         </li>
                                         <li>
-                                            <span>Authors retain the copyright to their articles and are free to republish or distribute them elsewhere after they have been published in PhysioTrends, provided proper acknowledgment is given to the magazine.</span>
+                                            <span>Authors retain the copyright to their articles and are free to republish or distribute them elsewhere after they have been published in PhysioZine, provided proper acknowledgment is given to the magazine.</span>
                                         </li>
                                     </ul>
 
                                     <h3 className={`${styles?.subHeading} mt-2`}>3. Editing:</h3>
                                     <ul>
                                         <li>
-                                            <span>PhysioTrends reserves the right to edit submissions for clarity, grammar, style, and length without altering the core content or meaning of the article.</span>
+                                            <span>PhysioZine reserves the right to edit submissions for clarity, grammar, style, and length without altering the core content or meaning of the article.</span>
                                         </li>
                                         <li>
                                             <span>Authors will be notified of any significant edits made to their submissions before publication.</span>
@@ -63,10 +63,10 @@ const TermsAndConditions = () => {
                                     <h3 className={`${styles?.subHeading} mt-2`}>4. Publication and Promotion:</h3>
                                     <ul>
                                         <li>
-                                            <span>Submission of an article does not guarantee publication. PhysioTrends reserves the right to reject any submission that does not meet our standards or align with our editorial focus.</span>
+                                            <span>Submission of an article does not guarantee publication. PhysioZine reserves the right to reject any submission that does not meet our standards or align with our editorial focus.</span>
                                         </li>
                                         <li>
-                                            <span>PhysioTrends may promote published articles through various channels, including but not limited to social media, email newsletters, and third-party platforms.</span>
+                                            <span>PhysioZine may promote published articles through various channels, including but not limited to social media, email newsletters, and third-party platforms.</span>
                                         </li>
                                     </ul>
 
@@ -76,7 +76,7 @@ const TermsAndConditions = () => {
                                             <span>Authors must disclose any potential conflicts of interest, financial or otherwise, that could influence the content of their articles.</span>
                                         </li>
                                         <li>
-                                            <span>PhysioTrends reserves the right to reject or remove any article that is found to have undisclosed conflicts of interest.</span>
+                                            <span>PhysioZine reserves the right to reject or remove any article that is found to have undisclosed conflicts of interest.</span>
                                         </li>
                                     </ul>
 
@@ -86,25 +86,25 @@ const TermsAndConditions = () => {
                                             <span>Authors are solely responsible for the content of their articles and any consequences that may arise from their publication.</span>
                                         </li>
                                         <li>
-                                            <span>Authors agree to indemnify and hold PhysioTrends harmless from any claims, liabilities, or damages resulting from their submissions.</span>
+                                            <span>Authors agree to indemnify and hold PhysioZine harmless from any claims, liabilities, or damages resulting from their submissions.</span>
                                         </li>
                                     </ul>
 
                                     <h3 className={`${styles?.subHeading} mt-2`}>7. Amendments:</h3>
                                     <ul>
                                         <li>
-                                            <span>PhysioTrends reserves the right to amend these terms and conditions at any time. Any changes will be communicated to authors in writing.</span>
+                                            <span>PhysioZine reserves the right to amend these terms and conditions at any time. Any changes will be communicated to authors in writing.</span>
                                         </li>
                                     </ul>
 
-                                    <p >By submitting an article to PhysioTrends E-Magazine, authors acknowledge that they have read, understood, and agree to abide by these terms and conditions.
+                                    <p >By submitting an article to PhysioZine E-Magazine, authors acknowledge that they have read, understood, and agree to abide by these terms and conditions.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
                         <div className={`accordion-item mt-2`}>
-                            <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-2`} title='Subscription Plan | PhysioTrends'>
+                            <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-2`} title='Subscription Plan | PhysioZine'>
                                 <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-2`} aria-expanded="false" aria-controls={`flush-collapse-2`}>
                                     Subscription Plan
                                 </button>
@@ -112,7 +112,7 @@ const TermsAndConditions = () => {
                             <div id={`flush-collapse-2`} className={`accordion-collapse collapse `} data-bs-parent="#main-accordion">
                                 <div className={`accordion-body ${styles.accordionBody}`}>
                                     <p>
-                                        By enrolling in the Physiotrends Digital Magazine Academic Partner Program, your institution agrees to the following terms and conditions. These terms are designed to ensure a smooth and efficient collaboration that highlights academic achievements and provides valuable opportunities for students.
+                                        By enrolling in the PhysioZine Digital Magazine Academic Partner Program, your institution agrees to the following terms and conditions. These terms are designed to ensure a smooth and efficient collaboration that highlights academic achievements and provides valuable opportunities for students.
                                     </p>
 
                                     <h3 className={`${styles?.subHeading} mt-2`}>1. Subscription Plans and Benefits</h3>
@@ -144,7 +144,7 @@ const TermsAndConditions = () => {
                                         </li>
                                         <li>
                                             <span>
-                                                Physiotrends Digital Magazine reserves the right to edit advertisement content to align with the magazine's layout and design standards. However, we will ensure that content integrity and key messaging remain intact.
+                                                PhysioZine Digital Magazine reserves the right to edit advertisement content to align with the magazine's layout and design standards. However, we will ensure that content integrity and key messaging remain intact.
                                             </span>
                                         </li>
                                     </ul>
@@ -153,7 +153,7 @@ const TermsAndConditions = () => {
                                     <ul>
                                         <li>
                                             <span>
-                                                By enrolling, the college grants Physiotrends Digital Magazine the right to display the college’s logo on the website, on an Academic Partner page, and in related promotional materials. This partnership recognition strengthens our collective reach and celebrates our commitment to academic excellence.
+                                                By enrolling, the college grants PhysioZine Digital Magazine the right to display the college’s logo on the website, on an Academic Partner page, and in related promotional materials. This partnership recognition strengthens our collective reach and celebrates our commitment to academic excellence.
                                             </span>
                                         </li>
                                         <li>
@@ -167,12 +167,12 @@ const TermsAndConditions = () => {
                                     <ul>
                                         <li>
                                             <span>
-                                                The college grants Physiotrends Digital Magazine the right to publish any submitted articles, advertisements, or promotional content from enrolled students and faculty within the agreed terms of each subscription plan.
+                                                The college grants PhysioZine Digital Magazine the right to publish any submitted articles, advertisements, or promotional content from enrolled students and faculty within the agreed terms of each subscription plan.
                                             </span>
                                         </li>
                                         <li>
                                             <span>
-                                                Content submitted by the college may also be used for promotional purposes across Physiotrends platforms, including social media and website features.
+                                                Content submitted by the college may also be used for promotional purposes across PhysioZine platforms, including social media and website features.
                                             </span>
                                         </li>
                                     </ul>
@@ -209,7 +209,7 @@ const TermsAndConditions = () => {
                                     <ul>
                                         <li>
                                             <span>
-                                                Physiotrends Digital Magazine reserves the right to terminate the subscription if the college violates any of these terms and conditions.
+                                                PhysioZine Digital Magazine reserves the right to terminate the subscription if the college violates any of these terms and conditions.
                                             </span>
                                         </li>
                                         <li>
@@ -223,7 +223,7 @@ const TermsAndConditions = () => {
                                     <ul>
                                         <li>
                                             <span>
-                                                Physiotrends Digital Magazine reserves the right to modify these terms and conditions as necessary. Any changes will be communicated to enrolled colleges, and continued enrollment constitutes agreement to any revised terms.
+                                                PhysioZine Digital Magazine reserves the right to modify these terms and conditions as necessary. Any changes will be communicated to enrolled colleges, and continued enrollment constitutes agreement to any revised terms.
                                             </span>
                                         </li>
                                     </ul>
@@ -237,7 +237,7 @@ const TermsAndConditions = () => {
                                         </li>
                                         <li>
                                             <span>
-                                                The award will be based on the number of articles published in Physiotrends Digital Magazine by students or faculty from the enrolled college.
+                                                The award will be based on the number of articles published in PhysioZine Digital Magazine by students or faculty from the enrolled college.
                                             </span>
                                         </li>
                                         <li>

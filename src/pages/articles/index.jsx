@@ -66,14 +66,14 @@ function Articles ({ data, router }) {
   return (
     <>
       <Head>
-        <title>Articles | PhysioTrends</title>
+        <title>Articles | PhysioZine</title>
         <meta charset="utf-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name='keywords' content='PhysioTrends, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-        <meta name="description" content="PHYSIOTRENDS is India’s fastest growing ISSN Certified E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
-        <meta property="og:title" content="PhysioTrends: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
-        <meta property="og:description" content="PhysioTrends: Explore all the expert articles and latest research on Physiotherapy here." />
-        <meta property="og:url" content="https://physiotrends.vercel.app/articles" />
+        <meta name='keywords' content='PhysioZine, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+        <meta name="description" content="PHYSIOZINE is India’s fastest growing ISSN Certified E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
+        <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
+        <meta property="og:description" content="PhysioZine: Explore all the expert articles and latest research on Physiotherapy here." />
+        <meta property="og:url" content="https://physiozine.vercel.app/articles" />
         <meta property="og:image" content="assets/img/favicon.jpg" />
         <meta property="og:type" content="article" />
         <link rel="icon" href="assets/img/favicon.png" />
@@ -81,7 +81,7 @@ function Articles ({ data, router }) {
       </Head>
 
       <Suspense fallback={<Spinner animation='border' size='md' variant='primary' />}>
-        <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Articles'} />
+        <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Articles'} />
         <section className={`${styles?.articles} container`}>
           <div className={`${styles?.articlesContent}`}>
             <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='Read'>Our Articles</h1>
@@ -122,7 +122,7 @@ function Articles ({ data, router }) {
                               <FontAwesomeIcon icon={faEye} /> View
                             </Button>
                             <Button onClick={() =>
-                              saveAs(`${articles?.find(item => item?._id === '1')?.eBook}`, `PhysioTrends_Vol-1_Issue-1`)}
+                              saveAs(`${articles?.find(item => item?._id === '1')?.eBook}`, `PhysioZine_Vol-1_Issue-1`)}
                             >
                               <FontAwesomeIcon icon={faFilePdf} /> PDF
                             </Button>
@@ -140,7 +140,7 @@ function Articles ({ data, router }) {
                               <FontAwesomeIcon icon={faEye} /> View
                             </Button>
                             <Button onClick={() =>
-                              saveAs(`${articles?.find(item => item?._id === '2')?.eBook}`, `PhysioTrends_Vol-1_Issue-2`)}>
+                              saveAs(`${articles?.find(item => item?._id === '2')?.eBook}`, `PhysioZine_Vol-1_Issue-2`)}>
                               <FontAwesomeIcon icon={faFilePdf} /> PDF
                             </Button>
                           </td>
@@ -157,7 +157,7 @@ function Articles ({ data, router }) {
                               <FontAwesomeIcon icon={faEye} /> View
                             </Button>
                             <Button onClick={() =>
-                              saveAs(`${articles?.find(item => item?._id === '3')?.eBook}`, `PhysioTrends_Vol-1_Issue-3`)}>
+                              saveAs(`${articles?.find(item => item?._id === '3')?.eBook}`, `PhysioZine_Vol-1_Issue-3`)}>
                               <FontAwesomeIcon icon={faFilePdf} /> PDF
                             </Button>
                           </td>
@@ -174,7 +174,7 @@ function Articles ({ data, router }) {
                               <FontAwesomeIcon icon={faEye} /> View
                             </Button>
                             <Button onClick={() =>
-                              saveAs(`${articles?.find(item => item?._id === '4')?.eBook}`, `PhysioTrends_Vol-1_Issue-4`)}>
+                              saveAs(`${articles?.find(item => item?._id === '4')?.eBook}`, `PhysioZine_Vol-1_Issue-4`)}>
                               <FontAwesomeIcon icon={faFilePdf} /> PDF
                             </Button>
                           </td>
@@ -191,7 +191,7 @@ function Articles ({ data, router }) {
                               <FontAwesomeIcon icon={faEye} /> View
                             </Button>
                             <Button onClick={() =>
-                              saveAs(`${articles?.find(item => item?._id === '5')?.eBook}`, `PhysioTrends_Vol-1_Issue-5`)}>
+                              saveAs(`${articles?.find(item => item?._id === '5')?.eBook}`, `PhysioZine_Vol-1_Issue-5`)}>
                               <FontAwesomeIcon icon={faFilePdf} /> PDF
                             </Button>
                           </td>
@@ -203,8 +203,8 @@ function Articles ({ data, router }) {
 
                 {btnToggle?.volTwo && (<>
                   <div className={`${styles?.upcomingArticle}`}>
-                    <h6>Call for publications - Physiotrends Digital Magazine</h6>
-                    <p>Here's your chance to showcase your expertise! Physiotrends Digital Magazine is inviting article submission for our upcoming Issue.<br />Submit your article on <a href='/submissionForm'>link</a></p>
+                    <h6>Call for publications - PhysioZine Digital Magazine</h6>
+                    <p>Here's your chance to showcase your expertise! PhysioZine Digital Magazine is inviting article submission for our upcoming Issue.<br />Submit your article on <a href='/submissionForm'>link</a></p>
                   </div>
                 </>)}
               </div>
@@ -220,7 +220,7 @@ function Articles ({ data, router }) {
                     <div className={`${styles?.accordion} accordion accordion-flush mt-2`} id='main-accordion'>
                       <article>
                         <div className={`accordion-item`}>
-                          <h2 className={`accordion-header`} id={`flush-heading-${index}`} title='Founders of PhysioTrends | PhysioTrends'>
+                          <h2 className={`accordion-header`} id={`flush-heading-${index}`} title='Founders of PhysioZine | PhysioZine'>
                             <button
                               className={`accordion-button collapsed ${styles.accordionBtn} ${ubuntu?.className}`}
                               type="button"
@@ -240,7 +240,7 @@ function Articles ({ data, router }) {
                                       <Button
                                         variant='info'
                                         size='sm'
-                                        title={`${article?.title} | PhysioTrends`}
+                                        title={`${article?.title} | PhysioZine`}
                                         style={{ marginLeft: '5px' }}
                                         onClick={() => handleCopyLink(`${process.env.DEPLOY}/articles/${article?._id}?sArticle=${article?.title}`)}
                                       >
@@ -250,9 +250,9 @@ function Articles ({ data, router }) {
                                       <Button
                                         variant='warning'
                                         size='sm'
-                                        title={`Download ${article?.title} | PhysioTrends`}
+                                        title={`Download ${article?.title} | PhysioZine`}
                                         style={{ marginLeft: '5px' }}
-                                        onClick={() => saveAs(`${article?.eBook}`, `PhysioTrends_Vol-1_Issue-1`)}
+                                        onClick={() => saveAs(`${article?.eBook}`, `PhysioZine_Vol-1_Issue-1`)}
                                       >
                                         <FaDownload />
                                       </Button>
@@ -270,10 +270,10 @@ function Articles ({ data, router }) {
                                     <Fragment key={index}>
                                       <div className={`${styles?.magazineCard}`}>
                                         <div className={`${styles?.magazineCardHeader}`}>
-                                          <span title={`${magazine?.sName} | PhysioTrends`} className={`${styles?.magazineCardTitle} {ubuntu?.className}`}>{magazine?.sName}</span>
+                                          <span title={`${magazine?.sName} | PhysioZine`} className={`${styles?.magazineCardTitle} {ubuntu?.className}`}>{magazine?.sName}</span>
                                         </div>
                                         <div className={`${styles?.authorContent}`}>
-                                          <span className={`${styles?.author} {ubuntu?.className}`} title={`${magazine?.sAuthor} | PhysioTrends`}><FaUserCircle /> {magazine?.sAuthor}</span>
+                                          <span className={`${styles?.author} {ubuntu?.className}`} title={`${magazine?.sAuthor} | PhysioZine`}><FaUserCircle /> {magazine?.sAuthor}</span>
                                           <span className={`${styles?.pageNumber} {ubuntu?.className}`}>Page No.: {magazine?.sPageNo}</span>
                                         </div>
                                         <p className={`${styles?.number} {ubuntu?.className}`}>DOI: {magazine?.sDOINo}</p>

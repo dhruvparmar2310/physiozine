@@ -1,4 +1,4 @@
-# PhysioTrends
+# PhysioZine
 
 | Node Version | NPM Version | Next Version |
 |---|---|---|

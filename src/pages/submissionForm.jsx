@@ -130,16 +130,16 @@ const SubmissionForm = () => {
     return (
         <>
             <Head>
-                <title>Article Form | PhysioTrends</title>
+                <title>Article Form | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioTrends, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name="description" content="PHYSIOZINE is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Submission Form'} />
+            <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Submission Form'} />
             <section className={`${styles?.submissionForm}`}>
                 <div className={`${styles?.innerContent} container`}>
                     <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Submission Form</h1>
@@ -147,7 +147,7 @@ const SubmissionForm = () => {
 
                     <div>
                         <p className={`mt-2 ${ubuntu?.className}`}>
-                            Share your expertise with the global physiotherapy community by submitting your original research, blogs, innovation or case studies to Physiotrends Magazine. Our platform provides an opportunity for professionals to contribute to the advancement of physiotherapy knowledge and practice. Submit your work today and be a part of shaping the future of the field.
+                            Share your expertise with the global physiotherapy community by submitting your original research, blogs, innovation or case studies to PhysioZine Magazine. Our platform provides an opportunity for professionals to contribute to the advancement of physiotherapy knowledge and practice. Submit your work today and be a part of shaping the future of the field.
                         </p>
                     </div>
                     <div>
@@ -411,7 +411,7 @@ const SubmissionForm = () => {
                     <div className='mt-2'>
                         <p>
                             <em>
-                                If you encounter any issues while submitting your article, please contact our customer care at <span style={{ color: 'var(--primary-color)' }}>+91 7984377793</span> or email us at <span style={{ color: 'var(--primary-color)' }}>physiotrendsmagazine@gmail.com</span> for assistance.
+                                If you encounter any issues while submitting your article, please contact our customer care at <span style={{ color: 'var(--primary-color)' }}>+91 7984377793</span> or email us at <span style={{ color: 'var(--primary-color)' }}>physiozinemagazine@gmail.com</span> for assistance.
                             </em>
                         </p>
                     </div>

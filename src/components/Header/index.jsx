@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from '../../styles/Header.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
-import TextLogo from '../../../public/assets/img/main-logo.png'
+import TextLogo from '../../../public/assets/img/logo-1.png'
 import { Bebas_Neue, Teko, Ubuntu } from 'next/font/google'
 import { useRouter } from 'next/router'
 import { RiMenu3Fill } from "react-icons/ri";
@@ -50,7 +50,7 @@ function Header () {
       >
         <div className={`d-flex align-items-center ${styles.home}`}>
           <div className={isNavExpanded ? `${styles.top_header}` : `${styles.top_headerWeb}`}>
-            <h1 className={`${styles.logo} mr-auto`} title={`PhysioTrends`}>
+            <h1 className={`${styles.logo} mr-auto`} title='PhysioZine'>
               <Link href='/' style={{ fontWeight: '500' }} passHref>
                 <Image src={TextLogo} alt='' quality={100} width={250} height={100} priority />
               </Link>
@@ -67,49 +67,49 @@ function Header () {
           >
             <ul>
               <li className="active">
-                <Link href='/' title='Home | PhysioTrends' className={`${router?.route === '/' && styles?.active} ${ubuntu.className} ${styles?.homeSvg}`} onClick={(e) => handleClick(e, '/')}>{isNavExpanded ? 'Home' : <IoMdHome />}</Link>
+                <Link href='/' title='Home | PhysioZine' className={`${router?.route === '/' && styles?.active} ${ubuntu.className} ${styles?.homeSvg}`} onClick={(e) => handleClick(e, '/')}>{isNavExpanded ? 'Home' : <IoMdHome />}</Link>
               </li>
               <li>
-                <Link href={`/articles`} title='Archives | PhysioTrends' className={`${router?.route?.includes('/articles') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/articles')}>Articles</Link>
+                <Link href={`/articles`} title='Archives | PhysioZine' className={`${router?.route?.includes('/articles') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/articles')}>Articles</Link>
               </li>
               <li>
-                <Link href='/advertise' title='Advertise | PhysioTrends' className={`${router?.route?.includes('/advertise') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/advertise')}>Advertise </Link>
+                <Link href='/advertise' title='Advertise | PhysioZine' className={`${router?.route?.includes('/advertise') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/advertise')}>Advertise </Link>
               </li>
               <li>
-                <Link href={'/editorialMember'} title='Editorial Members | PhysioTrends' className={`${router?.route?.includes('/editorialMember') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/editorialMember')}>Editorial Members</Link>
+                <Link href={'/editorialMember'} title='Editorial Members | PhysioZine' className={`${router?.route?.includes('/editorialMember') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/editorialMember')}>Editorial Members</Link>
               </li>
 
               <li>
-                <Link href={'/academicPartner'} title='Academic Partner | PhysioTrends' className={`${router?.route?.includes('/academicPartner') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/academicPartner')}>Academic Partner</Link>
+                <Link href={'/academicPartner'} title='Academic Partner | PhysioZine' className={`${router?.route?.includes('/academicPartner') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/academicPartner')}>Academic Partner</Link>
               </li>
 
               <li className={`${styles.drop_down}`}>
-                <span className={`${styles?.dropDownButton} ${ubuntu.className}`} title='Policies | PhysioTrends' onClick={() => setDropDownOpen(!dropdownOpen)}>Policies <FaChevronDown /></span>
+                <span className={`${styles?.dropDownButton} ${ubuntu.className}`} title='Policies | PhysioZine' onClick={() => setDropDownOpen(!dropdownOpen)}>Policies <FaChevronDown /></span>
                 <ul style={dropdownOpen ? { display: 'block' } : { display: 'none' }}>
                   <li>
-                    <Link href={'/terms-and-conditions'} title='Terms & Conditions | PhysioTrends' className={`${router?.route?.includes('/terms-and-conditions') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/terms-and-conditions')}>Terms & Conditions</Link>
+                    <Link href={'/terms-and-conditions'} title='Terms & Conditions | PhysioZine' className={`${router?.route?.includes('/terms-and-conditions') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/terms-and-conditions')}>Terms & Conditions</Link>
                   </li>
                   <li>
-                    <Link href={'/policy/disclaimerPolicy'} title='Disclaimer Policy | PhysioTrends' className={`${router?.route?.includes('/policy/disclaimerPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/disclaimerPolicy')}>Disclaimer Policy</Link>
+                    <Link href={'/policy/disclaimerPolicy'} title='Disclaimer Policy | PhysioZine' className={`${router?.route?.includes('/policy/disclaimerPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/disclaimerPolicy')}>Disclaimer Policy</Link>
                   </li>
                   <li>
-                    <Link href={'/policy/privacyPolicy'} title='Privacy Policy | PhysioTrends' className={`${router?.route?.includes('/policy/privacyPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/privacyPolicy')}>Privacy Policy</Link>
+                    <Link href={'/policy/privacyPolicy'} title='Privacy Policy | PhysioZine' className={`${router?.route?.includes('/policy/privacyPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/privacyPolicy')}>Privacy Policy</Link>
                   </li>
                   <li>
-                    <Link href={'/policy/referPolicy'} title='Refer & Earn Policy | PhysioTrends' className={`${router?.route?.includes('/policy/referPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/referPolicy')}>Refer & Earn Policy</Link>
+                    <Link href={'/policy/referPolicy'} title='Refer & Earn Policy | PhysioZine' className={`${router?.route?.includes('/policy/referPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/referPolicy')}>Refer & Earn Policy</Link>
                   </li>
                   <li>
-                    <Link href={'/policy/refundPolicy'} title='Refund Policy | PhysioTrends' className={`${router?.route?.includes('/policy/refundPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/refundPolicy')}>Refund Policy</Link>
+                    <Link href={'/policy/refundPolicy'} title='Refund Policy | PhysioZine' className={`${router?.route?.includes('/policy/refundPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/refundPolicy')}>Refund Policy</Link>
                   </li>
                   <li>
-                    <Link href={'/policy/plagiarismPolicy'} title='Plagiarism Policy | PhysioTrends' className={`${router?.route?.includes('/policy/plagiarismPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/plagiarismPolicy')}>Plagiarism Policy</Link>
+                    <Link href={'/policy/plagiarismPolicy'} title='Plagiarism Policy | PhysioZine' className={`${router?.route?.includes('/policy/plagiarismPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/plagiarismPolicy')}>Plagiarism Policy</Link>
                   </li>
-                  <li><Link href={'/policy/editorialPolicy'} title='Editorial Policy | PhysioTrends' className={`${router?.route?.includes('/policy/editorialPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/editorialPolicy')}>Editorial Policy</Link></li>
+                  <li><Link href={'/policy/editorialPolicy'} title='Editorial Policy | PhysioZine' className={`${router?.route?.includes('/policy/editorialPolicy') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/policy/editorialPolicy')}>Editorial Policy</Link></li>
                 </ul>
               </li>
 
               <li>
-                <Link href={'/contact'} className={`${router?.route?.includes('/contact') && styles?.active} ${ubuntu.className}`} title='Contact | PhysioTrends' onClick={(e) => handleClick(e, '/contact')}>
+                <Link href={'/contact'} className={`${router?.route?.includes('/contact') && styles?.active} ${ubuntu.className}`} title='Contact | PhysioZine' onClick={(e) => handleClick(e, '/contact')}>
                   Contact
                 </Link>
               </li>

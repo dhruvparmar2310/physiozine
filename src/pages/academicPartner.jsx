@@ -68,14 +68,14 @@ const AcademicPartner = () => {
     return (
         <>
             <Head>
-                <title>Academic Partner | PhysioTrends</title>
+                <title>Academic Partner | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioTrends, Physiotherapy, Academic Partners of PhysioTrends, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiotrendsmagazine@gmail.com or +91 7984377793." />
-                <meta property="og:title" content="PhysioTrends: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
-                <meta property="og:description" content="Empowering Colleges and Students through Publication and Recognition - Physiotrends" />
-                <meta property="og:url" content="https://physiotrends.vercel.app/academicPartner" />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Academic Partners of PhysioZine, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
+                <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
+                <meta property="og:description" content="Empowering Colleges and Students through Publication and Recognition - PhysioZine" />
+                <meta property="og:url" content="https://physiozine.vercel.app/academicPartner" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
@@ -95,7 +95,7 @@ const AcademicPartner = () => {
                 </div>
                 {/* <div className={`${styles?.academicContent} container`}>
                     <p className={`${styles?.introduction} ${ubuntu?.className}`}>
-                        Welcome to Physiotrends Digital Magazine’s Academic Partner Program! As a trusted resource in the field of physiotherapy, our digital magazine is dedicated to supporting educational institutions and their students. This program offers exclusive subscription plans that encourage knowledge sharing, promote student achievements, and build a strong community of future healthcare professionals. Join us in fostering academic excellence through accessible publication opportunities and gain recognition on a national platform!
+                        Welcome to PhysioZine Digital Magazine’s Academic Partner Program! As a trusted resource in the field of physiotherapy, our digital magazine is dedicated to supporting educational institutions and their students. This program offers exclusive subscription plans that encourage knowledge sharing, promote student achievements, and build a strong community of future healthcare professionals. Join us in fostering academic excellence through accessible publication opportunities and gain recognition on a national platform!
                     </p>
                     <p>
                         Before buying any plan, Please read all the <Link href='/terms-and-conditions' target='_blank'>Terms & Conditions</Link> of the Company.
@@ -116,7 +116,7 @@ const AcademicPartner = () => {
                                     <li>
                                         <span><FaCircleCheck /></span> <span>Free Publication</span>
                                         <p>
-                                            Each issue of Physiotrends Digital Magazine will include one free student publication from your institution, offering visibility to emerging talent in physiotherapy.
+                                            Each issue of PhysioZine Digital Magazine will include one free student publication from your institution, offering visibility to emerging talent in physiotherapy.
                                         </p>
                                     </li>
                                 </ul>
@@ -218,7 +218,7 @@ const AcademicPartner = () => {
 
                         <p>
                             <em>
-                                Join the Physiotrends Digital Magazine Academic Partner Program and empower your students through publication and recognition in the field of physiotherapy!
+                                Join the PhysioZine Digital Magazine Academic Partner Program and empower your students through publication and recognition in the field of physiotherapy!
                             </em>
                         </p>
                     </div>
