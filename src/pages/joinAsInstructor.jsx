@@ -9,21 +9,21 @@ const JoinAsInstructor = () => {
     return (
         <>
             <Head>
-                <title>Join As Instructor | PhysioTrends</title>
+                <title>Join As Instructor | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioTrends, Physiotherapy, Advertise of PhysioTrends, PhysioTrends Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiotrendsmagazine@gmail.com or +91 7984377793." />
-                <meta property="og:title" content="PhysioTrends: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
-                <meta property="og:description" content="Promote your brand to targeted physio audiences - Advertise with Physiotrends." />
-                <meta property="og:url" content="https://physiotrends.vercel.app/advertise" />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
+                <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
+                <meta property="og:description" content="Promote your brand to targeted physio audiences - Advertise with PhysioZine." />
+                <meta property="og:url" content="https://physiozine.vercel.app/advertise" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Join as Editor'} />
+            <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Join as Editor'} />
             <section className={`${styles?.joinAsInstructor}`}>
                 <div className={`${styles?.innerContent} container`}>
                     <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Join as Instructor</h1>
@@ -31,11 +31,11 @@ const JoinAsInstructor = () => {
 
                     <div className='mt-3'>
                         <p>
-                            Become an Instructor at PhysioTrends: Shape the Future of Online Physiotherapy Education
+                            Become an Instructor at PhysioZine: Shape the Future of Online Physiotherapy Education
                         </p>
-                        <p>PhysioTrends is seeking dedicated physiotherapy professionals to join our team of online instructors. As a leader in digital physiotherapy education, we're looking for experts who are passionate about sharing their knowledge and advancing the field.</p>
+                        <p>PhysioZine is seeking dedicated physiotherapy professionals to join our team of online instructors. As a leader in digital physiotherapy education, we're looking for experts who are passionate about sharing their knowledge and advancing the field.</p>
 
-                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Why Teach with PhysioTrends?</h1>
+                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Why Teach with PhysioZine?</h1>
                         <div className={`${styles?.line}`}></div>
 
                         <ul className='mt-3'>
@@ -68,7 +68,7 @@ const JoinAsInstructor = () => {
                             </li>
                         </ul>
 
-                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>As a PhysioTrends instructor, you'll play a crucial role in:</h1>
+                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>As a PhysioZine instructor, you'll play a crucial role in:</h1>
                         <div className={`${styles?.line}`}></div>
 
                         <ul className='mt-3'>
@@ -87,9 +87,9 @@ const JoinAsInstructor = () => {
                         </ul>
 
                         <p>
-                            Join the PhysioTrends family and help us revolutionize physiotherapy education. Apply now to start your journey as an online instructor and make a lasting impact on the next generation of physiotherapists!
+                            Join the PhysioZine family and help us revolutionize physiotherapy education. Apply now to start your journey as an online instructor and make a lasting impact on the next generation of physiotherapists!
                         </p>
-                        <p>Send your CV/Resume to <span style={{ color: 'var(--primary-color)' }}>physiotrendsmagazine@gmail.com</span></p>
+                        <p>Send your CV/Resume to <span style={{ color: 'var(--primary-color)' }}>physiozinemagazine@gmail.com</span></p>
                     </div>
 
                 </div>

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Button, Modal } from 'react-bootstrap'
 import BannerImg from '../../../public/assets/img/main-bg.png'
 import { useRouter } from 'next/router'
-import textLogo from '../../../public/assets/img/main-logo.png'
+import textLogo from '../../../public/assets/img/logo-1.png'
 import { motion } from 'framer-motion'
 import InstallPWA from '../InstallPWA'
 import { LuCoins } from "react-icons/lu"
@@ -72,7 +72,7 @@ function Hero ({ width }) {
                         </motion.p>
 
                         <div className='d-flex'>
-                            <motion.div
+                            {/* <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{
@@ -83,7 +83,7 @@ function Hero ({ width }) {
                                 className='mt-3 me-3'
                             >
                                 <Button className={`btn ${styles?.subscribeBtn} ${ubuntu?.className}`} onClick={() => handleSubscriptionBtn()}>Subscribe Now</Button>
-                            </motion.div>
+                            </motion.div> */}
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -128,7 +128,7 @@ function Hero ({ width }) {
                 </Modal.Header>
                 <Modal.Body>
                     <p>
-                        Here are the rules and regulations for manuscript submission to PhysioTrends:
+                        Here are the rules and regulations for manuscript submission to PhysioZine:
                     </p>
 
                     <ol>
@@ -141,15 +141,15 @@ function Hero ({ width }) {
                         <li>Clearly state the title and main text in the manuscript.</li>
                         <li>Figures and tables should be submitted as separate files in high resolution.</li>
                         <li>Manuscripts undergo peer review; authors should be prepared to revise based on feedback.</li>
-                        <li>PhysioTrends reserves the right to reject submissions that do not adhere to these guidelines or are deemed unsuitable for publication.</li>
+                        <li>PhysioZine reserves the right to reject submissions that do not adhere to these guidelines or are deemed unsuitable for publication.</li>
                     </ol>
 
                     <p>
-                        These guidelines ensure a smooth submission process and maintain the quality and integrity of PhysioTrends.
+                        These guidelines ensure a smooth submission process and maintain the quality and integrity of PhysioZine.
                     </p>
 
                     <div className={`${styles.submitBtn}`}>
-                        <a href='mailto:physiotrendsmagazine@gmail.com' target='_blank'>Submit Now</a>
+                        <a href='mailto:physiozinemagazine@gmail.com' target='_blank'>Submit Now</a>
                     </div>
                 </Modal.Body>
             </Modal>

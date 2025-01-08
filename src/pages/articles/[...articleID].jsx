@@ -32,7 +32,7 @@ function ArticleID ({ data }) {
     function goToZenodo (data) {
         let articleCode = data?.split('zenodo.')?.[1]
 
-        window.location.href = `https://zenodo.org/records/${articleCode}`
+        // window.location.href = `https://zenodo.org/records/${articleCode}`
     }
 
     useEffect(() => {
@@ -44,21 +44,21 @@ function ArticleID ({ data }) {
     return (
         <>
             <Head>
-                <title>Articles - {sArticle} | PhysioTrends</title>
+                <title>Articles - {sArticle} | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content={`PhysioTrends, Physiotrends, Physio trends, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, ${sArticle} of PhysioTrends, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine`} />
-                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiotrendsmagazine@gmail.com or +91 7984377793." />
-                <meta property="og:title" content="PhysioTrends: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
-                <meta property="og:description" content="PhysioTrends: Explore all the expert articles and latest research on Physiotherapy here." />
-                <meta property="og:url" content="https://physiotrends.vercel.app/articles" />
+                <meta name='keywords' content={`PhysioZine, PhysioZine, Physio zine, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, ${sArticle} of PhysioZine, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine`} />
+                <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
+                <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
+                <meta property="og:description" content="PhysioZine: Explore all the expert articles and latest research on Physiotherapy here." />
+                <meta property="og:url" content="https://physiozine.vercel.app/articles" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="article" />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            {/* <BreadCrumb title={'Articles | PhysioTrends'} link={'Home'} current={`Articles - ${sArticle}`} /> */}
+            {/* <BreadCrumb title={'Articles | PhysioZine'} link={'Home'} current={`Articles - ${sArticle}`} /> */}
             <section className={`${styles?.articles} ${styles?.readArticlePage} container`} style={{ marginTop: '6rem' }}>
                 {Object?.keys(articleData)?.length === 0 ? <>
                     <div>
@@ -135,7 +135,7 @@ function ArticleID ({ data }) {
                                                         {item?.sPageNo === '-' ? '' : <><span>Page No.: {item?.sPageNo}</span><span className={styles?.pipeSymbol}>|</span></>} <span className={`${styles?.downLoadBtn}`} onClick={() => router.push({
                                                             pathname: `/articles/${articleID?.[0]}/${articleID?.[1]}/${item?.sName}`,
                                                             query: { id: item?._id }
-                                                        })}><GrTextAlignFull /> Full Text</span> {item?.sDownLoadUrl === '-' ? '' : <><span className={styles?.pipeSymbol}>|</span> <span className={`${styles?.downLoadBtn}`} onClick={() => saveAs(`${item?.sDownLoadUrl}`, `${item?.sName}`)}><FontAwesomeIcon icon={faFilePdf} /> PDF</span></>}
+                                                        })}><GrTextAlignFull /> Full Text</span> {/*{item?.sDownLoadUrl === '-' ? '' : <><span className={styles?.pipeSymbol}>|</span> <span className={`${styles?.downLoadBtn}`} onClick={() => saveAs(`${item?.sDownLoadUrl}`, `${item?.sName}`)}><FontAwesomeIcon icon={faFilePdf} /> PDF</span></>} */}
                                                     </div>
                                                 </div>
                                             )

@@ -15,21 +15,21 @@ const MediaPartner = () => {
     return (
         <>
             <Head>
-                <title>Media Partner | PhysioTrends</title>
+                <title>Media Partner | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='Media Partner with PhysioTrends, Physiotherapy, Advertise of PhysioTrends, PhysioTrends Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiotrendsmagazine@gmail.com or +91 7984377793." />
-                <meta property="og:title" content="PhysioTrends: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
-                <meta property="og:description" content="Promote your brand to targeted physio audiences - Advertise with Physiotrends." />
-                <meta property="og:url" content="https://physiotrends.vercel.app/mediaPartner" />
+                <meta name='keywords' content='Media Partner with PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
+                <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
+                <meta property="og:description" content="Promote your brand to targeted physio audiences - Advertise with PhysioZine." />
+                <meta property="og:url" content="https://physiozine.vercel.app/mediaPartner" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Media Partner'} />
+            <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Media Partner'} />
             <section className={`${styles?.joinAsInstructor}`}>
                 <div className={`${styles?.innerContent} container`}>
                     <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='Collaborate with Us:'>Conferences, Workshops & More</h1>
@@ -37,10 +37,10 @@ const MediaPartner = () => {
 
                     <div className='mt-3'>
                         <p>
-                            Are you organizing a conference, workshop, webinar, physiotherapy course, book launch, or sports event? Partner with Physiotrends and amplify your reach through our established platform dedicated to the world of physiotherapy and wellness.
+                            Are you organizing a conference, workshop, webinar, physiotherapy course, book launch, or sports event? Partner with PhysioZine and amplify your reach through our established platform dedicated to the world of physiotherapy and wellness.
                         </p>
 
-                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Why Partner with PhysioTrends?</h1>
+                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Why Partner with PhysioZine?</h1>
                         <div className={`${styles?.line}`}></div>
 
                         <ul className='mt-3'>
@@ -81,16 +81,16 @@ const MediaPartner = () => {
 
                         <ul className='mt-3'>
                             <li>
-                                <span>PhysioTrends Logo on Marketing Materials: Kindly include our logo as the media partner on all banners, flyers, pamphlets, and promotional materials for the event.</span>
+                                <span>PhysioZine Logo on Marketing Materials: Kindly include our logo as the media partner on all banners, flyers, pamphlets, and promotional materials for the event.</span>
                             </li>
                             <li>
                                 <span>Visibility in Event Advertisements: Acknowledge our partnership in all event related advertisements, both digital and print.</span>
                             </li>
                             <li>
-                                <span>Timely Provision of Event Details and Flyers: We request event details and promotional flyers that include the PhysioTrends logo as the media sponsor. These materials should be shared at least one or two days in advance of our scheduled promotions.</span>
+                                <span>Timely Provision of Event Details and Flyers: We request event details and promotional flyers that include the PhysioZine logo as the media sponsor. These materials should be shared at least one or two days in advance of our scheduled promotions.</span>
                             </li>
                             <li>
-                                <span>Advertisement in the Souvenir: Kindly allocate space for a PhysioTrends advertisement in the event souvenir to further enhance visibility.</span>
+                                <span>Advertisement in the Souvenir: Kindly allocate space for a PhysioZine advertisement in the event souvenir to further enhance visibility.</span>
                             </li>
                         </ul>
 
@@ -122,11 +122,11 @@ const MediaPartner = () => {
                         <div className={`${styles?.line}`}></div>
 
                         <p className='mt-3'>
-                            Getting started is simple! Share your event details with us at <span style={{ color: 'var(--primary-color)' }}>physiotrendsmagazine@gmail.com</span> or contact us on <span style={{ color: 'var(--primary-color)' }}>+91 7984377793</span>.
+                            Getting started is simple! Share your event details with us at <span style={{ color: 'var(--primary-color)' }}>physiozinemagazine@gmail.com</span> or contact us on <span style={{ color: 'var(--primary-color)' }}>+91 7984377793</span>.
                         </p>
                         <p>Let's join hands to create meaningful impact and promote excellence in the field of physiotherapy and wellness.</p>
 
-                        <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading=''>Highlights of Event Collaborated</h1>
+                        {/* <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading=''>Highlights of Event Collaborated</h1>
                         <div className={`${styles?.line}`}></div>
 
                         <div className={`${styles?.mediaHighlights}`}>
@@ -135,7 +135,7 @@ const MediaPartner = () => {
                             <Image src={mediaPartnerFive} alt='' quality={100} />
                             <Image src={mediaPartnerTwo} alt='' quality={100} />
                             <Image src={mediaPartnerFour} alt='' quality={100} />
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>

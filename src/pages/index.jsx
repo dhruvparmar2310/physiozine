@@ -33,7 +33,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import ConphycsLogo from '../../public/assets/img/15-conphycs-logo-02.png'
 import gptaLogo from '../../public/assets/img/GPTA-LOGO.jpeg'
 import muLogo from '../../public/assets/img/MU_LOGO_BROWN.png'
-import mainLogo from '../../public/assets/img/main-logo.png'
+import mainLogo from '../../public/assets/img/logo-1.png'
 import zoteroLogo from '../../public/assets/img/webAvailability/Zotero_logo.png'
 import dataCiteLogo from '../../public/assets/img/webAvailability/DataCite-Commons.png'
 import mendeleyLogo from '../../public/assets/img/webAvailability/Mendeley_Logo_Vertical.png'
@@ -64,6 +64,7 @@ export default function Home () {
   const [cityCount, setCityCount] = useState(0);
   const [countryCount, setCountryCount] = useState(0);
   const [teamCount, setTeamCount] = useState(0);
+  const [copyRightYear, setCopyRightYear] = useState(new Date()?.getFullYear())
   const [partnerButtons, setPartnerButtons] = useState({
     conference: true,
     book: false,
@@ -135,16 +136,16 @@ export default function Home () {
   return (
     <>
       <Head>
-        <title>PhysioTrends | Magazine</title>
+        <title>PhysioZine | Magazine</title>
         <meta charset="utf-8"></meta>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name='keywords' content='PhysioTrends, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-        <meta name="description" content="PHYSIOTRENDS is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiotrendsmagazine@gmail.com or +91 7984377793." />
-        <meta property="og:title" content="PhysioTrends: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
-        <meta property="og:description" content="PHYSIOTRENDS is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiotrendsmagazine@gmail.com or +91 7984377793." />
-        <meta property="og:url" content="https://physiotrends.vercel.app/" />
+        <meta name='keywords' content='PhysioZine, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+        <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
+        <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
+        <meta property="og:description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
+        <meta property="og:url" content="https://physiozine.vercel.app/" />
         <meta property="og:image" content="assets/img/favicon.png" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="assets/img/favicon.png" />
@@ -155,7 +156,7 @@ export default function Home () {
 
         <section id="associated" className={`${styles?.associated} py-0`}>
           <div className={styles?.license}>
-            <h1 className={`sectionTitle text-center`} data-heading='License & Registration' title='License & Registration | PhysioTrends'></h1>
+            <h1 className={`sectionTitle text-center`} data-heading='License & Registration' title='License & Registration | PhysioZine'></h1>
 
             <div className={`${styles?.innerContent}`}>
               <div className={`${styles?.leftSide} container`}>
@@ -183,12 +184,12 @@ export default function Home () {
 
         <section className={`${styles?.mediaPartner}`}>
           <div className="container">
-            <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='Media Partner with Physiotrends:' title='Media Partner | PhysioTrends'> Amplify Your Event’s Reach</h1>
+            <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='Media Partner with PhysioZine:' title='Media Partner | PhysioZine'> Amplify Your Event’s Reach</h1>
 
             <div className={`${styles?.innerContent}`}>
               <div>
                 <p>
-                  Are you organizing a conference, workshop, webinar, physiotherapy course, book launch, or sports event? Partner with Physiotrends and amplify your reach through our established platform dedicated to the world of physiotherapy and wellness.
+                  Are you organizing a conference, workshop, webinar, physiotherapy course, book launch, or sports event? Partner with PhysioZine and amplify your reach through our established platform dedicated to the world of physiotherapy and wellness.
                 </p>
                 <Button type='button' onClick={() => router.push('/mediaPartner')}><span className="me-1">Learn More</span> <span><FaArrowRight /></span></Button>
 
@@ -242,7 +243,7 @@ export default function Home () {
                         <p className='mt-3'>Media Partner</p>
                         <Image
                           src={mainLogo}
-                          alt='PhysioTrends Logo'
+                          alt='PhysioZine Logo'
                           loading='lazy'
                           quality={100}
                           className="img-fluid"
@@ -282,7 +283,7 @@ export default function Home () {
                         <p className='mt-3'>Media Partner</p>
                         <Image
                           src={mainLogo}
-                          alt='PhysioTrends Logo'
+                          alt='PhysioZine Logo'
                           loading='lazy'
                           quality={100}
                           className="img-fluid"
@@ -318,7 +319,7 @@ export default function Home () {
         </section >
 
         <section className={`${styles?.actionBar} container`}>
-          <h1 className={`sectionTitle ${styles?.sectionTitle}`} data-heading='Our Services' title='Our Services | PhysioTrends'>Be a part of PhysioTrends</h1>
+          <h1 className={`sectionTitle ${styles?.sectionTitle}`} data-heading='Our Services' title='Our Services | PhysioZine'>Be a part of PhysioZine</h1>
 
           <div className={`${styles?.actions} ${ubuntu?.className} mt-4`}>
             <Row>
@@ -364,9 +365,9 @@ export default function Home () {
                     <h5 className={`${ubuntu?.className}`}>Online Courses</h5>
                   </div>
                   <div className={`${styles?.cardBody}`}>
-                    <p className={`${ubuntu?.className}`}>Explore certified courses by PhysioTrends Academy</p>
+                    <p className={`${ubuntu?.className}`}>Explore certified courses by PhysioZine Academy</p>
                     <span>
-                      <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://physiotrendsacademy.graphy.com/courses')}>
+                      <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://physiozineacademy.graphy.com/courses')}>
                         <span className="me-1">Explore Now</span> <span><FaArrowRight /></span>
                       </Button>
                     </span>
@@ -413,7 +414,7 @@ export default function Home () {
 
         <section id="associated" className={`${styles?.associated} py-0`}>
           <div className={styles?.partner}>
-            <h1 className={`sectionTitle text-center`} data-heading='Our International Educational Partner' title='Our International Association | PhysioTrends'></h1>
+            <h1 className={`sectionTitle text-center`} data-heading='Our International Educational Partner' title='Our International Association | PhysioZine'></h1>
 
             <div className={`${styles?.innerContent}`}>
               <div className={`${styles?.leftSide} container`}>
@@ -442,7 +443,7 @@ export default function Home () {
 
         <section id="about" className={`${styles?.about}`} ref={aboutSectionRef}>
           <div className="container">
-            <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='About' title='About Us | PhysioTrends'>PhysioTrends</h1>
+            <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='About' title='About Us | PhysioZine'>PhysioZine</h1>
 
             <div className={`${styles?.innerContent}`}>
               <motion.p
@@ -453,7 +454,7 @@ export default function Home () {
                 animate={controls}
                 transition={{ duration: width ? 0.5 : 1, ease: 'easeInOut' }}
               >
-                PHYSIOTRENDS is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy.
+                PHYSIOZINE is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy.
               </motion.p>
 
               <div className={`${styles?.visionContent} mt-5`}>
@@ -504,7 +505,7 @@ export default function Home () {
                   <tbody>
                     <tr>
                       <td>Title</td>
-                      <td className={`${styles?.dataValue}`}>PhysioTrends</td>
+                      <td className={`${styles?.dataValue}`}>PhysioZine</td>
                     </tr>
                     <tr>
                       <td>Frequency</td>
@@ -524,11 +525,11 @@ export default function Home () {
                     </tr>
                     <tr>
                       <td>Chief Editor</td>
-                      <td className={`${styles?.dataValue}`} title="Dr. Jaspreet Kaur Kang | Chief Editor of PhysioTrends">Dr. Jaspreet Kaur Kang</td>
+                      <td className={`${styles?.dataValue}`} title="Dr. Jaspreet Kaur Kang | Chief Editor of PhysioZine">Dr. Jaspreet Kaur Kang</td>
                     </tr>
                     <tr>
                       <td>Copyright</td>
-                      <td className={`${styles?.dataValue}`}>PhysioTrends &copy; 2024, All rights Reserved.</td>
+                      <td className={`${styles?.dataValue}`}>PhysioZine &copy; {copyRightYear || '2024'}, All rights Reserved.</td>
                     </tr>
                     <tr>
                       <td>Starting Year</td>
@@ -548,28 +549,28 @@ export default function Home () {
                     </tr>
                     <tr>
                       <td>Email Address</td>
-                      <td className={`${styles?.dataValue}`} title="Contact Us | Email Address of PhysioTrends">physiotrendsmagazine@gmail.com</td>
+                      <td className={`${styles?.dataValue}`} title="Contact Us | Email Address of PhysioZine">physiozinemagazine@gmail.com</td>
                     </tr>
                     <tr>
                       <td>Phone No.</td>
-                      <td className={`${styles?.dataValue}`} title="Contact Us | Phone Number of PhysioTrends">+91 7984-377-793</td>
+                      <td className={`${styles?.dataValue}`} title="Contact Us | Phone Number of PhysioZine">+91 7984-377-793</td>
                     </tr>
                     <tr>
                       <td>Website</td>
-                      <td className={`${styles?.dataValue}`} title="PhysioTrends | Website of PhysioTrends">https://physiotrends.vercel.app</td>
+                      <td className={`${styles?.dataValue}`} title="PhysioZine | Website of PhysioZine">https://physiozine.vercel.app</td>
                     </tr>
                     <tr>
                       <td>Address</td>
-                      <td className={`${styles?.dataValue}`} title='Contact Us | Address of PhysioTrends'>
+                      <td className={`${styles?.dataValue}`} title='Contact Us | Address of PhysioZine'>
                         {/* <ol>
                           <li>
-                            PhysioTrends, Aatishya 100, Nr. Lubi Corporate Road, Oppo. Tulsi Status, Ahmedabad, Gujarat - 382470
+                            PhysioZine, Aatishya 100, Nr. Lubi Corporate Road, Oppo. Tulsi Status, Ahmedabad, Gujarat - 382470
                           </li>
                           <li>
-                            PhysioTrends, Kuldevi Krupa, Sahkar Society Street No. - 3, Sahkar Main Road, Rajkot, Gujarat - 360002
+                            PhysioZine, Kuldevi Krupa, Sahkar Society Street No. - 3, Sahkar Main Road, Rajkot, Gujarat - 360002
                           </li>
                         </ol> */}
-                        PhysioTrends, Kuldevi Krupa, Sahkar Society Street No. - 3, Sahkar Main Road, Rajkot, Gujarat - 360002
+                        PhysioZine, Kuldevi Krupa, Sahkar Society Street No. - 3, Sahkar Main Road, Rajkot, Gujarat - 360002
                       </td>
                     </tr>
                   </tbody>
@@ -620,7 +621,7 @@ export default function Home () {
         <section id="magazines" className={`${styles?.articles}`}>
           <div className="container">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
-              <h1 className={`sectionTitle`} data-heading='Our Latest' title="Our Latest Research Magazines | PhysioTrends">Magazines</h1>
+              <h1 className={`sectionTitle`} data-heading='Our Latest' title="Our Latest Research Magazines | PhysioZine">Magazines</h1>
               <div className={`text-center mt-4 ${styles?.viewMoreBtn} ${ubuntu?.className}`}>
                 <span onClick={() => router.push('/articles')}>View More</span>
               </div>
@@ -630,7 +631,7 @@ export default function Home () {
         </section>
 
         <section id="webAvailable" className={`${styles?.webAvailable}`}>
-          <h1 className={`sectionTitle text-center`} data-heading='Major Index' title="Major Index | PhysioTrends"></h1>
+          <h1 className={`sectionTitle text-center`} data-heading='Major Index' title="Major Index | PhysioZine"></h1>
 
           <div className={`${styles?.innerContent} container mt-4`}>
             <div className={`${styles?.logoContent}`}>
@@ -651,16 +652,16 @@ export default function Home () {
                 </Row>
                 <Row className='mt-2'>
                   <Col>
-                    <Image src={zenodoLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://zenodo.org/search?q=physiotrends&l=list&p=1&s=10&sort=bestmatch')} />
+                    <Image src={zenodoLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://zenodo.org/search?q=physiozine&l=list&p=1&s=10&sort=bestmatch')} />
                   </Col>
                   <Col>
                     <Image src={openAccessLogo} alt="" quality={100} loading='lazy' />
                   </Col>
                   <Col>
-                    <Image src={openAireLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://explore.openaire.eu/search/find/research-outcomes?fv0=physiotrends&f0=q&page=1')} />
+                    <Image src={openAireLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://explore.openaire.eu/search/find/research-outcomes?fv0=physiozine&f0=q&page=1')} />
                   </Col>
                   <Col>
-                    <Image src={readwhereLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://www.readwhere.com/search?q=physiotrends')} />
+                    <Image src={readwhereLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://www.readwhere.com/search?q=physiozine')} />
                   </Col>
                 </Row>
                 <Row className='mt-2'>
@@ -674,7 +675,7 @@ export default function Home () {
                     <Image src={orcidLogo} alt="" quality={100} loading='lazy' />
                   </Col>
                   <Col>
-                    <Image src={linkedinLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://www.linkedin.com/company/physiotrends')} />
+                    <Image src={linkedinLogo} alt="" quality={100} loading='lazy' onClick={() => router.push('https://www.linkedin.com/company/physiozine')} />
                   </Col>
                 </Row>
                 <Row className='mt-2'>

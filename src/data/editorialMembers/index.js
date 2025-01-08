@@ -6,7 +6,7 @@ export const members = [
         profile: 'assets/img/Members/Dr.DarshanParmar.JPG',
         education: 'MPT in Neurological Conditions',
         designation: 'Assistant Professor at K.D.Institute of Physiotherapy',
-        role: ['Founder of PhysioTrends, ThePhysioBrothers, YogaSanskriti'],
+        role: ['Founder of PhysioZine, ThePhysioBrothers, YogaSanskriti'],
         emailAddress: 'insitute.phy@kdhospital.co.in',
         address: 'K.D.Institute of Physiotherapy, Nr. SGVP Hospital, Vaishnavdevi circle, Sarkhej - Gandhinagar Highway, Ahmedabad, Gujarat - 382421'
     },
@@ -17,7 +17,7 @@ export const members = [
         profile: 'assets/img/Members/DrSujayMakwana.jpg',
         education: 'MPT in Neurological Conditions',
         designation: '',
-        role: ['Co-Founder of PhysioTrends, ThePhysioBrothers'],
+        role: ['Co-Founder of PhysioZine, ThePhysioBrothers'],
         emailAddress: 'insitute.phy@kdhospital.co.in',
         address: 'Suden Physiotherapy Clinic, Yogi Complex, Opp. Maharaja Hotel, Kalol, Gujarat - 382721'
     },

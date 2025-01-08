@@ -17,25 +17,25 @@ const EditorialMember = ({ data }) => {
     return (
         <>
             <Head>
-                <title>Editorial Members | PhysioTrends</title>
+                <title>Editorial Members | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioTrends, Physiotherapy, Editorial Members of PhysioTrends, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiotrendsmagazine@gmail.com or +91 7984377793." />
-                <meta property="og:title" content="PhysioTrends: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
-                <meta property="og:description" content="All Editorial Members of PhysioTrends" />
-                <meta property="og:url" content="https://physiotrends.vercel.app/editorialMember" />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Editorial Members of PhysioZine, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
+                <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
+                <meta property="og:description" content="All Editorial Members of PhysioZine" />
+                <meta property="og:url" content="https://physiozine.vercel.app/editorialMember" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Editorial Members'} />
+            <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Editorial Members'} />
             <section className={`${styles?.editorialMember} container`}>
                 <div className={`accordion accordion-flush mt-3`} id='main-accordion'>
                     <div className={`accordion-item`}>
-                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-1`} title='Founders of PhysioTrends | PhysioTrends'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-1`} title='Founders of PhysioZine | PhysioZine'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-1`} aria-expanded="true" aria-controls={`flush-collapse-1`}>
                                 Founders / Patron
                             </button>
@@ -81,7 +81,7 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-2`} title='Chief Editor of PhysioTrends | PhysioTrends'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-2`} title='Chief Editor of PhysioZine | PhysioZine'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-2`} aria-expanded="false" aria-controls={`flush-collapse-2`}>
                                 Chief Editor
                             </button>
@@ -121,7 +121,7 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-3`} title='Associate Editors of PhysioTrends | PhysioTrends'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-3`} title='Associate Editors of PhysioZine | PhysioZine'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-3`} aria-expanded="false" aria-controls={`flush-collapse-3`}>
                                 Associate Editors
                             </button>
@@ -167,7 +167,7 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-4`} title='Advisory Members of PhysioTrends | PhysioTrends'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-4`} title='Advisory Members of PhysioZine | PhysioZine'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-4`} aria-expanded="false" aria-controls={`flush-collapse-4`}>
                                 Advisory Members
                             </button>
@@ -213,7 +213,7 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-5`} title='Editors of PhysioTrends | PhysioTrends'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-5`} title='Editors of PhysioZine | PhysioZine'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-5`} aria-expanded="false" aria-controls={`flush-collapse-5`}>
                                 Editors
                             </button>
@@ -259,7 +259,7 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-6`} title='Reviewers of PhysioTrends | PhysioTrends'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-6`} title='Reviewers of PhysioZine | PhysioZine'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-6`} aria-expanded="false" aria-controls={`flush-collapse-6`}>
                                 Reviewers
                             </button>

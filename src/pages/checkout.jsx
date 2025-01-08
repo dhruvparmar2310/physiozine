@@ -89,7 +89,7 @@ const Checkout = () => {
             let checkoutOptions = {
                 paymentSessionId: sessionID,
                 // returnUrl: 'https://t8j4snd7-3000.inc1.devtunnels.ms' + "/api/payment-status/{order_id}",
-                returnUrl: 'https://physiotrends-stag.vercel.app' + `/checkout?orderID={order_id}&type=${type}`,
+                returnUrl: 'https://physiozine-stag.vercel.app' + `/checkout?orderID={order_id}&type=${type}`,
             }
             cashfree.checkout(checkoutOptions).then(function (result) {
                 if (result.error) {
@@ -210,23 +210,23 @@ const Checkout = () => {
     return (
         <>
             <Head>
-                <title>Checkout Form | PhysioTrends</title>
+                <title>Checkout Form | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioTrends, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name="description" content="PHYSIOZINE is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={type === 'subscription' ? 'Academic Partner | PhysioTrends' : 'Submission Form | PhysioTrends'} link={type === 'subscription' ? '/academicPartner' : '/submissionForm'} current={'Checkout'} />
+            <BreadCrumb title={type === 'subscription' ? 'Academic Partner | PhysioZine' : 'Submission Form | PhysioZine'} link={type === 'subscription' ? '/academicPartner' : '/submissionForm'} current={'Checkout'} />
             <section className={`${styles?.checkout}`}>
                 <div className={`${styles?.innerContent} container`}>
                     <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Proceed to Payment</h1>
                     <div className={`${styles?.line}`}></div>
 
                     <p className={`${styles?.notes} ${ubuntu?.className}`}>
-                        Please review your {type === 'subscription' ? '' : 'article'} details below and confirm the payment details before proceeding to checkout. If you have any questions, feel free to reach out to our customer support team at <span style={{ color: 'var(--primary-color)' }}>physiotrendsmagazine@gmail.com</span>.
+                        Please review your {type === 'subscription' ? '' : 'article'} details below and confirm the payment details before proceeding to checkout. If you have any questions, feel free to reach out to our customer support team at <span style={{ color: 'var(--primary-color)' }}>physiozinemagazine@gmail.com</span>.
                     </p>
 
                     <div>

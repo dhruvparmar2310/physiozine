@@ -26,16 +26,16 @@ const Contact = () => {
     return (
         <>
             <Head>
-                <title>Contact | PhysioTrends</title>
+                <title>Contact | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioTrends, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name="description" content="PHYSIOZINE is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Contact'} />
+            <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Contact'} />
             <section className={`${styles?.contact} container`}>
                 <div className={`${styles?.contactContent}`}>
                     <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Stay Connected With Us!</h1>
@@ -48,7 +48,7 @@ const Contact = () => {
                                 <div className={`${styles?.cardDetails}`}>
                                     <div className={`${styles?.cardTitle}`}>
                                         <h1 className={ubuntu?.className}>Publisher</h1>
-                                        <p className={`${styles.subTitle}`}>PhysioTrends</p>
+                                        <p className={`${styles.subTitle}`}>PhysioZine</p>
                                     </div>
 
                                     <div className={`d-flex flex-wrap justify-content-center align-item-center gap-5`}>
@@ -67,7 +67,7 @@ const Contact = () => {
                                     </div>
 
                                     <div className={`${styles.cardContact}`}>
-                                        <p>Email Address: physiotrendsmagazine@gmail.com</p>
+                                        <p>Email Address: physiozinemagazine@gmail.com</p>
                                         <p>Phone No.: +91-7984377793</p>
                                     </div>
                                 </div>

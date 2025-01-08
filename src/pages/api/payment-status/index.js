@@ -19,11 +19,11 @@ export default function handler (req, res) {
         axios.request(options)
             .then(function (response) {
                 if(response.data.order_status === "PAID"){
-                    res.redirect(302, `https://physiotrends.vercel.app/checkout?data=${encodeURIComponent(JSON.stringify(orderData))}&status=success&message=Payment Successful`);
+                    res.redirect(302, `https://physiozine.vercel.app/checkout?data=${encodeURIComponent(JSON.stringify(orderData))}&status=success&message=Payment Successful`);
                 } else if (response.data.order_status = "ACTIVE"){
-                    res.redirect(302, `https://physiotrends.vercel.app/checkout?orderId=${orderData.payment_session_id}&status=active&message=Payment In Process`);
+                    res.redirect(302, `https://physiozine.vercel.app/checkout?orderId=${orderData.payment_session_id}&status=active&message=Payment In Process`);
                 } else{
-                    res.redirect(302, `https://physiotrends.vercel.app/checkout?status=failure&message=Payment Failed`);
+                    res.redirect(302, `https://physiozine.vercel.app/checkout?status=failure&message=Payment Failed`);
                 }
             })
             .catch(function (error) {

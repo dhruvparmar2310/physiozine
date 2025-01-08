@@ -9,21 +9,21 @@ const JoinAsEditor = () => {
     return (
         <>
             <Head>
-                <title>Join As Editor | PhysioTrends</title>
+                <title>Join As Editor | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioTrends, Physiotherapy, Advertise of PhysioTrends, PhysioTrends Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOTRENDS is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiotrendsmagazine@gmail.com or +91 7984377793." />
-                <meta property="og:title" content="PhysioTrends: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
-                <meta property="og:description" content="Promote your brand to targeted physio audiences - Advertise with Physiotrends." />
-                <meta property="og:url" content="https://physiotrends.vercel.app/advertise" />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
+                <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
+                <meta property="og:description" content="Promote your brand to targeted physio audiences - Advertise with PhysioZine." />
+                <meta property="og:url" content="https://physiozine.vercel.app/advertise" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Join as Editor'} />
+            <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Join as Editor'} />
             <section className={`${styles?.joinAsEditor}`}>
                 <div className={`${styles?.innerContent} container`}>
                     <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Join as Editor</h1>
@@ -31,7 +31,7 @@ const JoinAsEditor = () => {
 
                     <div className='mt-3'>
                         <p>
-                            Are you a passionate physiotherapist or healthcare professional looking to share your expertise with the world? Join the PhysioTrends editorial team and become a part of our mission to provide cutting-edge information and insights to our growing community.
+                            Are you a passionate physiotherapist or healthcare professional looking to share your expertise with the world? Join the PhysioZine editorial team and become a part of our mission to provide cutting-edge information and insights to our growing community.
                         </p>
                         <p>As an editor, you'll have the opportunity to:</p>
                         <ul>
@@ -49,11 +49,11 @@ const JoinAsEditor = () => {
                             </li>
                         </ul>
 
-                        <p>If you're ready to leverage your knowledge and make a meaningful impact, we'd love to hear from you. Apply now and join the PhysioTrends family!</p>
+                        <p>If you're ready to leverage your knowledge and make a meaningful impact, we'd love to hear from you. Apply now and join the PhysioZine family!</p>
                     </div>
 
                     <div>
-                        <p>Send your Updated CV on "<span className='text-info'>physiotrendsmagazine@gmail.com</span>"</p>
+                        <p>Send your Updated CV on "<span className='text-info'>physiozinemagazine@gmail.com</span>"</p>
                     </div>
                 </div>
             </section>

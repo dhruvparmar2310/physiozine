@@ -9,28 +9,28 @@ const RefundPolicy = () => {
     return (
         <>
             <Head>
-                <title>Privacy Policy | Policy | PhysioTrends</title>
+                <title>Privacy Policy | Policy | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioTrends, Physiotherapy, Advertise of PhysioTrends, PhysioTrends Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
                 <meta name="description" content="Read the Privacy Policy carefully." />
                 <meta property="og:title" content="Privacy Policy | Read the Privacy Policy carefully." />
                 <meta property="og:description" content="Read the Privacy Policy carefully." />
-                <meta property="og:url" content="https://physiotrends.vercel.app/policy/privacyPolicy" />
+                <meta property="og:url" content="https://physiozine.vercel.app/policy/privacyPolicy" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Policy - Privacy Policy'} />
+            <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Policy - Privacy Policy'} />
             <section className={`${styles?.policy}`}>
                 <div className={`${styles?.policyContent} container`}>
                     <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='Kindly Read Our'>Refund Policy</h1>
                     <div className={`${styles?.line}`}></div>
 
                     <p className={`${styles.policyDetails} ${ubuntu?.className} mt-3`}>
-                        At PhysioTrends, we are committed to providing high-quality educational content for physiotherapy professionals. We want you to be satisfied with your purchase. Please read our refund policy carefully before making a purchase.
+                        At PhysioZine, we are committed to providing high-quality educational content for physiotherapy professionals. We want you to be satisfied with your purchase. Please read our refund policy carefully before making a purchase.
                     </p>
 
                     <h3 className={`${styles.subTitle} ${ubuntu?.className}`}>Magazine Subscriptions:</h3>
@@ -69,11 +69,11 @@ const RefundPolicy = () => {
                     </p>
 
                     <p className={`${styles.policyDetails} ${ubuntu?.className} mt-3`}>
-                        To request a refund, please contact our customer support team at <span className='text-info'>physiotrendsmagazine@gmail.com</span> with your order number and reason for the refund request. All refunds will be processed using the original payment method.
+                        To request a refund, please contact our customer support team at <span className='text-info'>physiozinemagazine@gmail.com</span> with your order number and reason for the refund request. All refunds will be processed using the original payment method.
                     </p>
 
                     <p className={`${styles.policyDetails} ${ubuntu?.className} mt-3`}>
-                        PhysioTrends reserves the right to modify this refund policy at any time. Any changes will be effective immediately upon posting on our website.
+                        PhysioZine reserves the right to modify this refund policy at any time. Any changes will be effective immediately upon posting on our website.
                     </p>
 
                     <p>Last updated: 20/07/2024</p>

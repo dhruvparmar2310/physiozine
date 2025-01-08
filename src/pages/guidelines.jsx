@@ -33,15 +33,15 @@ const SubmitYourArticle = () => {
    return (
       <>
          <Head>
-            <title>Submit Your Article | PhysioTrends</title>
+            <title>Submit Your Article | PhysioZine</title>
             <meta charset="utf-8"></meta>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta name='keywords' content='PhysioTrends, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-            <meta name="description" content="PHYSIOTRENDS is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
+            <meta name='keywords' content='PhysioZine, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+            <meta name="description" content="PHYSIOZINE is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
             <link rel="icon" href="assets/img/favicon.jpg" />
          </Head>
 
-         <BreadCrumb title={'Home | PhysioTrends'} link={'Home'} current={'Guidelines'} />
+         <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Guidelines'} />
          <section className={`${styles?.submitYourArticle}`}>
             <div className={`${styles?.innerContent} container`}>
                <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Author Guidelines</h1>
@@ -50,12 +50,12 @@ const SubmitYourArticle = () => {
                <div className={`mt-2 ${styles?.contentInfo}`}>
                   <h1 className={ubuntu?.className}>1. Aim and Scope</h1>
                   <p>
-                     Physiotrends Magazine is a peer-reviewed, open-access publication dedicated to disseminating innovative research, case studies, and reviews in the field of physiotherapy. We aim to bridge the gap between research and clinical practice by providing insights into the latest trends, techniques, and evidence-based practices in physiotherapy. We welcome contributions from practitioners, researchers, and scholars across various related disciplines.
+                     PhysioZine Magazine is a peer-reviewed, open-access publication dedicated to disseminating innovative research, case studies, and reviews in the field of physiotherapy. We aim to bridge the gap between research and clinical practice by providing insights into the latest trends, techniques, and evidence-based practices in physiotherapy. We welcome contributions from practitioners, researchers, and scholars across various related disciplines.
                   </p>
 
                   <h1 className={ubuntu?.className}>2. Editorial Process</h1>
                   <p>
-                     A manuscript submitted to Physiotrends Magazine will be considered for publication on the condition that it is exclusively under review by our publication and has not been previously published, submitted elsewhere, or accepted for publication.
+                     A manuscript submitted to PhysioZine Magazine will be considered for publication on the condition that it is exclusively under review by our publication and has not been previously published, submitted elsewhere, or accepted for publication.
                   </p>
                   <p>
                      Upon submission, our editorial team evaluates all manuscripts. Those that lack originality, exhibit significant scientific or technical flaws, or fail to convey a meaningful contribution may be rejected prior to formal peer review. Manuscripts deemed suitable for publication will be sent to two or more expert reviewers.
@@ -155,7 +155,7 @@ const SubmitYourArticle = () => {
 
                   <h1 className={ubuntu?.className}>6. Duplicate Publication </h1>
                   <p>
-                     Material submitted to Physiotrends must be original and not published or submitted for consideration in other Journal. <br /><br />
+                     Material submitted to PhysioZine must be original and not published or submitted for consideration in other Journal. <br /><br />
                      Duplicate publication occurs when an author re-uses substantial parts of his or her own published work without providing the appropriate references. This can range from getting an identical paper published in multiple journals, to slicing of the paper, where authors add small amounts of new data to a previous paper.
                   </p>
 
@@ -171,16 +171,16 @@ const SubmitYourArticle = () => {
 
                   <h1 className={ubuntu?.className}>8. Disclaimer</h1>
                   <p>
-                     The author(s) of each article published in Physiotrends Magazine are solely responsible for the content of their work. Neither Physiotrends Magazine, its editors, publishers, nor anyone involved in the creation, production, or distribution of the magazine assumes any liability or responsibility for the accuracy, completeness, or usefulness of the information presented. Additionally, they are not liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from the use of Physiotrends Magazine.
+                     The author(s) of each article published in PhysioZine Magazine are solely responsible for the content of their work. Neither PhysioZine Magazine, its editors, publishers, nor anyone involved in the creation, production, or distribution of the magazine assumes any liability or responsibility for the accuracy, completeness, or usefulness of the information presented. Additionally, they are not liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from the use of PhysioZine Magazine.
                   </p>
 
                   <h1 className={ubuntu?.className}>9. Policy for Rejection of AI-Generated Articles </h1>
                   <p>
-                     Physiotrends Magazine does not accept articles generated wholly or primarily by artificial intelligence (AI). Submissions must represent original research, insights, or perspectives from human authors. Manuscripts that rely on AI-generated content will be automatically rejected. We prioritize authentic, thoughtful contributions that reflect the expertise and experiences of our authors, ensuring the integrity and quality of our publication.
+                     PhysioZine Magazine does not accept articles generated wholly or primarily by artificial intelligence (AI). Submissions must represent original research, insights, or perspectives from human authors. Manuscripts that rely on AI-generated content will be automatically rejected. We prioritize authentic, thoughtful contributions that reflect the expertise and experiences of our authors, ensuring the integrity and quality of our publication.
                   </p>
                </div>
 
-               <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Why PhysioTrends?</h1>
+               <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`}>Why PhysioZine?</h1>
                <div className={`${styles?.line}`}></div>
 
                <div className={`${styles?.whyUs}`}>
@@ -213,7 +213,7 @@ const SubmitYourArticle = () => {
                </div>
 
                {/* <div className={`${styles.webAvailable}`}>
-                  <h1 className={`sectionTitle text-center`} data-heading='Major Index' title="Major Index | PhysioTrends"></h1>
+                  <h1 className={`sectionTitle text-center`} data-heading='Major Index' title="Major Index | PhysioZine"></h1>
                   <div className={`${styles?.innerContent} mt-4`}>
                      <div className={`${styles?.logoContent}`}>
                         <Image src={googleLogo} alt="" quality={100} priority />
