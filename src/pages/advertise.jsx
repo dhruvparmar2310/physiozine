@@ -16,6 +16,7 @@ import { Abril_Fatface, Comfortaa, Ubuntu } from 'next/font/google'
 import DynamicChart from '@/components/DynamicChart'
 import physiothonline from '../../public/assets/img/associated/physioth-online.jpeg'
 import apcLogo from '../../public/assets/img/Clients/apc.jpeg'
+import genelekLogo from '../../public/assets/img/Clients/genelek-logo.png'
 import smartPT from '../../public/assets/img/associated/smart-pt.jpeg'
 import marwadiLogo from '../../public/assets/img/MU_LOGO_BROWN.png'
 import conphycsLogo from '../../public/assets/img/15-conphycs-logo-02.png'
@@ -497,6 +498,9 @@ const Advertise = () => {
                             </div>
                             <div>
                                 <Image src={apcLogo} className={'img-fluid'} alt='' quality={100} priority />
+                            </div>
+                            <div>
+                                <Image src={genelekLogo} className={'img-fluid'} alt='' quality={100} priority />
                             </div>
 
                         </div>
