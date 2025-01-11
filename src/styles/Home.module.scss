@@ -4,6 +4,61 @@ main {
     position: relative;
   }
 
+  .doiFinder {
+    .innerContent {
+      padding: 20px 0 60px 0;
+
+      .cardDesign {
+        border-radius: 30px;
+        padding: 30px;
+        background: linear-gradient(130deg, #004773 30%, #009dfe 100%);
+
+        .leftContent {
+          padding: 30px;
+          text-wrap: pretty;
+
+          h1 {
+            font-size: 48px;
+            line-height: 1;
+            text-align: left !important;
+            color: var(--white-color);
+          }
+
+          p {
+            color: var(--primary-light);
+            margin: 10px 0;
+            letter-spacing: 1.5px;
+          }
+
+          button {
+            background: var(--white-color);
+            border-color: var(--white-color);
+            color: var(--primary-dark);
+            font-weight: 600;
+
+            &:hover {
+              background: transparent;
+              color: var(--white-color);
+            }
+          }
+        }
+
+        .rightContent {
+          padding: 30px;
+          display: grid;
+          place-content: center;
+          height: 100%;
+
+          img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
   .counter {
     padding: 2rem 0;
     background: rgba(255, 255, 255, 0.859);
@@ -626,10 +681,56 @@ main {
       }
     }
   }
+
+  .doiFinder {
+    .innerContent {
+      // padding: 10px 0 40px 0 !important;
+
+      .cardDesign {
+        padding: 20px !important;
+
+        div {
+          flex-direction: column-reverse !important;
+
+          p {
+            font-size: 17px;
+          }
+
+          .leftContent,
+          .rightContent {
+            padding: 30px;
+          }
+        }
+      }
+    }
+  }
 }
 
 // small (mobile or Tablet)
 @media (min-width: 576px) and (max-width: 768px) {
+  .doiFinder {
+    .innerContent {
+      // padding: 10px 0 40px 0 !important;
+
+      .cardDesign {
+        padding: 20px !important;
+
+        div {
+          flex-direction: column-reverse !important;
+
+          p {
+            font-size: 17px;
+          }
+
+          .leftContent,
+          .rightContent {
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+
   .about {
     padding: 0;
 
@@ -695,6 +796,33 @@ main {
 }
 
 @media (max-width: 576px) {
+  .doiFinder {
+    .innerContent {
+      padding: 10px 0 40px 0 !important;
+
+      .cardDesign {
+        padding: 20px !important;
+
+        div {
+          flex-direction: column-reverse !important;
+
+          h1 {
+            line-height: 1.1 !important;
+          }
+
+          p {
+            font-size: 14px;
+          }
+
+          .leftContent,
+          .rightContent {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+
   .about {
     padding-top: 30px !important;
 
@@ -710,6 +838,12 @@ main {
 
         .card {
           padding: 15px !important;
+
+          .cardBody {
+            text-wrap: pretty;
+            word-spacing: 0 !important;
+            letter-spacing: 0 !important;
+          }
         }
       }
     }
@@ -804,7 +938,7 @@ main {
     h1 {
       word-wrap: break-word;
       letter-spacing: 0.5px !important;
-      line-height: 1.8rem;
+      line-height: 1 !important;
       font-size: 1.8rem !important;
     }
 
@@ -873,7 +1007,7 @@ main {
   }
 
   .tabContent {
-    padding: 10px !important;
+    padding: 10px 0 !important;
     // min-height: 680px;
   }
 }

@@ -40,6 +40,7 @@ import mendeleyLogo from '../../public/assets/img/webAvailability/Mendeley_Logo_
 import openScholarLogo from '../../public/assets/img/webAvailability/openscholar.png'
 import bookLogo from '../../public/assets/img/fundamentals-of-electrotherapy-book.png'
 import jaypeeDigitalLogo from '../../public/assets/img/header-jaypee.png'
+import DOILogo from '../../public/assets/img/DOI-Foundation-Logo.png'
 
 //* ALL SVG ELEMENTS
 import { BsGlobeCentralSouthAsia } from "react-icons/bs";
@@ -409,6 +410,31 @@ export default function Home () {
                 </div>
               </Col>
             </Row>
+          </div>
+        </section>
+
+        <section className={`${styles?.doiFinder} py-0`}>
+          <div className={`${styles?.innerContent} container`}>
+            <div className={styles?.cardDesign}>
+              <Row>
+                <Col lg={7} md={12}>
+                  <div className={styles?.leftContent}>
+                    <h1 className={`sectionTitle text-center`} data-heading='' title='Check Your DOI Number | PhysioZine'>Check Your DOI Number</h1>
+                    <p
+                      className={`${ubuntu?.className}`}
+                    >
+                      Check your publication's DOI number easily on given website link by entering the required details.
+                    </p>
+                    <Button onClick={() => window.open('https://www.doi.org/', '_blank')}>Visit here</Button>
+                  </div>
+                </Col>
+                <Col lg={5} md={12}>
+                  <div className={styles?.rightContent}>
+                    <Image src={DOILogo} quality={100} alt='DOI Foundation Logo' />
+                  </div>
+                </Col>
+              </Row>
+            </div>
           </div>
         </section>
 

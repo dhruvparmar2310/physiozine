@@ -92,23 +92,24 @@ function Hero ({ width }) {
                                     duration: width ? 0.3 : 1, // animation duration of 0.8 seconds
                                     ease: 'easeInOut', // easing function for a smoother animation
                                 }}
-                                className='mt-3'
+                                className='mt-3 me-3'
                             >
                                 <InstallPWA />
                             </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{
+                                    delay: width ? 0 : 0.8, // delay the animation by 0.2 seconds
+                                    duration: width ? 0.3 : 1, // animation duration of 0.8 seconds
+                                    ease: 'easeInOut', // easing function for a smoother animation
+                                }}
+                                // className='mt-2'
+                                className='mt-3'
+                            >
+                                <Button className={`btn ${styles?.referBtn} ${ubuntu?.className}`} onClick={() => router.push('/policy/referPolicy')}>Refer & Earn <LuCoins /></Button>
+                            </motion.div>
                         </div>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{
-                                delay: width ? 0 : 0.8, // delay the animation by 0.2 seconds
-                                duration: width ? 0.3 : 1, // animation duration of 0.8 seconds
-                                ease: 'easeInOut', // easing function for a smoother animation
-                            }}
-                            className='mt-2'
-                        >
-                            <Button className={`btn ${styles?.referBtn} ${ubuntu?.className}`} onClick={() => router.push('/policy/referPolicy')}>Refer & Earn <LuCoins /></Button>
-                        </motion.div>
                     </div>
 
                     <motion.div
