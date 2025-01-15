@@ -7,6 +7,7 @@ import { Controller, useForm } from 'react-hook-form'
 import logo from '../../../public/assets/img/footer-logo.png'
 import Image from 'next/image'
 import { Ubuntu } from 'next/font/google'
+import grBtn from '../../../public/assets/img/google-review-button.png'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 const Footer = () => {
@@ -104,6 +105,10 @@ const Footer = () => {
                             <p className={ubuntu?.className}>
                                 Advancing Physiotherapy through Knowledge & Innovation
                             </p>
+
+                            <div className={`${styles?.googleReviewBtn}`}>
+                                <Image src={grBtn} quality={100} alt='Google Review Button' onClick={() => window.open('https://g.page/r/CRcCHyCfyySeEBE/review', '_blank')} />
+                            </div>
                         </div>
 
                         <div className={`${styles?.linkContent}`}>

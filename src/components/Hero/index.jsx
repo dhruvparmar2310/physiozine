@@ -9,6 +9,7 @@ import textLogo from '../../../public/assets/img/logo-1.png'
 import { motion } from 'framer-motion'
 import InstallPWA from '../InstallPWA'
 import { LuCoins } from "react-icons/lu"
+import grBtn from '../../../public/assets/img/google-review-button.png'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const Roboto_Condensed_Font = Roboto_Condensed({ subsets: ['latin'], weight: ['400', '500', '600', '700'], style: ['normal'] })
@@ -110,6 +111,19 @@ function Hero ({ width }) {
                                 <Button className={`btn ${styles?.referBtn} ${ubuntu?.className}`} onClick={() => router.push('/policy/referPolicy')}>Refer & Earn <LuCoins /></Button>
                             </motion.div>
                         </div>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                delay: width ? 0 : 0.8, // delay the animation by 0.2 seconds
+                                duration: width ? 0.3 : 1, // animation duration of 0.8 seconds
+                                ease: 'easeInOut', // easing function for a smoother animation
+                            }}
+                            // className='mt-2'
+                            className={`mt-3 ${styles?.googleReviewBtn}`}
+                        >
+                            <Image src={grBtn} quality={100} alt='Google Review Button' onClick={() => window.open('https://g.page/r/CRcCHyCfyySeEBE/review', '_blank')} />
+                        </motion.div>
                     </div>
 
                     <motion.div
