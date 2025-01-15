@@ -39,7 +39,7 @@ const Advertise = () => {
     const [ref, inView] = useInView({ triggerOnce: true, rootMargin: '-100px' });
 
     const [chartOptions, setChartOptions] = useState({
-        series: [12119, 4814, 3176, 2267],
+        series: [12119, 4986, 5393, 2267],
         options: {
             chart: {
                 height: 390,
@@ -189,14 +189,25 @@ const Advertise = () => {
                                 <DynamicChart options={chartOptions.options} series={chartOptions.series} type="radialBar" height={390} />
                             </Col>
                             <Col sm={6}>
-                                <div className={`${styles?.totalAudience}`}>
-                                    <h1 className={`${styles?.totalCount} ${abrilFatface?.className}`}>{nTotalAudience || '0'}+</h1>
-                                    <h1 className={`${styles?.audienceTitle} ${comfortaa?.className}`}>Total Audience</h1>
-                                    <div className={`mt-5`}>
+                                <Row>
+                                    <Col lg={6} md={12}>
+                                        <div className={`${styles?.totalAudience}`}>
+                                            <h1 className={`${styles?.totalCount} ${abrilFatface?.className}`}>{nTotalAudience || '0'}+</h1>
+                                            <h1 className={`${styles?.audienceTitle} ${comfortaa?.className}`}>Total Audience</h1>
+                                        </div>
+                                    </Col>
+                                    <Col lg={6} md={12}>
+                                        <div className={`${styles?.totalAudience}`}>
+                                            <h1 className={`${styles?.totalCount} ${abrilFatface?.className}`}>27686+</h1>
+                                            <h1 className={`${styles?.audienceTitle} ${comfortaa?.className}`}>Total Instagram Reach</h1>
+                                            <p>(90.1% Non Follower)</p>
+                                        </div>
+                                    </Col>
+                                    <div className={`mt-3`}>
                                         <h2 className={`${comfortaa?.className} mb-0`} style={{ textAlign: 'left' }}>Our International Presence:</h2>
-                                        <p className={`${ubuntu?.className}`} style={{ color: 'var(--primary-color)' }}>India, USA, UK, Australia, UAE, Canada, Indonesia, Ireland, Pakistan</p>
+                                        <p className={`${ubuntu?.className}`} style={{ color: 'var(--primary-color)' }}>India, USA, UK, Australia, UAE, Canada, Germany, Indonesia, Ireland, Poland, Pakistan, Nigeria, Sweden</p>
                                     </div>
-                                </div>
+                                </Row>
                             </Col>
                         </Row>
                     </div>
@@ -309,13 +320,13 @@ const Advertise = () => {
                                         </tr>
                                         <tr>
                                             <td>Single Page in Magazine + <br />Social Media Advertisement</td>
-                                            <td className={`${styles?.price}`}>4,000/-</td>
+                                            <td className={`${styles?.price}`}>5,000/-</td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 Double Page in Magazine + <br /> Social Media Advertisement
                                             </td>
-                                            <td className={`${styles?.price}`}>4,500/-</td>
+                                            <td className={`${styles?.price}`}>5,500/-</td>
                                         </tr>
                                     </tbody>
                                 </Table>
