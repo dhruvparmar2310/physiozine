@@ -41,6 +41,9 @@ import openScholarLogo from '../../public/assets/img/webAvailability/openscholar
 import bookLogo from '../../public/assets/img/fundamentals-of-electrotherapy-book.png'
 import jaypeeDigitalLogo from '../../public/assets/img/header-jaypee.png'
 import DOILogo from '../../public/assets/img/DOI-Foundation-Logo.png'
+import FeppaLogo from '../../public/assets/img/Feppa-Logo.png'
+import SwatiLogo from '../../public/assets/img/Swati-Logo.jpg'
+import odfLogo from '../../public/assets/img/odf-logo.png'
 
 //* ALL SVG ELEMENTS
 import { BsGlobeCentralSouthAsia } from "react-icons/bs";
@@ -206,6 +209,54 @@ export default function Home () {
                 <div className={`${styles?.tabContent}`}>
                   {partnerButtons?.conference && <>
                     <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
+                      <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
+                        <h1 className={`${ubuntu?.className} text-uppercase`}>2<sup>nd</sup> FEPPA International Conference on CPP, 2025</h1>
+                        <p className='mt-4'>Theme: Recognition, Resolution, Rehabilitation</p>
+                        <p>Venue: Mumbai</p>
+                        <p>Date: 19 - 20 April, 2025</p>
+                        <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://feppa.org/feppa-2025-2nd-annual-conference-of-female-pelvic-pain-association/')}>Register Now</Button>
+                      </div>
+                      <div className={styles?.middleImg}>
+                        <Image
+                          src={FeppaLogo}
+                          alt='Feppa Logo'
+                          loading='lazy'
+                          quality={100}
+                          className="img-fluid"
+                        />
+                        <Image
+                          src={SwatiLogo}
+                          alt='Swati Logo'
+                          loading='lazy'
+                          quality={100}
+                          className="img-fluid"
+                        // onClick={() => router.push('https://gptaindia.org/')}
+                        />
+                      </div>
+                      <div className={styles?.lastDetails}>
+                        <p>Organized By</p>
+                        <Image
+                          src={odfLogo}
+                          alt='ODF Logo'
+                          loading='lazy'
+                          quality={100}
+                          className="img-fluid"
+                          style={{ maxWidth: '130px' }}
+                          onClick={() => router.push('https://www.orphandiseasefoundation.com/')}
+                        />
+
+                        <p className='mt-3'>Media Partner</p>
+                        <Image
+                          src={mainLogo}
+                          alt='PhysioZine Logo'
+                          loading='lazy'
+                          quality={100}
+                          className="img-fluid"
+                        />
+                      </div>
+                    </div>
+
+                    <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className} mt-3`}>
                       <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
                         <h1 className={`${ubuntu?.className} text-uppercase`}>15<sup>th</sup> Gujstate Conphycs, 2024</h1>
                         <p className='mt-4'>Theme: Global Perspectives on Physiotherapy - Collaboration & Innovation</p>

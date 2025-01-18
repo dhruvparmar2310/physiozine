@@ -157,6 +157,9 @@ function ArticleID ({ data }) {
                                                     <Link href='/guidelines'>Author Guidelines</Link>
                                                 </li>
                                                 <li>
+                                                    <Link href='/processing-charge'>Processing Charge</Link>
+                                                </li>
+                                                <li>
                                                     <Link href='/policy/plagiarismPolicy'>Plagiarism Policy</Link>
                                                 </li>
                                                 <li>
@@ -164,6 +167,15 @@ function ArticleID ({ data }) {
                                                 </li>
                                                 <li>
                                                     <Link href='/policy/referPolicy'>Refer & Earn Policy</Link>
+                                                </li>
+                                                <li>
+                                                    <Link href='/interview'>Expert Interviews</Link>
+                                                </li>
+                                                <li>
+                                                    <Link href='/call-for-interview'>Call for Interview</Link>
+                                                </li>
+                                                <li>
+                                                    <Link href='/be-featured'>Be Featured</Link>
                                                 </li>
                                                 <li>
                                                     <Link href='/contact'>Contact Us</Link>

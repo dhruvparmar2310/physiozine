@@ -1,9 +1,10 @@
 .header {
-    background: transparent !important;
+    // background: transparent !important;
     transition: all 0.5s;
     z-index: 997;
     padding: 0 10px;
-    backdrop-filter: blur(10px);
+    // backdrop-filter: blur(10px);
+    background: white;
 }
 
 .headerScrolled {
@@ -85,6 +86,7 @@
         .logo {
             position: relative;
             left: -15px !important;
+            z-index: 999;
         }
     }
 }
@@ -181,6 +183,72 @@
     transition: 0.3s;
     line-height: 1.5rem !important;
     border-top: 3px solid var(--primary-color);
+}
+
+.nav_menu {
+    li {
+        &.aboutUs {
+            span {
+                cursor: pointer;
+            }
+
+            &:hover {
+                .aboutUsContent {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .aboutUsContent {
+        display: none; // TODO: NONE
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 30px;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.253);
+
+        .row {
+            align-items: baseline;
+        }
+
+        p {
+            padding: 0 15px;
+            margin: 0;
+            font-size: 13px;
+            font-weight: 600;
+            color: gray;
+            position: relative;
+        }
+
+        ul {
+            display: block;
+            padding: 0 15px;
+            line-height: 1.8;
+
+            li {
+                width: 100%;
+                box-sizing: border-box;
+                max-width: calc(100% - 100px);
+
+                a {
+                    cursor: pointer;
+
+                    &::after {
+                        content: none;
+                        background: none;
+                    }
+
+                    &.active,
+                    &:hover {
+                        border: none !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .drop_down:hover>ul {
@@ -395,6 +463,88 @@
     .drop_down ul {
         width: calc(100% - 30px) !important;
         left: 0 !important;
+    }
+
+
+    .top_header {
+        top: 8px !important;
+        padding: 5px 10px;
+
+        .logo {
+            width: calc(100% - 80px);
+        }
+    }
+
+    .top_headerWeb {
+        .logo {
+            width: calc(100% - 50px);
+        }
+    }
+
+    .nav_menu.expanded {
+        ul {
+            width: 90vw !important;
+        }
+    }
+
+    .aboutUs {
+        span {
+            display: block;
+            position: relative;
+            color: #111;
+            transition: 0.3s;
+            font-size: 1.15rem;
+            text-transform: capitalize !important;
+            font-weight: 800 !important;
+            letter-spacing: 0.1mm;
+            text-decoration: none;
+
+            svg {
+                position: absolute;
+                top: 10px;
+                right: 0;
+            }
+        }
+
+        .aboutUsContent {
+            width: fit-content;
+            height: 220px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 10px 20px;
+            position: relative;
+            top: 10px;
+            left: 0;
+            box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.253);
+
+            p {
+                padding: 0;
+                font-size: 16px;
+            }
+
+            .dropdownMenu {
+                padding: 0;
+                width: 100%;
+                max-width: fit-content;
+                display: block;
+                position: relative;
+                top: 0;
+                left: 0;
+                line-height: 1.2;
+
+                li {
+                    padding: 5px 0;
+
+                    a {
+
+                        &.active,
+                        &:hover {
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
