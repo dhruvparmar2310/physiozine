@@ -23,12 +23,12 @@ const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['nor
 const SubmitYourArticle = () => {
    const router = useRouter()
 
-   const columns = ["Article Type", "Abstract - Word Count", "Article - Word Count", "Publication Charge"]
+   const columns = ["Article Type", "Abstract - Word Count", "Article - Word Count"]
    const data = [
-      { _id: 0, sTitle: 'Research Article', sAbsCount: '150 - 250', sArticleCount: 'Max. 2000', sCharge: '₹ 500' },
-      { _id: 1, sTitle: 'Case Report', sAbsCount: '150 - 250', sArticleCount: 'Max. 2000', sCharge: '₹ 500' },
-      { _id: 2, sTitle: 'Case Series', sAbsCount: '150 - 250', sArticleCount: 'Max. 2000', sCharge: '₹ 500' },
-      { _id: 3, sTitle: 'Blogs', sAbsCount: '-', sArticleCount: 'Max. 1500', sCharge: '₹ 500' }
+      { _id: 0, sTitle: 'Research Article', sAbsCount: '150 - 250', sArticleCount: 'Max. 2000' },
+      { _id: 1, sTitle: 'Case Report', sAbsCount: '150 - 250', sArticleCount: 'Max. 2000' },
+      { _id: 2, sTitle: 'Case Series', sAbsCount: '150 - 250', sArticleCount: 'Max. 2000' },
+      { _id: 3, sTitle: 'Blogs', sAbsCount: '-', sArticleCount: 'Max. 1500' }
    ]
    return (
       <>
@@ -130,12 +130,10 @@ const SubmitYourArticle = () => {
                                  <td>{item?.sTitle}</td>
                                  <td className='text-center'>{item?.sAbsCount}</td>
                                  <td className='text-center'>{item?.sArticleCount}</td>
-                                 <td className='text-center'>{item?.sCharge}</td>
                               </tr>
                            )
                         })}
                      </tbody>
-                     <caption className='text-danger text-end'>Publication charges are effective from 13/10/2024.</caption>
                   </Table>
 
                   <h1 className={ubuntu?.className}>5. Submission Guidelines</h1>
