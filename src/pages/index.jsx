@@ -210,6 +210,31 @@ export default function Home () {
                   {partnerButtons?.conference && <>
                     <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
                       <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
+                        <h1 className={`${ubuntu?.className} text-uppercase`}>1<sup>st</sup> International Physiotherapy Conference, Physio Confluence, 2025</h1>
+                        <p className='mt-4'>Theme: Expanding horizons in Physiotherapy</p>
+                        <p>Venue: MCPRC, Satara, Maharastra</p>
+                        <p>Date: 22 - 23 February, 2025</p>
+                        <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://docs.google.com/forms/d/e/1FAIpQLSdvgVmc-dmcswi-sv_zRpmpFxsiKKQ5wZvZGy77_cYKeYImkQ/viewform?pli=1')}>Register Now</Button>
+                      </div>
+                      <div className={styles?.middleImg}>
+                      </div>
+                      <div className={styles?.lastDetails}>
+                        <p>Organized By</p>
+                        <h1 className={ubuntu?.className}>Mahalaxmi College Of Physiotherapy & Rehabilitation Center</h1>
+
+                        <p className='mt-3'>Media Partner</p>
+                        <Image
+                          src={mainLogo}
+                          alt='PhysioZine Logo'
+                          loading='lazy'
+                          quality={100}
+                          className="img-fluid"
+                        />
+                      </div>
+                    </div>
+
+                    <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className} mt-3`}>
+                      <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
                         <h1 className={`${ubuntu?.className} text-uppercase`}>2<sup>nd</sup> FEPPA International Conference on CPP, 2025</h1>
                         <p className='mt-4'>Theme: Recognition, Resolution, Rehabilitation</p>
                         <p>Venue: Mumbai</p>
