@@ -269,13 +269,13 @@ article {
 
 @media (min-width: 1400px) and (max-width: 1950px) {
   section {
-    padding: 90px 80px;
+    padding: 80px 50px !important;
 
     .sectionTitle {
-      font-size: 4rem;
+      font-size: 50px;
 
       &::before {
-        font-size: 2rem;
+        font-size: 30px;
         top: -15px;
       }
     }

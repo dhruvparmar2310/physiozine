@@ -687,7 +687,7 @@
         .logo {
             img {
                 width: 350px;
-                height: 200px;
+                height: auto;
             }
         }
 
@@ -700,8 +700,18 @@
         .nav_menu {
 
             a,
+            a>svg,
+            span,
             .dropDownButton {
-                font-size: 1.5rem;
+                font-size: 22px;
+            }
+
+            .aboutUsContent {
+                top: 75px;
+
+                p {
+                    font-size: 22px;
+                }
             }
         }
     }

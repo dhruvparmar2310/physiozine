@@ -33,6 +33,8 @@ import openScholarLogo from '../../public/assets/img/webAvailability/openscholar
 import { setCookie } from '@/utils'
 import { useRouter } from 'next/router'
 import { BsArrowRight } from 'react-icons/bs'
+import qrCode from '../../public/assets/img/payment-qr.jpg'
+import { Bounce, toast } from 'react-toastify'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500', '700'], style: ['normal'] })
 const SubmissionForm = () => {
@@ -43,7 +45,7 @@ const SubmissionForm = () => {
     const { control, handleSubmit, formState: { errors }, watch, setValue, reset } = useForm({
         mode: 'all',
         // defaultValues: {
-        //     sPaperTitle: 'sdfsd',
+        //     sPaperTitle: 'Testing',
         //     sEmailID: 'dhru@gmail.com',
         //     sMobileNo: '9876543210',
         //     sCity: 'Delhi',
@@ -118,10 +120,80 @@ const SubmissionForm = () => {
             // Remove the original file objects if not needed (optional)
             delete data.fAuthorFormFile;
             delete data.fArticleFile;
-            setCookie('articleData', JSON.stringify(data), 1)
-            localStorage.setItem('articleData', JSON.stringify(data))
-            router.push('/checkout?type=article')
+
+            // Authors details
+            const serializeAuthors = (authors) => {
+                return authors.map((author, index) => {
+                    return `Author ${index + 1}: Name: ${author.name}, Designation: ${author.designation}, Mobile: ${author.mobileNumber}`;
+                }).join(' | ');
+            };
+
+            // Prepare form data for submission
+            const formDataForSheet = {
+                "Paper Title": data.sPaperTitle,
+                EmailID: data.sEmailID,
+                "Mobile No.": data.sMobileNo,
+                City: data.sCity,
+                Country: data.sCountry,
+                "Author Counts": data.sAuthorCount?.value,
+                Authors: serializeAuthors(data.authors || []),
+                "Author Form File URL": data.fAuthorFormFileBase64,
+                "File URL": data.fArticleFileBase64,
+                "Transaction ID": data?.sTransactionID
+            };
+
+            // Post to backend (UPLOAD TO DRIVE)
+            const driveResponse = await fetch('/api/upload-to-drive', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ formDataForSheet }),
+            });
+
+            const driveData = await driveResponse.json();
+
+            // Submit the updated form data (with Drive URLs) to Google Sheets
+            const sheetResponse = await fetch('/api/submit-to-sheet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(driveData.formDataForSheet),
+            })
+
+            if (!sheetResponse.ok) {
+                setIsLoading(false);
+                throw new Error('Failed to submit to Google Sheets');
+            } else {
+                setIsLoading(false);
+                toast.success('Your article has been submitted successfully.', {
+                    position: 'top-right',
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                    toastId: 'copied'
+                })
+                setMsg({ type: 'submitted', data: 'Your article has been submitted successfully.' })
+            }
         } catch (err) {
+            toast.error('Oops! Something went wrong. Please try again.', {
+                position: 'top-right',
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+                toastId: 'copied'
+            })
             setMsg({ type: 'error', data: 'Oops! Something went wrong. Please try again.' });
             console.error(err);
         }
@@ -385,13 +457,51 @@ const SubmissionForm = () => {
                                     </Col>
                                 </Row>
 
-                                <Button
-                                    type='submit'
-                                    className='me-2'
-                                    disabled={isLoading}
-                                >
-                                    Next <BsArrowRight /> {isLoading && <Spinner animation='border' size='sm' />}
-                                </Button>
+                                <Row className='mt-3'>
+                                    <h1 className={ubuntu?.className}>Payment Details:</h1>
+                                    <Col lg={6} className='mt-3'>
+                                        <div className={`${styles?.paymentDetails}`}>
+                                            <Image src={qrCode} alt='payment qr for PhysioZine' quality={100} className='img-fluid' />
+                                        </div>
+                                    </Col>
+                                    <Col lg={6} className='mt-3'>
+                                        <div className={`${styles?.paymentDetails}`}>
+                                            <p>
+                                                Note: Article Processing Charge (APC) for research article, case study and blog is 500 /-
+                                            </p>
+                                        </div>
+
+                                        <Form.Group className="mb-3">
+                                            <Form.Label>Transaction ID <span className='text-danger'>*</span></Form.Label>
+                                            <Controller
+                                                name="sTransactionID"
+                                                control={control}
+                                                defaultValue=""
+                                                rules={{ required: 'Transaction ID is required' }}
+                                                render={({ field }) => (
+                                                    <>
+                                                        <Form.Control {...field} placeholder="Enter transaction ID" />
+                                                    </>
+                                                )}
+                                            />
+                                            {errors?.sTransactionID &&
+                                                <span className='d-block text-danger text-end'>{errors?.sTransactionID?.message}</span>
+                                            }
+                                        </Form.Group>
+
+                                        <Button
+                                            type='submit'
+                                            className='me-2 mt-3'
+                                            disabled={isLoading}
+                                        >
+                                            Submit {isLoading && <Spinner animation='border' size='sm' />}
+                                        </Button>
+
+                                        {msg?.data !== '' && <div className="mt-2">
+                                            <span className={msg.type === 'submitted' ? 'text-warning' : 'text-danger'}>{msg?.data}</span>
+                                        </div>}
+                                    </Col>
+                                </Row>
 
                                 {/* <Button
                                     type='button'
@@ -400,10 +510,6 @@ const SubmissionForm = () => {
                                 >
                                     Proceed to Pay {isLoading && <Spinner animation='border' size='sm' />}
                                 </Button> */}
-
-                                {msg?.data !== '' && <div className="mt-2">
-                                    <span className={msg.type === 'submitted' ? 'text-warning' : 'text-danger'}>{msg?.data}</span>
-                                </div>}
                             </div>
                         </Form>
                     </div>
