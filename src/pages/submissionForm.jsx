@@ -205,8 +205,13 @@ const SubmissionForm = () => {
                 <title>Article Form | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioZine, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOZINE is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine, Article Form of Physiozine, Article Submission in Physiozine, Article Payment in Physiozine, Physiozine Article Submission Form' />
+                <meta name="description" content="Share your expertise with the global physiotherapy community by submitting your original research, blogs, innovation or case studies to PhysioZine Magazine. Our platform provides an opportunity for professionals to contribute to the advancement of physiotherapy knowledge and practice. Submit your work today and be a part of shaping the future of the field." />
+                <meta property="og:title" content="Article Form | PhysioZine" />
+                <meta property="og:description" content="Share your expertise with the global physiotherapy community by submitting your original research, blogs, innovation or case studies to PhysioZine Magazine. Our platform provides an opportunity for professionals to contribute to the advancement of physiotherapy knowledge and practice. Submit your work today and be a part of shaping the future of the field." />
+                <meta property="og:url" content="https://physiozine.vercel.app/policy/submissionForm" />
+                <meta property="og:image" content="assets/img/favicon.jpg" />
+                <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>

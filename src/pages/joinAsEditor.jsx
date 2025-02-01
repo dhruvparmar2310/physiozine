@@ -12,11 +12,11 @@ const JoinAsEditor = () => {
                 <title>Join As Editor | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
-                <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
-                <meta property="og:description" content="Promote your brand to targeted physio audiences - Advertise with PhysioZine." />
-                <meta property="og:url" content="https://physiozine.vercel.app/advertise" />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Join As Editor of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name="description" content="Are you a passionate physiotherapist or healthcare professional looking to share your expertise with the world? Join the PhysioZine editorial team and become a part of our mission to provide cutting-edge information and insights to our growing community." />
+                <meta property="og:title" content="Join As Editor | PhysioZine" />
+                <meta property="og:description" content="Are you a passionate physiotherapist or healthcare professional looking to share your expertise with the world? Join the PhysioZine editorial team and become a part of our mission to provide cutting-edge information and insights to our growing community." />
+                <meta property="og:url" content="https://physiozine.vercel.app/joinAsEditor" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

@@ -20,7 +20,7 @@ const MediaPartner = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name='keywords' content='Media Partner with PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
                 <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
-                <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
+                <meta property="og:title" content="Media Partner | PhysioZine" />
                 <meta property="og:description" content="Promote your brand to targeted physio audiences - Advertise with PhysioZine." />
                 <meta property="og:url" content="https://physiozine.vercel.app/mediaPartner" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />

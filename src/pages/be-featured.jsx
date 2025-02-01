@@ -12,11 +12,11 @@ const BeFeatured = () => {
                 <title>Be Featured | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="Read the Disclaimer Policy, Terms & Conditions apply." />
-                <meta property="og:title" content="Disclaimer Policy | Read the Disclaimer Policy, Terms & Conditions apply." />
-                <meta property="og:description" content="Read the Disclaimer Policy, Terms & Conditions apply." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/disclaimerPolicy" />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine, Be Featured of Physiozine' />
+                <meta name="description" content="Read the Be Featured content carefully." />
+                <meta property="og:title" content="Be Featured | PhysioZine" />
+                <meta property="og:description" content="Read the Be Featured content carefully." />
+                <meta property="og:url" content="https://physiozine.vercel.app/policy/be-featured" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
