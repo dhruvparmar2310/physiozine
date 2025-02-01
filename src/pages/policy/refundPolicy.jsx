@@ -9,14 +9,14 @@ const RefundPolicy = () => {
     return (
         <>
             <Head>
-                <title>Privacy Policy | Policy | PhysioZine</title>
+                <title>Refund Policy | Policy | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="Read the Privacy Policy carefully." />
-                <meta property="og:title" content="Privacy Policy | Read the Privacy Policy carefully." />
-                <meta property="og:description" content="Read the Privacy Policy carefully." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/privacyPolicy" />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine, Refund Policy of Physiozine' />
+                <meta name="description" content="Read the Refund Policy carefully." />
+                <meta property="og:title" content="Refund Policy | Read the Refund Policy carefully." />
+                <meta property="og:description" content="Read the Refund Policy carefully." />
+                <meta property="og:url" content="https://physiozine.vercel.app/policy/refundPolicy" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

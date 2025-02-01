@@ -24,11 +24,12 @@ export default async function handler(req, res) {
                 Authors: authors,
                 'Author Form File URL': authorFormFileUrl,
                 'File URL': fileUrl,
+                'Transaction ID': transactionID,
             } = req.body;
 
             const values = [
                 [
-                    paperTitle, email, mobileNo, city, country, authorCounts, authors, authorFormFileUrl, fileUrl
+                    paperTitle, email, mobileNo, city, country, authorCounts, authors, authorFormFileUrl, fileUrl, transactionID
                 ],
             ];
 

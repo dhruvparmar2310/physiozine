@@ -12,7 +12,7 @@ const EditorialPolicy = () => {
                 <title>Editorial Policy | Policy | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine, Editorial Policy of Physiozine' />
                 <meta name="description" content="Read the Editorial Policy carefully." />
                 <meta property="og:title" content="Editorial Policy | Read the Editorial Policy carefully." />
                 <meta property="og:description" content="Read the Editorial Policy carefully." />

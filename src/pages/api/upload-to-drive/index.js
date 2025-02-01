@@ -54,8 +54,8 @@ export default async function handler(req, res) {
                 return fileResponse.data.webViewLink;
             };
 
-            const authorFormFileUrl = await uploadFile(`AuthorForm_${Date.now()}.pdf`, formDataForSheet['Author Form File URL']);
-            const articleFileUrl = await uploadFile(`Article_${Date.now()}.pdf`, formDataForSheet['File URL']);
+            const authorFormFileUrl = await uploadFile(`AuthorForm_${Date.now()}_${formDataForSheet['Paper Title']}.pdf`, formDataForSheet['Author Form File URL']);
+            const articleFileUrl = await uploadFile(`Article_${Date.now()}_${formDataForSheet['Paper Title']}.pdf`, formDataForSheet['File URL']);
 
             formDataForSheet['Author Form File URL'] = authorFormFileUrl;
             formDataForSheet['File URL'] = articleFileUrl;

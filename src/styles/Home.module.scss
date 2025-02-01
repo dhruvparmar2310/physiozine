@@ -100,11 +100,11 @@ main {
     width: 100%;
     padding: 0;
     // margin-bottom: 25px;
+    background: rgba(223, 223, 223, 0.634);
 
     .license {
       padding: 20px !important;
       width: 100%;
-      background: rgba(223, 223, 223, 0.634);
     }
 
     .partner {
@@ -1020,6 +1020,92 @@ main {
 
 // very large display
 @media (min-width: 1400px) and (max-width: 1950px) {
+  .associated {
+    padding: 0px !important;
+
+    .license {
+      padding: 0 !important;
+    }
+
+    .innerContent {
+      .leftSide {
+        img {
+          width: 100% !important;
+          height: auto !important;
+          max-width: 250px !important;
+          max-height: fit-content !important;
+        }
+      }
+    }
+  }
+
+  .mediaPartner {
+    p {
+      font-size: 30px !important;
+      line-height: 1.5 !important;
+      margin-top: 30px !important;
+    }
+
+    button {
+      font-size: 30px !important;
+      padding: 10px 30px !important;
+      margin: 40px 0 !important;
+    }
+
+    .tabs {
+      button {
+        margin: 0 !important;
+      }
+    }
+
+    .upcomingDetailCard {
+      .middleImg {
+        img {
+          max-width: 200px !important;
+        }
+      }
+    }
+  }
+
+  .actionBar {
+    h1 {
+      font-size: 50px !important;
+      margin-bottom: 50px !important;
+    }
+
+    .actionCard {
+      .cardHeader {
+        h5 {
+          font-size: 30px;
+        }
+      }
+
+      .cardBody {
+        p {
+          font-size: 25px !important;
+        }
+
+        button {
+          font-size: 25px !important;
+          padding: 10px 30px !important;
+        }
+      }
+    }
+  }
+
+  .doiFinder {
+    .cardDesign {
+      p {
+        font-size: 25px;
+      }
+
+      button {
+        font-size: 25px;
+        padding: 10px 30px;
+      }
+    }
+  }
+
   .about {
     .innerContent {
       .desc {

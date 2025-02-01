@@ -18,14 +18,14 @@ const ProcessingCharge = () => {
     return (
         <>
             <Head>
-                <title>Article Processing Charge | PhysioZine</title>
+                <title>Article Processing Charge (APC) | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioZine, Physiotherapy, Advertise of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="Read the Disclaimer Policy, Terms & Conditions apply." />
-                <meta property="og:title" content="Disclaimer Policy | Read the Disclaimer Policy, Terms & Conditions apply." />
-                <meta property="og:description" content="Read the Disclaimer Policy, Terms & Conditions apply." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/disclaimerPolicy" />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Article Processing Charge of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine, APC of Physiozine' />
+                <meta name="description" content=" At Physiozine Magazine, we strive to ensure that authors from all over the world have the opportunity to showcase their research, ideas, and contributions to the physiotherapy community. Below are the details regarding the Article Processing Charge (APC) for Indian and International authors, as well as the procedure for obtaining a hard copy certificate." />
+                <meta property="og:title" content="Article Processing Charge (APC) | PhysioZine" />
+                <meta property="og:description" content=" At Physiozine Magazine, we strive to ensure that authors from all over the world have the opportunity to showcase their research, ideas, and contributions to the physiotherapy community. Below are the details regarding the Article Processing Charge (APC) for Indian and International authors, as well as the procedure for obtaining a hard copy certificate." />
+                <meta property="og:url" content="https://physiozine.vercel.app/policy/processing-charge" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
