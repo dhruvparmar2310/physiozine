@@ -25,6 +25,12 @@ import useMediaQuery from '@/hooks/useMediaQuery'
 import { useInView } from 'react-intersection-observer'
 import { useRouter } from 'next/router'
 import { Controller, useForm } from 'react-hook-form'
+import FeppaLogo from '../../public/assets/img/Feppa-Logo.png'
+import SwatiLogo from '../../public/assets/img/Swati-Logo.jpg'
+import odfLogo from '../../public/assets/img/odf-logo.png'
+import mahalaxmiLogo from '../../public/assets/img/mahalaxmi.jpeg'
+import jainUniversityLogo from '../../public/assets/img/jain-university.jpeg'
+import konvergeLogo from '../../public/assets/img/konverge.jpeg'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const abrilFatface = Abril_Fatface({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
@@ -486,6 +492,24 @@ const Advertise = () => {
                         <h1 className={`sectionTitle text-center`} data-heading='A few of our many Satisfied Clients'></h1>
 
                         <div className={`mt-4 ${styles?.clientLogo}`}>
+                            <div>
+                                <Image src={mahalaxmiLogo} className={'img-fluid'} alt='Mahalaxmi College' quality={100} priority />
+                            </div>
+                            <div>
+                                <Image src={konvergeLogo} className={'img-fluid'} alt='Konverge College' quality={100} priority />
+                            </div>
+                            <div>
+                                <Image src={jainUniversityLogo} className={'img-fluid'} alt='Jain University Logo' quality={100} priority />
+                            </div>
+                            <div>
+                                <Image src={FeppaLogo} className={'img-fluid'} alt='Feppa Logo' quality={100} priority />
+                            </div>
+                            <div>
+                                <Image src={SwatiLogo} className={'img-fluid'} alt='Swati Logo' quality={100} priority />
+                            </div>
+                            <div>
+                                <Image src={odfLogo} className={'img-fluid'} alt='ODF Logo' quality={100} priority />
+                            </div>
                             <div>
                                 <Image src={marwadiLogo} className={'img-fluid'} alt='Marwadi University' quality={100} priority onClick={() => router.push('https://www.marwadiuniversity.ac.in/faculty-of-physiotherapy/')} />
                             </div>
