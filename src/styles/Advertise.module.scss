@@ -244,9 +244,9 @@
 
                 img {
                     width: 150px;
-                    height: 70px;
+                    // height: 70px;
                     max-height: 100px;
-                    aspect-ratio: 10/4;
+                    aspect-ratio: 4/3;
                     object-fit: contain;
                     mix-blend-mode: darken;
                     opacity: 1;

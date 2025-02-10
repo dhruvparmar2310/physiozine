@@ -1,0 +1,290 @@
+.mediaPartner {
+    width: 100%;
+
+    .innerContent {
+        .comingSoonContent {
+            height: 100%;
+            display: grid;
+            place-items: center;
+        }
+
+        .tabContent {
+            margin-top: 10px;
+            overflow-y: auto;
+
+            .upcomingDetailCard {
+                background: #fff;
+                overflow: hidden;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-content: center;
+                align-items: center;
+                justify-items: center;
+
+                h1 {
+                    color: var(--primary-color);
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    font-size: 1.8rem;
+                    text-wrap: pretty;
+
+                    .extraInfo {
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: var(--black-color);
+                    }
+                }
+
+                .readMoreBtn {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 99px;
+                    border: none;
+                    background: rgb(0, 110, 131);
+                    background: linear-gradient(200deg, rgb(12, 111, 131) 35%, rgb(36, 205, 239) 100%);
+
+                    &:hover {
+                        svg {
+                            transform: translateX(2px);
+                        }
+                    }
+
+                    svg {
+                        transition: all 0.1s linear;
+                        font-size: 13px;
+                    }
+                }
+
+                .middleImg {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        max-width: 100px;
+                        object-fit: contain;
+                    }
+
+                    .bookImage {
+                        display: block;
+                        object-fit: contain;
+                        width: 100%;
+                        max-width: 180px !important;
+                    }
+                }
+
+                .lastDetails {
+                    text-align: left;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    img {
+                        width: 100%;
+                        max-width: 250px;
+                        height: auto;
+                        // object-fit: contain;
+                    }
+                }
+            }
+        }
+
+        p {
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            font-size: 1.1rem;
+            line-height: 1.8rem;
+            color: var(--black-color);
+            text-align: left;
+            text-wrap: pretty;
+        }
+
+        button {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 99px;
+            border: none;
+            background: rgb(0, 110, 131);
+            background: linear-gradient(200deg, rgb(12, 111, 131) 35%, rgb(36, 205, 239) 100%);
+
+            &:hover {
+                svg {
+                    transform: translateX(2px);
+                }
+            }
+
+            svg {
+                transition: all 0.1s linear;
+                font-size: 13px;
+            }
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 5px;
+
+            button {
+                background: transparent;
+                border-color: transparent;
+                color: var(--primary-color);
+                border-radius: 0;
+                margin: 0;
+                padding: 0 10px;
+                font-weight: 600;
+                font-size: 1.2rem;
+
+                &.active {
+                    color: var(--primary-dark);
+                    border-bottom: 2px solid var(--primary-dark);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .mediaPartner {
+        p {
+            text-align: justify;
+        }
+
+        .upcomingDetailCard {
+            grid-template-columns: 1fr !important;
+
+            h1 {
+                font-size: 25px !important;
+            }
+
+            .middleImg {
+                width: 100%;
+                margin: 15px 0;
+                display: flex;
+                justify-content: space-evenly !important;
+
+                img {
+                    width: 100%;
+                    max-width: 100px;
+                    object-fit: contain;
+                }
+            }
+
+            .lastDetails {
+                text-align: center;
+
+                p {
+                    font-weight: 500;
+                    color: var(--primary-dark);
+                    font-family: 'Ubuntu';
+                    margin: 0;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 200px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .mediaPartner {
+        padding: 20px;
+
+        h1 {
+            word-wrap: break-word;
+            letter-spacing: 0.5px !important;
+            line-height: 1 !important;
+            font-size: 1.8rem !important;
+        }
+
+        p {
+            line-height: 1.5rem !important;
+            text-align: justify !important;
+        }
+
+        .upcomingDetailCard {
+            grid-template-columns: 1fr !important;
+
+            h1 {
+                font-size: 25px !important;
+            }
+
+            p {
+                text-align: left !important;
+            }
+
+            .middleImg {
+                margin: 15px 0;
+                flex-direction: row !important;
+                justify-content: space-evenly !important;
+
+                img {
+                    width: 100%;
+                    max-width: 100px;
+                    object-fit: contain;
+                }
+            }
+
+            .lastDetails {
+                text-align: center;
+
+                p {
+                    font-weight: 500;
+                    color: var(--primary-dark);
+                    font-family: 'Ubuntu';
+                    margin: 0;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 200px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1950px) {
+    .mediaPartner {
+        p {
+            font-size: 30px !important;
+            line-height: 1.5 !important;
+            margin-top: 30px !important;
+        }
+
+        button {
+            font-size: 30px !important;
+            padding: 10px 30px !important;
+            margin: 40px 0 !important;
+        }
+
+        .tabs {
+            button {
+                margin: 0 !important;
+            }
+        }
+
+        .upcomingDetailCard {
+            .middleImg {
+                img {
+                    max-width: 200px !important;
+                }
+            }
+        }
+    }
+}

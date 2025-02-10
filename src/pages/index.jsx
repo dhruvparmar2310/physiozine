@@ -5,11 +5,6 @@ import { Inter, Ubuntu } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
 import Hero from "@/components/Hero";
 import HomePageArticles from "@/components/HomePageArticles";
-import { articles } from "@/data/articles";
-import articleImg from '../../public/assets/img/magazines/vol1_issue1.jpg'
-import { Button, Col, Row, Table, Container } from "react-bootstrap";
-import { useRouter } from "next/router";
-import { ToastContainer } from "react-toastify";
 import googleLogo from '../../public/assets/img/webAvailability/Google-Logo.png'
 import googleScholarLogo from '../../public/assets/img/webAvailability/google-scholar.jpg'
 import magzterLogo from '../../public/assets/img/webAvailability/magzter_logo.png'
@@ -30,9 +25,6 @@ import smartPT from '../../public/assets/img/associated/smart-pt.jpeg'
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import ConphycsLogo from '../../public/assets/img/15-conphycs-logo-02.png'
-import gptaLogo from '../../public/assets/img/GPTA-LOGO.jpeg'
-import muLogo from '../../public/assets/img/MU_LOGO_BROWN.png'
 import mainLogo from '../../public/assets/img/logo-1.png'
 import zoteroLogo from '../../public/assets/img/webAvailability/Zotero_logo.png'
 import dataCiteLogo from '../../public/assets/img/webAvailability/DataCite-Commons.png'
@@ -41,9 +33,6 @@ import openScholarLogo from '../../public/assets/img/webAvailability/openscholar
 import bookLogo from '../../public/assets/img/fundamentals-of-electrotherapy-book.png'
 import jaypeeDigitalLogo from '../../public/assets/img/header-jaypee.png'
 import DOILogo from '../../public/assets/img/DOI-Foundation-Logo.png'
-import FeppaLogo from '../../public/assets/img/Feppa-Logo.png'
-import SwatiLogo from '../../public/assets/img/Swati-Logo.jpg'
-import odfLogo from '../../public/assets/img/odf-logo.png'
 
 //* ALL SVG ELEMENTS
 import { BsGlobeCentralSouthAsia } from "react-icons/bs";
@@ -51,6 +40,8 @@ import { FaCity, FaUsers } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartSimple, faCity, faEarthAsia } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/router";
+import { Button, Row, Col, Table, Container } from "react-bootstrap";
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500', '700'], style: ['normal'] })
 const inter = Inter({ subsets: ["latin"] });
@@ -70,8 +61,7 @@ export default function Home () {
   const [teamCount, setTeamCount] = useState(0);
   const [copyRightYear, setCopyRightYear] = useState(new Date()?.getFullYear())
   const [partnerButtons, setPartnerButtons] = useState({
-    conference: true,
-    book: false,
+    book: true,
     workshop: false,
     course: false,
     sportEvent: false
@@ -199,7 +189,6 @@ export default function Home () {
 
                 <h1 className={`sectionTitle my-3 ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='Our'> Partnered Events:</h1>
                 <div className={`${styles?.tabs}`}>
-                  <Button className={partnerButtons?.conference && styles?.active} onClick={() => setPartnerButtons({ conference: true })}>Conference</Button>
                   <Button className={partnerButtons?.book && styles?.active} onClick={() => setPartnerButtons({ book: true })}>Book</Button>
                   <Button className={partnerButtons?.course && styles?.active} onClick={() => setPartnerButtons({ course: true })}>CPD Courses</Button>
                   <Button className={partnerButtons?.workshop && styles?.active} onClick={() => setPartnerButtons({ workshop: true })}>Workshop/ Webinar</Button>
@@ -207,127 +196,6 @@ export default function Home () {
                 </div>
 
                 <div className={`${styles?.tabContent}`}>
-                  {partnerButtons?.conference && <>
-                    <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
-                      <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
-                        <h1 className={`${ubuntu?.className} text-uppercase`}>1<sup>st</sup> International Physiotherapy Conference, Physio Confluence, 2025</h1>
-                        <p className='mt-4'>Theme: Expanding horizons in Physiotherapy</p>
-                        <p>Venue: MCPRC, Satara, Maharastra</p>
-                        <p>Date: 22 - 23 February, 2025</p>
-                        <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://docs.google.com/forms/d/e/1FAIpQLSdvgVmc-dmcswi-sv_zRpmpFxsiKKQ5wZvZGy77_cYKeYImkQ/viewform?pli=1')}>Register Now</Button>
-                      </div>
-                      <div className={styles?.middleImg}>
-                      </div>
-                      <div className={styles?.lastDetails}>
-                        <p>Organized By</p>
-                        <h1 className={ubuntu?.className}>Mahalaxmi College Of Physiotherapy & Rehabilitation Center</h1>
-
-                        <p className='mt-3'>Media Partner</p>
-                        <Image
-                          src={mainLogo}
-                          alt='PhysioZine Logo'
-                          loading='lazy'
-                          quality={100}
-                          className="img-fluid"
-                        />
-                      </div>
-                    </div>
-
-                    <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className} mt-3`}>
-                      <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
-                        <h1 className={`${ubuntu?.className} text-uppercase`}>2<sup>nd</sup> FEPPA International Conference on CPP, 2025</h1>
-                        <p className='mt-4'>Theme: Recognition, Resolution, Rehabilitation</p>
-                        <p>Venue: Mumbai</p>
-                        <p>Date: 19 - 20 April, 2025</p>
-                        <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://feppa.org/feppa-2025-2nd-annual-conference-of-female-pelvic-pain-association/')}>Register Now</Button>
-                      </div>
-                      <div className={styles?.middleImg}>
-                        <Image
-                          src={FeppaLogo}
-                          alt='Feppa Logo'
-                          loading='lazy'
-                          quality={100}
-                          className="img-fluid"
-                        />
-                        <Image
-                          src={SwatiLogo}
-                          alt='Swati Logo'
-                          loading='lazy'
-                          quality={100}
-                          className="img-fluid"
-                        // onClick={() => router.push('https://gptaindia.org/')}
-                        />
-                      </div>
-                      <div className={styles?.lastDetails}>
-                        <p>Organized By</p>
-                        <Image
-                          src={odfLogo}
-                          alt='ODF Logo'
-                          loading='lazy'
-                          quality={100}
-                          className="img-fluid"
-                          style={{ maxWidth: '130px' }}
-                          onClick={() => router.push('https://www.orphandiseasefoundation.com/')}
-                        />
-
-                        <p className='mt-3'>Media Partner</p>
-                        <Image
-                          src={mainLogo}
-                          alt='PhysioZine Logo'
-                          loading='lazy'
-                          quality={100}
-                          className="img-fluid"
-                        />
-                      </div>
-                    </div>
-
-                    <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className} mt-3`}>
-                      <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
-                        <h1 className={`${ubuntu?.className} text-uppercase`}>15<sup>th</sup> Gujstate Conphycs, 2024</h1>
-                        <p className='mt-4'>Theme: Global Perspectives on Physiotherapy - Collaboration & Innovation</p>
-                        <p>Venue: Marwadi University, Rajkot</p>
-                        <p>Date: 20 - 21 December, 2024</p>
-                        {/* <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://conphycs2024.com/')}>Register Now</Button> */}
-                      </div>
-                      <div className={styles?.middleImg}>
-                        <Image
-                          src={ConphycsLogo}
-                          alt='15th Conphycs Logo'
-                          loading='lazy'
-                          quality={100}
-                          className="img-fluid"
-                        />
-                        <Image
-                          src={gptaLogo}
-                          alt='GPTA Logo'
-                          loading='lazy'
-                          quality={100}
-                          className="img-fluid"
-                          onClick={() => router.push('https://gptaindia.org/')}
-                        />
-                      </div>
-                      <div className={styles?.lastDetails}>
-                        <p>Organized By</p>
-                        <Image
-                          src={muLogo}
-                          alt='Marwadi University Logo'
-                          loading='lazy'
-                          quality={100}
-                          className="img-fluid"
-                          onClick={() => router.push('https://www.marwadiuniversity.ac.in/faculty-of-physiotherapy/')}
-                        />
-
-                        <p className='mt-3'>Media Partner</p>
-                        <Image
-                          src={mainLogo}
-                          alt='PhysioZine Logo'
-                          loading='lazy'
-                          quality={100}
-                          className="img-fluid"
-                        />
-                      </div>
-                    </div>
-                  </>}
                   {partnerButtons?.book && <>
                     <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
                       <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>

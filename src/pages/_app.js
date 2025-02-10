@@ -14,7 +14,7 @@ import Script from 'next/script';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'react-loading-skeleton/dist/skeleton.css'
 
-const GA_MEASUREMENT_ID = 'G-P080GEG6FN';
+const GA_MEASUREMENT_ID = 'G-KS4PTC6RGY';
 
 export default function App({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(false)
@@ -59,6 +59,7 @@ export default function App({ Component, pageProps }) {
     };
   }, [router.events])
 
+  // Google Analytic
   useEffect(() => {
     const handleRouteChange = (url) => {
       window.gtag('config', GA_MEASUREMENT_ID, {
