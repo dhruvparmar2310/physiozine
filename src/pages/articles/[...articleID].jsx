@@ -11,11 +11,12 @@ import { articles } from '@/data/articles'
 import { Abril_Fatface, Comfortaa, Ubuntu } from 'next/font/google'
 import { GrFormPrevious, GrPrevious, GrTextAlignFull } from "react-icons/gr"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
+import { faEye, faFilePdf } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import msmeLogo from '../../../public/assets/img/License/MSME-Logo.png'
 import Image from 'next/image'
 import Skeleton from 'react-loading-skeleton'
+import axios from 'axios'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 const abrilFatface = Abril_Fatface({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
@@ -40,6 +41,49 @@ function ArticleID ({ data }) {
 
         setArticleData(data)
     }, [articleID])
+
+    // useEffect(() => {
+    //     // ZENODO API:
+    //     const requestParams = {
+    //         params: {
+    //             'access_token': process.env.ZENODO_SECKRET_KEY,
+    //             'all_versions': true
+    //         }
+    //     }
+    //     axios.get("https://zenodo.org/api/deposit/depositions", requestParams).then(response => {
+    //         console.log(response.status);
+    //         // > 200
+    //         console.log("data: ", response.data);
+    //         // > []
+    //     }).catch(error => {
+    //         console.log(error.response.data);
+    //     });
+    // }, [])
+
+    const requestParams = {
+        params: {
+            'access_token': process.env.ZENODO_SECKRET_KEY,
+        }
+    }
+
+    const getArticleStats = (doiNumber) => {
+        const version = doiNumber?.split('zenodo.')?.[1]
+        let statsData = {}
+        axios.get(`https://zenodo.org/api/records/${version}/versions?size=5&sort=version&allversions=true`, requestParams).then(response => {
+            console.log('res:: ', response.data?.hits?.hits?.[0]?.stats)
+            // > 200
+            let views = response.data?.hits?.hits?.[0]?.stats?.views
+            let downloads = response.data?.hits?.hits?.[0]?.stats?.downloads
+
+            statsData = response.data?.hits?.hits?.[0]?.stats
+            // > []
+        }).catch(error => {
+            console.log("error:  ", error.response);
+        });
+        console.log('statsData :>> ', statsData);
+        return statsData
+    }
+    console.log('123 :>> ', getArticleStats('10.5281/zenodo.14780311'));
 
     return (
         <>
@@ -130,12 +174,17 @@ function ArticleID ({ data }) {
                                                     </div>
                                                     <h1 className={ubuntu?.className}>{item?.sName}</h1>
                                                     <p className={`${styles?.authorName} ${comfortaa?.className}`}> {item?.sAuthor} </p>
-                                                    {item?.sDOINo === '-' ? '' : <p className={`${styles?.doiNumber}`}>DOI: <span style={{ cursor: 'pointer' }} onClick={() => goToZenodo(item?.sDOINo)}>{item?.sDOINo}</span></p>}
+                                                    {item?.sDOINo === '-' ? ''
+                                                        : <p className={`${styles?.doiNumber}`}>DOI: <span style={{ cursor: 'pointer' }} onClick={() => goToZenodo(item?.sDOINo)}>{item?.sDOINo}</span> <span><FontAwesomeIcon icon={faEye} /> {getArticleStats(item?.sDOINo)}</span></p>
+                                                    }
                                                     <div className={styles?.actionBar}>
                                                         {item?.sPageNo === '-' ? '' : <><span>Page No.: {item?.sPageNo}</span><span className={styles?.pipeSymbol}>|</span></>} <span className={`${styles?.downLoadBtn}`} onClick={() => router.push({
                                                             pathname: `/articles/${articleID?.[0]}/${articleID?.[1]}/${item?.sName}`,
                                                             query: { id: item?._id }
-                                                        })}><GrTextAlignFull /> Full Text</span> {/*{item?.sDownLoadUrl === '-' ? '' : <><span className={styles?.pipeSymbol}>|</span> <span className={`${styles?.downLoadBtn}`} onClick={() => saveAs(`${item?.sDownLoadUrl}`, `${item?.sName}`)}><FontAwesomeIcon icon={faFilePdf} /> PDF</span></>} */}
+                                                        })}><GrTextAlignFull /> Full Text</span>
+                                                        {articleID?.[0]?.includes('Volume-2') &&
+                                                            (item?.sDownLoadUrl === '-' ? '' : <><span className={styles?.pipeSymbol}>|</span> <span className={`${styles?.downLoadBtn}`} onClick={() => saveAs(`${item?.sDownLoadUrl}`, `${item?.sName}`)}><FontAwesomeIcon icon={faFilePdf} /> PDF</span></>
+                                                            )}
                                                     </div>
                                                 </div>
                                             )

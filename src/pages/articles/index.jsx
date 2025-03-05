@@ -202,9 +202,49 @@ function Articles ({ data, router }) {
                 </>)}
 
                 {btnToggle?.volTwo && (<>
-                  <div className={`${styles?.upcomingArticle}`}>
+                  {/* <div className={`${styles?.upcomingArticle}`}>
                     <h6>Call for publications - PhysioZine Digital Magazine</h6>
                     <p>Here's your chance to showcase your expertise! PhysioZine Digital Magazine is inviting article submission for our upcoming Issue.<br />Submit your article on <a href='/submissionForm'>link</a></p>
+                  </div> */}
+                  <div>
+                    <Table responsive>
+                      <tbody>
+                        <tr>
+                          <td>Issue 1</td>
+                          <td>February, 2025</td>
+                          <td>
+                            <Button className='me-2' onClick={() => router.push({
+                              pathname: `/articles/Volume-2/Issue-1`,
+                              query: { publishedDate: 'February, 2025' }
+                            })}>
+                              <FontAwesomeIcon icon={faEye} /> View
+                            </Button>
+                            <Button onClick={() =>
+                              saveAs(`${articles?.find(item => item?._id === '1')?.eBook}`, `PhysioZine_Vol-2_Issue-1`)}
+                            >
+                              <FontAwesomeIcon icon={faFilePdf} /> PDF
+                            </Button>
+                          </td>
+                        </tr>
+                        <tr>
+                          {/* <td>2</td> */}
+                          <td>Issue 2</td>
+                          <td>April, 2025</td>
+                          <td>
+                            <Button className='me-2' onClick={() => router.push({
+                              pathname: `/articles/Volume-2/Issue-2`,
+                              query: { publishedDate: 'April, 2025' }
+                            })}>
+                              <FontAwesomeIcon icon={faEye} /> View
+                            </Button>
+                            <Button onClick={() =>
+                              saveAs(`${articles?.find(item => item?._id === '2')?.eBook}`, `PhysioZine_Vol-2_Issue-2`)}>
+                              <FontAwesomeIcon icon={faFilePdf} /> PDF
+                            </Button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </Table>
                   </div>
                 </>)}
               </div>

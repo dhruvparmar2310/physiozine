@@ -1,3 +1,9 @@
+const ARTICLE_TYPES = {
+    ARTICLE: 'Article',
+    RESEARCH_ARTICLE: 'Research Article',
+    CASE_STUDY: 'Case Study',
+}
+
 export const articles = [
     {
         _id: '1',
@@ -310,6 +316,67 @@ export const articles = [
         nMonth: 'February, 2025',
         img: 'assets/img/magazines/Vol-2-Issue-1.png',
         eBook: 'assets/pdfs/vol-2-issue-1/PhysioZine Vol 2, Issue 1.pdf',
-        aMagazines: []
+        aMagazines: [
+            {
+                _id: '201',
+                sName: "HOLISTIC SOLUTIONS FOR CHRONIC LOW BACK PAIN INTEGRATING ICF CORE SETS WITH REHABILITATION PROBLEM-SOLVING FORM - STRATEGIC PATHWAYS IN PHYSIOTHERAPY",
+                sAuthor: 'Dr.Janani Arul',
+                sPageNo: '1-2',
+                eTag: ARTICLE_TYPES.ARTICLE,
+                sDOINo: '10.5281/zenodo.14780311',
+                sDownLoadUrl: '/assets/pdfs/vol-2-issue-1/ARTICLE 1.pdf',
+                sContent: ""
+            },
+            {
+                _id: '202',
+                sName: "PREVALENCE OF FORWARD HEAD POSTURE IN FEMALE COLLEGE GOING STUDENTS OF GANDHINAGAR",
+                sAuthor: 'Dr. Nidhi Panchal, Dr. Nisha Kanabar, Dr. Pooja Dave',
+                sPageNo: '3-7',
+                eTag: ARTICLE_TYPES.RESEARCH_ARTICLE,
+                sDOINo: '10.5281/zenodo.14780434',
+                sDownLoadUrl: '/assets/pdfs/vol-2-issue-1/ARTICLE 2.pdf',
+                sContent: ""
+            },
+            {
+                _id: '203',
+                sName: "A STUDY TO COMPARE THE PULMONARY FUNCTION TESTS IN COLLEGE STUDENTS FROM DIFFERENT COUNTRIES: A CROSS SECTIONAL OBSERVATIONAL STUDY",
+                sAuthor: 'Honey Meghaben Mehta, Khushi Harshad Ahuja, Mona Jitubhai Sorathiya',
+                sPageNo: '8-14',
+                eTag: ARTICLE_TYPES.RESEARCH_ARTICLE,
+                sDOINo: '10.5281/zenodo.14780632',
+                sDownLoadUrl: '/assets/pdfs/vol-2-issue-1/ARTICLE 3.pdf',
+                sContent: ""
+            },
+            {
+                _id: '204',
+                sName: "EFFECT OF TRUNK PROPRIOCEPTIVE NEUROMUSCULAR FACILITATION EXERCISE AND CORE STABILITY EXERCISE ON TRUNK CONTROL, BALANCE, AND QUALITY OF LIFE IN INDIVIDUALS WITH STROKE-AN EXPERIMENTAL STUDY.",
+                sAuthor: 'Dr. Bansari Bhanderi (PT), Dr. Dhara Vaghela (PT)',
+                sPageNo: '15-22',
+                eTag: ARTICLE_TYPES.RESEARCH_ARTICLE,
+                sDOINo: '10.5281/zenodo.14780897',
+                sDownLoadUrl: '/assets/pdfs/vol-2-issue-1/ARTICLE 4.pdf',
+                sContent: ""
+            },
+            {
+                _id: '205',
+                sName: "PREVENTING TENNIS ELBOW: SIMPLE MEASURES FOR A PAIN-FREE GAME",
+                sAuthor: 'Rahul Rajeev',
+                sPageNo: '23-24',
+                eTag: ARTICLE_TYPES.ARTICLE,
+                sDOINo: '10.5281/zenodo.14810653',
+                sDownLoadUrl: '/assets/pdfs/vol-2-issue-1/ARTICLE 5.pdf',
+                sContent: ""
+            },
+            {
+                _id: '206',
+                sName: "COMPREHENSIVE PHYSIOTHERAPY APPROACH TO IMPROVE MOUTH OPENING",
+                sAuthor: 'Dr. Chirag Solanki',
+                sPageNo: '25-26',
+                eTag: ARTICLE_TYPES.ARTICLE,
+                sDOINo: '10.5281/zenodo.14810708',
+                sDownLoadUrl: '/assets/pdfs/vol-2-issue-1/ARTICLE 6.pdf',
+                sContent: ""
+            }
+        ]
     },
 ]

@@ -10,6 +10,8 @@ import kpImage from '../../../public/assets/img/interview/kunal-patel.JPG'
 import wnImage from '../../../public/assets/img/interview/waqar-naqvi.JPG'
 import brdImage from '../../../public/assets/img/interview/Bhavna-Rajesh- Devnani.JPG'
 import rpImage from '../../../public/assets/img/interview/rachna-patel.JPG'
+import msImage from '../../../public/assets/img/interview/DrMeghaSheth.jpg'
+import rupamSarkarImage from '../../../public/assets/img/interview/DrRupamSarkar.jpg'
 import { Button, Col, Row } from 'react-bootstrap'
 import { useRouter } from 'next/router'
 
@@ -108,6 +110,40 @@ const Interview = () => {
                                         <p className={`${styles?.interviewerName}`}>Dr. Rachana Patel</p>
                                         <p className={`${styles?.cardTitle}`}>Journey of Para Badminton Player</p>
                                         <Button className={`${styles?.readMoreBtn}`} onClick={() => router.push('/interview/Dr. Rachana Patel')}>Read Interview</Button>
+                                    </div>
+                                </motion.div>
+                            </Col>
+                            <Col lg={3} md={4} sm={6} xs={12}>
+                                <motion.div
+                                    className={`${styles?.interviewCard} ${ubuntu?.className}`}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 1.5 }}
+                                >
+                                    <div className={styles?.cardTop}>
+                                        <Image src={msImage} alt='Dr. Megha Sheth' quality={100} className='img-fluid' />
+                                    </div>
+                                    <div className={`${styles?.cardBody}`}>
+                                        <p className={`${styles?.interviewerName}`}>Dr. Megha Sheth</p>
+                                        <p className={`${styles?.cardTitle}`}>How to Select a Research Topic in Physiotherapy</p>
+                                        <Button className={`${styles?.readMoreBtn}`} onClick={() => router.push('/interview/Dr. Megha Sheth')}>Read Interview</Button>
+                                    </div>
+                                </motion.div>
+                            </Col>
+                            <Col lg={3} md={4} sm={6} xs={12}>
+                                <motion.div
+                                    className={`${styles?.interviewCard} ${ubuntu?.className}`}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 1.5 }}
+                                >
+                                    <div className={styles?.cardTop}>
+                                        <Image src={rupamSarkarImage} alt='Dr. Rupam Sarkar' quality={100} className='img-fluid' />
+                                    </div>
+                                    <div className={`${styles?.cardBody}`}>
+                                        <p className={`${styles?.interviewerName}`}>Dr. Rupam Sarkar</p>
+                                        <p className={`${styles?.cardTitle}`}>Physiotherapy in COVID-19 Recovery: Challenges, Interventions and Lessons Learned</p>
+                                        <Button className={`${styles?.readMoreBtn}`} onClick={() => router.push('/interview/Dr. Rupam Sarkar')}>Read Interview</Button>
                                     </div>
                                 </motion.div>
                             </Col>
