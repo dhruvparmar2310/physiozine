@@ -124,9 +124,9 @@ const Interview = () => {
                                         <Image src={msImage} alt='Dr. Megha Sheth' quality={100} className='img-fluid' />
                                     </div>
                                     <div className={`${styles?.cardBody}`}>
-                                        <p className={`${styles?.interviewerName}`}>Dr. Megha Sheth</p>
+                                        <p className={`${styles?.interviewerName}`}>Dr. Megha Sheth (PT)</p>
                                         <p className={`${styles?.cardTitle}`}>How to Select a Research Topic in Physiotherapy</p>
-                                        <Button className={`${styles?.readMoreBtn}`} onClick={() => router.push('/interview/Dr. Megha Sheth')}>Read Interview</Button>
+                                        <Button className={`${styles?.readMoreBtn}`} onClick={() => router.push('/interview/Dr. Megha Sheth (PT)')}>Read Interview</Button>
                                     </div>
                                 </motion.div>
                             </Col>
