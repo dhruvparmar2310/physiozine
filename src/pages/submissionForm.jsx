@@ -237,6 +237,7 @@ const SubmissionForm = () => {
                         </p>
                     </div>
                     <div>
+                        <h1>Submission Form for Magazine</h1>
                         <Form onSubmit={handleSubmit(onSubmit)}>
                             <div className={`${styles?.articleDetails}`}>
                                 <h1 className={ubuntu?.className}>Article Details:</h1>
@@ -481,7 +482,10 @@ const SubmissionForm = () => {
                                     <Col lg={6} className='mt-3'>
                                         <div className={`${styles?.paymentDetails}`}>
                                             <p>
-                                                Note: Article Processing Charge (APC) for research article, case study and blog is 500 /-
+                                                Note: Article Processing Charge (APC) for case study and blog is 500 /-
+                                            </p>
+                                            <p>
+                                                For Research Article Submission in IJOPT, <span onClick={() => router?.push('https://auth.oxfordabstracts.com/?redirect=/stages/78097/submitter')}>Click Here</span>
                                             </p>
                                         </div>
 
