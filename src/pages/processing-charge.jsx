@@ -10,10 +10,10 @@ const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['nor
 const ProcessingCharge = () => {
     const columns = ["Article Type", "Processing Charge for Indian Authors", "Processing Charge for International Authors"]
     const data = [
-        { _id: 0, sTitle: 'Research Article', sCharge: '₹ 500', sInternationalCharge: '$ 50' },
-        { _id: 1, sTitle: 'Case Report', sCharge: '₹ 500', sInternationalCharge: '$ 50' },
-        { _id: 2, sTitle: 'Case Series', sCharge: '₹ 500', sInternationalCharge: '$ 50' },
-        { _id: 3, sTitle: 'Blogs', sCharge: '₹ 500', sInternationalCharge: '$ 50' }
+        { _id: 0, sTitle: 'Research Article in IJOPT', sCharge: '₹ 2000', sInternationalCharge: '$ 50' },
+        { _id: 1, sTitle: 'Case Report', sCharge: '₹ 500', sInternationalCharge: '$ 30' },
+        { _id: 2, sTitle: 'Case Series', sCharge: '₹ 500', sInternationalCharge: '$ 30' },
+        { _id: 3, sTitle: 'Blogs', sCharge: '₹ 500', sInternationalCharge: '$ 30' }
     ]
     return (
         <>
@@ -74,6 +74,16 @@ const ProcessingCharge = () => {
                         </tbody>
                         <caption className='text-danger text-end'>Publication charges are effective from 13/10/2024.</caption>
                     </Table>
+
+                    <p className={styles?.notes}>
+                        <span className={styles?.noteTitle}>Note:</span>
+                        <br />
+                        Research articles are subject to publication in the Indian Journal of Physical Therapy (IJOPT), an international peer-reviewed journal with ISSN 2321-5690. Authors submitting research articles must adhere to the journal's guidelines and publication policies.
+                        <br />
+                        For details on the Article Processing Charges (APC) of Journal, please visit: <span className={styles?.noteLink} onClick={() => router.push('https://ijopt.co.in/author-tools/article-processing-charge')}>Click here</span>.
+                        <br /><br />
+                        Meanwhile, PhysioZine Magazine exclusively accepts case studies, blogs, and articles on the latest innovations in physiotherapy. Submissions related to these categories are welcome for publication in PhysioZine Magazine.
+                    </p>
 
                     <h3 className={`${styles.subTitle} ${ubuntu?.className}`}>Hard Copy Certificate</h3>
                     <div className={`${styles?.line}`}></div>

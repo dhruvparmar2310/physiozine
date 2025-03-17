@@ -163,6 +163,9 @@ function Header () {
                 <Link href={'/conferences'} title='Conferences | PhysioZine' className={`${router?.route?.includes('/conferences') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/conferences')}>Conferences</Link>
               </li>
               <li>
+                <Link href='https://ijopt.co.in' title='PhysioZine Journal' className={`${ubuntu.className}`} onClick={(e) => handleClick(e, 'https://ijopt.co.in')}>Journal</Link>
+              </li>
+              <li>
                 <Link href={'/contact'} className={`${router?.route?.includes('/contact') && styles?.active} ${ubuntu.className}`} title='Contact | PhysioZine' onClick={(e) => handleClick(e, '/contact')}>
                   Contact
                 </Link>

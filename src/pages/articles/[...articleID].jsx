@@ -60,30 +60,30 @@ function ArticleID ({ data }) {
     //     });
     // }, [])
 
-    const requestParams = {
-        params: {
-            'access_token': process.env.ZENODO_SECKRET_KEY,
-        }
-    }
+    // const requestParams = {
+    //     params: {
+    //         'access_token': process.env.ZENODO_SECKRET_KEY,
+    //     }
+    // }
 
-    const getArticleStats = (doiNumber) => {
-        const version = doiNumber?.split('zenodo.')?.[1]
-        let statsData = {}
-        axios.get(`https://zenodo.org/api/records/${version}/versions?size=5&sort=version&allversions=true`, requestParams).then(response => {
-            console.log('res:: ', response.data?.hits?.hits?.[0]?.stats)
-            // > 200
-            let views = response.data?.hits?.hits?.[0]?.stats?.views
-            let downloads = response.data?.hits?.hits?.[0]?.stats?.downloads
+    // const getArticleStats = (doiNumber) => {
+    //     const version = doiNumber?.split('zenodo.')?.[1]
+    //     let statsData = {}
+    //     axios.get(`https://zenodo.org/api/records/${version}/versions?size=5&sort=version&allversions=true`, requestParams).then(response => {
+    //         console.log('res:: ', response.data?.hits?.hits?.[0]?.stats)
+    //         // > 200
+    //         let views = response.data?.hits?.hits?.[0]?.stats?.views
+    //         let downloads = response.data?.hits?.hits?.[0]?.stats?.downloads
 
-            statsData = response.data?.hits?.hits?.[0]?.stats
-            // > []
-        }).catch(error => {
-            console.log("error:  ", error.response);
-        });
-        console.log('statsData :>> ', statsData);
-        return statsData
-    }
-    console.log('123 :>> ', getArticleStats('10.5281/zenodo.14780311'));
+    //         statsData = response.data?.hits?.hits?.[0]?.stats
+    //         // > []
+    //     }).catch(error => {
+    //         console.log("error:  ", error.response);
+    //     });
+    //     console.log('statsData :>> ', statsData);
+    //     return statsData
+    // }
+    // console.log('123 :>> ', getArticleStats('10.5281/zenodo.14780311'));
 
     return (
         <>
@@ -175,7 +175,7 @@ function ArticleID ({ data }) {
                                                     <h1 className={ubuntu?.className}>{item?.sName}</h1>
                                                     <p className={`${styles?.authorName} ${comfortaa?.className}`}> {item?.sAuthor} </p>
                                                     {item?.sDOINo === '-' ? ''
-                                                        : <p className={`${styles?.doiNumber}`}>DOI: <span style={{ cursor: 'pointer' }} onClick={() => goToZenodo(item?.sDOINo)}>{item?.sDOINo}</span> <span><FontAwesomeIcon icon={faEye} /> {getArticleStats(item?.sDOINo)}</span></p>
+                                                        : <p className={`${styles?.doiNumber}`}>DOI: <span onClick={() => goToZenodo(item?.sDOINo)}>{item?.sDOINo}</span> {/*<span><FontAwesomeIcon icon={faEye} /> {getArticleStats(item?.sDOINo)}</span>*/}</p>
                                                     }
                                                     <div className={styles?.actionBar}>
                                                         {item?.sPageNo === '-' ? '' : <><span>Page No.: {item?.sPageNo}</span><span className={styles?.pipeSymbol}>|</span></>} <span className={`${styles?.downLoadBtn}`} onClick={() => router.push({

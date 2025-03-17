@@ -223,8 +223,17 @@ const SubmissionForm = () => {
                     <div className={`${styles?.line}`}></div>
 
                     <div>
-                        <p className={`mt-2 ${ubuntu?.className}`}>
+                        <p className={`mt-2`}>
                             Share your expertise with the global physiotherapy community by submitting your original research, blogs, innovation or case studies to PhysioZine Magazine. Our platform provides an opportunity for professionals to contribute to the advancement of physiotherapy knowledge and practice. Submit your work today and be a part of shaping the future of the field.
+                        </p>
+                        <p className={styles?.notes}>
+                            <span className={styles?.noteTitle}>Note:</span>
+                            <br />
+                            Research articles are subject to publication in the Indian Journal of Physical Therapy (IJOPT), an international peer-reviewed journal with ISSN 2321-5690. Authors submitting research articles must adhere to the journal's guidelines and publication policies.
+                            <br />
+                            For details on the Article Processing Charges (APC) of Journal, please visit: <span className={styles?.noteLink} onClick={() => router.push('https://ijopt.co.in/author-tools/article-processing-charge')}>Click here</span>.
+                            <br /><br />
+                            Meanwhile, PhysioZine Magazine exclusively accepts case studies, blogs, and articles on the latest innovations in physiotherapy. Submissions related to these categories are welcome for publication in PhysioZine Magazine.
                         </p>
                     </div>
                     <div>

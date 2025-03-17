@@ -49,7 +49,7 @@ export const interviewCollection = [
     },
     {
         _id: '5',
-        name: 'Dr. Megha Sheth',
+        name: 'Dr. Megha Sheth (PT)',
         designation: 'Lecturer at SBB College of Physiotherapy',
         sTitle: "How to Select a Research Topic in Physiotherapy",
         img: '/assets/img/interview/DrMeghaSheth.jpg',
