@@ -593,7 +593,7 @@ export default function Home () {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
               <h1 className={`sectionTitle`} data-heading='Our Latest' title="Our Latest Research Magazines | PhysioZine">Magazines</h1>
               <div className={`text-center mt-4 ${styles?.viewMoreBtn} ${ubuntu?.className}`}>
-                <span onClick={() => router.push('/articles')}>View More</span>
+                <span onClick={() => router.push('/magazines')}>View More</span>
               </div>
             </div>
             <HomePageArticles />
