@@ -57,7 +57,7 @@ function Hero ({ width }) {
                                 ease: 'easeInOut', // easing function for a smoother animation
                             }}
                         >
-                            for Physiotherapy, featuring <span style={{ color: 'var(--primary-dark)' }}>peer-reviewed</span> articles with <span style={{ color: 'var(--primary-dark)' }}>DOI</span>.
+                            for Physiotherapy, featuring <span style={{ color: 'var(--primary-dark)' }}>peer-reviewed</span> articles.
                         </motion.p>
                         <motion.p
                             className={`${styles?.desc} ${Roboto_Condensed_Font?.className} mt-3`}

@@ -74,8 +74,11 @@ function Header () {
               <li className="active">
                 <Link href='/' title='Home | PhysioZine' className={`${router?.route === '/' && styles?.active} ${ubuntu.className} ${styles?.homeSvg}`} onClick={(e) => handleClick(e, '/')}>{isNavExpanded ? 'Home' : <IoMdHome />}</Link>
               </li>
+              {/* <li>
+                <Link href={`/articles`} title='Archives | PhysioZine' className={`${router?.route?.includes('/articles') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/articles')}>Magazines</Link>
+              </li> */}
               <li>
-                <Link href={`/articles`} title='Archives | PhysioZine' className={`${router?.route?.includes('/articles') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/articles')}>Articles</Link>
+                <Link href={`/magazines`} title='Magazines | PhysioZine' className={`${router?.route?.includes('/magazines') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/magazines')}>Magazines</Link>
               </li>
 
               <li className={styles?.aboutUs}>
