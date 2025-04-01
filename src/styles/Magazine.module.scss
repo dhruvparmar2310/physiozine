@@ -1,4 +1,7 @@
 .magazineSection {
+    background: rgba(128, 128, 128, 0.094);
+    padding-top: 130px;
+
     .innerContent {
         .magazineTitle {
             p {
@@ -115,15 +118,27 @@
 
 @media (max-width: 576px) {
     .magazineSection {
+        padding-top: 100px;
+
         .innerContent {
+            padding: 0;
+
+            .magazineTitle {
+                p {
+                    font-size: 20px;
+                }
+            }
+
             .latestMagazine {
+                margin: 0;
+
                 .articleCard {
-                    width: 145px;
-                    max-width: none;
+                    width: 100%;
+                    max-width: 155px;
                     margin-top: 30px;
 
                     .cardImg {
-                        width: 145px;
+                        width: 100%;
                     }
 
                     .cardBody {

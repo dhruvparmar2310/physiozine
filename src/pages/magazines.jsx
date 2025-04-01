@@ -28,21 +28,21 @@ const Magazines = () => {
     return (
         <>
             <Head>
-                <title>Join As Editor | PhysioZine</title>
+                <title>Magazines | PhysioZine</title>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name='keywords' content='PhysioZine, Physiotherapy, Join As Editor of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
-                <meta name="description" content="Are you a passionate physiotherapist or healthcare professional looking to share your expertise with the world? Join the PhysioZine editorial team and become a part of our mission to provide cutting-edge information and insights to our growing community." />
-                <meta property="og:title" content="Join As Editor | PhysioZine" />
-                <meta property="og:description" content="Are you a passionate physiotherapist or healthcare professional looking to share your expertise with the world? Join the PhysioZine editorial team and become a part of our mission to provide cutting-edge information and insights to our growing community." />
-                <meta property="og:url" content="https://physiozine.vercel.app/joinAsEditor" />
+                <meta name='keywords' content='PhysioZine, Physiotherapy, Magazine of PhysioZine, PhysioZine Ads, Physio Magazine, Physio Article, ThePhysioBrothers, Magazine for Physiotherapy, Physiotherapy Magazine, Magazine for Physiotherapy India, Indian Physiotherapy Magazine' />
+                <meta name="description" content="India's leading digital magazine for Physiotherapy." />
+                <meta property="og:title" content="Magazines | PhysioZine" />
+                <meta property="og:description" content="India's leading digital magazine for Physiotherapy." />
+                <meta property="og:url" content="https://physiozine.vercel.app/magazines" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Magazines'} />
+            {/* <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Magazines'} /> */}
             <section className={`${styles?.magazineSection}`}>
                 <div className={`${styles?.innerContent} container`}>
                     <div className={styles?.magazineTitle}>
