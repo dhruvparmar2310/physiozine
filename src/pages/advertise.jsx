@@ -306,11 +306,11 @@ const Advertise = () => {
                                     <tbody>
                                         <tr>
                                             <td>Double Pages</td>
-                                            <td className={`${styles?.price}`}>3000/-</td>
+                                            <td className={`${styles?.price}`}>4000/-</td>
                                         </tr>
                                         <tr>
                                             <td>Single Page</td>
-                                            <td className={`${styles?.price}`}>2000/-</td>
+                                            <td className={`${styles?.price}`}>3000/-</td>
                                         </tr>
                                         <tr>
                                             <td>Half Page</td>
@@ -326,13 +326,19 @@ const Advertise = () => {
                                         </tr>
                                         <tr>
                                             <td>Single Page in Magazine + <br />Social Media Advertisement</td>
-                                            <td className={`${styles?.price}`}>5,000/-</td>
+                                            <td className={`${styles?.price}`}>4,000/-</td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 Double Page in Magazine + <br /> Social Media Advertisement
                                             </td>
                                             <td className={`${styles?.price}`}>5,500/-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Website of Indian Journal of Physical Therapy
+                                            </td>
+                                            <td className={`${styles?.price}`}>10,000/-</td>
                                         </tr>
                                     </tbody>
                                 </Table>
