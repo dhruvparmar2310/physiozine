@@ -38,10 +38,8 @@ function InterviewID ({ data }) {
             setInterviewDetails(data)
         }
     }, [interviewID])
-    console.log('interviewDetails :>> ', interviewDetails);
 
     const handleCopyLink = async (link) => {
-        console.log('link :>> ', link);
         try {
             await copy(link)
             setIsCopied(true)

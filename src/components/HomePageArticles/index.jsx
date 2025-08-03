@@ -1,14 +1,11 @@
-import React, { useEffect } from 'react'
-import { articles } from '@/data/articles';
+import React from 'react'
 import Image from 'next/image';
 import styles from '../../styles/HomePageArticles.module.scss'
 import { saveAs } from 'file-saver'
-import { GrNext, GrPrevious } from 'react-icons/gr';
-import Slider from 'react-slick';
 import { Ubuntu } from 'next/font/google';
 import { Button } from 'react-bootstrap';
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import { FaShare } from "react-icons/fa"
+import { allMagazine } from '@/data/magazine';
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500', '700'], style: ['normal'] })
 const HomePageArticles = () => {
@@ -33,7 +30,6 @@ const HomePageArticles = () => {
         ]
     };
 
-    const sortArticle = articles?.reverse()
     return (
         <>
             {/* <div className={`${styles?.magazine}`}>
@@ -83,18 +79,18 @@ const HomePageArticles = () => {
             </div> */}
 
             <div className={styles?.homePageArticleSlider}>
-                {sortArticle?.map(article => {
+                {allMagazine[new Date().getFullYear()]?.sort((a, b) => b._id - a._id)?.map(article => {
                     return (
                         <tr key={article?._id}>
                             <div className={`${styles?.articleCard}`}>
                                 <div className={`${styles?.cardImg}`}>
-                                    <Image src={article?.img} className='img-fluid' priority quality={100} width={100} height={100} alt={article?.title} />
+                                    <Image src={article?.sImage} className='img-fluid' priority quality={100} width={100} height={100} alt={`${article?.sMonth}, ${article?.sYear}`} />
                                 </div>
                                 <div className={`${styles?.cardBody}`}>
                                     {/* <h1 className={ubuntu?.className}>{article?.title}</h1> */}
-                                    <p className={ubuntu?.className}>{article?.nMonth}</p>
+                                    <p className={ubuntu?.className}>{article?.sMonth}</p>
 
-                                    <Button className={`${styles?.downloadBtn} ${ubuntu?.className}`} variant='info' onClick={() => saveAs(article?.eBook, article?.title)}>Download <span><FaArrowUpRightFromSquare /></span></Button>
+                                    <Button className={`${styles?.downloadBtn} ${ubuntu?.className}`} variant='info' onClick={() => saveAs(article?.eBook, `Volume-${article?.eBook?.split('-')[1]}, Issue-${article?.eBook?.split('-')[3].split('/')[0]}`)}>Download <span><FaArrowUpRightFromSquare /></span></Button>
                                 </div>
                             </div>
                         </tr>
