@@ -45,7 +45,7 @@ const Magazines = () => {
             {/* <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Magazines'} /> */}
             <section className={`${styles?.magazineSection}`}>
                 <div className={`${styles?.innerContent} container`}>
-                    <div className={styles?.magazineTitle}>
+                    {/* <div className={styles?.magazineTitle}>
                         <p>Latest Magazine</p>
                     </div>
                     <div className={styles?.latestMagazine}>
@@ -57,7 +57,7 @@ const Magazines = () => {
                                             <Image src={article?.sImage} className='img-fluid' priority quality={100} width={100} height={100} alt={article?.sMonth + ', ' + article?.sYear} />
                                         </div>
                                         <div className={`${styles?.cardBody}`}>
-                                            {/* <h1 className={ubuntu?.className}>{article?.title}</h1> */}
+                                            <h1 className={ubuntu?.className}>{article?.title}</h1>
                                             <p className={ubuntu?.className}>{article?.sMonth}, {article?.sYear}</p>
 
                                             <Button className={`${styles?.downloadBtn} ${ubuntu?.className}`} variant='info' onClick={() => saveAs(article?.eBook, article?.sMonth + ', ' + article?.sYear)}>
@@ -70,7 +70,7 @@ const Magazines = () => {
                                 </tr>
                             )
                         })}
-                    </div>
+                    </div> */}
 
                     {Object.keys(allMagazine)
                         .sort((a, b) => b - a) // Sort years in descending order
@@ -80,7 +80,7 @@ const Magazines = () => {
                                     <p>{year}</p>
                                 </div>
                                 <div className={styles?.latestMagazine}>
-                                    {allMagazine[year].map((article) => (
+                                    {allMagazine[year]?.sort((a, b) => b._id - a._id)?.map((article) => (
                                         <tr key={article?._id}>
                                             <div className={`${styles?.articleCard}`}>
                                                 <div className={`${styles?.cardImg}`} onClick={() => window.open(article?.eBook)}>
