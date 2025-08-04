@@ -3,6 +3,7 @@ import styles from '../../styles/Header.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
 import TextLogo from '../../../public/assets/img/logo-1.png'
+import WebinarLogo from '../../../public/assets/img/webinar-logo.png'
 import { Bebas_Neue, Teko, Ubuntu } from 'next/font/google'
 import { useRouter } from 'next/router'
 import { RiMenu3Fill } from "react-icons/ri";
@@ -57,7 +58,7 @@ function Header () {
           <div className={isNavExpanded ? `${styles.top_header}` : `${styles.top_headerWeb}`}>
             <h1 className={`${styles.logo} mr-auto`} title='PhysioZine'>
               <Link href='/' style={{ fontWeight: '500' }} passHref>
-                <Image src={TextLogo} alt='' quality={100} width={250} height={100} priority />
+                <Image src={router.route.includes('webinar') ? WebinarLogo : TextLogo} alt='' quality={100} width={250} height={100} priority />
               </Link>
             </h1>
             <button className={`${styles.menu}`}
@@ -71,16 +72,16 @@ function Header () {
           <nav className={isNavExpanded ? `${styles.nav_menu} ${styles.expanded} d-lg-block` : `${styles.nav_menu} d-lg-block`}
           >
             <ul>
-              <li className="active">
-                <Link href='/' title='Home | PhysioZine' className={`${router?.route === '/' && styles?.active} ${ubuntu.className} ${styles?.homeSvg}`} onClick={(e) => handleClick(e, '/')}>{isNavExpanded ? 'Home' : <IoMdHome />}</Link>
-              </li>
               {/* <li>
                 <Link href={`/articles`} title='Archives | PhysioZine' className={`${router?.route?.includes('/articles') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/articles')}>Magazines</Link>
-              </li> */}
+                </li> */}
               <li>
                 <Link href={`/magazines`} title='Magazines | PhysioZine' className={`${router?.route?.includes('/magazines') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/magazines')}>Magazines</Link>
               </li>
 
+              <li className="active">
+                <Link href='/webinar' title='Webinar | PhysioZine' className={`${router?.route === '/webinar' && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/webinar')}>Webinar</Link>
+              </li>
               <li className={styles?.aboutUs}>
                 <span title='Services | PhysioZine' className={`${allServiceRoutes && styles?.active} ${ubuntu.className}`}
                   onClick={() => width ? setDropDownOpen(!dropdownOpen) : ''}
