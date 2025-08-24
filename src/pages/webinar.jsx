@@ -102,7 +102,7 @@ const Webinar = ({ webinars }) => {
 export default Webinar
 
 export const getServerSideProps = async () => {
-    const res = await fetch(`${process.env.LOCALHOST}/api/webinar`)
-    const webinars = await res.json()
+    const res = await fetch(`${process.env.DEPLOY}/api/webinar`)
+    const webinars = await res?.json()
     return { props: { webinars: webinars?.data } }
 }
