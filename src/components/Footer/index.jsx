@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../../styles/Footer.module.scss'
 import Link from 'next/link'
-import { FaLinkedinIn, FaWhatsapp, FaInstagram, FaBookReader } from "react-icons/fa"
+import { FaLinkedinIn, FaWhatsapp, FaInstagram, FaBookReader, FaYoutube } from "react-icons/fa"
 import { Form } from 'react-bootstrap'
 import { Controller, useForm } from 'react-hook-form'
 import logo from '../../../public/assets/img/footer-logo.png'
@@ -185,6 +185,9 @@ const Footer = () => {
                         </Link>
                         <Link href="https://www.instagram.com/physiozineofficial/" target="_blank" className={styles.instagram} title='Instagram | PhysioZine'>
                             <FaInstagram />
+                        </Link>
+                        <Link href="https://www.youtube.com/@physiozine" target="_blank" className={styles.youtube} title='Youtube Channel | PhysioZine'>
+                            <FaYoutube />
                         </Link>
                     </div>
                 </div>

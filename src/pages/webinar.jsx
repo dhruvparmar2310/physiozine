@@ -1,18 +1,28 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/Webinar.module.scss'
-import webinarOne from '../../public/assets/img/webinar/webinar.jpg'
+import webinarOne from '../../public/assets/img/webinar/23-08-25.png'
 import Image from 'next/image'
 import { Ubuntu } from 'next/font/google'
-import { Button } from 'react-bootstrap'
+import { Button, Col, Modal, Row } from 'react-bootstrap'
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6'
 import { useRouter } from 'next/router'
+import Skeleton from 'react-loading-skeleton'
+import Link from 'next/link'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
-const Webinar = () => {
-    const CARD_TAG = {
-        REGISTER: 'Register Now',
-        YOUTUBE: 'YouTube Link'
+const Webinar = ({ webinars }) => {
+    const [modal, setModal] = useState(false)
+    const handleClick = (data) => {
+        if (data?.sLink) {
+            window.open(data?.sLink, '_blank')
+        } else {
+            setModal(true);
+        }
+    }
+
+    const handleClose = () => {
+        setModal(false)
     }
     return (
         <>
@@ -37,35 +47,62 @@ const Webinar = () => {
                     <div className={styles?.magazineTitle}>
                         <p>Webinar Series</p>
                     </div>
-                    <div className={styles?.latestMagazine}>
-                        <div className={`${styles?.articleCard}`} onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScmb_W-q5Wf6LPBugf-KTcG8A1ofnZxWaGL-oc6WQ8hJClKNA/viewform?usp=pp_url', '_blank')}>
-                            <div className={`${styles?.cardImg}`}>
-                                <Image src={webinarOne} className='img-fluid' priority quality={100} width={100} height={100} alt='Webinar' />
-                            </div>
-                            <div className={`${styles?.cardBody}`}>
-                                <div className={styles?.topContent}>
-                                    <p className={ubuntu?.className}><span>Date:</span> <span>06/09/2025, 6:00 - 7:00 PM</span></p>
-                                </div>
-                                <div className={styles?.bottomContent}>
-                                    <p className={ubuntu?.className}>{CARD_TAG.REGISTER}</p>
-                                    <p className={`${ubuntu?.className} ${styles?.runningArrow}`}>
-                                        <span className={`${styles?.arrow} ${styles?.arrow1}`}>&gt;</span>
-                                        <span className={`${styles?.arrow} ${styles?.arrow2}`}>&gt;</span>
-                                        <span className={`${styles?.arrow} ${styles?.arrow3}`}>&gt;</span>
-                                        <span className={`${styles?.arrow} ${styles?.arrow4}`}>&gt;</span>
-                                    </p>
 
-                                    <Button className={`${styles?.downloadBtn} `} variant='info' onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScmb_W-q5Wf6LPBugf-KTcG8A1ofnZxWaGL-oc6WQ8hJClKNA/viewform?usp=pp_url', '_blank')}>
-                                        Click Here <span><FaArrowUpRightFromSquare /></span>
-                                    </Button>
-                                </div>
-                            </div>
-                        </div>
+                    <div className={`${styles?.webinarContainer}`}>
+                        <Row>
+                            {webinars ?
+                                webinars?.sort((a, b) => b._id - a._id)?.map(webinar => (
+                                    <Col xxl={4} xl={4} lg={4} md={6} sm={12} key={webinar._id}>
+                                        <div className={`${styles?.webinarCard}`} onClick={() => handleClick(webinar)}>
+                                            <div className={`${styles?.topContent}`}>
+                                                <Image
+                                                    src={webinar?.sImage}
+                                                    width={100}
+                                                    height={100}
+                                                    quality={100}
+                                                    title={webinar?.sTitle + ' PhysioZine'}
+                                                    alt={webinar?.sTitle}
+                                                />
+                                            </div>
+                                            <div className={`${styles?.bottomContent}`}>
+                                                <p>{webinar?.sTitle}</p>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                )) :
+                                <>
+                                    <Col xxl={4} xl={4} lg={4} md={6} sm={12}>
+                                        <Skeleton count={1} width={360} height={200} borderRadius={10} />
+                                    </Col>
+                                    <Col xxl={4} xl={4} lg={4} md={6} sm={12}>
+                                        <Skeleton count={1} width={360} height={200} borderRadius={10} />
+                                    </Col>
+                                    <Col xxl={4} xl={4} lg={4} md={6} sm={12}>
+                                        <Skeleton count={1} width={360} height={200} borderRadius={10} />
+                                    </Col>
+                                </>
+                            }
+                        </Row>
                     </div>
                 </div>
             </section>
+
+            <Modal show={modal} onHide={handleClose} size='md'>
+                <Modal.Header closeButton>
+                    <Modal.Title>Webinar Series</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>Webinar will be uploaded soon. Subscribe to <Link href='https://www.youtube.com/@physiozine' target='_blank'>PhysioZine Youtube Channel</Link> to stay updated.</p>
+                </Modal.Body>
+            </Modal>
         </>
     )
 }
 
 export default Webinar
+
+export const getServerSideProps = async () => {
+    const res = await fetch(`${process.env.LOCALHOST}/api/webinar`)
+    const webinars = await res.json()
+    return { props: { webinars: webinars?.data } }
+}
