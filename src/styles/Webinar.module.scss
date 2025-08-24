@@ -19,143 +19,33 @@
             }
         }
 
-        .latestMagazine {
-            display: flex;
-            flex-wrap: wrap;
-            overflow: hidden;
-            margin: 20px 0;
-
-            &::-webkit-scrollbar {
-                width: 0.30rem;
-                background-color: var(--primary-light);
-                border-radius: 0.5rem;
-            }
-
-            &::-webkit-scrollbar-thumb {
-                background-color: var(--primary-color) !important;
-                border-radius: 0.5rem;
-            }
-
-            &::-webkit-scrollbar {
-                height: 5px;
-            }
-
-            tr {
-                margin: 0 5px;
-            }
-
-            .articleCard {
-                overflow: hidden;
-                cursor: pointer;
-                min-width: fit-content;
-                margin: 0 !important;
+        .webinarContainer {
+            .webinarCard {
                 width: 100%;
-                max-width: 280px;
+                max-width: 360px;
+                height: auto;
+                cursor: pointer;
 
-                .cardImg {
-                    width: 280px;
+                .topContent {
                     overflow: hidden;
 
                     img {
                         width: 100%;
                         height: 100%;
-                        // object-fit: cover;
-                        transition: 0.5s ease-in-out;
+                        object-fit: contain;
+                        border-radius: 10px;
                     }
                 }
 
-                .cardBody {
+                .bottomContent {
                     padding: 10px 0;
-                    text-align: left;
-                    background: transparent !important;
 
-                    .topContent {
-                        p {
-                            color: #0f2557 !important;
-                            font-size: 15px;
-                            font-weight: 700;
-                            margin: 0;
-                            display: flex;
-                            justify-content: flex-start;
-                            align-items: center;
-                            gap: 10px;
-                        }
-                    }
-
-                    .bottomContent {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: baseline;
-
-                        h1 {
-                            color: var(--primary-color) !important;
-                            font-size: 16px;
-                            font-weight: 700;
-                            margin: 0;
-                        }
-
-                        p {
-                            color: #0f2557 !important;
-                            font-size: 16px;
-                            font-weight: 700;
-                            margin: 0;
-                            text-align: left;
-
-                            &.runningArrow {
-                                display: flex;
-                                gap: 2px;
-
-                                .arrow {
-                                    color: #0f2557;
-                                    animation: arrowRun 1s infinite;
-
-                                    &.arrow1 {
-                                        animation-delay: 0s;
-                                    }
-
-                                    &.arrow2 {
-                                        animation-delay: 0.25s;
-                                    }
-
-                                    &.arrow3 {
-                                        animation-delay: 0.5s;
-                                    }
-
-                                    &.arrow4 {
-                                        animation-delay: 0.75s;
-                                    }
-
-                                    @keyframes arrowRun {
-
-                                        0%,
-                                        100% {
-                                            color: #0f2557;
-                                        }
-
-                                        50% {
-                                            color: white;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .downloadBtn {
-                            border: none;
-                            border-radius: 99px;
-                            font-size: 14px;
-                            padding: 2px 8px;
-                            font-weight: 500;
-                            letter-spacing: 0.5px;
-                            color: var(--white-color);
-                            border: 1px solid #0f2557;
-                            background: #0f2557;
-                            margin: 0;
-
-                            svg {
-                                font-size: 12px !important;
-                            }
-                        }
+                    p {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-family: 'Ubuntu', sans-serif;
+                        line-height: 1.2;
+                        color: var(--primary-dark);
                     }
                 }
             }
@@ -163,34 +53,31 @@
     }
 }
 
-@media (max-width: 576px) {
+
+@media (min-width: 1400px) and (max-width: 1950px) {
+
     .magazineSection {
-        padding-top: 100px;
+        padding-top: 150px !important;
 
         .innerContent {
             padding: 0;
 
             .magazineTitle {
                 p {
-                    font-size: 20px;
+                    font-size: 2.2rem !important;
+
+                    &::after {
+                        width: 80px;
+                    }
                 }
             }
 
-            .latestMagazine {
-                margin: 0;
-
-                .articleCard {
-                    width: 100%;
-                    max-width: 155px;
-                    margin-top: 30px;
-
-                    .cardImg {
-                        width: 100%;
-                    }
-
-                    .cardBody {
-                        .downloadBtn {
-                            border-radius: 5px;
+            .webinarContainer {
+                .webinarCard {
+                    .bottomContent {
+                        p {
+                            font-size: 1.1rem;
+                            line-height: 1.3;
                         }
                     }
                 }
