@@ -17,6 +17,7 @@ import odfLogo from '../../public/assets/img/odf-logo.png'
 import mahalaxmiLogo from '../../public/assets/img/mahalaxmi.jpeg'
 import jainUniversityLogo from '../../public/assets/img/jain-university.jpeg'
 import konvergeLogo from '../../public/assets/img/konverge.jpeg'
+import JGLogo from '../../public/assets/img/JG-College.png'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['normal'] })
 const Conferences = () => {
@@ -56,11 +57,45 @@ const Conferences = () => {
                             <div className={`${styles?.tabContent}`}>
                                 <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
                                     <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
+                                        <h1 className={`${ubuntu?.className} text-uppercase`}>JG Physiocon 2026 - National Physiotherapy Conference</h1>
+                                        <p className='mt-4'>Theme: Restoring Moment & Rebuilding Lives</p>
+                                        <p>Venue: Pandit Deendayal Upadhyay Auditorium, Ahmedabad</p>
+                                        <p>Date: 20 - 21 February, 2026</p>
+                                        <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://axisbpayments.razorpay.com/jgphysiocon')}>Register Now</Button>
+                                    </div>
+                                    <div className={styles?.middleImg}>
+                                    </div>
+                                    <div className={styles?.lastDetails}>
+                                        <p>Organized By</p>
+                                        <Image
+                                            src={JGLogo}
+                                            alt='JG College of Physiotherapy Logo'
+                                            loading='lazy'
+                                            quality={100}
+                                            className="img-fluid"
+                                            style={{ maxWidth: '100px' }}
+                                        />
+
+                                        <p className='mt-3'>Media Partner</p>
+                                        <Image
+                                            src={mainLogo}
+                                            alt='PhysioZine Logo'
+                                            loading='lazy'
+                                            quality={100}
+                                            className="img-fluid"
+                                        />
+                                    </div>
+                                </div>
+
+                                <hr />
+
+                                <div className={`${styles?.upcomingDetailCard} ${ubuntu?.className}`}>
+                                    <div className={`${styles?.cardDetails} ${ubuntu?.className}`}>
                                         <h1 className={`${ubuntu?.className} text-uppercase`}>1<sup>st</sup> International Physiotherapy Conference, Physio Confluence, 2025</h1>
                                         <p className='mt-4'>Theme: Expanding horizons in Physiotherapy</p>
                                         <p>Venue: Zila Parishad Auditorium Powai Naka, Satara, Maharastra</p>
                                         <p>Date: 22 - 23 February, 2025</p>
-                                        <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://docs.google.com/forms/d/e/1FAIpQLSdvgVmc-dmcswi-sv_zRpmpFxsiKKQ5wZvZGy77_cYKeYImkQ/viewform?pli=1')}>Register Now</Button>
+                                        {/* <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://docs.google.com/forms/d/e/1FAIpQLSdvgVmc-dmcswi-sv_zRpmpFxsiKKQ5wZvZGy77_cYKeYImkQ/viewform?pli=1')}>Register Now</Button> */}
                                     </div>
                                     <div className={styles?.middleImg}>
                                     </div>
@@ -94,7 +129,7 @@ const Conferences = () => {
                                         <p className='mt-4'>Theme: Physiotherapy</p>
                                         <p>Venue: Jain University, Bangalore</p>
                                         <p>Date: 20 - 21 March, 2025</p>
-                                        <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://docs.google.com/forms/d/e/1FAIpQLScPC-s2ThAwrIfmbWgUCGBd7VtczEZXvRpN5zvKnegbkQZV_w/viewform?usp=send_form')}>Register Now</Button>
+                                        {/* <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://docs.google.com/forms/d/e/1FAIpQLScPC-s2ThAwrIfmbWgUCGBd7VtczEZXvRpN5zvKnegbkQZV_w/viewform?usp=send_form')}>Register Now</Button> */}
                                     </div>
                                     <div className={styles?.middleImg}>
                                         <Image
@@ -134,7 +169,7 @@ const Conferences = () => {
                                         <p className='mt-4'>Theme: Recognition, Resolution, Rehabilitation</p>
                                         <p>Venue: Mumbai</p>
                                         <p>Date: 19 - 20 April, 2025</p>
-                                        <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://feppa.org/feppa-2025-2nd-annual-conference-of-female-pelvic-pain-association/')}>Register Now</Button>
+                                        {/* <Button className={`${styles?.readMoreBtn} ${ubuntu?.className}`} onClick={() => router.push('https://feppa.org/feppa-2025-2nd-annual-conference-of-female-pelvic-pain-association/')}>Register Now</Button> */}
                                     </div>
                                     <div className={styles?.middleImg}>
                                         <Image
