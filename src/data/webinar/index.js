@@ -11,6 +11,6 @@ export const WEBINAR_DATA = [
         sImage: 'assets/img/webinar/06-09-25.png',
         dDateTime: '06-09-25',
         sTitle: 'Preventing frailty and falls in geriatrics',
-        sLink: null
+        sLink: 'https://youtu.be/1wWXoopHePs?si=-oH9oRiYl9JlzfM9'
     }
 ]
