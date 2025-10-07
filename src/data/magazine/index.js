@@ -65,5 +65,12 @@ export const allMagazine = {
             sImage: 'assets/img/magazines/Vol-2-Issue-4.jpg',
             eBook: 'assets/pdfs/vol-2-issue-4/PhysioZine Vol 2, Issue 4.pdf'
         },
+        {
+            _id: '205',
+            sYear: '2025',
+            sMonth: 'October',
+            sImage: 'assets/img/magazines/Vol-2-Issue-5.png',
+            eBook: 'assets/pdfs/vol-2-issue-5/PhysioZine Vol 2, Issue 5.pdf'
+        },
     ]
 }
