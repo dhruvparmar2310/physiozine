@@ -16,6 +16,7 @@
                 letter-spacing: 0.8px;
                 color: var(--primary-color);
                 font-style: italic;
+                text-transform: capitalize;
 
                 &:hover {
                     color: var(--primary-dark);

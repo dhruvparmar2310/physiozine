@@ -33,7 +33,7 @@ function Hero ({ width }) {
     return (
         <>
             <section className={`${styles?.hero}`} id='hero'>
-                <div className={`${styles?.heroContent} container-sm`}>
+                <div className={`${styles?.heroContent}`}>
                     <div className={`${styles?.adsContent}`}>
                         <motion.h1
                             className={`mt-3`}
@@ -45,7 +45,7 @@ function Hero ({ width }) {
                                 ease: 'easeInOut', // easing function for a smoother animation
                             }}
                         >
-                            India's <span style={{ color: 'var(--primary-color)' }}>pioneering</span> digital magazine
+                            The Global Hub for Physiotherapy <span style={{ color: 'var(--white-color)' }}>Research</span>, <span style={{ color: 'var(--white-color)' }}>Education</span> and <span style={{ color: 'var(--white-color)' }}>Professional Growth</span>
                         </motion.h1>
                         <motion.p
                             className={`${styles?.desc} ${Roboto_Condensed_Font?.className} mt-3`}
@@ -57,23 +57,11 @@ function Hero ({ width }) {
                                 ease: 'easeInOut', // easing function for a smoother animation
                             }}
                         >
-                            for Physiotherapy, featuring <span style={{ color: 'var(--primary-dark)' }}>peer-reviewed</span> articles.
-                        </motion.p>
-                        <motion.p
-                            className={`${styles?.desc} ${Roboto_Condensed_Font?.className} mt-3`}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{
-                                delay: width ? 0 : 0.8, // delay the animation by 0.2 seconds
-                                duration: width ? 0.3 : 1, // animation duration of 0.8 seconds
-                                ease: 'easeInOut', // easing function for a smoother animation
-                            }}
-                        >
-                            <span style={{ color: 'var(--primary-dark)' }}>Read the latest research and empower your physiotherapy journey.</span>
+                            Access Leading Journal, Magazine, Cutting Edge Webinars and Premier Conference.
                         </motion.p>
 
-                        <div className='d-flex'>
-                            {/* <motion.div
+                        {/* <div className='d-flex'>
+                            <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{
@@ -84,7 +72,7 @@ function Hero ({ width }) {
                                 className='mt-3 me-3'
                             >
                                 <Button className={`btn ${styles?.subscribeBtn} ${ubuntu?.className}`} onClick={() => handleSubscriptionBtn()}>Subscribe Now</Button>
-                            </motion.div> */}
+                            </motion.div>
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -110,8 +98,8 @@ function Hero ({ width }) {
                             >
                                 <Button className={`btn ${styles?.referBtn} ${ubuntu?.className}`} onClick={() => router.push('/policy/referPolicy')}>Refer & Earn <LuCoins /></Button>
                             </motion.div>
-                        </div>
-                        <motion.div
+                        </div> */}
+                        {/* <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{
@@ -123,7 +111,7 @@ function Hero ({ width }) {
                             className={`mt-3 ${styles?.googleReviewBtn}`}
                         >
                             <Image src={grBtn} quality={100} alt='Google Review Button' onClick={() => window.open('https://g.page/r/CRcCHyCfyySeEBE/review', '_blank')} />
-                        </motion.div>
+                        </motion.div> */}
                     </div>
 
                     <motion.div
@@ -132,7 +120,7 @@ function Hero ({ width }) {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: width ? 0.3 : 1, animate: 'easeInOut' }}
                     >
-                        <Image src={BannerImg} quality={100} width={100} priority height={100} className={`${styles?.phoneMockUp}`} alt='doctor image' />
+                        {/* <Image src={BannerImg} quality={100} width={100} priority height={100} className={`${styles?.phoneMockUp}`} alt='doctor image' /> */}
                     </motion.div>
                 </div >
             </section >

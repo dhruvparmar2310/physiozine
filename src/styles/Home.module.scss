@@ -599,6 +599,32 @@ main {
     }
   }
 
+  .journal {
+    background: var(--white-color);
+
+    h1 {
+      color: var(--primary-color) !important;
+    }
+
+    .viewMoreBtn {
+      span {
+        cursor: pointer;
+        font-weight: 700;
+        word-spacing: 3px;
+        letter-spacing: 2px !important;
+        color: var(--black-color);
+        transition: 0.5s;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
   .plans {
     .planCards {
       .planCard {

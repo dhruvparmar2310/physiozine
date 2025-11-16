@@ -1,6 +1,239 @@
 .magazineSection {
     background: rgba(128, 128, 128, 0.094);
-    padding-top: 130px;
+    padding: 50px 0px;
+    padding-top: 85px;
+
+    .magazineNav {
+        margin-bottom: 2.5rem;
+
+        .nav_menu {
+            position: relative;
+            background: #fff;
+        }
+
+        .nav_menu ul {
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: left;
+            padding: 0 20px;
+            line-height: 2.5rem;
+        }
+
+        .nav_menu>ul>li {
+            position: relative;
+            white-space: nowrap;
+            padding: 10px 0 10px 28px;
+        }
+
+        .nav_menu a,
+        .nav_menu span {
+            display: block;
+            position: relative;
+            color: #111;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-decoration: none;
+
+            &::after {
+                content: '';
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: transparent;
+                top: -8px;
+            }
+
+            &.homeSvg {
+                svg {
+                    font-size: 25px !important;
+                }
+            }
+
+            &.active {
+                color: var(--primary-color);
+
+                &::after {
+                    content: '';
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background: var(--primary-color);
+                    top: -8px;
+                }
+            }
+        }
+
+        .nav_menu a:hover,
+        .nav_menu .active>a,
+        .nav_menu li:hover>a {
+            color: var(--primary-color);
+
+            &::after {
+                content: '';
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: var(--primary-color);
+                top: -8px;
+            }
+        }
+
+        .drop_down ul {
+            display: block;
+            position: absolute;
+            left: -80px !important;
+            top: calc(100% + 15px) !important;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            padding: 10px 0;
+            border-radius: 5px;
+            background: var(--white-color);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.253);
+            transition: 0.3s;
+            line-height: 1.5rem !important;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .nav_menu {
+            width: 100%;
+            position: relative;
+
+            li {
+                &.aboutUs {
+                    span {
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        .aboutUsContent {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .aboutUsContent {
+                display: none; // TODO: NONE
+                position: fixed;
+                top: 8rem;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                padding: 30px;
+                box-shadow: 0 20px 20px rgba(0, 0, 0, 0.253);
+
+                .row {
+                    align-items: baseline;
+                }
+
+                p {
+                    padding: 0 15px;
+                    margin: 0;
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: gray;
+                    position: relative;
+                }
+
+                ul {
+                    display: block;
+                    padding: 0 15px;
+                    line-height: 1.8;
+
+                    li {
+                        width: 100%;
+                        box-sizing: border-box;
+                        max-width: calc(100% - 100px);
+
+                        a {
+                            cursor: pointer;
+
+                            &::after {
+                                content: none;
+                                background: none;
+                            }
+
+                            &.active,
+                            &:hover {
+                                border: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .drop_down:hover>ul {
+            opacity: 1;
+            top: 100%;
+            visibility: visible;
+        }
+
+        .nav_menu .drop_down li {
+            min-width: 180px;
+            position: relative;
+        }
+
+        .nav_menu .drop_down ul a {
+            padding: 8px 20px;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: none;
+            color: #111;
+            letter-spacing: 0.3mm;
+            border: none !important;
+
+            &.active {
+                color: var(--primary-color);
+
+                &::after {
+                    width: 0%;
+                    height: 0%;
+                }
+            }
+        }
+
+        .dropDownButton {
+            font-size: 1.15rem;
+
+            svg {
+                font-size: 13px;
+            }
+        }
+
+        .nav_menu .drop_down ul a:hover,
+        .nav_menu .drop_down ul .active>a,
+        .nav_menu .drop_down ul li:hover>a {
+            color: var(--primary-color);
+
+            &::after {
+                width: 0%;
+                height: 0%;
+            }
+        }
+
+        .nav_menu .drop_down .drop_down ul {
+            top: 0;
+            left: calc(100% - 30px);
+        }
+
+        .nav_menu .drop_down .drop_down:hover>ul {
+            opacity: 1;
+            top: 0;
+            left: 100%;
+        }
+
+        .nav_menu .drop_down .drop_down>a {
+            padding-right: 35px;
+        }
+    }
 
     .innerContent {
         .magazineTitle {
@@ -54,7 +287,7 @@
 
                 &:hover {
                     .cardImg img {
-                        transform: scale(1.05);
+                        // transform: scale(1.05);
                     }
                 }
 
@@ -118,10 +351,36 @@
 
 @media (max-width: 576px) {
     .magazineSection {
-        padding-top: 100px;
+        padding-top: 80px;
+
+        .magazineNav {
+            overflow-x: auto;
+            background: #fff;
+
+            &::-webkit-scrollbar {
+                width: 0.30rem;
+                height: 3px;
+                background-color: var(--primary-color) !important;
+                border-radius: 0.5rem;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--primary-dark) !important;
+                border-radius: 0.5rem;
+            }
+
+            .nav_menu ul {
+                width: fit-content;
+                padding: 0 10px;
+
+                li {
+                    padding: 10px 15px;
+                }
+            }
+        }
 
         .innerContent {
-            padding: 0;
+            padding: 0 30px;
 
             .magazineTitle {
                 p {
@@ -133,7 +392,6 @@
                 margin: 0;
 
                 .articleCard {
-                    width: 100%;
                     max-width: 155px;
                     margin-top: 30px;
 
@@ -142,8 +400,19 @@
                     }
 
                     .cardBody {
+                        p {
+                            font-size: 18px;
+                        }
+
                         .downloadBtn {
+                            padding: 6px;
                             border-radius: 5px;
+
+                            span {
+                                svg {
+                                    font-size: 15px !important;
+                                }
+                            }
                         }
                     }
                 }

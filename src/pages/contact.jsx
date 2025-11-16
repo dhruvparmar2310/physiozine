@@ -64,10 +64,10 @@ const Contact = () => {
                                             <p>Ahmedabad, Gujarat - 382470</p>
                                         </div> */}
                                         <div className={`${styles.cardBody}`}>
-                                            <p>Kuldevi Krupa,</p>
-                                            <p>Sahkar Society, Street No.- 3,</p>
-                                            <p>Sahkar Main Road,</p>
-                                            <p>Rajkot, Gujarat - 360002</p>
+                                            <p>Aatishya 100, B-102</p>
+                                            <p>Nr. Lubi Corporate Road,</p>
+                                            <p>Opp. Tulsi Status,</p>
+                                            <p>Ahmedabad, Gujarat - 382421</p>
                                         </div>
                                     </div>
 
@@ -77,7 +77,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={6} md={6}>
+                            {/* <Col lg={6} md={6}>
                                 <div className={`${styles?.cardDetails}`}>
                                     <div className={`${styles?.cardTitle}`}>
                                         <h1 className={ubuntu?.className}>Chief Editor</h1>
@@ -96,7 +96,7 @@ const Contact = () => {
                                         <p>Phone No.: +91-9429129409</p>
                                     </div>
                                 </div>
-                            </Col>
+                            </Col> */}
                         </Row>
                     </div>
 

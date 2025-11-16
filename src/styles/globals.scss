@@ -105,20 +105,33 @@ h6 {
 /*--------------------------------------------------------------
 # Progressive Web App
 --------------------------------------------------------------*/
-.install-button {
-  background: transparent !important;
+#setup_button {
+  background: var(--primary-dark) !important;
   padding: 8px 25px !important;
   border: none;
   border-radius: 99px !important;
   border: 2px solid var(--primary-dark) !important;
   font-size: 13px !important;
-  color: var(--primary-dark) !important;
+  color: var(--white-color) !important;
   font-weight: 500;
   transition: 0.3s ease-in-out !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  svg {
+    color: var(--white-color);
+  }
 
   &:hover {
-    background: var(--primary-dark) !important;
-    color: var(--white-color) !important;
+    background: transparent !important;
+    border-color: var(--primary-dark);
+    color: var(--primary-dark) !important;
+
+    svg {
+      color: var(--primary-dark);
+    }
   }
 }
 
@@ -135,7 +148,7 @@ section {
     font-weight: 700;
     line-height: 2.2rem;
     color: var(--primary-color);
-    letter-spacing: 3.5px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 

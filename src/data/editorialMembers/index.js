@@ -5,10 +5,10 @@ export const members = [
         name: 'Dr. Darshan Parmar',
         profile: 'assets/img/Members/Dr.DarshanParmar.JPG',
         education: 'MPT in Neurological Conditions',
-        designation: 'Assistant Professor at K.D.Institute of Physiotherapy',
+        designation: 'Assistant Professor at Shree Swaminarayan Physiotherapy College, Swaminarayan University',
         role: ['Founder of PhysioZine, ThePhysioBrothers, YogaSanskriti'],
-        emailAddress: 'insitute.phy@kdhospital.co.in',
-        address: 'K.D.Institute of Physiotherapy, Nr. SGVP Hospital, Vaishnavdevi circle, Sarkhej - Gandhinagar Highway, Ahmedabad, Gujarat - 382421'
+        emailAddress: 'fophy.darshanp@swaminarayanuniversity.ac.in',
+        address: 'Swaminarayan University, Kalol, Gujarat - 382421'
     },
     {
         _id: '2',
@@ -18,7 +18,7 @@ export const members = [
         education: 'MPT in Neurological Conditions',
         designation: '',
         role: ['Co-Founder of PhysioZine, ThePhysioBrothers'],
-        emailAddress: 'insitute.phy@kdhospital.co.in',
+        emailAddress: '-',
         address: 'Suden Physiotherapy Clinic, Yogi Complex, Opp. Maharaja Hotel, Kalol, Gujarat - 382721'
     },
     {
@@ -41,7 +41,7 @@ export const members = [
         education: 'MPT in Rehabilitation',
         designation: 'Lecturer at SBB College of Physiotherapy',
         role: '-',
-        emailAddress: 'insitute.phy@kdhospital.co.in, msheth2969@gmail.com',
+        emailAddress: 'msheth2969@gmail.com',
         address: 'SBB College of Physiotherapy, V.S.Hopital Campus, Ellisbridge, Ahmedabad, Gujarat - 380006'
     },
     {
@@ -75,7 +75,7 @@ export const members = [
         education: 'Ph.D.- Indian Board of Alternative Medicines',
         designation: 'Professor at Ahmedabad Institute of Medical Sciences',
         role: '-',
-        emailAddress: 'insitute.phy@kdhospital.co.in, neetavyassbb@gmail.com',
+        emailAddress: 'neetavyassbb@gmail.com',
         address: 'Ahmedabad Institute of Medical Sciences, Nr. Lions Karnavati Eye Hospital, Lapkaman, Ahmedabad, Gujarat - 380060'
     },
     {
@@ -162,10 +162,10 @@ export const members = [
         name: 'Dr. Poorvin Shah',
         profile: 'assets/img/Members/DrPoorvinShah.jpg',
         education: 'MPT in Orthopedics',
-        designation: 'Assistant Professor at K.D.Institute of Physiotherapy',
+        designation: 'Assistant Professor at Silver Oak University',
         role: '-',
-        emailAddress: 'insitute.phy@kdhospital.co.in',
-        address: 'K.D.Institute of Physiotherapy, Nr. SGVP Hospital, Vaishnavdevi circle, Sarkhej - Gandhinagar Highway, Ahmedabad, Gujarat - 382421'
+        emailAddress: '-',
+        address: 'Silver Oak University, 352/353, Silver Oak University, 370/371, near Bhavik Publication, Gota Gam, Gota, Ahmedabad, Gujarat - 382481'
     },
     {
         _id: '16',
