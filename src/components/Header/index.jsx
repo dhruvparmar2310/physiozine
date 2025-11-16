@@ -3,6 +3,7 @@ import styles from '../../styles/Header.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
 import TextLogo from '../../../public/assets/img/logo-1.png'
+import MainLogo from '../../../public/assets/img/main-logo.png'
 import WebinarLogo from '../../../public/assets/img/webinar-logo.png'
 import { Bebas_Neue, Teko, Ubuntu } from 'next/font/google'
 import { useRouter } from 'next/router'
@@ -12,6 +13,7 @@ import { useScroll } from 'framer-motion'
 import { IoMdHome } from "react-icons/io"
 import { Col, Row } from 'react-bootstrap'
 import useMediaQuery from '@/hooks/useMediaQuery'
+import InstallPWA from '../InstallPWA'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 
@@ -58,7 +60,18 @@ function Header () {
           <div className={isNavExpanded ? `${styles.top_header}` : `${styles.top_headerWeb}`}>
             <h1 className={`${styles.logo} mr-auto`} title='PhysioZine'>
               <Link href='/' style={{ fontWeight: '500' }} passHref>
-                <Image src={router.route.includes('webinar') ? WebinarLogo : TextLogo} alt='' quality={100} width={250} height={100} priority />
+                <Image
+                  src={router.route.includes('webinar') ?
+                    WebinarLogo : router.route === '/' || router.route === '/conferences' || router.route === '/contact'
+                      ? MainLogo :
+                      TextLogo
+                  }
+                  alt=''
+                  quality={100}
+                  width={250}
+                  height={100}
+                  priority
+                />
               </Link>
             </h1>
             <button className={`${styles.menu}`}
@@ -82,7 +95,7 @@ function Header () {
               <li className="active">
                 <Link href='/webinar' title='Webinar | PhysioZine' className={`${router?.route === '/webinar' && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/webinar')}>Webinar</Link>
               </li>
-              <li className={styles?.aboutUs}>
+              {/* <li className={styles?.aboutUs}>
                 <span title='Services | PhysioZine' className={`${allServiceRoutes && styles?.active} ${ubuntu.className}`}
                   onClick={() => width ? setDropDownOpen(!dropdownOpen) : ''}
                 >Our Services <FaChevronDown /></span>
@@ -159,10 +172,10 @@ function Header () {
                     </Col>
                   </Row>
                 </div>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link href={'/editorialMember'} title='Editorial Members | PhysioZine' className={`${router?.route?.includes('/editorialMember') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/editorialMember')}>Editorial Members</Link>
-              </li>
+              </li> */}
               <li>
                 <Link href={'/conferences'} title='Conferences | PhysioZine' className={`${router?.route?.includes('/conferences') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/conferences')}>Conferences</Link>
               </li>
@@ -173,6 +186,9 @@ function Header () {
                 <Link href={'/contact'} className={`${router?.route?.includes('/contact') && styles?.active} ${ubuntu.className}`} title='Contact | PhysioZine' onClick={(e) => handleClick(e, '/contact')}>
                   Contact
                 </Link>
+              </li>
+              <li>
+                <InstallPWA />
               </li>
             </ul>
           </nav>

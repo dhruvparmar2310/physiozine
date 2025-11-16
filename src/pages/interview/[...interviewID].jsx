@@ -174,7 +174,7 @@ function InterviewID ({ data }) {
                                             <span onClick={() => handleCopyLink(`${process.env.DEPLOY}interview/${interviewID}`)}><LuLink /> Copy</span>
                                         </div>
 
-                                        <Image className={styles?.mainLogo} src={TextLogo} alt='PhysioZine | Magazine' quality={100} />
+                                        <Image className={styles?.mainLogo} src={TextLogo} alt='PhysioZine' quality={100} />
                                     </div>
                                 </Col>
                             </Row>

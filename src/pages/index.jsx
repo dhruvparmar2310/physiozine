@@ -55,7 +55,7 @@ export default function Home () {
   const [ref, inView] = useInView({ triggerOnce: true, rootMargin: '300px', });
   const [actionBarRef, actionBarInView] = useInView({ triggerOnce: true, rootMargin: '300px', });
 
-  const [network, setNetwork] = useState(22376)
+  const [network, setNetwork] = useState(1.3)
   const [cityCount, setCityCount] = useState(0);
   const [countryCount, setCountryCount] = useState(0);
   const [teamCount, setTeamCount] = useState(0);
@@ -90,7 +90,7 @@ export default function Home () {
     }, 10);
 
     countryCountInterval = setInterval(() => {
-      if (countryCount <= 10) {
+      if (countryCount <= 13) {
         setCountryCount((prevCount) => prevCount + 1);
       } else {
         clearInterval(countryCountInterval);
@@ -98,7 +98,7 @@ export default function Home () {
     }, 10);
 
     teamInterval = setInterval(() => {
-      if (teamCount < members?.length) {
+      if (teamCount < members?.length + 23) {
         setTeamCount((prevCount) => prevCount + 1);
       } else {
         clearInterval(teamCount);
@@ -130,7 +130,7 @@ export default function Home () {
   return (
     <>
       <Head>
-        <title>PhysioZine | Magazine</title>
+        <title>PhysioZine</title>
         <meta charset="utf-8"></meta>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
 
@@ -176,7 +176,43 @@ export default function Home () {
           </div>
         </section>
 
-        <section className={`${styles?.mediaPartner}`}>
+        <section id="magazines" className={`${styles?.articles}`}>
+          <div className="container">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
+              <h1 className={`sectionTitle`} data-heading='Our Latest' title="Our Latest Research Magazines | PhysioZine">Magazines</h1>
+              <div className={`text-center mt-4 ${styles?.viewMoreBtn} ${ubuntu?.className}`}>
+                <span onClick={() => router.push('/magazines')}>View More</span>
+              </div>
+            </div>
+            <HomePageArticles type='magazine' />
+          </div>
+        </section>
+
+        <section id="journal" className={`${styles?.journal}`}>
+          <div className="container">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
+              <h1 className={`sectionTitle`} data-heading='Our Latest' title="Our Latest Research Magazines | PhysioZine">Journal's Edition</h1>
+              <div className={`text-center mt-4 ${styles?.viewMoreBtn} ${ubuntu?.className}`}>
+                <span onClick={() => router.push('https://ijopt.co.in/archives')}>View More</span>
+              </div>
+            </div>
+            <HomePageArticles type='journal' />
+          </div>
+        </section>
+
+        <section id="magazines" className={`${styles?.articles}`}>
+          <div className="container">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
+              <h1 className={`sectionTitle`} data-heading='Our Latest' title="Our Latest Research Magazines | PhysioZine">Webinars</h1>
+              <div className={`text-center mt-4 ${styles?.viewMoreBtn} ${ubuntu?.className}`}>
+                <span onClick={() => router.push('/webinar')}>View More</span>
+              </div>
+            </div>
+            <HomePageArticles type='webinar' />
+          </div>
+        </section>
+
+        {/* <section className={`${styles?.mediaPartner}`}>
           <div className="container">
             <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='Media Partner with PhysioZine:' title='Media Partner | PhysioZine'> Amplify Your Event’s Reach</h1>
 
@@ -301,8 +337,8 @@ export default function Home () {
                     </span>
                   </div>
                 </div>
-              </Col>
-              {/* <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
+              </Col> */}
+        {/* <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
                 <div
                   className={`${styles?.actionCard} ${ubuntu?.className}`}
                 >
@@ -319,7 +355,7 @@ export default function Home () {
                   </div>
                 </div>
               </Col> */}
-              <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
+        {/* <Col lg={4} md={6} sm={12} className="mt-lg-0 mt-md-0 mt-3">
                 <div
                   className={`${styles?.actionCard} ${ubuntu?.className}`}
                 >
@@ -355,9 +391,9 @@ export default function Home () {
               </Col>
             </Row>
           </div>
-        </section>
+        </section> */}
 
-        <section className={`${styles?.doiFinder} py-0`}>
+        {/* <section className={`${styles?.doiFinder} py-0`}>
           <div className={`${styles?.innerContent} container`}>
             <div className={styles?.cardDesign}>
               <Row>
@@ -380,9 +416,9 @@ export default function Home () {
               </Row>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section id="associated" className={`${styles?.associated} py-0`}>
+        {/* <section id="associated" className={`${styles?.associated} py-0`}>
           <div className={styles?.partner}>
             <h1 className={`sectionTitle text-center`} data-heading='Our International Educational Partner' title='Our International Association | PhysioZine'></h1>
 
@@ -409,9 +445,9 @@ export default function Home () {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section id="about" className={`${styles?.about}`} ref={aboutSectionRef}>
+        {/* <section id="about" className={`${styles?.about}`} ref={aboutSectionRef}>
           <div className="container">
             <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='About' title='About Us | PhysioZine'>PhysioZine</h1>
 
@@ -532,14 +568,14 @@ export default function Home () {
                     <tr>
                       <td>Address</td>
                       <td className={`${styles?.dataValue}`} title='Contact Us | Address of PhysioZine'>
-                        {/* <ol>
+                         <ol>
                           <li>
                             PhysioZine, Aatishya 100, Nr. Lubi Corporate Road, Oppo. Tulsi Status, Ahmedabad, Gujarat - 382470
                           </li>
                           <li>
                             PhysioZine, Kuldevi Krupa, Sahkar Society Street No. - 3, Sahkar Main Road, Rajkot, Gujarat - 360002
                           </li>
-                        </ol> */}
+                        </ol>
                         PhysioZine, Kuldevi Krupa, Sahkar Society Street No. - 3, Sahkar Main Road, Rajkot, Gujarat - 360002
                       </td>
                     </tr>
@@ -548,7 +584,7 @@ export default function Home () {
               </div>
             </div>
           </div>
-        </section >
+        </section > */}
 
         <section className={`${styles?.counter}`}>
           <div className={`${styles?.innerContent} container`}>
@@ -559,7 +595,7 @@ export default function Home () {
               <Col lg={3}>
                 <div className={`${styles?.counterCard}`}>
                   <div><FontAwesomeIcon icon={faChartSimple} color='#c1c1c1' /></div>
-                  <div className={`${styles?.dataValue}`}>{network}+</div>
+                  <div className={`${styles?.dataValue}`}>{network}L+</div>
                   <div className={`${styles?.dataLabel} ${ubuntu?.className}`}>Network</div>
                 </div>
               </Col>
@@ -581,26 +617,14 @@ export default function Home () {
                 <div className={`${styles?.counterCard}`}>
                   <div><FaUsers style={{ color: '#ff8fa3' }} /></div>
                   <div className={`${styles?.dataValue}`}>{teamCount}</div>
-                  <div className={`${styles?.dataLabel} ${ubuntu?.className}`}>Editorial Team</div>
+                  <div className={`${styles?.dataLabel} ${ubuntu?.className}`}>Team Member</div>
                 </div>
               </Col>
             </Row>
           </div>
         </section>
 
-        <section id="magazines" className={`${styles?.articles}`}>
-          <div className="container">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
-              <h1 className={`sectionTitle`} data-heading='Our Latest' title="Our Latest Research Magazines | PhysioZine">Magazines</h1>
-              <div className={`text-center mt-4 ${styles?.viewMoreBtn} ${ubuntu?.className}`}>
-                <span onClick={() => router.push('/magazines')}>View More</span>
-              </div>
-            </div>
-            <HomePageArticles />
-          </div>
-        </section>
-
-        <section id="webAvailable" className={`${styles?.webAvailable}`}>
+        {/* <section id="webAvailable" className={`${styles?.webAvailable}`}>
           <h1 className={`sectionTitle text-center`} data-heading='Major Index' title="Major Index | PhysioZine"></h1>
 
           <div className={`${styles?.innerContent} container mt-4`}>
@@ -666,7 +690,7 @@ export default function Home () {
             </div>
 
           </div>
-        </section>
+        </section> */}
       </main >
     </>
   );

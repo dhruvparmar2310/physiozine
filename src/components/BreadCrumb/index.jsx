@@ -11,7 +11,7 @@ const BreadCrumb = ({ title, link, current }) => {
             <div className={`${styles?.breadcrumbContent} container mt-5`}>
                 <div className={`${styles?.breadcrumb}`}>
                     <span className={`${styles?.breadcrumbItem}`}>
-                        <Link href={link === 'Home' ? '/' : link} className={ubuntu?.className} title={title}>{link}</Link>
+                        <Link href={link === 'Home' ? '/' : link} className={`${ubuntu?.className} text-capitalize`} title={title}>{link}</Link>
                     </span>
                     <span><FaAngleRight /></span>
                     <span className={`${styles?.currentPage} ${ubuntu?.className}`}>{current}</span>

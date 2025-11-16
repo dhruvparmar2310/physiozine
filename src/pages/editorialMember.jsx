@@ -31,7 +31,7 @@ const EditorialMember = ({ data }) => {
                 <link rel="manifest" href="/manifest.json" />
             </Head>
 
-            <BreadCrumb title={'Home | PhysioZine'} link={'Home'} current={'Editorial Members'} />
+            <BreadCrumb title={'Home | PhysioZine'} link={'magazines'} current={'Editorial Members'} />
             <section className={`${styles?.editorialMember} container`}>
                 <div className={`accordion accordion-flush mt-3`} id='main-accordion'>
                     <div className={`accordion-item`}>

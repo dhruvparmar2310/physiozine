@@ -12,5 +12,12 @@ export const WEBINAR_DATA = [
         dDateTime: '06-09-25',
         sTitle: 'Preventing frailty and falls in geriatrics',
         sLink: 'https://youtu.be/1wWXoopHePs?si=-oH9oRiYl9JlzfM9'
+    },
+    {
+        _id: 102,
+        sImage: 'assets/img/webinar/15-11-25.png',
+        dDateTime: '15-11-25',
+        sTitle: 'Neuroplasticity in Action: How Brain Rewires through Physiotherapy',
+        sLink: 'https://youtu.be/xvVuUzAprrk'
     }
 ]
