@@ -193,6 +193,10 @@
             font-weight: 600;
         }
 
+        .serviceGrid {
+            grid-template-columns: repeat(auto-fit, 1fr);
+        }
+
         .innerContent {
             .founderMessage {
                 grid-template-columns: repeat(auto-fit, minmax(50vh, 1fr));
@@ -230,6 +234,25 @@
         }
 
         .innerContent {
+
+            .serviceGrid,
+            .missionCards {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+            }
+
+            .missionCards {
+                .missionCard {
+                    h1 {
+                        font-size: 3vh;
+                    }
+
+                    p,
+                    ul>li {
+                        font-size: 2vh;
+                    }
+                }
+            }
+
             .founderMessage {
                 grid-template-columns: repeat(auto-fit, minmax(50vh, 1fr));
                 grid-template-rows: none;

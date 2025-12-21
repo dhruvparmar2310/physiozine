@@ -22,8 +22,13 @@
         }
 
         .packageTable {
+            th {
+                text-wrap: nowrap;
+            }
+
             td {
                 vertical-align: middle;
+                text-wrap: nowrap;
 
                 &:last-child {
                     text-align: left;
