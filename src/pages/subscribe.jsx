@@ -79,13 +79,13 @@ const Subscribe = () => {
                     <div className={`${styles?.line}`}></div>
 
                     <div className='mt-3'>
-                        <Table responsive bordered striped className='text-center'>
+                        <Table responsive bordered striped className={`text-center ${styles?.packageTable}`}>
                             <thead>
                                 <tr>
                                     {columns?.map((item, index) => {
                                         return (
                                             <React.Fragment key={index}>
-                                                <td>{item}</td>
+                                                <th>{item}</th>
                                             </React.Fragment>
                                         )
                                     })}
@@ -115,7 +115,7 @@ const Subscribe = () => {
                                     {packageColumns?.map((item, index) => {
                                         return (
                                             <React.Fragment key={index}>
-                                                <td className='text-center'>{item}</td>
+                                                <th className='text-center'>{item}</th>
                                             </React.Fragment>
                                         )
                                     })}
