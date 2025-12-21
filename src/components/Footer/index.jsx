@@ -117,7 +117,7 @@ const Footer = () => {
                                     <h4 className={ubuntu?.className}>Useful Links</h4>
                                     <ul>
                                         <li><i className="ri-arrow-right-s-line"></i> <Link href="/" title='Home | PhysioZine' className={ubuntu?.className}>Home</Link></li>
-                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/#about" title='About Us | PhysioZine' className={ubuntu?.className}>About us</Link></li>
+                                        <li><i className="ri-arrow-right-s-line"></i> <Link href="/aboutUs" title='About Us | PhysioZine' className={ubuntu?.className}>About us</Link></li>
                                         <li><i className="ri-arrow-right-s-line"></i> <Link href="/magazines" title='Our Latest Articles | PhysioZine' className={ubuntu?.className}>Latest Magazine</Link></li>
                                         <li><i className="ri-arrow-right-s-line"></i> <Link href="/contact" title='Contact Us | PhysioZine' className={ubuntu?.className}>Contact</Link></li>
                                     </ul>

@@ -10,6 +10,7 @@ const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500'], style: ['nor
 const EditorialMember = ({ data }) => {
     const founders = data?.members?.filter(item => item?.type === 'Founder')
     const chiefEditor = data?.members?.find(item => item?.type === 'ChiefEditor')
+    const managingDirector = data?.members?.find(item => item?.type === 'ManagingDirector')
     const associateEditors = data?.members?.filter(item => item?.type === 'AssociateEditors')
     const advisoryMembers = data?.members?.filter(item => item?.type === 'AdvisoryMembers')
     const editors = data?.members?.filter(item => item?.type === 'Editors')
@@ -121,12 +122,52 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-3`} title='Associate Editors of PhysioZine | PhysioZine'>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-3`} title='Managing Director of PhysioZine | PhysioZine'>
                             <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-3`} aria-expanded="false" aria-controls={`flush-collapse-3`}>
-                                Associate Editors
+                                Managing Director
                             </button>
                         </h2>
                         <div id={`flush-collapse-3`} className={`accordion-collapse collapse `} data-bs-parent="#main-accordion">
+                            <div className={`accordion-body ${styles.accordionBody}`}>
+                                <Row className={`${styles?.memberContent}`}>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                                        <div className={`${styles?.memberCard}`}>
+                                            <div className={`${styles?.memberProfile}`}>
+                                                <Image src={managingDirector?.profile} alt={managingDirector?.name + 'profile'} quality={100} width={100} height={100} priority />
+                                            </div>
+                                            <div className={`${styles?.memberCardBody}`}>
+                                                <h3 className={`${styles?.doctorName} ${ubuntu?.className}`}>{managingDirector?.name}</h3>
+                                                <span className={`${styles?.occupation} ${ubuntu?.className}`}>{managingDirector?.occupation || ''}</span>
+                                                <ul>
+                                                    <li className={`${styles?.details} ${ubuntu?.className}`}>{managingDirector?.education}</li>
+                                                    <li className={`${styles?.details} ${ubuntu?.className}`}>{managingDirector?.designation}</li>
+                                                    <li className={`${styles?.details}`}>
+                                                        {typeof managingDirector?.role === 'string' ? '' : managingDirector?.role?.map((item, i) => {
+                                                            return (
+                                                                <React.Fragment key={i}>
+                                                                    <p className={`mb-1 ${ubuntu?.className}`}>{item}</p>
+                                                                </React.Fragment >
+                                                            )
+                                                        })}
+                                                    </li>
+                                                    <li className={`${styles?.details} ${styles?.contact}`}>Address: {managingDirector?.address}</li>
+                                                    <li className={`${styles?.details} ${styles?.contact}`}>Email Address: {managingDirector?.emailAddress}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={`accordion-item mt-2`}>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-4`} title='Associate Editors of PhysioZine | PhysioZine'>
+                            <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-4`} aria-expanded="false" aria-controls={`flush-collapse-4`}>
+                                Associate Editors
+                            </button>
+                        </h2>
+                        <div id={`flush-collapse-4`} className={`accordion-collapse collapse `} data-bs-parent="#main-accordion">
                             <div className={`accordion-body ${styles.accordionBody}`}>
                                 <Row className={`${styles?.memberContent}`}>
                                     {associateEditors?.map(editors => {
@@ -167,12 +208,12 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-4`} title='Advisory Members of PhysioZine | PhysioZine'>
-                            <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-4`} aria-expanded="false" aria-controls={`flush-collapse-4`}>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-5`} title='Advisory Members of PhysioZine | PhysioZine'>
+                            <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-5`} aria-expanded="false" aria-controls={`flush-collapse-5`}>
                                 Advisory Members
                             </button>
                         </h2>
-                        <div id={`flush-collapse-4`} className={`accordion-collapse collapse `} data-bs-parent="#main-accordion">
+                        <div id={`flush-collapse-5`} className={`accordion-collapse collapse `} data-bs-parent="#main-accordion">
                             <div className={`accordion-body ${styles.accordionBody}`}>
                                 <Row className={`${styles?.memberContent}`}>
                                     {advisoryMembers?.map(members => {
@@ -213,12 +254,12 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-5`} title='Editors of PhysioZine | PhysioZine'>
-                            <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-5`} aria-expanded="false" aria-controls={`flush-collapse-5`}>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-6`} title='Editors of PhysioZine | PhysioZine'>
+                            <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-6`} aria-expanded="false" aria-controls={`flush-collapse-6`}>
                                 Editors
                             </button>
                         </h2>
-                        <div id={`flush-collapse-5`} className={`accordion-collapse collapse `} data-bs-parent="#main-accordion">
+                        <div id={`flush-collapse-6`} className={`accordion-collapse collapse `} data-bs-parent="#main-accordion">
                             <div className={`accordion-body ${styles.accordionBody}`}>
                                 <Row className={`${styles?.memberContent}`}>
                                     {editors?.map(editors => {
@@ -259,12 +300,12 @@ const EditorialMember = ({ data }) => {
                     </div>
 
                     <div className={`accordion-item mt-2`}>
-                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-6`} title='Reviewers of PhysioZine | PhysioZine'>
-                            <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-6`} aria-expanded="false" aria-controls={`flush-collapse-6`}>
+                        <h2 className={`accordion-header ${ubuntu?.className}`} id={`flush-heading-7`} title='Reviewers of PhysioZine | PhysioZine'>
+                            <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-7`} aria-expanded="false" aria-controls={`flush-collapse-7`}>
                                 Reviewers
                             </button>
                         </h2>
-                        <div id={`flush-collapse-6`} className={`accordion-collapse collapse `} data-bs-parent="#main-accordion">
+                        <div id={`flush-collapse-7`} className={`accordion-collapse collapse `} data-bs-parent="#main-accordion">
                             <div className={`accordion-body ${styles.accordionBody}`}>
                                 <Row className={`${styles?.memberContent}`}>
                                     {reviewers?.map(reviewers => {
@@ -312,7 +353,7 @@ const EditorialMember = ({ data }) => {
 export default EditorialMember
 
 export const getServerSideProps = async () => {
-    const res = await fetch(`${process.env.DEPLOY}/api/editorialMembers`)
+    const res = await fetch(`${process.env.LOCALHOST}/api/editorialMembers`)
     const data = await res.json()
     return { props: { data } }
 }

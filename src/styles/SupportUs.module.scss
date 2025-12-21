@@ -21,6 +21,25 @@
             background: var(--secondary-200);
         }
 
+        .packageTable {
+            td {
+                vertical-align: middle;
+
+                &:last-child {
+                    text-align: left;
+
+                    ul {
+                        padding: 0 5vh;
+
+                        li {
+                            list-style: disc;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
 
         ul {
             padding: 0;

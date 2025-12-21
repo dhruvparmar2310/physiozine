@@ -212,6 +212,18 @@ export default function Home () {
           </div>
         </section>
 
+        <section id="journal" className={`${styles?.journal}`}>
+          <div className="container">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
+              <h1 className={`sectionTitle`} data-heading='Our Latest' title="Our Latest Interviews | PhysioZine">Interviews</h1>
+              <div className={`text-center mt-4 ${styles?.viewMoreBtn} ${ubuntu?.className}`}>
+                <span onClick={() => router.push('/interview')}>View More</span>
+              </div>
+            </div>
+            <HomePageArticles type='interview' />
+          </div>
+        </section>
+
         {/* <section className={`${styles?.mediaPartner}`}>
           <div className="container">
             <h1 className={`sectionTitle ${styles?.sectionTitle} ${ubuntu?.className}`} data-heading='Media Partner with PhysioZine:' title='Media Partner | PhysioZine'> Amplify Your Event’s Reach</h1>
@@ -297,9 +309,9 @@ export default function Home () {
               </div>
             </div>
           </div>
-        </section >
+        </section > */}
 
-        <section className={`${styles?.actionBar} container`}>
+        {/* <section className={`${styles?.actionBar} container`}>
           <h1 className={`sectionTitle ${styles?.sectionTitle}`} data-heading='Our Services' title='Our Services | PhysioZine'>Be a part of PhysioZine</h1>
 
           <div className={`${styles?.actions} ${ubuntu?.className} mt-4`}>
