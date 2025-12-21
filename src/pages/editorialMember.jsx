@@ -353,7 +353,7 @@ const EditorialMember = ({ data }) => {
 export default EditorialMember
 
 export const getServerSideProps = async () => {
-    const res = await fetch(`${process.env.LOCALHOST}/api/editorialMembers`)
+    const res = await fetch(`${process.env.DEPLOY}/api/editorialMembers`)
     const data = await res.json()
     return { props: { data } }
 }
