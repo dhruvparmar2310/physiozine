@@ -8,11 +8,13 @@
         justify-content: start !important;
 
         .breadcrumbItem {
+            font-weight: 600;
+
             a {
                 display: flex;
                 flex-wrap: nowrap;
                 text-decoration: none !important;
-                font-weight: 500;
+                font-weight: 600;
                 letter-spacing: 0.8px;
                 color: var(--primary-color);
                 font-style: italic;
@@ -28,7 +30,7 @@
         .currentPage {
             color: var(--secondary-400);
             font-style: italic;
-            font-weight: 500;
+            font-weight: 600;
             letter-spacing: 0.8px;
         }
     }

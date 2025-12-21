@@ -62,7 +62,7 @@ function Header () {
               <Link href='/' style={{ fontWeight: '500' }} passHref>
                 <Image
                   src={router.route.includes('webinar') ?
-                    WebinarLogo : router.route === '/' || router.route === '/conferences' || router.route === '/contact'
+                    WebinarLogo : router.route === '/' || router.route === '/conferences' || router.route === '/contact' || router.route === '/aboutUs' || router.route === '/subscribe'
                       ? MainLogo :
                       TextLogo
                   }
@@ -85,9 +85,9 @@ function Header () {
           <nav className={isNavExpanded ? `${styles.nav_menu} ${styles.expanded} d-lg-block` : `${styles.nav_menu} d-lg-block`}
           >
             <ul>
-              {/* <li>
-                <Link href={`/articles`} title='Archives | PhysioZine' className={`${router?.route?.includes('/articles') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/articles')}>Magazines</Link>
-                </li> */}
+              <li>
+                <Link href={`/aboutUs`} title='About Us | PhysioZine' className={`${router?.route?.includes('/aboutUs') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/aboutUs')}>About Us</Link>
+              </li>
               <li>
                 <Link href={`/magazines`} title='Magazines | PhysioZine' className={`${router?.route?.includes('/magazines') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/magazines')}>Magazines</Link>
               </li>
@@ -181,6 +181,9 @@ function Header () {
               </li>
               <li>
                 <Link href='https://ijopt.co.in' title='PhysioZine Journal' className={`${ubuntu.className}`} onClick={(e) => handleClick(e, 'https://ijopt.co.in')}>Journal</Link>
+              </li>
+              <li>
+                <Link href={'/subscribe'} title='Subscribe | PhysioZine' className={`${router?.route?.includes('/subscribe') && styles?.active} ${ubuntu.className}`} onClick={(e) => handleClick(e, '/subscribe')}>Subscribe</Link>
               </li>
               <li>
                 <Link href={'/contact'} className={`${router?.route?.includes('/contact') && styles?.active} ${ubuntu.className}`} title='Contact | PhysioZine' onClick={(e) => handleClick(e, '/contact')}>
