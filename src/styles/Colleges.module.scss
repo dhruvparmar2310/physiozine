@@ -1,0 +1,32 @@
+.colleges {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+    .collegesItems {
+        display: flex;
+        width: fit-content;
+        // will-change: transform;
+        // backface-visibility: hidden;
+        animation: scroll 18s linear infinite;
+    }
+
+    .collegeImageContain {
+        width: 180px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}

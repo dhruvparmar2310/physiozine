@@ -42,6 +42,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartSimple, faCity, faEarthAsia } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
 import { Button, Row, Col, Table, Container } from "react-bootstrap";
+import Colleges from "@/components/Colleges/Colleges";
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500', '700'], style: ['normal'] })
 const inter = Inter({ subsets: ["latin"] });
@@ -150,11 +151,11 @@ export default function Home () {
 
         <section id="associated" className={`${styles?.associated} py-0`}>
           <div className={styles?.license}>
-            <h1 className={`sectionTitle text-center`} data-heading='License & Registration' title='License & Registration | PhysioZine'></h1>
+            <h1 className={`sectionTitle text-center`} data-heading='Trusted by Leading Institute' title='License & Registration | PhysioZine'></h1>
 
             <div className={`${styles?.innerContent}`}>
               <div className={`${styles?.leftSide} container`}>
-                <div>
+                {/* <div>
                   <Image
                     src={msmeLogo}
                     alt="MSME Logo"
@@ -170,7 +171,8 @@ export default function Home () {
                     priority
                     onClick={() => router.push('https://en.wikipedia.org/wiki/Creative_Commons_license', { target: '_blank' })}
                   />
-                </div>
+                </div> */}
+                <Colleges />
               </div>
             </div>
           </div>

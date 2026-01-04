@@ -8,6 +8,8 @@ import logo from '../../../public/assets/img/footer-logo.png'
 import Image from 'next/image'
 import { Ubuntu } from 'next/font/google'
 import grBtn from '../../../public/assets/img/google-review-button.png'
+import ccLogo from '../../../public/assets/img/License/cc.jpeg'
+import msmeLogo from '../../../public/assets/img/License/MSME-Logo.png'
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 const Footer = () => {
@@ -108,6 +110,8 @@ const Footer = () => {
 
                             <div className={`${styles?.googleReviewBtn}`}>
                                 <Image src={grBtn} quality={100} alt='Google Review Button' onClick={() => window.open('https://g.page/r/CRcCHyCfyySeEBE/review', '_blank')} />
+                                <Image src={msmeLogo} quality={100} alt='Google Review Button' onClick={() => window.open('https://g.page/r/CRcCHyCfyySeEBE/review', '_blank')} />
+                                <Image src={ccLogo} quality={100} alt='Google Review Button' onClick={() => window.open('https://g.page/r/CRcCHyCfyySeEBE/review', '_blank')} />
                             </div>
                         </div>
 

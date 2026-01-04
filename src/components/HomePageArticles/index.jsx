@@ -40,12 +40,11 @@ const HomePageArticles = ({ type }) => {
     //         case ''
     //     }
     // }
-
     return (
         <>
             <div className={`${styles?.homePageArticleSlider} ${type}`}>
                 {type === 'magazine' &&
-                    allMagazine[new Date().getFullYear()]?.sort((a, b) => b._id - a._id)?.map(article => {
+                    allMagazine?.[Object.keys(allMagazine)?.[Object?.keys(allMagazine)?.length - 1]]?.sort((a, b) => b._id - a._id)?.map(article => {
                         return (
                             <tr key={article?._id}>
                                 <div className={`${styles?.articleCard}`}>
