@@ -69,18 +69,21 @@
                 }
 
                 .googleReviewBtn {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    flex-wrap: wrap;
 
                     img {
                         cursor: pointer;
                         width: 100%;
-                        height: auto;
-                        max-width: 150px;
-                        object-fit: contain;
+                        height: 100%;
+                        max-height: 50px;
+                        max-width: 130px;
+                        // object-fit: contain;
+                        aspect-ratio: 6/2;
+                        border-radius: 5px;
                         transition: all 0.3s linear;
-
-                        &:hover {
-                            transform: translateY(-3px);
-                        }
                     }
                 }
 
