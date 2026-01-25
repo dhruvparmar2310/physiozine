@@ -30,7 +30,7 @@ const Interview = () => {
                 <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
                 <meta property="og:title" content="Interview with fastest growing Physiotherapy Network at PhysioZine" />
                 <meta property="og:description" content="Promote your brand to targeted physio audiences - Interview with PhysioZine." />
-                <meta property="og:url" content="https://physiozine.vercel.app/Interview" />
+                <meta property="og:url" content="https://physiozine.co.in/Interview" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

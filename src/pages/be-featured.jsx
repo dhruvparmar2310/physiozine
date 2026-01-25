@@ -16,7 +16,7 @@ const BeFeatured = () => {
                 <meta name="description" content="Read the Be Featured content carefully." />
                 <meta property="og:title" content="Be Featured | PhysioZine" />
                 <meta property="og:description" content="Read the Be Featured content carefully." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/be-featured" />
+                <meta property="og:url" content="https://physiozine.co.in/policy/be-featured" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

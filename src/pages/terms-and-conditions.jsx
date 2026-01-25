@@ -16,7 +16,7 @@ const TermsAndConditions = () => {
                 <meta name="description" content="PHYSIOZINE is India’s fastest growing E-Magazine for Physical Therapist, your ultimate resource for all things related to physical therapy and rehabilitation. Explore expert articles, in-depth interviews with leading professionals, latest research findings, innovative techniques, and practical tips to enhance your understanding and practice in the field of physiotherapy. Whether you're a seasoned practitioner or just starting your journey, our E-Magazine is your go-to destination for staying updated, informed, and inspired in the world of physiotherapy." />
                 <meta property="og:title" content="Terms & Conditions | PhysioZine" />
                 <meta property="og:description" content=" At PhysioZine, we are dedicated to empowering physiotherapists, healthcare professionals, and students with valuable resources, insights, and opportunities to advance the field of physiotherapy. As a non-profit organization, we rely on the generosity and support of our community to sustain and expand our initiatives." />
-                <meta property="og:url" content="https://physiozine.vercel.app/terms-and-conditions" />
+                <meta property="og:url" content="https://physiozine.co.in/terms-and-conditions" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

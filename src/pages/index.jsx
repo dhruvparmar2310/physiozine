@@ -140,7 +140,7 @@ export default function Home () {
         <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
         <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
         <meta property="og:description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
-        <meta property="og:url" content="https://physiozine.vercel.app/" />
+        <meta property="og:url" content="https://physiozine.co.in/" />
         <meta property="og:image" content="assets/img/favicon.png" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="assets/img/favicon.png" />
@@ -577,7 +577,7 @@ export default function Home () {
                     </tr>
                     <tr>
                       <td>Website</td>
-                      <td className={`${styles?.dataValue}`} title="PhysioZine | Website of PhysioZine">https://physiozine.vercel.app</td>
+                      <td className={`${styles?.dataValue}`} title="PhysioZine | Website of PhysioZine">https://physiozine.co.in</td>
                     </tr>
                     <tr>
                       <td>Address</td>

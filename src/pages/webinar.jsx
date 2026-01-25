@@ -34,7 +34,7 @@ const Webinar = ({ webinars }) => {
                 <meta name="description" content="India's leading digital magazine for Physiotherapy." />
                 <meta property="og:title" content="Webinar | PhysioZine" />
                 <meta property="og:description" content="India's leading digital magazine for Physiotherapy." />
-                <meta property="og:url" content="https://physiozine.vercel.app/webinar" />
+                <meta property="og:url" content="https://physiozine.co.in/webinar" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

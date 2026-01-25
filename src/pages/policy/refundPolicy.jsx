@@ -16,7 +16,7 @@ const RefundPolicy = () => {
                 <meta name="description" content="Read the Refund Policy carefully." />
                 <meta property="og:title" content="Refund Policy | Read the Refund Policy carefully." />
                 <meta property="og:description" content="Read the Refund Policy carefully." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/refundPolicy" />
+                <meta property="og:url" content="https://physiozine.co.in/policy/refundPolicy" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

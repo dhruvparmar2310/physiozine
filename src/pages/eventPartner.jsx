@@ -15,7 +15,7 @@ const EventPartner = () => {
             <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
             <meta property="og:title" content="Event Partner | PhysioZine" />
             <meta property="og:description" content="Promote your brand to targeted physio audiences - Advertise with PhysioZine." />
-            <meta property="og:url" content="https://physiozine.vercel.app/eventPartner" />
+            <meta property="og:url" content="https://physiozine.co.in/eventPartner" />
             <meta property="og:image" content="assets/img/favicon.jpg" />
             <meta property="og:type" content="website" />
             <link rel="icon" href="assets/img/favicon.png" />

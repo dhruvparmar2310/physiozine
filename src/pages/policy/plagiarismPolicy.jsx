@@ -16,7 +16,7 @@ const PlagiarismPolicy = () => {
                 <meta name="description" content="Read the Plagiarism Policy carefully." />
                 <meta property="og:title" content="Plagiarism Policy | Read the Plagiarism Policy carefully." />
                 <meta property="og:description" content="Read the Plagiarism Policy carefully." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/plagiarismPolicy" />
+                <meta property="og:url" content="https://physiozine.co.in/policy/plagiarismPolicy" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

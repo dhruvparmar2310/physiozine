@@ -16,7 +16,7 @@ const DisclaimerPolicy = () => {
                 <meta name="description" content="Read the Disclaimer Policy, Terms & Conditions apply." />
                 <meta property="og:title" content="Disclaimer Policy | Read the Disclaimer Policy, Terms & Conditions apply." />
                 <meta property="og:description" content="Read the Disclaimer Policy, Terms & Conditions apply." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/disclaimerPolicy" />
+                <meta property="og:url" content="https://physiozine.co.in/policy/disclaimerPolicy" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

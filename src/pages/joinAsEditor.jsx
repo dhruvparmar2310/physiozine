@@ -16,7 +16,7 @@ const JoinAsEditor = () => {
                 <meta name="description" content="Are you a passionate physiotherapist or healthcare professional looking to share your expertise with the world? Join the PhysioZine editorial team and become a part of our mission to provide cutting-edge information and insights to our growing community." />
                 <meta property="og:title" content="Join As Editor | PhysioZine" />
                 <meta property="og:description" content="Are you a passionate physiotherapist or healthcare professional looking to share your expertise with the world? Join the PhysioZine editorial team and become a part of our mission to provide cutting-edge information and insights to our growing community." />
-                <meta property="og:url" content="https://physiozine.vercel.app/joinAsEditor" />
+                <meta property="og:url" content="https://physiozine.co.in/joinAsEditor" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
