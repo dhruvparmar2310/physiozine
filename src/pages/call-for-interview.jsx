@@ -16,7 +16,7 @@ const CallForInterview = () => {
                 <meta name="description" content="Are you a visionary in the field of physiotherapy, rehabilitation, or fitness? Do you have groundbreaking ideas, inspiring experiences, or expert insights to share? Physiozine Magazine invites you to be a part of our exclusive interview series." />
                 <meta property="og:title" content="Call for Interview | PhysioZine" />
                 <meta property="og:description" content="Are you a visionary in the field of physiotherapy, rehabilitation, or fitness? Do you have groundbreaking ideas, inspiring experiences, or expert insights to share? Physiozine Magazine invites you to be a part of our exclusive interview series." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/call-for-interview" />
+                <meta property="og:url" content="https://physiozine.co.in/policy/call-for-interview" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

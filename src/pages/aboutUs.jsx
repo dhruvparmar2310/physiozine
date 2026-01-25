@@ -19,7 +19,7 @@ const AboutUs = () => {
                 <meta name="description" content="PhysioZine is a global physiotherapy platform offering a professional physiotherapy magazine, international journals, webinars, workshops, and online courses. We empower physiotherapy students, clinicians, and researchers through evidence-based education and global knowledge sharing." />
                 <meta property="og:title" content="About PhysioZine | Global Physiotherapy Magazine, Journals & Online Courses" />
                 <meta property="og:description" content="PhysioZine is a leading global physiotherapy platform providing physiotherapy magazines, international journals, webinars, workshops, and online courses for students, clinicians, and researchers worldwide." />
-                <meta property="og:url" content="https://physiozine.vercel.app/aboutUs" />
+                <meta property="og:url" content="https://physiozine.co.in/aboutUs" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

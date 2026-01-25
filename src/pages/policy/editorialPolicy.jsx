@@ -16,7 +16,7 @@ const EditorialPolicy = () => {
                 <meta name="description" content="Read the Editorial Policy carefully." />
                 <meta property="og:title" content="Editorial Policy | Read the Editorial Policy carefully." />
                 <meta property="og:description" content="Read the Editorial Policy carefully." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/editorialPolicy" />
+                <meta property="og:url" content="https://physiozine.co.in/policy/editorialPolicy" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

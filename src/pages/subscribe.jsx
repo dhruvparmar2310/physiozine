@@ -65,7 +65,7 @@ const Subscribe = () => {
                 <meta name="description" content="At PhysioZine, we are dedicated to empowering physiotherapists, healthcare professionals, and students with valuable resources, insights, and opportunities to advance the field of physiotherapy. As a non-profit organization, we rely on the generosity and support of our community to sustain and expand our initiatives." />
                 <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
                 <meta property="og:description" content=" At PhysioZine, we are dedicated to empowering physiotherapists, healthcare professionals, and students with valuable resources, insights, and opportunities to advance the field of physiotherapy. As a non-profit organization, we rely on the generosity and support of our community to sustain and expand our initiatives." />
-                <meta property="og:url" content="https://physiozine.vercel.app/subscribe" />
+                <meta property="og:url" content="https://physiozine.co.in/subscribe" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

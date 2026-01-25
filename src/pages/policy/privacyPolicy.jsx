@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
                 <meta name="description" content="Read the Privacy Policy carefully." />
                 <meta property="og:title" content="Privacy Policy | Read the Privacy Policy carefully." />
                 <meta property="og:description" content="Read the Privacy Policy carefully." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/privacyPolicy" />
+                <meta property="og:url" content="https://physiozine.co.in/policy/privacyPolicy" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

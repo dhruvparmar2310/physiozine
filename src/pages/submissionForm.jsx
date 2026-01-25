@@ -209,7 +209,7 @@ const SubmissionForm = () => {
                 <meta name="description" content="Share your expertise with the global physiotherapy community by submitting your original research, blogs, innovation or case studies to PhysioZine Magazine. Our platform provides an opportunity for professionals to contribute to the advancement of physiotherapy knowledge and practice. Submit your work today and be a part of shaping the future of the field." />
                 <meta property="og:title" content="Article Form | PhysioZine" />
                 <meta property="og:description" content="Share your expertise with the global physiotherapy community by submitting your original research, blogs, innovation or case studies to PhysioZine Magazine. Our platform provides an opportunity for professionals to contribute to the advancement of physiotherapy knowledge and practice. Submit your work today and be a part of shaping the future of the field." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/submissionForm" />
+                <meta property="og:url" content="https://physiozine.co.in/policy/submissionForm" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

@@ -81,7 +81,7 @@ function InterviewID ({ data }) {
                 <meta name="description" content="PHYSIOZINE is India’s fastest growing digital magazine with DOI and Peer reviewed content. Contact Us at physiozinemagazine@gmail.com or +91 7984377793." />
                 <meta property="og:title" content="PhysioZine: India's #1 PT E-Magazine Empowering You with Expert Articles & Latest Research" />
                 <meta property="og:description" content="PhysioZine: Explore all the expert articles and latest research on Physiotherapy here." />
-                <meta property="og:url" content="https://physiozine.vercel.app/articles" />
+                <meta property="og:url" content="https://physiozine.co.in/articles" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="article" />
                 <link rel="icon" href="assets/img/favicon.png" />

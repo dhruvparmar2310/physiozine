@@ -25,7 +25,7 @@ const ProcessingCharge = () => {
                 <meta name="description" content=" At Physiozine Magazine, we strive to ensure that authors from all over the world have the opportunity to showcase their research, ideas, and contributions to the physiotherapy community. Below are the details regarding the Article Processing Charge (APC) for Indian and International authors, as well as the procedure for obtaining a hard copy certificate." />
                 <meta property="og:title" content="Article Processing Charge (APC) | PhysioZine" />
                 <meta property="og:description" content=" At Physiozine Magazine, we strive to ensure that authors from all over the world have the opportunity to showcase their research, ideas, and contributions to the physiotherapy community. Below are the details regarding the Article Processing Charge (APC) for Indian and International authors, as well as the procedure for obtaining a hard copy certificate." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/processing-charge" />
+                <meta property="og:url" content="https://physiozine.co.in/policy/processing-charge" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

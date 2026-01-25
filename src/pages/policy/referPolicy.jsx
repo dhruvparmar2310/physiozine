@@ -16,7 +16,7 @@ const ReferPolicy = () => {
                 <meta name="description" content="Read the Refer & Earn Policy carefully." />
                 <meta property="og:title" content="Refer & Earn Policy | Read the Refer & Earn Policy carefully." />
                 <meta property="og:description" content="Read the Refer & Earn Policy carefully." />
-                <meta property="og:url" content="https://physiozine.vercel.app/policy/referPolicy" />
+                <meta property="og:url" content="https://physiozine.co.in/policy/referPolicy" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />

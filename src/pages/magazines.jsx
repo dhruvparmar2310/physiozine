@@ -76,7 +76,7 @@ const Magazines = () => {
                 <meta name="description" content="India's leading digital magazine for Physiotherapy." />
                 <meta property="og:title" content="Magazines | PhysioZine" />
                 <meta property="og:description" content="India's leading digital magazine for Physiotherapy." />
-                <meta property="og:url" content="https://physiozine.vercel.app/magazines" />
+                <meta property="og:url" content="https://physiozine.co.in/magazines" />
                 <meta property="og:image" content="assets/img/favicon.jpg" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="assets/img/favicon.png" />
