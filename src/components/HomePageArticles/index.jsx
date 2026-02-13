@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Image from 'next/image';
 import styles from '../../styles/HomePageArticles.module.scss'
 import { saveAs } from 'file-saver'
@@ -44,9 +44,9 @@ const HomePageArticles = ({ type }) => {
         <>
             <div className={`${styles?.homePageArticleSlider} ${type}`}>
                 {type === 'magazine' &&
-                    allMagazine?.[Object.keys(allMagazine)?.[Object?.keys(allMagazine)?.length - 1]]?.sort((a, b) => b._id - a._id)?.map(article => {
+                    allMagazine?.[Object.keys(allMagazine)?.[Object?.keys(allMagazine)?.length - 2]]?.sort((a, b) => b._id - a._id)?.map(article => {
                         return (
-                            <tr key={article?._id}>
+                            <Fragment key={article?._id}>
                                 <div className={`${styles?.articleCard}`}>
                                     <div className={`${styles?.cardImg}`}>
                                         <Image src={article?.sImage} className='img-fluid' priority quality={100} width={100} height={100} alt={`${article?.sMonth}, ${article?.sYear}`} />
@@ -58,7 +58,7 @@ const HomePageArticles = ({ type }) => {
                                         <Button className={`${styles?.downloadBtn} ${ubuntu?.className}`} variant='info' onClick={() => saveAs(article?.eBook, `Volume-${article?.eBook?.split('-')[1]}, Issue-${article?.eBook?.split('-')[3].split('/')[0]}`)}>Download <span><FaArrowUpRightFromSquare /></span></Button>
                                     </div>
                                 </div>
-                            </tr>
+                            </Fragment>
                         )
                     })
                 }
@@ -98,7 +98,7 @@ const HomePageArticles = ({ type }) => {
                 {type === 'interview' &&
                     interviewCollection?.sort((a, b) => b._id - a._id)?.slice(0, 4)?.map(interview => {
                         return (
-                            <tr key={interview?._id}>
+                            <Fragment key={interview?._id}>
                                 <div className={`${styles?.articleCard} ${styles?.interviewCard}`}>
                                     <div className={`${styles?.cardImg}`}>
                                         <Image src={interview?.img} className='img-fluid' priority quality={100} width={100} height={100} alt={`${interview?.sTitle}`} />
@@ -110,7 +110,7 @@ const HomePageArticles = ({ type }) => {
                                         <Button className={`${styles?.downloadBtn} ${ubuntu?.className}`} variant='info' onClick={() => router?.push(`/interview/${interview?.name}`)}>Read Interview</Button>
                                     </div>
                                 </div>
-                            </tr>
+                            </Fragment>
                         )
                     })
                 }

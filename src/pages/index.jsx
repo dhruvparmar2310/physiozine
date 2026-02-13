@@ -1,48 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/image"
 import { Inter, Ubuntu } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
 import Hero from "@/components/Hero";
 import HomePageArticles from "@/components/HomePageArticles";
-import googleLogo from '../../public/assets/img/webAvailability/Google-Logo.png'
-import googleScholarLogo from '../../public/assets/img/webAvailability/google-scholar.jpg'
-import magzterLogo from '../../public/assets/img/webAvailability/magzter_logo.png'
-import doiLogo from '../../public/assets/img/webAvailability/DOI_logo.png'
-import zenodoLogo from '../../public/assets/img/webAvailability/zenodo.png'
-import openAccessLogo from '../../public/assets/img/webAvailability/Open_Access_logo.png'
-import openAireLogo from '../../public/assets/img/webAvailability/OpenAire_Logo.jpg'
-import readwhereLogo from '../../public/assets/img/webAvailability/readwhere.jpg'
-import rgLogo from '../../public/assets/img/webAvailability/researchgate.png'
-import amLogo from '../../public/assets/img/webAvailability/am.jpeg'
-import orcidLogo from '../../public/assets/img/webAvailability/orcid.logo.png'
-import ccLogo from '../../public/assets/img/License/cc.jpeg'
-import msmeLogo from '../../public/assets/img/License/MSME-Logo.png'
-import linkedinLogo from '../../public/assets/img/webAvailability/Linkedin-Logo.png'
 import { members } from "@/data/editorialMembers";
-import physiothonline from '../../public/assets/img/associated/physioth-online.jpeg'
-import smartPT from '../../public/assets/img/associated/smart-pt.jpeg'
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import mainLogo from '../../public/assets/img/logo-1.png'
-import zoteroLogo from '../../public/assets/img/webAvailability/Zotero_logo.png'
-import dataCiteLogo from '../../public/assets/img/webAvailability/DataCite-Commons.png'
-import mendeleyLogo from '../../public/assets/img/webAvailability/Mendeley_Logo_Vertical.png'
-import openScholarLogo from '../../public/assets/img/webAvailability/openscholar.png'
-import bookLogo from '../../public/assets/img/fundamentals-of-electrotherapy-book.png'
-import jaypeeDigitalLogo from '../../public/assets/img/header-jaypee.png'
-import DOILogo from '../../public/assets/img/DOI-Foundation-Logo.png'
+import EventPDF from '../../public/assets/pdfs/National Physiotherapy Blog Competition.pdf'
+import { saveAs } from 'file-saver'
 
 //* ALL SVG ELEMENTS
 import { BsGlobeCentralSouthAsia } from "react-icons/bs";
 import { FaCity, FaUsers } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa6"
+import { FaArrowRight, FaArrowUpRightFromSquare } from "react-icons/fa6"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartSimple, faCity, faEarthAsia } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
 import { Button, Row, Col, Table, Container } from "react-bootstrap";
 import Colleges from "@/components/Colleges/Colleges";
+import Link from "next/link";
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '500', '700'], style: ['normal'] })
 const inter = Inter({ subsets: ["latin"] });
@@ -175,6 +154,20 @@ export default function Home () {
                 <Colleges />
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className={`${styles?.eventAnnouncement}`}>
+          <div className={`${styles?.innerContent} container`}>
+            <h1 className={`sectionTitle`} data-heading='Announcement' title='Upcoming Event | PhysioZine'>
+              2<sup>nd</sup> National Physiotherapy Blog Competition, 2026
+            </h1>
+            <div className={styles?.btnGroup}>
+              <Link href='https://docs.google.com/forms/d/e/1FAIpQLSe2FzUT8U2d9eFBQQYb4s_O9yuPoNUcHtpMUNFy27ZF3yXeoA/viewform?pli=1' target="_blank" className={styles?.active}>Register Now</Link>
+
+              <Button className={`${styles?.downloadBtn} ${ubuntu?.className}`} variant='info' onClick={() => saveAs(EventPDF, `National Physiotherapy Blog Competition, 2026`)}>Download <span><FaArrowUpRightFromSquare /></span></Button>
+            </div>
+
           </div>
         </section>
 
